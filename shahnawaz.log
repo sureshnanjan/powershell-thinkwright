@@ -1,0 +1,158 @@
+﻿**********************
+Windows PowerShell transcript start
+Start time: 20240603144040
+Username: THINKWRIGHT\user13
+RunAs User: THINKWRIGHT\user13
+Configuration Name: 
+Machine: DESKTOP-13 (Microsoft Windows NT 10.0.19045.0)
+Host Application: C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe
+Process ID: 6540
+PSVersion: 5.1.19041.4412
+PSEdition: Desktop
+PSCompatibleVersions: 1.0, 2.0, 3.0, 4.0, 5.0, 5.1.19041.4412
+BuildVersion: 10.0.19041.4412
+CLRVersion: 4.0.30319.42000
+WSManStackVersion: 3.0
+PSRemotingProtocolVersion: 2.3
+SerializationVersion: 1.1.0.1
+**********************
+Transcript started, output file is shahnawaz.log
+PS C:\PS-24> New-Item -Path C:\PS-24\ -Name 'QA-Training' -ItemType Directory
+
+
+    Directory: C:\PS-24
+
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+d-----        03-06-2024     14:41                QA-Training
+
+
+PS C:\PS-24> git --version
+git : The term 'git' is not recognized as the name of a cmdlet, function, script file, or operable program. Check the 
+spelling of the name, or if a path was included, verify that the path is correct and try again.
+At line:1 char:1
++ git --version
++ ~~~
+    + CategoryInfo          : ObjectNotFound: (git:String) [], CommandNotFoundException
+    + FullyQualifiedErrorId : CommandNotFoundException
+git : The term 'git' is not recognized as the name of a cmdlet, function, script file, or operable program. Check the
+spelling of the name, or if a path was included, verify that the path is correct and try again.
+At line:1 char:1
++ git --version
++ ~~~
+    + CategoryInfo          : ObjectNotFound: (git:String) [], CommandNotFoundException
+    + FullyQualifiedErrorId : CommandNotFoundException
+
+PS C:\PS-24> Invoke-WebRequest -Uri https://github.com/git-for-windows/git/releases/download/v2.44.0.windows.1/git-2.44.0-64bit.exe -OutFile git-installer.exe
+>> TerminatingError(Invoke-WebRequest): "The request was aborted: The connection was closed unexpectedly."
+Invoke-WebRequest : The request was aborted: The connection was closed unexpectedly.
+At line:1 char:1
++ Invoke-WebRequest -Uri https://github.com/git-for-windows/git/release ...
++ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : InvalidOperation: (System.Net.HttpWebRequest:HttpWebRequest) [Invoke-WebRequest], 
+WebException
+    + FullyQualifiedErrorId : WebCmdletWebResponseException,Microsoft.PowerShell.Commands.InvokeWebRequestCommand
+Invoke-WebRequest : The request was aborted: The connection was closed unexpectedly.
+At line:1 char:1
++ Invoke-WebRequest -Uri https://github.com/git-for-windows/git/release ...
++ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : InvalidOperation: (System.Net.HttpWebRequest:HttpWebRequest) [Invoke-WebRequest], WebExc
+   eption
+    + FullyQualifiedErrorId : WebCmdletWebResponseException,Microsoft.PowerShell.Commands.InvokeWebRequestCommand
+
+PS C:\PS-24> Invoke-WebRequest -Uri https://github.com/git-for-windows/git/releases/download/v2.44.0.windows.1/git-2.44.0-64-bit.exe -OutFile git-installer.exe
+PS C:\PS-24> .\git-installer.exe /verysilent /norestart
+PS C:\PS-24> git --version
+git : The term 'git' is not recognized as the name of a cmdlet, function, script file, or operable program. Check the 
+spelling of the name, or if a path was included, verify that the path is correct and try again.
+At line:1 char:1
++ git --version
++ ~~~
+    + CategoryInfo          : ObjectNotFound: (git:String) [], CommandNotFoundException
+    + FullyQualifiedErrorId : CommandNotFoundException
+git : The term 'git' is not recognized as the name of a cmdlet, function, script file, or operable program. Check the
+spelling of the name, or if a path was included, verify that the path is correct and try again.
+At line:1 char:1
++ git --version
++ ~~~
+    + CategoryInfo          : ObjectNotFound: (git:String) [], CommandNotFoundException
+    + FullyQualifiedErrorId : CommandNotFoundException
+
+PS C:\PS-24> git --version
+git : The term 'git' is not recognized as the name of a cmdlet, function, script file, or operable program. Check the 
+spelling of the name, or if a path was included, verify that the path is correct and try again.
+At line:1 char:1
++ git --version
++ ~~~
+    + CategoryInfo          : ObjectNotFound: (git:String) [], CommandNotFoundException
+    + FullyQualifiedErrorId : CommandNotFoundException
+git : The term 'git' is not recognized as the name of a cmdlet, function, script file, or operable program. Check the
+spelling of the name, or if a path was included, verify that the path is correct and try again.
+At line:1 char:1
++ git --version
++ ~~~
+    + CategoryInfo          : ObjectNotFound: (git:String) [], CommandNotFoundException
+    + FullyQualifiedErrorId : CommandNotFoundException
+
+PS C:\PS-24> .\git-installer.exe /verysilent /norestart
+PS C:\PS-24> .\git-installer.exe /verysilent /norestart
+PS C:\PS-24> git --version
+git : The term 'git' is not recognized as the name of a cmdlet, function, script file, or operable program. Check the 
+spelling of the name, or if a path was included, verify that the path is correct and try again.
+At line:1 char:1
++ git --version
++ ~~~
+    + CategoryInfo          : ObjectNotFound: (git:String) [], CommandNotFoundException
+    + FullyQualifiedErrorId : CommandNotFoundException
+git : The term 'git' is not recognized as the name of a cmdlet, function, script file, or operable program. Check the
+spelling of the name, or if a path was included, verify that the path is correct and try again.
+At line:1 char:1
++ git --version
++ ~~~
+    + CategoryInfo          : ObjectNotFound: (git:String) [], CommandNotFoundException
+    + FullyQualifiedErrorId : CommandNotFoundException
+
+PS C:\PS-24> .\git-installer.exe /verysilent /norestart
+**********************
+Windows PowerShell transcript start
+Start time: 20240603150542
+Username: THINKWRIGHT\user13
+RunAs User: THINKWRIGHT\user13
+Configuration Name: 
+Machine: DESKTOP-13 (Microsoft Windows NT 10.0.19045.0)
+Host Application: C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe
+Process ID: 9248
+PSVersion: 5.1.19041.4412
+PSEdition: Desktop
+PSCompatibleVersions: 1.0, 2.0, 3.0, 4.0, 5.0, 5.1.19041.4412
+BuildVersion: 10.0.19041.4412
+CLRVersion: 4.0.30319.42000
+WSManStackVersion: 3.0
+PSRemotingProtocolVersion: 2.3
+SerializationVersion: 1.1.0.1
+**********************
+Transcript started, output file is shahnawaz.log
+PS C:\PS-24> Set-Location powershell-thinkwright
+PS C:\PS-24\powershell-thinkwright> git statu
+git: 'statu' is not a git command. See 'git --help'.
+
+The most similar commands are
+        status
+        stage
+        stash
+PS C:\PS-24\powershell-thinkwright> git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+nothing to commit, working tree clean
+PS C:\PS-24\powershell-thinkwright> git checkout -b shahnawaz-branch
+Switched to a new branch 'shahnawaz-branch'
+PS C:\PS-24\powershell-thinkwright> git status
+On branch shahnawaz-branch
+nothing to commit, working tree clean
+PS C:\PS-24\powershell-thinkwright> Stop-Transcript
+**********************
+Windows PowerShell transcript end
+End time: 20240603150952
+**********************
