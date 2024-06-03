@@ -1,0 +1,47 @@
+﻿**********************
+Windows PowerShell transcript start
+Start time: 20240603162106
+Username: THINKWRIGHT\user18
+RunAs User: THINKWRIGHT\user18
+Configuration Name: 
+Machine: DESKTOP-18 (Microsoft Windows NT 10.0.19045.0)
+Host Application: C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe
+Process ID: 10536
+PSVersion: 5.1.19041.4412
+PSEdition: Desktop
+PSCompatibleVersions: 1.0, 2.0, 3.0, 4.0, 5.0, 5.1.19041.4412
+BuildVersion: 10.0.19041.4412
+CLRVersion: 4.0.30319.42000
+WSManStackVersion: 3.0
+PSRemotingProtocolVersion: 2.3
+SerializationVersion: 1.1.0.1
+**********************
+Transcript started, output file is .\Rajesh.log
+PS C:\RajeshG> git --version
+git version 2.44.0.windows.1
+PS C:\RajeshG> cd .\WorkingFolder\
+PS C:\RajeshG\WorkingFolder> get clone https://github.com/sureshnanjan/powershell-thinkwright.git
+get : The term 'get' is not recognized as the name of a cmdlet, function, script file, or operable program. Check the 
+spelling of the name, or if a path was included, verify that the path is correct and try again.
+At line:1 char:1
++ get clone https://github.com/sureshnanjan/powershell-thinkwright.git
++ ~~~
+    + CategoryInfo          : ObjectNotFound: (get:String) [], CommandNotFoundException
+    + FullyQualifiedErrorId : CommandNotFoundException
+get : The term 'get' is not recognized as the name of a cmdlet, function, script file, or operable program. Check the
+spelling of the name, or if a path was included, verify that the path is correct and try again.
+At line:1 char:1
++ get clone https://github.com/sureshnanjan/powershell-thinkwright.git
++ ~~~
+    + CategoryInfo          : ObjectNotFound: (get:String) [], CommandNotFoundException
+    + FullyQualifiedErrorId : CommandNotFoundException
+
+PS C:\RajeshG\WorkingFolder> git clone https://github.com/sureshnanjan/powershell-thinkwright.git
+Cloning into 'powershell-thinkwright'...
+remote: Enumerating objects: 6, done.
+remote: Counting objects: 100% (6/6), done.
+remote: Compressing objects: 100% (5/5), done.
+remote: Total 6 (delta 0), reused 3 (delta 0), pack-reused 0
+Receiving objects: 100% (6/6), done.
+PS C:\RajeshG\WorkingFolder> git status
+fatal: not a git repository (or any of the parent directories): .git
