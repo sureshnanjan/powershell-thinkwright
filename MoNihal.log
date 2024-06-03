@@ -1,0 +1,82 @@
+﻿**********************
+Windows PowerShell transcript start
+Start time: 20240603152532
+Username: THINKWRIGHT\user14
+RunAs User: THINKWRIGHT\user14
+Configuration Name: 
+Machine: DESKTOP-14 (Microsoft Windows NT 10.0.19045.0)
+Host Application: C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe
+Process ID: 9068
+PSVersion: 5.1.19041.4412
+PSEdition: Desktop
+PSCompatibleVersions: 1.0, 2.0, 3.0, 4.0, 5.0, 5.1.19041.4412
+BuildVersion: 10.0.19041.4412
+CLRVersion: 4.0.30319.42000
+WSManStackVersion: 3.0
+PSRemotingProtocolVersion: 2.3
+SerializationVersion: 1.1.0.1
+**********************
+Transcript started, output file is MoNihal.log
+PS C:\Users\user14> New-Item -Name ‘QA-Training’ -ItemType Directory
+
+
+    Directory: C:\Users\user14
+
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+d-----        03-06-2024     15:27                QA-Training
+
+
+PS C:\Users\user14> git --version
+git version 2.44.0.windows.1
+PS C:\Users\user14> Stop-Transcript
+**********************
+Windows PowerShell transcript end
+End time: 20240603153103
+**********************
+**********************
+Windows PowerShell transcript start
+Start time: 20240603153227
+Username: THINKWRIGHT\user14
+RunAs User: THINKWRIGHT\user14
+Configuration Name: 
+Machine: DESKTOP-14 (Microsoft Windows NT 10.0.19045.0)
+Host Application: C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe
+Process ID: 9068
+PSVersion: 5.1.19041.4412
+PSEdition: Desktop
+PSCompatibleVersions: 1.0, 2.0, 3.0, 4.0, 5.0, 5.1.19041.4412
+BuildVersion: 10.0.19041.4412
+CLRVersion: 4.0.30319.42000
+WSManStackVersion: 3.0
+PSRemotingProtocolVersion: 2.3
+SerializationVersion: 1.1.0.1
+**********************
+Transcript started, output file is .\MoNihal.log
+PS C:\Users\user14> cd .\QA-Training\
+PS C:\Users\user14\QA-Training> git clone https://github.com/sureshnanjan/powershell-thinkwright.git
+Cloning into 'powershell-thinkwright'...
+remote: Enumerating objects: 6, done.
+remote: Counting objects: 100% (6/6), done.
+remote: Compressing objects: 100% (5/5), done.
+remote: Total 6 (delta 0), reused 3 (delta 0), pack-reused 0
+Receiving objects: 100% (6/6), done.
+PS C:\Users\user14\QA-Training> Set-Location powershell-thinkwright
+PS C:\Users\user14\QA-Training\powershell-thinkwright> git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+nothing to commit, working tree clean
+PS C:\Users\user14\QA-Training\powershell-thinkwright> git checkout -b MoNihal -branch
+Switched to a new branch 'ranch'
+PS C:\Users\user14\QA-Training\powershell-thinkwright> git checkout -b MoNihal-branch
+Switched to a new branch 'MoNihal-branch'
+PS C:\Users\user14\QA-Training\powershell-thinkwright> git status
+On branch MoNihal-branch
+nothing to commit, working tree clean
+PS C:\Users\user14\QA-Training\powershell-thinkwright> Stop-Transcript
+**********************
+Windows PowerShell transcript end
+End time: 20240603154328
+**********************
