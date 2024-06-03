@@ -1,0 +1,63 @@
+﻿**********************
+Windows PowerShell transcript start
+Start time: 20240603153246
+Username: THINKWRIGHT\user6
+RunAs User: THINKWRIGHT\user6
+Configuration Name: 
+Machine: DESKTOP-6 (Microsoft Windows NT 10.0.19045.0)
+Host Application: C:\Windows\system32\WindowsPowerShell\v1.0\PowerShell_ISE.exe
+Process ID: 12520
+PSVersion: 5.1.19041.4412
+PSEdition: Desktop
+PSCompatibleVersions: 1.0, 2.0, 3.0, 4.0, 5.0, 5.1.19041.4412
+BuildVersion: 10.0.19041.4412
+CLRVersion: 4.0.30319.42000
+WSManStackVersion: 3.0
+PSRemotingProtocolVersion: 2.3
+SerializationVersion: 1.1.0.1
+**********************
+Transcript started, output file is dhilipan_New.log
+PS C:\Users\user6\Desktop\Training\QA-Training> git --version
+git version 2.44.0.windows.1
+PS C:\Users\user6\Desktop\Training\QA-Training> git clone https://github.com/sureshnanjan/powershell-thinkwright.git
+git : Cloning into 'powershell-thinkwright'...
+At line:1 char:1
++ git clone https://github.com/sureshnanjan/powershell-thinkwright.git
++ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (Cloning into 'powershell-thinkwright'...:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+git : Cloning into 'powershell-thinkwright'...
+At line:1 char:1
++ git clone https://github.com/sureshnanjan/powershell-thinkwright.git
++ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (Cloning into 'powershell-thinkwright'...:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+
+PS C:\Users\user6\Desktop\Training\QA-Training> Set-Location C:\Users\user6\Desktop\Training\QA-Training\powershell-thinkwright
+PS C:\Users\user6\Desktop\Training\QA-Training\powershell-thinkwright> git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+nothing to commit, working tree clean
+PS C:\Users\user6\Desktop\Training\QA-Training\powershell-thinkwright> git checkout -b Dhilipan-branch
+git : Switched to a new branch 'Dhilipan-branch'
+At line:1 char:1
++ git checkout -b Dhilipan-branch
++ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (Switched to a n...hilipan-branch':String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+git : Switched to a new branch 'Dhilipan-branch'
+At line:1 char:1
++ git checkout -b Dhilipan-branch
++ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (Switched to a n...hilipan-branch':String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+
+PS C:\Users\user6\Desktop\Training\QA-Training\powershell-thinkwright> git status
+On branch Dhilipan-branch
+nothing to commit, working tree clean
+PS C:\Users\user6\Desktop\Training\QA-Training\powershell-thinkwright> Stop-Transcript 
+**********************
+Windows PowerShell transcript end
+End time: 20240603153352
+**********************
