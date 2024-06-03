@@ -1,0 +1,94 @@
+﻿**********************
+Windows PowerShell transcript start
+Start time: 20240603145744
+Username: THINKWRIGHT\user11
+RunAs User: THINKWRIGHT\user11
+Configuration Name: 
+Machine: DESKTOP-11 (Microsoft Windows NT 10.0.19045.0)
+Host Application: C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe
+Process ID: 10608
+PSVersion: 5.1.19041.4412
+PSEdition: Desktop
+PSCompatibleVersions: 1.0, 2.0, 3.0, 4.0, 5.0, 5.1.19041.4412
+BuildVersion: 10.0.19041.4412
+CLRVersion: 4.0.30319.42000
+WSManStackVersion: 3.0
+PSRemotingProtocolVersion: 2.3
+SerializationVersion: 1.1.0.1
+**********************
+Transcript started, output file is .\User11.log
+PS C:\User11> Stop-Transcript -patth User11.log
+>> TerminatingError(Stop-Transcript): "A parameter cannot be found that matches parameter name 'patth'."
+Stop-Transcript : A parameter cannot be found that matches parameter name 'patth'.
+At line:1 char:17
++ Stop-Transcript -patth User11.log
++                 ~~~~~~
+    + CategoryInfo          : InvalidArgument: (:) [Stop-Transcript], ParameterBindingException
+    + FullyQualifiedErrorId : NamedParameterNotFound,Microsoft.PowerShell.Commands.StopTranscriptCommand
+Stop-Transcript : A parameter cannot be found that matches parameter name 'patth'.
+At line:1 char:17
++ Stop-Transcript -patth User11.log
++                 ~~~~~~
+    + CategoryInfo          : InvalidArgument: (:) [Stop-Transcript], ParameterBindingException
+    + FullyQualifiedErrorId : NamedParameterNotFound,Microsoft.PowerShell.Commands.StopTranscriptCommand
+
+PS C:\User11> Stop-Transcript
+**********************
+Windows PowerShell transcript end
+End time: 20240603150609
+**********************
+**********************
+Windows PowerShell transcript start
+Start time: 20240603150924
+Username: THINKWRIGHT\user11
+RunAs User: THINKWRIGHT\user11
+Configuration Name: 
+Machine: DESKTOP-11 (Microsoft Windows NT 10.0.19045.0)
+Host Application: C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe
+Process ID: 10608
+PSVersion: 5.1.19041.4412
+PSEdition: Desktop
+PSCompatibleVersions: 1.0, 2.0, 3.0, 4.0, 5.0, 5.1.19041.4412
+BuildVersion: 10.0.19041.4412
+CLRVersion: 4.0.30319.42000
+WSManStackVersion: 3.0
+PSRemotingProtocolVersion: 2.3
+SerializationVersion: 1.1.0.1
+**********************
+Transcript started, output file is User11.log
+PS C:\User11> git clone https://github.com/sureshnanjan/powershell-thinkwright.git
+Cloning into 'powershell-thinkwright'...
+remote: Enumerating objects: 6, done.
+remote: Counting objects: 100% (6/6), done.
+remote: Compressing objects: 100% (5/5), done.
+remote: Total 6 (delta 0), reused 3 (delta 0), pack-reused 0
+Receiving objects: 100% (6/6), done.
+PS C:\User11> dir
+
+
+    Directory: C:\User11
+
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+d-----        03-06-2024     15:24                powershell-thinkwright
+-a----        03-06-2024     14:51       65350776 git-installer.exe
+-a----        03-06-2024     15:06           1694 User11.log
+
+
+PS C:\User11> Set-Location powershell-thinkwright
+PS C:\User11\powershell-thinkwright> git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+nothing to commit, working tree clean
+PS C:\User11\powershell-thinkwright> git checkout -b user11-branch
+Switched to a new branch 'user11-branch'
+PS C:\User11\powershell-thinkwright> git status
+On branch user11-branch
+nothing to commit, working tree clean
+PS C:\User11\powershell-thinkwright> Stop-Transcript
+**********************
+Windows PowerShell transcript end
+End time: 20240603152713
+**********************
