@@ -1,0 +1,474 @@
+﻿**********************
+Windows PowerShell transcript start
+Start time: 20240603144959
+Username: THINKWRIGHT\user12
+RunAs User: THINKWRIGHT\user12
+Configuration Name: 
+Machine: DESKTOP-12 (Microsoft Windows NT 10.0.19045.0)
+Host Application: C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe
+Process ID: 11816
+PSVersion: 5.1.19041.4412
+PSEdition: Desktop
+PSCompatibleVersions: 1.0, 2.0, 3.0, 4.0, 5.0, 5.1.19041.4412
+BuildVersion: 10.0.19041.4412
+CLRVersion: 4.0.30319.42000
+WSManStackVersion: 3.0
+PSRemotingProtocolVersion: 2.3
+SerializationVersion: 1.1.0.1
+**********************
+Transcript started, output file is Joseph.log
+PS C:\Users\user12\TrainData> Invoke-WebRequest -Uri https://github.com/git-for-windows/git/releases/download/v2.44.0.indows.1/Git-2.44.0-64-bit.exe -OutFile git-intsall.exe
+>> TerminatingError(Invoke-WebRequest): "The request was aborted: The connection was closed unexpectedly."
+Invoke-WebRequest : The request was aborted: The connection was closed unexpectedly.
+At line:1 char:1
++ Invoke-WebRequest -Uri https://github.com/git-for-windows/git/release ...
++ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : InvalidOperation: (System.Net.HttpWebRequest:HttpWebRequest) [Invoke-WebRequest], 
+WebException
+    + FullyQualifiedErrorId : WebCmdletWebResponseException,Microsoft.PowerShell.Commands.InvokeWebRequestCommand
+Invoke-WebRequest : The request was aborted: The connection was closed unexpectedly.
+At line:1 char:1
++ Invoke-WebRequest -Uri https://github.com/git-for-windows/git/release ...
++ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : InvalidOperation: (System.Net.HttpWebRequest:HttpWebRequest) [Invoke-WebRequest], WebExc
+   eption
+    + FullyQualifiedErrorId : WebCmdletWebResponseException,Microsoft.PowerShell.Commands.InvokeWebRequestCommand
+
+PS C:\Users\user12\TrainData> Invoke-WebRequest -Uri https://github.com/git-for-windows/git/releases/download/v2.44.0.indows.1/Git-2.44.0-64-bit.exe -OutFile git-intsall.exe
+>> TerminatingError(Invoke-WebRequest): "Skip to content 
+Navigation Menu
+Toggle navigation 
+Sign in 
+ 
+Product  
+Actions
+Automate any workflow 
+Packages
+Host and manage packages 
+Security
+Find and fix vulnerabilities 
+Codespaces
+Instant dev environments 
+Copilot
+Write better code with AI 
+Code review
+Manage code changes 
+Issues
+Plan and track work 
+Discussions
+Collaborate outside of code 
+Explore 
+All features 
+Documentation 
+GitHub Skills 
+Blog 
+Solutions  
+For 
+Enterprise 
+Teams 
+Startups 
+Education 
+By Solution 
+CI/CD & Automation 
+DevOps 
+DevSecOps 
+Resources 
+Learning Pathways 
+White papers, Ebooks, Webinars 
+Customer Stories 
+Partners 
+Open Source  
+GitHub Sponsors
+Fund open source developers 
+The ReadME Project
+GitHub community articles 
+Repositories 
+Topics 
+Trending 
+Collections 
+Enterprise  
+Enterprise platform
+AI-powered developer platform 
+Available add-ons 
+Advanced Security
+Enterprise-grade security features 
+Copilot Enterprise
+Enterprise-grade AI features 
+Premium Support
+Enterprise-grade 24/7 support 
+Pricing "
+Invoke-WebRequest : Skip to content 
+Navigation Menu
+Toggle navigation 
+Sign in 
+ 
+Product  
+Actions
+Automate any workflow 
+Packages
+Host and manage packages 
+Security
+Find and fix vulnerabilities 
+Codespaces
+Instant dev environments 
+Copilot
+Write better code with AI 
+Code review
+Manage code changes 
+Issues
+Plan and track work 
+Discussions
+Collaborate outside of code 
+Explore 
+All features 
+Documentation 
+GitHub Skills 
+Blog 
+Solutions  
+For 
+Enterprise 
+Teams 
+Startups 
+Education 
+By Solution 
+CI/CD & Automation 
+DevOps 
+DevSecOps 
+Resources 
+Learning Pathways 
+White papers, Ebooks, Webinars 
+Customer Stories 
+Partners 
+Open Source  
+GitHub Sponsors
+Fund open source developers 
+The ReadME Project
+GitHub community articles 
+Repositories 
+Topics 
+Trending 
+Collections 
+Enterprise  
+Enterprise platform
+AI-powered developer platform 
+Available add-ons 
+Advanced Security
+Enterprise-grade security features 
+Copilot Enterprise
+Enterprise-grade AI features 
+Premium Support
+Enterprise-grade 24/7 support 
+Pricing 
+At line:1 char:1
++ Invoke-WebRequest -Uri https://github.com/git-for-windows/git/release ...
++ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : InvalidOperation: (System.Net.HttpWebRequest:HttpWebRequest) [Invoke-WebRequest], 
+WebException
+    + FullyQualifiedErrorId : WebCmdletWebResponseException,Microsoft.PowerShell.Commands.InvokeWebRequestCommand
+Invoke-WebRequest : Skip to content
+Navigation Menu
+Toggle navigation
+Sign in
+
+Product
+Actions
+Automate any workflow
+Packages
+Host and manage packages
+Security
+Find and fix vulnerabilities
+Codespaces
+Instant dev environments
+Copilot
+Write better code with AI
+Code review
+Manage code changes
+Issues
+Plan and track work
+Discussions
+Collaborate outside of code
+Explore
+All features
+Documentation
+GitHub Skills
+Blog
+Solutions
+For
+Enterprise
+Teams
+Startups
+Education
+By Solution
+CI/CD & Automation
+DevOps
+DevSecOps
+Resources
+Learning Pathways
+White papers, Ebooks, Webinars
+Customer Stories
+Partners
+Open Source
+GitHub Sponsors
+Fund open source developers
+The ReadME Project
+GitHub community articles
+Repositories
+Topics
+Trending
+Collections
+Enterprise
+Enterprise platform
+AI-powered developer platform
+Available add-ons
+Advanced Security
+Enterprise-grade security features
+Copilot Enterprise
+Enterprise-grade AI features
+Premium Support
+Enterprise-grade 24/7 support
+Pricing
+At line:1 char:1
++ Invoke-WebRequest -Uri https://github.com/git-for-windows/git/release ...
++ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : InvalidOperation: (System.Net.HttpWebRequest:HttpWebRequest) [Invoke-WebRequest], WebExc
+   eption
+    + FullyQualifiedErrorId : WebCmdletWebResponseException,Microsoft.PowerShell.Commands.InvokeWebRequestCommand
+PS C:\Users\user12\TrainData> Invoke-WebRequest -Uri https://github.com/git-for-windows/git/releases/download/v2.44.0.indows.1/Git-2.44.0-64-bit.exe -OutFile git-intsall.exe
+>> TerminatingError(Invoke-WebRequest): "Skip to content Navigation MenuToggle navigation Sign in  Product  
+Actions
+Automate any workflow 
+Packages
+Host and manage packages 
+Security
+Find and fix vulnerabilities 
+Codespaces
+Instant dev environments 
+Copilot
+Write better code with AI 
+Code review
+Manage code changes 
+Issues
+Plan and track work 
+Discussions
+Collaborate outside of code 
+Explore
+ 
+All features 
+Documentation 
+GitHub Skills 
+Blog 
+Solutions  
+For
+ 
+Enterprise 
+Teams 
+Startups 
+Education 
+By Solution
+ 
+CI/CD & Automation 
+DevOps 
+DevSecOps 
+Resources
+ 
+Learning Pathways 
+White papers, Ebooks, Webinars 
+Customer Stories 
+Partners 
+Open Source  
+GitHub Sponsors
+Fund open source developers 
+The ReadME Project
+GitHub community articles 
+Repositories
+ 
+Topics 
+Trending 
+Collections 
+Enterprise  
+Enterprise platform
+AI-powered developer platform 
+Available add-ons
+ 
+Advanced Security
+Enterprise-grade security features 
+Copilot Enterprise
+Enterprise-grade AI features 
+Premium Support
+Enterprise-grade 24/7 support 
+Pricing
+ "
+Invoke-WebRequest : Skip to content Navigation MenuToggle navigation Sign in  Product  
+Actions
+Automate any workflow 
+Packages
+Host and manage packages 
+Security
+Find and fix vulnerabilities 
+Codespaces
+Instant dev environments 
+Copilot
+Write better code with AI 
+Code review
+Manage code changes 
+Issues
+Plan and track work 
+Discussions
+Collaborate outside of code 
+Explore
+ 
+All features 
+Documentation 
+GitHub Skills 
+Blog 
+Solutions  
+For
+ 
+Enterprise 
+Teams 
+Startups 
+Education 
+By Solution
+ 
+CI/CD & Automation 
+DevOps 
+DevSecOps 
+Resources
+ 
+Learning Pathways 
+White papers, Ebooks, Webinars 
+Customer Stories 
+Partners 
+Open Source  
+GitHub Sponsors
+Fund open source developers 
+The ReadME Project
+GitHub community articles 
+Repositories
+ 
+Topics 
+Trending 
+Collections 
+Enterprise  
+Enterprise platform
+AI-powered developer platform 
+Available add-ons
+ 
+Advanced Security
+Enterprise-grade security features 
+Copilot Enterprise
+Enterprise-grade AI features 
+Premium Support
+Enterprise-grade 24/7 support 
+Pricing
+ 
+At line:1 char:1
++ Invoke-WebRequest -Uri https://github.com/git-for-windows/git/release ...
++ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : InvalidOperation: (System.Net.HttpWebRequest:HttpWebRequest) [Invoke-WebRequest], 
+WebException
+    + FullyQualifiedErrorId : WebCmdletWebResponseException,Microsoft.PowerShell.Commands.InvokeWebRequestCommand
+Invoke-WebRequest : Skip to content Navigation MenuToggle navigation Sign in  Product
+Actions
+Automate any workflow
+Packages
+Host and manage packages
+Security
+Find and fix vulnerabilities
+Codespaces
+Instant dev environments
+Copilot
+Write better code with AI
+Code review
+Manage code changes
+Issues
+Plan and track work
+Discussions
+Collaborate outside of code
+Explore
+
+All features
+Documentation
+GitHub Skills
+Blog
+Solutions
+For
+
+Enterprise
+Teams
+Startups
+Education
+By Solution
+
+CI/CD & Automation
+DevOps
+DevSecOps
+Resources
+
+Learning Pathways
+White papers, Ebooks, Webinars
+Customer Stories
+Partners
+Open Source
+GitHub Sponsors
+Fund open source developers
+The ReadME Project
+GitHub community articles
+Repositories
+
+Topics
+Trending
+Collections
+Enterprise
+Enterprise platform
+AI-powered developer platform
+Available add-ons
+
+Advanced Security
+Enterprise-grade security features
+Copilot Enterprise
+Enterprise-grade AI features
+Premium Support
+Enterprise-grade 24/7 support
+Pricing
+
+At line:1 char:1
++ Invoke-WebRequest -Uri https://github.com/git-for-windows/git/release ...
++ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : InvalidOperation: (System.Net.HttpWebRequest:HttpWebRequest) [Invoke-WebRequest], WebExc
+   eption
+    + FullyQualifiedErrorId : WebCmdletWebResponseException,Microsoft.PowerShell.Commands.InvokeWebRequestCommand
+PS C:\Users\user12\TrainData> dir
+
+
+    Directory: C:\Users\user12\TrainData
+
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+-a----        03-06-2024     14:43         691131 GitHub-ProjectSetup.docx
+-a----        03-06-2024     14:49              0 Joseph.log
+
+
+PS C:\Users\user12\TrainData> .\Git-2.44.0-64-bit.exe /verysilent /norestart
+PS C:\Users\user12\TrainData> git --version
+git : The term 'git' is not recognized as the name of a cmdlet, function, script file, or operable program. Check the 
+spelling of the name, or if a path was included, verify that the path is correct and try again.
+At line:1 char:1
++ git --version
++ ~~~
+    + CategoryInfo          : ObjectNotFound: (git:String) [], CommandNotFoundException
+    + FullyQualifiedErrorId : CommandNotFoundException
+git : The term 'git' is not recognized as the name of a cmdlet, function, script file, or operable program. Check the
+spelling of the name, or if a path was included, verify that the path is correct and try again.
+At line:1 char:1
++ git --version
++ ~~~
+    + CategoryInfo          : ObjectNotFound: (git:String) [], CommandNotFoundException
+    + FullyQualifiedErrorId : CommandNotFoundException
+
+PS C:\Users\user12\TrainData> Stop-Transcript
+**********************
+Windows PowerShell transcript end
+End time: 20240603145744
+**********************
