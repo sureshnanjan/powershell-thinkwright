@@ -45,3 +45,7 @@ remote: Total 6 (delta 0), reused 3 (delta 0), pack-reused 0
 Receiving objects: 100% (6/6), done.
 PS C:\RajeshG\WorkingFolder> git status
 fatal: not a git repository (or any of the parent directories): .git
+
+
+
+
