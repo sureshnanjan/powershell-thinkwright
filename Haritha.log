@@ -1,0 +1,120 @@
+﻿**********************
+Windows PowerShell transcript start
+Start time: 20240603165923
+Username: THINKWRIGHT\user9
+RunAs User: THINKWRIGHT\user9
+Configuration Name: 
+Machine: DESKTOP-9 (Microsoft Windows NT 10.0.19045.0)
+Host Application: C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe
+Process ID: 1340
+PSVersion: 5.1.19041.4412
+PSEdition: Desktop
+PSCompatibleVersions: 1.0, 2.0, 3.0, 4.0, 5.0, 5.1.19041.4412
+BuildVersion: 10.0.19041.4412
+CLRVersion: 4.0.30319.42000
+WSManStackVersion: 3.0
+PSRemotingProtocolVersion: 2.3
+SerializationVersion: 1.1.0.1
+**********************
+Transcript started, output file is Haritha.log
+PS C:\Users\user9\powershell-thinkwright> git status
+On branch Haritha-branch
+Your branch is up to date with 'origin/Haritha-branch'.
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        Haritha.log
+
+nothing added to commit but untracked files present (use "git add" to track)
+PS C:\Users\user9\powershell-thinkwright> dir
+
+
+    Directory: C:\Users\user9\powershell-thinkwright
+
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+-a----        03-06-2024     16:59              0 Haritha.log
+-a----        03-06-2024     15:27             56 README.md
+
+
+PS C:\Users\user9\powershell-thinkwright> Get-ChildItem -Name *.log
+Haritha.log
+PS C:\Users\user9\powershell-thinkwright> move-item ..\Haritha.log .
+move-item : Cannot create a file when that file already exists.
+
+At line:1 char:1
++ move-item ..\Haritha.log .
++ ~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : WriteError: (C:\Users\user9\Haritha.log:FileInfo) [Move-Item], IOException
+    + FullyQualifiedErrorId : MoveFileInfoItemIOError,Microsoft.PowerShell.Commands.MoveItemCommand
+move-item : Cannot create a file when that file already exists.
+
+At line:1 char:1
++ move-item ..\Haritha.log .
++ ~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : WriteError: (C:\Users\user9\Haritha.log:FileInfo) [Move-Item], IOException
+    + FullyQualifiedErrorId : MoveFileInfoItemIOError,Microsoft.PowerShell.Commands.MoveItemCommand
+
+PS C:\Users\user9\powershell-thinkwright> git add .
+
+PS C:\Users\user9\powershell-thinkwright> git commit -m "adding first file to branch"
+[Haritha-branch c92f700] adding first file to branch
+ Committer: user9 <user9@thinkwright.in>
+Your name and email address were configured automatically based
+on your username and hostname. Please check that they are accurate.
+You can suppress this message by setting them explicitly. Run the
+following command and follow the instructions in your editor to edit
+your configuration file:
+
+    git config --global --edit
+
+After doing this, you may fix the identity used for this commit with:
+
+    git commit --amend --reset-author
+
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 Haritha.log
+PS C:\Users\user9\powershell-thinkwright> git status
+On branch Haritha-branch
+Your branch is ahead of 'origin/Haritha-branch' by 1 commit.
+  (use "git push" to publish your local commits)
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   Haritha.log
+
+no changes added to commit (use "git add" and/or "git commit -a")
+PS C:\Users\user9\powershell-thinkwright> cd powershell-thinkwright
+cd : Cannot find path 'C:\Users\user9\powershell-thinkwright\powershell-thinkwright' because it does not exist.
+At line:1 char:1
++ cd powershell-thinkwright
++ ~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : ObjectNotFound: (C:\Users\user9\...ell-thinkwright:String) [Set-Location], 
+ItemNotFoundException
+    + FullyQualifiedErrorId : PathNotFound,Microsoft.PowerShell.Commands.SetLocationCommand
+cd : Cannot find path 'C:\Users\user9\powershell-thinkwright\powershell-thinkwright' because it does not exist.
+At line:1 char:1
++ cd powershell-thinkwright
++ ~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : ObjectNotFound: (C:\Users\user9\...ell-thinkwright:String) [Set-Location], ItemNotFoundE
+   xception
+    + FullyQualifiedErrorId : PathNotFound,Microsoft.PowerShell.Commands.SetLocationCommand
+
+PS C:\Users\user9\powershell-thinkwright> git status
+On branch Haritha-branch
+Your branch is ahead of 'origin/Haritha-branch' by 1 commit.
+  (use "git push" to publish your local commits)
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   Haritha.log
+
+no changes added to commit (use "git add" and/or "git commit -a")
+PS C:\Users\user9\powershell-thinkwright> Start-Transcript -path Haritha.log
+**********************
+Windows PowerShell transcript end
+End time: 20240604142437
+**********************
