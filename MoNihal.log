@@ -80,3 +80,27 @@ PS C:\Users\user14\QA-Training\powershell-thinkwright> Stop-Transcript
 Windows PowerShell transcript end
 End time: 20240603154328
 **********************
+**********************
+Windows PowerShell transcript start
+Start time: 20240603165111
+Username: THINKWRIGHT\user14
+RunAs User: THINKWRIGHT\user14
+Configuration Name: 
+Machine: DESKTOP-14 (Microsoft Windows NT 10.0.19045.0)
+Host Application: C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe
+Process ID: 9068
+PSVersion: 5.1.19041.4412
+PSEdition: Desktop
+PSCompatibleVersions: 1.0, 2.0, 3.0, 4.0, 5.0, 5.1.19041.4412
+BuildVersion: 10.0.19041.4412
+CLRVersion: 4.0.30319.42000
+WSManStackVersion: 3.0
+PSRemotingProtocolVersion: 2.3
+SerializationVersion: 1.1.0.1
+**********************
+Transcript started, output file is MoNihal.log
+PS C:\Users\user14\QA-Training\powershell-thinkwright> Stop-Transcript
+**********************
+Windows PowerShell transcript end
+End time: 20240603165507
+**********************
