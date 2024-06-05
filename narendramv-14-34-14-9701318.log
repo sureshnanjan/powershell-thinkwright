@@ -1,0 +1,2563 @@
+﻿**********************
+Windows PowerShell transcript start
+Start time: 20240605152133
+Username: THINKWRIGHT\user16
+RunAs User: THINKWRIGHT\user16
+Configuration Name: 
+Machine: DESKTOP-16 (Microsoft Windows NT 10.0.19045.0)
+Host Application: C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe
+Process ID: 9640
+PSVersion: 5.1.19041.4412
+PSEdition: Desktop
+PSCompatibleVersions: 1.0, 2.0, 3.0, 4.0, 5.0, 5.1.19041.4412
+BuildVersion: 10.0.19041.4412
+CLRVersion: 4.0.30319.42000
+WSManStackVersion: 3.0
+PSRemotingProtocolVersion: 2.3
+SerializationVersion: 1.1.0.1
+**********************
+Transcript started, output file is C:\Users\user16\narendramv-14-34-14-9701318.log
+PS C:\Users\user16\powershell-thinkwright> Get-Command -Noun CSV
+
+CommandType     Name                                               Version    Source
+-----------     ----                                               -------    ------
+Cmdlet          ConvertFrom-Csv                                    3.1.0.0    Microsoft.PowerShell.Utility
+Cmdlet          ConvertTo-Csv                                      3.1.0.0    Microsoft.PowerShell.Utility
+Cmdlet          Export-Csv                                         3.1.0.0    Microsoft.PowerShell.Utility
+Cmdlet          Import-Csv                                         3.1.0.0    Microsoft.PowerShell.Utility
+
+
+PS C:\Users\user16\powershell-thinkwright> Get-Command -Noun CSV | fl Source
+
+
+Source : Microsoft.PowerShell.Utility
+
+Source : Microsoft.PowerShell.Utility
+
+Source : Microsoft.PowerShell.Utility
+
+Source : Microsoft.PowerShell.Utility
+
+
+
+PS C:\Users\user16\powershell-thinkwright> cd..
+PS C:\Users\user16> cls
+PS C:\Users\user16> dir
+
+
+    Directory: C:\Users\user16
+
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+d-r---        31-05-2024     17:44                3D Objects
+d-r---        31-05-2024     17:44                Contacts
+d-r---        31-05-2024     17:44                Desktop
+d-r---        05-06-2024     15:04                Documents
+d-r---        31-05-2024     17:44                Downloads
+d-r---        31-05-2024     17:44                Favorites
+d-r---        31-05-2024     17:44                Links
+d-r---        31-05-2024     17:44                Music
+d-r---        31-05-2024     17:44                OneDrive
+d-r---        31-05-2024     17:44                Pictures
+d-----        05-06-2024     14:20                powershell-thinkwright
+d-----        03-06-2024     15:32                QA-Training
+d-r---        31-05-2024     17:44                Saved Games
+d-r---        31-05-2024     17:44                Searches
+d-r---        31-05-2024     17:44                Videos
+-a----        05-06-2024     14:20            850 .viminfo
+-a----        03-06-2024     15:28       65350776 git-installer.exe
+-a----        05-06-2024     15:21            693 narendramv-14-34-14-9701318.log
+
+
+PS C:\Users\user16> cls
+PS C:\Users\user16> dir
+
+
+    Directory: C:\Users\user16
+
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+d-r---        31-05-2024     17:44                3D Objects
+d-r---        31-05-2024     17:44                Contacts
+d-r---        31-05-2024     17:44                Desktop
+d-r---        05-06-2024     15:04                Documents
+d-r---        31-05-2024     17:44                Downloads
+d-r---        31-05-2024     17:44                Favorites
+d-r---        31-05-2024     17:44                Links
+d-r---        31-05-2024     17:44                Music
+d-r---        31-05-2024     17:44                OneDrive
+d-r---        31-05-2024     17:44                Pictures
+d-----        05-06-2024     14:20                powershell-thinkwright
+d-----        03-06-2024     15:32                QA-Training
+d-r---        31-05-2024     17:44                Saved Games
+d-r---        31-05-2024     17:44                Searches
+d-r---        31-05-2024     17:44                Videos
+-a----        05-06-2024     14:20            850 .viminfo
+-a----        03-06-2024     15:28       65350776 git-installer.exe
+-a----        05-06-2024     15:21            693 narendramv-14-34-14-9701318.log
+
+
+PS C:\Users\user16> $out = Get-Command -Noun CSV
+PS C:\Users\user16> $out |Get-Member
+
+
+   TypeName: System.Management.Automation.CmdletInfo
+
+Name                MemberType     Definition
+----                ----------     ----------
+Equals              Method         bool Equals(System.Object obj)
+GetHashCode         Method         int GetHashCode()
+GetType             Method         type GetType()
+ResolveParameter    Method         System.Management.Automation.ParameterMetadata ResolveParameter(string name)
+ToString            Method         string ToString()
+CommandType         Property       System.Management.Automation.CommandTypes CommandType {get;}
+DefaultParameterSet Property       string DefaultParameterSet {get;}
+Definition          Property       string Definition {get;}
+HelpFile            Property       string HelpFile {get;}
+ImplementingType    Property       type ImplementingType {get;}
+Module              Property       psmoduleinfo Module {get;}
+ModuleName          Property       string ModuleName {get;}
+Name                Property       string Name {get;}
+Noun                Property       string Noun {get;}
+Options             Property       System.Management.Automation.ScopedItemOptions Options {get;set;}
+OutputType          Property       System.Collections.ObjectModel.ReadOnlyCollection[System.Management.Automation....
+Parameters          Property       System.Collections.Generic.Dictionary[string,System.Management.Automation.Param...
+ParameterSets       Property       System.Collections.ObjectModel.ReadOnlyCollection[System.Management.Automation....
+PSSnapIn            Property       System.Management.Automation.PSSnapInInfo PSSnapIn {get;}
+RemotingCapability  Property       System.Management.Automation.RemotingCapability RemotingCapability {get;}
+Source              Property       string Source {get;}
+Verb                Property       string Verb {get;}
+Version             Property       version Version {get;}
+Visibility          Property       System.Management.Automation.SessionStateEntryVisibility Visibility {get;set;}
+DLL                 ScriptProperty System.Object DLL {get=$this.ImplementingType.Assembly.Location;}
+HelpUri             ScriptProperty System.Object HelpUri {get=$oldProgressPreference = $ProgressPreference...
+
+
+PS C:\Users\user16> $out.GetType()
+
+IsPublic IsSerial Name                                     BaseType
+-------- -------- ----                                     --------
+True     True     Object[]                                 System.Array
+
+
+PS C:\Users\user16> $out[0].Source
+Microsoft.PowerShell.Utility
+PS C:\Users\user16> $out[1].Source
+Microsoft.PowerShell.Utility
+PS C:\Users\user16> $out[2].Source
+Microsoft.PowerShell.Utility
+PS C:\Users\user16> Get-Command -Noun Csv |fl source
+
+
+Source : Microsoft.PowerShell.Utility
+
+Source : Microsoft.PowerShell.Utility
+
+Source : Microsoft.PowerShell.Utility
+
+Source : Microsoft.PowerShell.Utility
+
+
+
+PS C:\Users\user16> Get-Alias
+
+CommandType     Name                                               Version    Source
+-----------     ----                                               -------    ------
+Alias           % -> ForEach-Object
+Alias           ? -> Where-Object
+Alias           ac -> Add-Content
+Alias           asnp -> Add-PSSnapin
+Alias           cat -> Get-Content
+Alias           cd -> Set-Location
+Alias           CFS -> ConvertFrom-String                          3.1.0.0    Microsoft.PowerShell.Utility
+Alias           chdir -> Set-Location
+Alias           clc -> Clear-Content
+Alias           clear -> Clear-Host
+Alias           clhy -> Clear-History
+Alias           cli -> Clear-Item
+Alias           clp -> Clear-ItemProperty
+Alias           cls -> Clear-Host
+Alias           clv -> Clear-Variable
+Alias           cnsn -> Connect-PSSession
+Alias           compare -> Compare-Object
+Alias           copy -> Copy-Item
+Alias           cp -> Copy-Item
+Alias           cpi -> Copy-Item
+Alias           cpp -> Copy-ItemProperty
+Alias           curl -> Invoke-WebRequest
+Alias           cvpa -> Convert-Path
+Alias           dbp -> Disable-PSBreakpoint
+Alias           del -> Remove-Item
+Alias           diff -> Compare-Object
+Alias           dir -> Get-ChildItem
+Alias           dnsn -> Disconnect-PSSession
+Alias           ebp -> Enable-PSBreakpoint
+Alias           echo -> Write-Output
+Alias           epal -> Export-Alias
+Alias           epcsv -> Export-Csv
+Alias           epsn -> Export-PSSession
+Alias           erase -> Remove-Item
+Alias           etsn -> Enter-PSSession
+Alias           exsn -> Exit-PSSession
+Alias           fc -> Format-Custom
+Alias           fhx -> Format-Hex                                  3.1.0.0    Microsoft.PowerShell.Utility
+Alias           fl -> Format-List
+Alias           foreach -> ForEach-Object
+Alias           ft -> Format-Table
+Alias           fw -> Format-Wide
+Alias           gal -> Get-Alias
+Alias           gbp -> Get-PSBreakpoint
+Alias           gc -> Get-Content
+Alias           gcb -> Get-Clipboard                               3.1.0.0    Microsoft.PowerShell.Management
+Alias           gci -> Get-ChildItem
+Alias           gcm -> Get-Command
+Alias           gcs -> Get-PSCallStack
+Alias           gdr -> Get-PSDrive
+Alias           ghy -> Get-History
+Alias           gi -> Get-Item
+Alias           gin -> Get-ComputerInfo                            3.1.0.0    Microsoft.PowerShell.Management
+Alias           gjb -> Get-Job
+Alias           gl -> Get-Location
+Alias           gm -> Get-Member
+Alias           gmo -> Get-Module
+Alias           gp -> Get-ItemProperty
+Alias           gps -> Get-Process
+Alias           gpv -> Get-ItemPropertyValue
+Alias           group -> Group-Object
+Alias           gsn -> Get-PSSession
+Alias           gsnp -> Get-PSSnapin
+Alias           gsv -> Get-Service
+Alias           gtz -> Get-TimeZone                                3.1.0.0    Microsoft.PowerShell.Management
+Alias           gu -> Get-Unique
+Alias           gv -> Get-Variable
+Alias           gwmi -> Get-WmiObject
+Alias           h -> Get-History
+Alias           history -> Get-History
+Alias           icm -> Invoke-Command
+Alias           iex -> Invoke-Expression
+Alias           ihy -> Invoke-History
+Alias           ii -> Invoke-Item
+Alias           ipal -> Import-Alias
+Alias           ipcsv -> Import-Csv
+Alias           ipmo -> Import-Module
+Alias           ipsn -> Import-PSSession
+Alias           irm -> Invoke-RestMethod
+Alias           ise -> powershell_ise.exe
+Alias           iwmi -> Invoke-WmiMethod
+Alias           iwr -> Invoke-WebRequest
+Alias           kill -> Stop-Process
+Alias           lp -> Out-Printer
+Alias           ls -> Get-ChildItem
+Alias           man -> help
+Alias           md -> mkdir
+Alias           measure -> Measure-Object
+Alias           mi -> Move-Item
+Alias           mount -> New-PSDrive
+Alias           move -> Move-Item
+Alias           mp -> Move-ItemProperty
+Alias           mv -> Move-Item
+Alias           nal -> New-Alias
+Alias           ndr -> New-PSDrive
+Alias           ni -> New-Item
+Alias           nmo -> New-Module
+Alias           npssc -> New-PSSessionConfigurationFile
+Alias           nsn -> New-PSSession
+Alias           nv -> New-Variable
+Alias           ogv -> Out-GridView
+Alias           oh -> Out-Host
+Alias           popd -> Pop-Location
+Alias           ps -> Get-Process
+Alias           pushd -> Push-Location
+Alias           pwd -> Get-Location
+Alias           r -> Invoke-History
+Alias           rbp -> Remove-PSBreakpoint
+Alias           rcjb -> Receive-Job
+Alias           rcsn -> Receive-PSSession
+Alias           rd -> Remove-Item
+Alias           rdr -> Remove-PSDrive
+Alias           ren -> Rename-Item
+Alias           ri -> Remove-Item
+Alias           rjb -> Remove-Job
+Alias           rm -> Remove-Item
+Alias           rmdir -> Remove-Item
+Alias           rmo -> Remove-Module
+Alias           rni -> Rename-Item
+Alias           rnp -> Rename-ItemProperty
+Alias           rp -> Remove-ItemProperty
+Alias           rsn -> Remove-PSSession
+Alias           rsnp -> Remove-PSSnapin
+Alias           rujb -> Resume-Job
+Alias           rv -> Remove-Variable
+Alias           rvpa -> Resolve-Path
+Alias           rwmi -> Remove-WmiObject
+Alias           sajb -> Start-Job
+Alias           sal -> Set-Alias
+Alias           saps -> Start-Process
+Alias           sasv -> Start-Service
+Alias           sbp -> Set-PSBreakpoint
+Alias           sc -> Set-Content
+Alias           scb -> Set-Clipboard                               3.1.0.0    Microsoft.PowerShell.Management
+Alias           select -> Select-Object
+Alias           set -> Set-Variable
+Alias           shcm -> Show-Command
+Alias           si -> Set-Item
+Alias           sl -> Set-Location
+Alias           sleep -> Start-Sleep
+Alias           sls -> Select-String
+Alias           sort -> Sort-Object
+Alias           sp -> Set-ItemProperty
+Alias           spjb -> Stop-Job
+Alias           spps -> Stop-Process
+Alias           spsv -> Stop-Service
+Alias           start -> Start-Process
+Alias           stz -> Set-TimeZone                                3.1.0.0    Microsoft.PowerShell.Management
+Alias           sujb -> Suspend-Job
+Alias           sv -> Set-Variable
+Alias           swmi -> Set-WmiInstance
+Alias           tee -> Tee-Object
+Alias           trcm -> Trace-Command
+Alias           type -> Get-Content
+Alias           wget -> Invoke-WebRequest
+Alias           where -> Where-Object
+Alias           wjb -> Wait-Job
+Alias           write -> Write-Output
+
+
+PS C:\Users\user16> Get-Alias -Name dir
+
+CommandType     Name                                               Version    Source
+-----------     ----                                               -------    ------
+Alias           dir -> Get-ChildItem
+
+
+PS C:\Users\user16> Get-ChildItem
+
+
+    Directory: C:\Users\user16
+
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+d-r---        31-05-2024     17:44                3D Objects
+d-r---        31-05-2024     17:44                Contacts
+d-r---        31-05-2024     17:44                Desktop
+d-r---        05-06-2024     15:04                Documents
+d-r---        31-05-2024     17:44                Downloads
+d-r---        31-05-2024     17:44                Favorites
+d-r---        31-05-2024     17:44                Links
+d-r---        31-05-2024     17:44                Music
+d-r---        31-05-2024     17:44                OneDrive
+d-r---        31-05-2024     17:44                Pictures
+d-----        05-06-2024     14:20                powershell-thinkwright
+d-----        03-06-2024     15:32                QA-Training
+d-r---        31-05-2024     17:44                Saved Games
+d-r---        31-05-2024     17:44                Searches
+d-r---        31-05-2024     17:44                Videos
+-a----        05-06-2024     14:20            850 .viminfo
+-a----        03-06-2024     15:28       65350776 git-installer.exe
+-a----        05-06-2024     15:25           6988 narendramv-14-34-14-9701318.log
+
+
+PS C:\Users\user16> dir
+
+
+    Directory: C:\Users\user16
+
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+d-r---        31-05-2024     17:44                3D Objects
+d-r---        31-05-2024     17:44                Contacts
+d-r---        31-05-2024     17:44                Desktop
+d-r---        05-06-2024     15:04                Documents
+d-r---        31-05-2024     17:44                Downloads
+d-r---        31-05-2024     17:44                Favorites
+d-r---        31-05-2024     17:44                Links
+d-r---        31-05-2024     17:44                Music
+d-r---        31-05-2024     17:44                OneDrive
+d-r---        31-05-2024     17:44                Pictures
+d-----        05-06-2024     14:20                powershell-thinkwright
+d-----        03-06-2024     15:32                QA-Training
+d-r---        31-05-2024     17:44                Saved Games
+d-r---        31-05-2024     17:44                Searches
+d-r---        31-05-2024     17:44                Videos
+-a----        05-06-2024     14:20            850 .viminfo
+-a----        03-06-2024     15:28       65350776 git-installer.exe
+-a----        05-06-2024     15:25           6988 narendramv-14-34-14-9701318.log
+
+
+PS C:\Users\user16> Get-Alias -Name ls
+
+CommandType     Name                                               Version    Source
+-----------     ----                                               -------    ------
+Alias           ls -> Get-ChildItem
+
+
+PS C:\Users\user16> New-Alias -Name Machaovlu -Value Get-Process
+PS C:\Users\user16> machavolu
+machavolu : The term 'machavolu' is not recognized as the name of a cmdlet, function, script file, or operable program. 
+Check the spelling of the name, or if a path was included, verify that the path is correct and try again.
+At line:1 char:1
++ machavolu
++ ~~~~~~~~~
+    + CategoryInfo          : ObjectNotFound: (machavolu:String) [], CommandNotFoundException
+    + FullyQualifiedErrorId : CommandNotFoundException
+machavolu : The term 'machavolu' is not recognized as the name of a cmdlet, function, script file, or operable
+program. Check the spelling of the name, or if a path was included, verify that the path is correct and try again.
+At line:1 char:1
++ machavolu
++ ~~~~~~~~~
+    + CategoryInfo          : ObjectNotFound: (machavolu:String) [], CommandNotFoundException
+    + FullyQualifiedErrorId : CommandNotFoundException
+
+PS C:\Users\user16> Machaovlu
+
+Handles  NPM(K)    PM(K)      WS(K)     CPU(s)     Id  SI ProcessName
+-------  ------    -----      -----     ------     --  -- -----------
+    135       7     1412       6780              3376   0 AggregatorHost
+    269      16     5084      26480       0.48   7004   3 ApplicationFrameHost
+    144       7     1456       8988       0.05   9376   3 CompPkgSrv
+    271      13     5376      18356      34.38   4424   3 conhost
+    273      14     6152      18808       6.27   5908   3 conhost
+    556      21     1796       5512               488   0 csrss
+    170       9     1664       5020               580   1 csrss
+    384      12     2068       6016              4336   2 csrss
+    602      16     2800       7096              7744   3 csrss
+    361      15     3384      14432              6088   2 ctfmon
+    469      17     4720      22204       6.36   8828   3 ctfmon
+    199      17     3620      11652              3236   0 dllhost
+    148       9     2052       8184       0.23   6888   3 dllhost
+    286      16     4264      14596       0.36  12072   3 dllhost
+    732      24    15252      48260               492   1 dwm
+   1074      35    54512      92236              4056   3 dwm
+    780      30    19100      46116              5544   2 dwm
+   1632      66    34724     112908               732   2 explorer
+   2661     123    78916     224280      89.19   8008   3 explorer
+    127       8     1320       7224              8404   0 fodhelper
+     36       5     1208       3868               892   1 fontdrvhost
+     36       5     1276       3972               900   0 fontdrvhost
+     36       5     1496       4708              4968   2 fontdrvhost
+     36       6     2348       5832              7888   3 fontdrvhost
+      0       0       60          8                 0   0 Idle
+    178      10     1772       9272              1808   0 igfxCUIService
+    162       8     1396       7696              1460   0 IntelCpHDCPSvc
+    641      35    20992      66668               416   1 LogonUI
+    525      30    29516      63848              2500   2 LogonUI
+   1654      32     9016      24804               724   0 lsass
+      0       0      476     115224              2204   0 Memory Compression
+    211      13     2112       4516              6052   0 MicrosoftEdgeUpdate
+    351      19     9700      25648              5964   0 MoUsoCoreWorker
+    457      15     7632      20300              8184   0 MpDefenderCoreService
+    261      18    18272       7480       0.28   3288   3 msedge
+    447      27   115640     147228      12.09   4768   3 msedge
+    273      19    30092       8904       0.53   4972   3 msedge
+    303      16     9748      29184              5468   2 msedge
+   1887      69    83820     187624      44.75   6292   3 msedge
+    409      27   261316      32708      23.72   7596   3 msedge
+    331      19    17008      42088      11.25   7600   3 msedge
+    848      27   110164     117036      19.17   8340   3 msedge
+    200       9     2148       8772       0.06   8584   3 msedge
+    298      18    21156       8728       0.48   8812   3 msedge
+    255      14     8156      25408       0.41   9284   3 msedge
+    208      15    13692      27320       0.05   9508   3 msedge
+    193      12     7516      19196       0.11  10100   3 msedge
+    300      16    15224      33212             10608   2 msedge
+   1161      36    40008      96032             11168   2 msedge
+    176      11     6968      17508             11236   2 msedge
+    355      28   141960     179072      19.78  11504   3 msedge
+    144       9     2096       8264             12124   2 msedge
+    778     189   282476     167752              3960   0 MsMpEng
+    217      40     3848      11384             10244   0 NisSrv
+    494      27     8520      34860       0.92   9900   3 notepad
+    551      27    38932      46720              3076   0 OneApp.IGCC.WinService
+    869      51    53700     118720       3.44   8768   3 OneDrive
+    871      51    53752     118468             10496   2 OneDrive
+   1483     110    56496     170016       3.31   7876   3 PhoneExperienceHost
+    728      34    74320      95604       5.50   9640   3 powershell
+    810      38    64164     110268      40.23  10988   3 powershell
+    321      13     2500      12100              4348   2 rdpclip
+    349      14     3284      13832       4.06   6960   3 rdpclip
+      0      15     4752     130056               108   0 Registry
+    222      12     2516      13696              4352   2 RuntimeBroker
+    341      18     6260      28708              5704   2 RuntimeBroker
+    466      23     9656      33936              6200   2 RuntimeBroker
+    355      20     6784      32292       2.95   8540   3 RuntimeBroker
+    662      33    29080      60072      16.05  10336   3 RuntimeBroker
+    290      16     5404      19004       0.36  10832   3 RuntimeBroker
+    311      18    10252      28868       6.53  11392   3 RuntimeBroker
+   1204     113   155612     225748              2624   2 SearchApp
+   2059     143   237956     324548      58.25  10292   3 SearchApp
+    779      55    30564      44696              3848   0 SearchIndexer
+    439      15     5204      15360              7124   0 SecurityHealthService
+    167       9     1900       9616              7084   2 SecurityHealthSystray
+    167       9     1892       9980       0.25   8444   3 SecurityHealthSystray
+    716      14     6260      14300               712   0 services
+    105       7     4136       7452              5208   0 SgrmBroker
+    583      28    17164      65032       1.02   4636   3 ShellExperienceHost
+    454      17     6060      26440              3308   2 sihost
+    538      18     6584      29320      19.13   7436   3 sihost
+     59       3     1064       1188               368   0 smss
+    548      25     7984      23072              3036   0 spoolsv
+    655      31    18308      64508              1452   2 StartMenuExperienceHost
+    647      33    23700      81244       4.02   4020   3 StartMenuExperienceHost
+    431      12     3396      11572               328   0 svchost
+    436      20     7260      31296               476   2 svchost
+   1834      22    19096      37972               860   0 svchost
+    335      18    11524      28000               876   0 svchost
+   1293      19    12108      20624               984   0 svchost
+    889      35    88020      89748              1096   0 svchost
+    205      12     1768       7888              1144   0 svchost
+    149      23     5072       9588              1152   0 svchost
+    225      10     2260       7968              1236   0 svchost
+    451      14    16328      19316              1268   0 svchost
+    215      12     2572      10648              1276   0 svchost
+    293      14     3660      21408       1.44   1288   3 svchost
+    394      17     6768      16564              1296   0 svchost
+    323      16     3528      10028              1388   0 svchost
+    391      20     7836      26548              1476   0 svchost
+    186       9     2020       8096              1500   0 svchost
+    417      16     4444      13592              1508   0 svchost
+    194       7     1724       6676              1544   0 svchost
+    407      31    11572      20924              1688   0 svchost
+    178       9     1868       8400              1704   0 svchost
+    241       7     1340       6124              1728   0 svchost
+    654      13     4992      17948              1780   0 svchost
+    435       9     2364      12780              1784   0 svchost
+    486      12     3168      10308              1832   0 svchost
+    265      13     2564      11320              1856   0 svchost
+    194      10     2628       9680              1908   0 svchost
+    131       8     1404       7476              1920   0 svchost
+    278      15     3748      15896              2056   0 svchost
+    265      14     3104      13148              2144   0 svchost
+    217      11     2192       9532              2220   0 svchost
+    197      10     1880       8952              2228   0 svchost
+    239      13     3176      11176              2240   0 svchost
+    262      10     2780      10164              2380   0 svchost
+    204      11     2076       9300              2400   0 svchost
+    245      15     2408      11104              2488   0 svchost
+    385      15     9936      21028              2596   0 svchost
+    383      17     2924      11832              2648   0 svchost
+    345      13     3148      14056              2676   0 svchost
+    328      28     7580      19144              2708   0 svchost
+    345      19    34192      43712              2744   0 svchost
+    597      28    25792      53212              2788   0 svchost
+    215      12     2432      11092              2824   0 svchost
+    383      13     2260      10040              2832   0 svchost
+    203      13     2316      13040              2892   0 svchost
+    187      15    17824      26936              2908   0 svchost
+    135       7     1312       6020              3184   0 svchost
+    204      11     2332       9420              3224   0 svchost
+    388      19     4664      21868              3248   0 svchost
+    116       7     1308       5856              3272   0 svchost
+    214       9     1816       8432              3400   0 svchost
+    122       8     1284       5820              4168   0 svchost
+    275      16     4180      20844              4272   0 svchost
+    417      21    11412      23384              4408   0 svchost
+    216      11     1888       8600              4412   0 svchost
+    438      25     5320      20936              4780   2 svchost
+    227      15     3684      13772              4784   0 svchost
+    425      20     4144      19200              4956   0 svchost
+    235      12     3024      17208              5036   2 svchost
+    191       9     1744       7636              5344   0 svchost
+    285      12     4652      10164              5400   0 svchost
+    193      15     6152      10004              5556   0 svchost
+    292      14     3936      17236              5608   2 svchost
+    150      10     1712       8676              5776   0 svchost
+    217      15     2044       7896              5872   0 svchost
+    342      20     4872      18836              5900   0 svchost
+    169      11     1588       7820              6172   0 svchost
+    177       9     1844       8300              6452   0 svchost
+    314      15     6608      22800       1.48   6660   3 svchost
+    423      19     6292      28652       1.53   6732   3 svchost
+    230      12     2528      12248              7028   0 svchost
+    186      10     1820       9300              7272   0 svchost
+    145       9     1584      11472              7400   0 svchost
+    522      26     6096      24268       0.64  10916   3 svchost
+   4004       0      208       4676                 4   0 System
+    257      27     6148      15780              1516   2 taskhostw
+    307      29     6948      19192       1.77   7112   3 taskhostw
+    555      23    15276      56152       1.33  11976   3 TextInputHost
+    210      58    38628      41652              7764   0 TiWorker
+    138       8     4152       8444              8480   0 TrustedInstaller
+    121       7     1360       6456               912   0 uhssvc
+    164      11     1392       7172               572   0 wininit
+    213      10     2072      10948               640   1 winlogon
+    263      11     2200      12712              4012   2 winlogon
+    261      11     2316      10276              6964   3 winlogon
+     69       5      752       3696              3260   0 wlms
+    355      14    16416      35596              4500   0 WUDFHost
+
+
+PS C:\Users\user16> Get-Help
+
+TOPIC
+    Windows PowerShell Help System
+
+SHORT DESCRIPTION
+    Displays help about Windows PowerShell cmdlets and concepts. 
+
+LONG DESCRIPTION
+    Windows PowerShell Help describes Windows PowerShell cmdlets,
+    functions, scripts, and modules, and explains concepts, including
+    the elements of the Windows PowerShell language.
+
+    Windows PowerShell does not include help files, but you can read the
+    help topics online, or use the Update-Help cmdlet to download help files
+    to your computer and then use the Get-Help cmdlet to display the help
+    topics at the command line.
+
+    You can also use the Update-Help cmdlet to download updated help files
+    as they are released so that your local help content is never obsolete. 
+
+    Without help files, Get-Help displays auto-generated help for cmdlets, 
+    functions, and scripts.
+
+
+  ONLINE HELP    
+    You can find help for Windows PowerShell online in the TechNet Library
+    beginning at http://go.microsoft.com/fwlink/?LinkID=108518. 
+
+    To open online help for any cmdlet or function, type:
+
+        Get-Help <cmdlet-name> -Online    
+
+  UPDATE-HELP
+    To download and install help files on your computer:
+
+       1. Start Windows PowerShell with the "Run as administrator" option.
+       2. Type:
+
+          Update-Help
+
+    After the help files are installed, you can use the Get-Help cmdlet to
+    display the help topics. You can also use the Update-Help cmdlet to
+    download updated help files so that your local help files are always
+    up-to-date.
+    
+    For more information about the Update-Help cmdlet, type:
+
+       Get-Help Update-Help -Online
+
+    or go to: http://go.microsoft.com/fwlink/?LinkID=210614
+
+
+  GET-HELP
+    The Get-Help cmdlet displays help at the command line from content in
+    help files on your computer. Without help files, Get-Help displays basic
+    help about cmdlets and functions. You can also use Get-Help to display
+    online help for cmdlets and functions.
+
+    To get help for a cmdlet, type:
+
+        Get-Help <cmdlet-name>
+    
+    To get online help, type:
+   
+        Get-Help <cmdlet-name> -Online    
+
+    The titles of conceptual topics begin with "About_".
+    To get help for a concept or language element, type:
+
+        Get-Help About_<topic-name>
+
+    To search for a word or phrase in all help files, type:
+
+        Get-Help <search-term>
+
+    For more information about the Get-Help cmdlet, type:
+
+        Get-Help Get-Help -Online
+
+    or go to: http://go.microsoft.com/fwlink/?LinkID=113316
+
+
+  EXAMPLES:
+      Save-Help              : Download help files from the Internet and saves
+                               them on a file share.
+      Update-Help            : Downloads and installs help files from the
+                               Internet or a file share.
+      Get-Help Get-Process   : Displays help about the Get-Process cmdlet.   
+      Get-Help Get-Process -Online
+                             : Opens online help for the Get-Process cmdlet.                            
+      Help Get-Process       : Displays help about Get-Process one page at a time.
+      Get-Process -?         : Displays help about the Get-Process cmdlet.      
+      Get-Help About_Modules : Displays help about Windows PowerShell modules.
+      Get-Help remoting      : Searches the help topics for the word "remoting."
+
+  SEE ALSO:
+      about_Updatable_Help
+      Get-Help
+      Save-Help
+      Update-Help
+PS C:\Users\user16> Get-WindowsUpdateLog
+
+Converting C:\Windows\logs\WindowsUpdate into C:\Users\user16\Desktop\WindowsUpdate.log ...
+
+
+    Directory: C:\Users\user16\AppData\Local\Temp\WindowsUpdateLog
+
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+d-----        05-06-2024     15:35                SymCache
+
+Input
+----------------
+File(s):
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240531.105956.180.9.etl
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240531.105956.180.10.etl
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240531.105956.180.11.etl
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240531.105956.180.12.etl
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240531.105956.180.13.etl
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240531.105956.180.14.etl
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240531.105956.180.15.etl
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240531.105956.180.16.etl
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240531.105956.180.17.etl
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240531.105956.180.18.etl
+
+0.00%4.69%9.38%14.08%18.77%23.46%28.15%32.84%37.54%42.23%46.92%51.61%56.30%61.00%65.69%70.38%75.07%79.77%84.46%89.15%93.84%98.53%100.00%
+
+Output
+----------------
+DumpFile:           C:\Users\user16\AppData\Local\Temp\WindowsUpdateLog\wuetl.CSV.tmp.00000
+
+The command completed successfully.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Input
+----------------
+File(s):
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240531.105956.180.19.etl
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240531.105956.180.20.etl
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240531.105956.180.21.etl
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240531.105956.180.22.etl
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240531.105956.180.23.etl
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240531.105956.180.24.etl
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240531.105956.180.25.etl
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240531.105956.180.26.etl
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240531.105956.180.27.etl
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240531.105956.180.28.etl
+
+0.00%5.02%10.03%15.05%20.06%25.08%30.09%35.11%40.13%45.14%50.16%55.17%60.19%65.20%70.22%75.24%80.25%85.27%90.28%95.30%100.00%
+
+Output
+----------------
+DumpFile:           C:\Users\user16\AppData\Local\Temp\WindowsUpdateLog\wuetl.CSV.tmp.00001
+
+The command completed successfully.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Input
+----------------
+File(s):
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240531.112726.087.1.etl
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240531.114226.251.1.etl
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240531.114226.251.2.etl
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240531.114226.251.3.etl
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240531.120912.659.1.etl
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240531.120912.659.2.etl
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240531.120912.659.3.etl
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240531.120912.659.4.etl
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240531.120912.659.5.etl
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240531.120912.659.6.etl
+
+0.00%5.42%10.85%16.27%21.69%27.12%32.54%37.97%43.39%48.81%54.24%59.66%65.08%70.51%75.93%81.36%86.78%92.20%97.63%100.00%
+
+Output
+----------------
+DumpFile:           C:\Users\user16\AppData\Local\Temp\WindowsUpdateLog\wuetl.CSV.tmp.00002
+
+The command completed successfully.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Input
+----------------
+File(s):
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240531.120912.659.7.etl
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240531.120912.659.8.etl
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240531.120912.659.9.etl
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240531.120912.659.10.etl
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240531.120912.659.11.etl
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240531.120912.659.12.etl
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240531.120912.659.13.etl
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240531.120912.659.14.etl
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240531.120912.659.15.etl
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240531.120912.659.16.etl
+
+0.00%4.69%9.38%14.08%18.77%23.46%28.15%32.84%37.54%42.23%46.92%51.61%56.30%61.00%65.69%70.38%75.07%79.77%84.46%89.15%93.84%98.53%100.00%
+
+Output
+----------------
+DumpFile:           C:\Users\user16\AppData\Local\Temp\WindowsUpdateLog\wuetl.CSV.tmp.00003
+
+The command completed successfully.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Input
+----------------
+File(s):
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240531.120912.659.17.etl
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240531.120912.659.18.etl
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240531.120912.659.19.etl
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240531.120912.659.20.etl
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240531.120912.659.21.etl
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240531.120912.659.22.etl
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240531.120912.659.23.etl
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240531.120912.659.24.etl
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240531.120912.659.25.etl
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240531.120912.659.26.etl
+
+0.00%4.69%9.38%14.08%18.77%23.46%28.15%32.84%37.54%42.23%46.92%51.61%56.30%61.00%65.69%70.38%75.07%79.77%84.46%89.15%93.84%98.53%100.00%
+
+Output
+----------------
+DumpFile:           C:\Users\user16\AppData\Local\Temp\WindowsUpdateLog\wuetl.CSV.tmp.00004
+
+The command completed successfully.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Input
+----------------
+File(s):
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240531.120912.659.27.etl
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240531.120912.659.28.etl
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240531.120912.659.29.etl
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240531.120912.659.30.etl
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240531.120912.659.31.etl
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240531.120912.659.32.etl
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240531.120912.659.33.etl
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240531.120912.659.34.etl
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240531.120912.659.35.etl
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240531.120912.659.36.etl
+
+0.00%4.68%9.36%14.04%18.71%23.39%28.07%32.75%37.43%42.11%46.78%51.46%56.14%60.82%65.50%70.18%74.85%79.53%84.21%88.89%93.57%98.25%100.00%
+
+Output
+----------------
+DumpFile:           C:\Users\user16\AppData\Local\Temp\WindowsUpdateLog\wuetl.CSV.tmp.00005
+
+The command completed successfully.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Input
+----------------
+File(s):
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240531.120912.659.37.etl
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240531.122758.176.1.etl
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240531.130453.419.1.etl
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240531.130453.419.2.etl
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240531.130453.419.3.etl
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240531.140912.619.1.etl
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240531.150912.607.1.etl
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240531.154242.777.1.etl
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240531.160743.062.1.etl
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240531.170912.573.1.etl
+
+0.00%7.62%15.24%22.86%30.48%38.10%45.71%53.33%60.95%68.57%76.19%83.81%91.43%99.05%100.00%
+
+Output
+----------------
+DumpFile:           C:\Users\user16\AppData\Local\Temp\WindowsUpdateLog\wuetl.CSV.tmp.00006
+
+The command completed successfully.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Input
+----------------
+File(s):
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240531.174429.313.1.etl
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240531.174429.313.2.etl
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240601.035327.361.1.etl
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240601.101420.050.1.etl
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240601.110008.167.1.etl
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240601.110008.167.2.etl
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240601.114454.347.1.etl
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240601.114454.347.2.etl
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240601.114454.347.3.etl
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240601.133043.603.1.etl
+
+0.00%7.31%14.61%21.92%29.22%36.53%43.84%51.14%58.45%65.75%73.06%80.37%87.67%94.98%100.00%
+
+Output
+----------------
+DumpFile:           C:\Users\user16\AppData\Local\Temp\WindowsUpdateLog\wuetl.CSV.tmp.00007
+
+The command completed successfully.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Input
+----------------
+File(s):
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240601.133043.603.2.etl
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240601.133043.603.3.etl
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240601.134400.061.1.etl
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240601.152944.048.1.etl
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240602.033530.303.1.etl
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240602.101356.061.1.etl
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240602.103055.477.1.etl
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240602.103055.477.2.etl
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240602.103055.477.3.etl
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240602.104454.242.1.etl
+
+0.00%8.42%16.84%25.26%33.68%42.11%50.53%58.95%67.37%75.79%84.21%92.63%100.00%
+
+Output
+----------------
+DumpFile:           C:\Users\user16\AppData\Local\Temp\WindowsUpdateLog\wuetl.CSV.tmp.00008
+
+The command completed successfully.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Input
+----------------
+File(s):
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240602.104454.242.2.etl
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240602.104454.242.3.etl
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240602.110253.324.1.etl
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240602.110253.324.2.etl
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240602.122941.063.1.etl
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240602.124416.056.1.etl
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240602.182828.607.1.etl
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240603.043339.838.1.etl
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240603.085952.600.1.etl
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240603.094454.557.1.etl
+
+0.00%9.82%19.63%29.45%39.26%49.08%58.90%68.71%78.53%88.34%98.16%100.00%
+
+Output
+----------------
+DumpFile:           C:\Users\user16\AppData\Local\Temp\WindowsUpdateLog\wuetl.CSV.tmp.00009
+
+The command completed successfully.
+
+
+
+
+
+
+
+
+
+
+
+
+
+Input
+----------------
+File(s):
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240603.094454.557.2.etl
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240603.094454.557.3.etl
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240603.101411.057.1.etl
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240603.110004.600.1.etl
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240603.114429.067.1.etl
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240603.145550.558.1.etl
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240604.044533.704.1.etl
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240604.083938.903.1.etl
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240604.083938.903.2.etl
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240604.083938.903.3.etl
+
+0.00%8.25%16.49%24.74%32.99%41.24%49.48%57.73%65.98%74.23%82.47%90.72%98.97%100.00%
+
+Output
+----------------
+DumpFile:           C:\Users\user16\AppData\Local\Temp\WindowsUpdateLog\wuetl.CSV.tmp.00010
+
+The command completed successfully.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+PS C:\Users\user16> TerminatingError(): "The pipeline has been stopped."
+>> TerminatingError(): "The pipeline has been stopped."
+>> TerminatingError(): "The pipeline has been stopped."
+>> TerminatingError(): "The pipeline has been stopped."
+>> TerminatingError(): "The pipeline has been stopped."
+PS C:\Users\user16> Get-WindowsUpdateLog
+
+Converting C:\Windows\logs\WindowsUpdate into C:\Users\user16\Desktop\WindowsUpdate.log ...
+
+Input
+----------------
+File(s):
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240531.105956.180.9.etl
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240531.105956.180.10.etl
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240531.105956.180.11.etl
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240531.105956.180.12.etl
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240531.105956.180.13.etl
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240531.105956.180.14.etl
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240531.105956.180.15.etl
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240531.105956.180.16.etl
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240531.105956.180.17.etl
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240531.105956.180.18.etl
+
+0.00%4.69%9.38%14.08%18.77%23.46%28.15%32.84%37.54%42.23%46.92%51.61%56.30%61.00%65.69%70.38%75.07%79.77%84.46%89.15%93.84%98.53%100.00%
+
+Output
+----------------
+DumpFile:           C:\Users\user16\AppData\Local\Temp\WindowsUpdateLog\wuetl.CSV.tmp.00000
+
+The command completed successfully.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Input
+----------------
+File(s):
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240531.105956.180.19.etl
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240531.105956.180.20.etl
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240531.105956.180.21.etl
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240531.105956.180.22.etl
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240531.105956.180.23.etl
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240531.105956.180.24.etl
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240531.105956.180.25.etl
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240531.105956.180.26.etl
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240531.105956.180.27.etl
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240531.105956.180.28.etl
+
+0.00%5.02%10.03%15.05%20.06%25.08%30.09%35.11%40.13%45.14%50.16%55.17%60.19%65.20%70.22%75.24%80.25%85.27%90.28%95.30%100.00%
+
+Output
+----------------
+DumpFile:           C:\Users\user16\AppData\Local\Temp\WindowsUpdateLog\wuetl.CSV.tmp.00001
+
+The command completed successfully.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Input
+----------------
+File(s):
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240531.112726.087.1.etl
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240531.114226.251.1.etl
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240531.114226.251.2.etl
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240531.114226.251.3.etl
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240531.120912.659.1.etl
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240531.120912.659.2.etl
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240531.120912.659.3.etl
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240531.120912.659.4.etl
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240531.120912.659.5.etl
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240531.120912.659.6.etl
+
+0.00%5.42%10.85%16.27%21.69%27.12%32.54%37.97%43.39%48.81%54.24%59.66%65.08%70.51%75.93%81.36%86.78%92.20%97.63%100.00%
+
+Output
+----------------
+DumpFile:           C:\Users\user16\AppData\Local\Temp\WindowsUpdateLog\wuetl.CSV.tmp.00002
+
+The command completed successfully.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Input
+----------------
+File(s):
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240531.120912.659.7.etl
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240531.120912.659.8.etl
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240531.120912.659.9.etl
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240531.120912.659.10.etl
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240531.120912.659.11.etl
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240531.120912.659.12.etl
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240531.120912.659.13.etl
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240531.120912.659.14.etl
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240531.120912.659.15.etl
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240531.120912.659.16.etl
+
+0.00%4.69%9.38%14.08%18.77%23.46%28.15%32.84%37.54%42.23%46.92%51.61%56.30%61.00%65.69%70.38%75.07%79.77%84.46%89.15%93.84%98.53%100.00%
+
+Output
+----------------
+DumpFile:           C:\Users\user16\AppData\Local\Temp\WindowsUpdateLog\wuetl.CSV.tmp.00003
+
+The command completed successfully.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Input
+----------------
+File(s):
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240531.120912.659.17.etl
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240531.120912.659.18.etl
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240531.120912.659.19.etl
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240531.120912.659.20.etl
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240531.120912.659.21.etl
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240531.120912.659.22.etl
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240531.120912.659.23.etl
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240531.120912.659.24.etl
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240531.120912.659.25.etl
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240531.120912.659.26.etl
+
+0.00%4.69%9.38%14.08%18.77%23.46%28.15%32.84%37.54%42.23%46.92%51.61%56.30%61.00%65.69%70.38%75.07%79.77%84.46%89.15%93.84%98.53%100.00%
+
+Output
+----------------
+DumpFile:           C:\Users\user16\AppData\Local\Temp\WindowsUpdateLog\wuetl.CSV.tmp.00004
+
+The command completed successfully.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Input
+----------------
+File(s):
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240531.120912.659.27.etl
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240531.120912.659.28.etl
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240531.120912.659.29.etl
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240531.120912.659.30.etl
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240531.120912.659.31.etl
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240531.120912.659.32.etl
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240531.120912.659.33.etl
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240531.120912.659.34.etl
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240531.120912.659.35.etl
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240531.120912.659.36.etl
+
+0.00%4.68%9.36%14.04%18.71%23.39%28.07%32.75%37.43%42.11%46.78%51.46%56.14%60.82%65.50%70.18%74.85%79.53%84.21%88.89%93.57%98.25%100.00%
+
+Output
+----------------
+DumpFile:           C:\Users\user16\AppData\Local\Temp\WindowsUpdateLog\wuetl.CSV.tmp.00005
+
+The command completed successfully.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Input
+----------------
+File(s):
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240531.120912.659.37.etl
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240531.122758.176.1.etl
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240531.130453.419.1.etl
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240531.130453.419.2.etl
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240531.130453.419.3.etl
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240531.140912.619.1.etl
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240531.150912.607.1.etl
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240531.154242.777.1.etl
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240531.160743.062.1.etl
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240531.170912.573.1.etl
+
+0.00%7.62%15.24%22.86%30.48%38.10%45.71%53.33%60.95%68.57%76.19%83.81%91.43%99.05%100.00%
+
+Output
+----------------
+DumpFile:           C:\Users\user16\AppData\Local\Temp\WindowsUpdateLog\wuetl.CSV.tmp.00006
+
+The command completed successfully.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Input
+----------------
+File(s):
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240531.174429.313.1.etl
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240531.174429.313.2.etl
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240601.035327.361.1.etl
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240601.101420.050.1.etl
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240601.110008.167.1.etl
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240601.110008.167.2.etl
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240601.114454.347.1.etl
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240601.114454.347.2.etl
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240601.114454.347.3.etl
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240601.133043.603.1.etl
+
+0.00%7.31%14.61%21.92%29.22%36.53%43.84%51.14%58.45%65.75%73.06%80.37%87.67%94.98%100.00%
+
+Output
+----------------
+DumpFile:           C:\Users\user16\AppData\Local\Temp\WindowsUpdateLog\wuetl.CSV.tmp.00007
+
+The command completed successfully.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Input
+----------------
+File(s):
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240601.133043.603.2.etl
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240601.133043.603.3.etl
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240601.134400.061.1.etl
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240601.152944.048.1.etl
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240602.033530.303.1.etl
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240602.101356.061.1.etl
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240602.103055.477.1.etl
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240602.103055.477.2.etl
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240602.103055.477.3.etl
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240602.104454.242.1.etl
+
+0.00%8.42%16.84%25.26%33.68%42.11%50.53%58.95%67.37%75.79%84.21%92.63%100.00%
+
+Output
+----------------
+DumpFile:           C:\Users\user16\AppData\Local\Temp\WindowsUpdateLog\wuetl.CSV.tmp.00008
+
+The command completed successfully.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Input
+----------------
+File(s):
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240602.104454.242.2.etl
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240602.104454.242.3.etl
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240602.110253.324.1.etl
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240602.110253.324.2.etl
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240602.122941.063.1.etl
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240602.124416.056.1.etl
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240602.182828.607.1.etl
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240603.043339.838.1.etl
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240603.085952.600.1.etl
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240603.094454.557.1.etl
+
+0.00%9.82%19.63%29.45%39.26%49.08%58.90%68.71%78.53%88.34%98.16%100.00%
+
+Output
+----------------
+DumpFile:           C:\Users\user16\AppData\Local\Temp\WindowsUpdateLog\wuetl.CSV.tmp.00009
+
+The command completed successfully.
+
+
+
+
+
+
+
+
+
+
+
+
+
+Input
+----------------
+File(s):
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240603.094454.557.2.etl
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240603.094454.557.3.etl
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240603.101411.057.1.etl
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240603.110004.600.1.etl
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240603.114429.067.1.etl
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240603.145550.558.1.etl
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240604.044533.704.1.etl
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240604.083938.903.1.etl
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240604.083938.903.2.etl
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240604.083938.903.3.etl
+
+0.00%8.25%16.49%24.74%32.99%41.24%49.48%57.73%65.98%74.23%82.47%90.72%98.97%100.00%
+
+Output
+----------------
+DumpFile:           C:\Users\user16\AppData\Local\Temp\WindowsUpdateLog\wuetl.CSV.tmp.00010
+
+The command completed successfully.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Input
+----------------
+File(s):
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240604.101418.054.1.etl
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240604.103805.061.1.etl
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240604.110004.552.1.etl
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240604.110004.552.2.etl
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240604.110004.552.3.etl
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240604.110004.552.4.etl
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240604.110004.552.5.etl
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240604.110004.552.6.etl
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240604.110004.552.7.etl
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240604.110004.552.8.etl
+
+0.00%5.65%11.31%16.96%22.61%28.27%33.92%39.58%45.23%50.88%56.54%62.19%67.84%73.50%79.15%84.81%90.46%96.11%100.00%
+
+Output
+----------------
+DumpFile:           C:\Users\user16\AppData\Local\Temp\WindowsUpdateLog\wuetl.CSV.tmp.00011
+
+The command completed successfully.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Input
+----------------
+File(s):
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240604.110004.552.9.etl
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240604.110004.552.10.etl
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240604.110004.552.11.etl
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240604.110004.552.12.etl
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240604.110004.552.13.etl
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240604.110004.552.14.etl
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240604.110004.552.15.etl
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240604.125901.057.1.etl
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240604.183719.608.1.etl
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240604.183719.608.2.etl
+
+0.00%5.33%10.67%16.00%21.33%26.67%32.00%37.33%42.67%48.00%53.33%58.67%64.00%69.33%74.67%80.00%85.33%90.67%96.00%100.00%
+
+Output
+----------------
+DumpFile:           C:\Users\user16\AppData\Local\Temp\WindowsUpdateLog\wuetl.CSV.tmp.00012
+
+The command completed successfully.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Input
+----------------
+File(s):
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240604.183719.608.3.etl
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240604.183719.608.4.etl
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240604.183719.608.5.etl
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240604.183719.608.6.etl
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240604.183719.608.7.etl
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240604.183719.608.8.etl
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240604.183719.608.9.etl
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240604.183719.608.10.etl
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240604.183719.608.11.etl
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240604.183719.608.12.etl
+
+0.00%4.69%9.38%14.08%18.77%23.46%28.15%32.84%37.54%42.23%46.92%51.61%56.30%61.00%65.69%70.38%75.07%79.77%84.46%89.15%93.84%98.53%100.00%
+
+Output
+----------------
+DumpFile:           C:\Users\user16\AppData\Local\Temp\WindowsUpdateLog\wuetl.CSV.tmp.00013
+
+The command completed successfully.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Input
+----------------
+File(s):
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240604.183719.608.13.etl
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240604.183719.608.14.etl
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240604.183719.608.15.etl
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240604.183719.608.16.etl
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240604.183719.608.17.etl
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240604.183719.608.18.etl
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240604.183719.608.19.etl
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240604.183719.608.20.etl
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240604.183719.608.21.etl
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240604.183719.608.22.etl
+
+0.00%4.69%9.38%14.08%18.77%23.46%28.15%32.84%37.54%42.23%46.92%51.61%56.30%61.00%65.69%70.38%75.07%79.77%84.46%89.15%93.84%98.53%100.00%
+
+Output
+----------------
+DumpFile:           C:\Users\user16\AppData\Local\Temp\WindowsUpdateLog\wuetl.CSV.tmp.00014
+
+The command completed successfully.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Input
+----------------
+File(s):
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240604.183719.608.23.etl
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240604.183719.608.24.etl
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240604.183719.608.25.etl
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240604.183719.608.26.etl
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240604.183719.608.27.etl
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240604.183719.608.28.etl
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240604.183719.608.29.etl
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240604.183719.608.30.etl
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240604.183719.608.31.etl
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240604.183719.608.32.etl
+
+0.00%4.83%9.67%14.50%19.34%24.17%29.00%33.84%38.67%43.50%48.34%53.17%58.01%62.84%67.67%72.51%77.34%82.18%87.01%91.84%96.68%100.00%
+
+Output
+----------------
+DumpFile:           C:\Users\user16\AppData\Local\Temp\WindowsUpdateLog\wuetl.CSV.tmp.00015
+
+The command completed successfully.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Input
+----------------
+File(s):
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240604.223809.053.1.etl
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240604.225953.694.1.etl
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240605.035949.603.1.etl
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240605.064009.416.1.etl
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240605.101451.056.1.etl
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240605.110009.106.1.etl
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240605.110009.106.2.etl
+
+0.00%11.68%23.36%35.04%46.72%58.39%70.07%81.75%93.43%100.00%
+
+Output
+----------------
+DumpFile:           C:\Users\user16\AppData\Local\Temp\WindowsUpdateLog\wuetl.CSV.tmp.00016
+
+The command completed successfully.
+
+
+
+
+
+
+
+
+
+
+
+WindowsUpdate.log written to C:\Users\user16\Desktop\WindowsUpdate.log
+PS C:\Users\user16> Test-Path $env:USERPROFILE\Documents\WindowsUpdate.log
+False
+PS C:\Users\user16> Get-WindowsUpdateLog | Get-Member
+
+Converting C:\Windows\logs\WindowsUpdate into C:\Users\user16\Desktop\WindowsUpdate.log ...
+
+Input
+----------------
+File(s):
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240531.105956.180.9.etl
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240531.105956.180.10.etl
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240531.105956.180.11.etl
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240531.105956.180.12.etl
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240531.105956.180.13.etl
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240531.105956.180.14.etl
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240531.105956.180.15.etl
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240531.105956.180.16.etl
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240531.105956.180.17.etl
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240531.105956.180.18.etl
+
+0.00%4.69%9.38%14.08%18.77%23.46%28.15%32.84%37.54%42.23%46.92%51.61%56.30%61.00%65.69%70.38%75.07%79.77%84.46%89.15%93.84%98.53%100.00%
+
+Output
+----------------
+DumpFile:           C:\Users\user16\AppData\Local\Temp\WindowsUpdateLog\wuetl.CSV.tmp.00000
+
+The command completed successfully.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Input
+----------------
+File(s):
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240531.105956.180.19.etl
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240531.105956.180.20.etl
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240531.105956.180.21.etl
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240531.105956.180.22.etl
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240531.105956.180.23.etl
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240531.105956.180.24.etl
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240531.105956.180.25.etl
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240531.105956.180.26.etl
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240531.105956.180.27.etl
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240531.105956.180.28.etl
+
+0.00%5.02%10.03%15.05%20.06%25.08%30.09%35.11%40.13%45.14%50.16%55.17%60.19%65.20%70.22%75.24%80.25%85.27%90.28%95.30%100.00%
+
+Output
+----------------
+DumpFile:           C:\Users\user16\AppData\Local\Temp\WindowsUpdateLog\wuetl.CSV.tmp.00001
+
+The command completed successfully.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Input
+----------------
+File(s):
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240531.112726.087.1.etl
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240531.114226.251.1.etl
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240531.114226.251.2.etl
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240531.114226.251.3.etl
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240531.120912.659.1.etl
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240531.120912.659.2.etl
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240531.120912.659.3.etl
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240531.120912.659.4.etl
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240531.120912.659.5.etl
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240531.120912.659.6.etl
+
+0.00%5.42%10.85%16.27%21.69%27.12%32.54%37.97%43.39%48.81%54.24%59.66%65.08%70.51%75.93%81.36%86.78%92.20%97.63%100.00%
+
+Output
+----------------
+DumpFile:           C:\Users\user16\AppData\Local\Temp\WindowsUpdateLog\wuetl.CSV.tmp.00002
+
+The command completed successfully.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Input
+----------------
+File(s):
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240531.120912.659.7.etl
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240531.120912.659.8.etl
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240531.120912.659.9.etl
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240531.120912.659.10.etl
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240531.120912.659.11.etl
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240531.120912.659.12.etl
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240531.120912.659.13.etl
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240531.120912.659.14.etl
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240531.120912.659.15.etl
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240531.120912.659.16.etl
+
+0.00%4.69%9.38%14.08%18.77%23.46%28.15%32.84%37.54%42.23%46.92%51.61%56.30%61.00%65.69%70.38%75.07%79.77%84.46%89.15%93.84%98.53%100.00%
+
+Output
+----------------
+DumpFile:           C:\Users\user16\AppData\Local\Temp\WindowsUpdateLog\wuetl.CSV.tmp.00003
+
+The command completed successfully.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Input
+----------------
+File(s):
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240531.120912.659.17.etl
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240531.120912.659.18.etl
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240531.120912.659.19.etl
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240531.120912.659.20.etl
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240531.120912.659.21.etl
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240531.120912.659.22.etl
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240531.120912.659.23.etl
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240531.120912.659.24.etl
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240531.120912.659.25.etl
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240531.120912.659.26.etl
+
+0.00%4.69%9.38%14.08%18.77%23.46%28.15%32.84%37.54%42.23%46.92%51.61%56.30%61.00%65.69%70.38%75.07%79.77%84.46%89.15%93.84%98.53%100.00%
+
+Output
+----------------
+DumpFile:           C:\Users\user16\AppData\Local\Temp\WindowsUpdateLog\wuetl.CSV.tmp.00004
+
+The command completed successfully.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Input
+----------------
+File(s):
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240531.120912.659.27.etl
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240531.120912.659.28.etl
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240531.120912.659.29.etl
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240531.120912.659.30.etl
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240531.120912.659.31.etl
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240531.120912.659.32.etl
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240531.120912.659.33.etl
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240531.120912.659.34.etl
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240531.120912.659.35.etl
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240531.120912.659.36.etl
+
+0.00%4.68%9.36%14.04%18.71%23.39%28.07%32.75%37.43%42.11%46.78%51.46%56.14%60.82%65.50%70.18%74.85%79.53%84.21%88.89%93.57%98.25%100.00%
+
+Output
+----------------
+DumpFile:           C:\Users\user16\AppData\Local\Temp\WindowsUpdateLog\wuetl.CSV.tmp.00005
+
+The command completed successfully.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Input
+----------------
+File(s):
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240531.120912.659.37.etl
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240531.122758.176.1.etl
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240531.130453.419.1.etl
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240531.130453.419.2.etl
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240531.130453.419.3.etl
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240531.140912.619.1.etl
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240531.150912.607.1.etl
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240531.154242.777.1.etl
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240531.160743.062.1.etl
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240531.170912.573.1.etl
+
+0.00%7.62%15.24%22.86%30.48%38.10%45.71%53.33%60.95%68.57%76.19%83.81%91.43%99.05%100.00%
+
+Output
+----------------
+DumpFile:           C:\Users\user16\AppData\Local\Temp\WindowsUpdateLog\wuetl.CSV.tmp.00006
+
+The command completed successfully.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Input
+----------------
+File(s):
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240531.174429.313.1.etl
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240531.174429.313.2.etl
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240601.035327.361.1.etl
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240601.101420.050.1.etl
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240601.110008.167.1.etl
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240601.110008.167.2.etl
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240601.114454.347.1.etl
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240601.114454.347.2.etl
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240601.114454.347.3.etl
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240601.133043.603.1.etl
+
+0.00%7.31%14.61%21.92%29.22%36.53%43.84%51.14%58.45%65.75%73.06%80.37%87.67%94.98%100.00%
+
+Output
+----------------
+DumpFile:           C:\Users\user16\AppData\Local\Temp\WindowsUpdateLog\wuetl.CSV.tmp.00007
+
+The command completed successfully.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Input
+----------------
+File(s):
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240601.133043.603.2.etl
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240601.133043.603.3.etl
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240601.134400.061.1.etl
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240601.152944.048.1.etl
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240602.033530.303.1.etl
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240602.101356.061.1.etl
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240602.103055.477.1.etl
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240602.103055.477.2.etl
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240602.103055.477.3.etl
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240602.104454.242.1.etl
+
+0.00%8.42%16.84%25.26%33.68%42.11%50.53%58.95%67.37%75.79%84.21%92.63%100.00%
+
+Output
+----------------
+DumpFile:           C:\Users\user16\AppData\Local\Temp\WindowsUpdateLog\wuetl.CSV.tmp.00008
+
+The command completed successfully.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Input
+----------------
+File(s):
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240602.104454.242.2.etl
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240602.104454.242.3.etl
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240602.110253.324.1.etl
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240602.110253.324.2.etl
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240602.122941.063.1.etl
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240602.124416.056.1.etl
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240602.182828.607.1.etl
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240603.043339.838.1.etl
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240603.085952.600.1.etl
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240603.094454.557.1.etl
+
+0.00%9.82%19.63%29.45%39.26%49.08%58.90%68.71%78.53%88.34%98.16%100.00%
+
+Output
+----------------
+DumpFile:           C:\Users\user16\AppData\Local\Temp\WindowsUpdateLog\wuetl.CSV.tmp.00009
+
+The command completed successfully.
+
+
+
+
+
+
+
+
+
+
+
+
+
+Input
+----------------
+File(s):
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240603.094454.557.2.etl
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240603.094454.557.3.etl
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240603.101411.057.1.etl
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240603.110004.600.1.etl
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240603.114429.067.1.etl
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240603.145550.558.1.etl
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240604.044533.704.1.etl
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240604.083938.903.1.etl
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240604.083938.903.2.etl
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240604.083938.903.3.etl
+
+0.00%8.25%16.49%24.74%32.99%41.24%49.48%57.73%65.98%74.23%82.47%90.72%98.97%100.00%
+
+Output
+----------------
+DumpFile:           C:\Users\user16\AppData\Local\Temp\WindowsUpdateLog\wuetl.CSV.tmp.00010
+
+The command completed successfully.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Input
+----------------
+File(s):
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240604.101418.054.1.etl
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240604.103805.061.1.etl
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240604.110004.552.1.etl
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240604.110004.552.2.etl
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240604.110004.552.3.etl
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240604.110004.552.4.etl
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240604.110004.552.5.etl
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240604.110004.552.6.etl
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240604.110004.552.7.etl
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240604.110004.552.8.etl
+
+0.00%5.65%11.31%16.96%22.61%28.27%33.92%39.58%45.23%50.88%56.54%62.19%67.84%73.50%79.15%84.81%90.46%96.11%100.00%
+
+Output
+----------------
+DumpFile:           C:\Users\user16\AppData\Local\Temp\WindowsUpdateLog\wuetl.CSV.tmp.00011
+
+The command completed successfully.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Input
+----------------
+File(s):
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240604.110004.552.9.etl
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240604.110004.552.10.etl
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240604.110004.552.11.etl
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240604.110004.552.12.etl
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240604.110004.552.13.etl
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240604.110004.552.14.etl
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240604.110004.552.15.etl
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240604.125901.057.1.etl
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240604.183719.608.1.etl
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240604.183719.608.2.etl
+
+0.00%5.33%10.67%16.00%21.33%26.67%32.00%37.33%42.67%48.00%53.33%58.67%64.00%69.33%74.67%80.00%85.33%90.67%96.00%100.00%
+
+Output
+----------------
+DumpFile:           C:\Users\user16\AppData\Local\Temp\WindowsUpdateLog\wuetl.CSV.tmp.00012
+
+The command completed successfully.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Input
+----------------
+File(s):
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240604.183719.608.3.etl
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240604.183719.608.4.etl
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240604.183719.608.5.etl
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240604.183719.608.6.etl
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240604.183719.608.7.etl
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240604.183719.608.8.etl
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240604.183719.608.9.etl
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240604.183719.608.10.etl
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240604.183719.608.11.etl
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240604.183719.608.12.etl
+
+0.00%4.69%9.38%14.08%18.77%23.46%28.15%32.84%37.54%42.23%46.92%51.61%56.30%61.00%65.69%70.38%75.07%79.77%84.46%89.15%93.84%98.53%100.00%
+
+Output
+----------------
+DumpFile:           C:\Users\user16\AppData\Local\Temp\WindowsUpdateLog\wuetl.CSV.tmp.00013
+
+The command completed successfully.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Input
+----------------
+File(s):
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240604.183719.608.13.etl
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240604.183719.608.14.etl
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240604.183719.608.15.etl
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240604.183719.608.16.etl
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240604.183719.608.17.etl
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240604.183719.608.18.etl
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240604.183719.608.19.etl
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240604.183719.608.20.etl
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240604.183719.608.21.etl
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240604.183719.608.22.etl
+
+0.00%4.69%9.38%14.08%18.77%23.46%28.15%32.84%37.54%42.23%46.92%51.61%56.30%61.00%65.69%70.38%75.07%79.77%84.46%89.15%93.84%98.53%100.00%
+
+Output
+----------------
+DumpFile:           C:\Users\user16\AppData\Local\Temp\WindowsUpdateLog\wuetl.CSV.tmp.00014
+
+The command completed successfully.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Input
+----------------
+File(s):
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240604.183719.608.23.etl
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240604.183719.608.24.etl
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240604.183719.608.25.etl
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240604.183719.608.26.etl
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240604.183719.608.27.etl
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240604.183719.608.28.etl
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240604.183719.608.29.etl
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240604.183719.608.30.etl
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240604.183719.608.31.etl
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240604.183719.608.32.etl
+
+0.00%4.83%9.67%14.50%19.34%24.17%29.00%33.84%38.67%43.50%48.34%53.17%58.01%62.84%67.67%72.51%77.34%82.18%87.01%91.84%96.68%100.00%
+
+Output
+----------------
+DumpFile:           C:\Users\user16\AppData\Local\Temp\WindowsUpdateLog\wuetl.CSV.tmp.00015
+
+The command completed successfully.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Input
+----------------
+File(s):
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240604.223809.053.1.etl
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240604.225953.694.1.etl
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240605.035949.603.1.etl
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240605.064009.416.1.etl
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240605.101451.056.1.etl
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240605.110009.106.1.etl
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240605.110009.106.2.etl
+
+0.00%11.68%23.36%35.04%46.72%58.39%70.07%81.75%93.43%100.00%
+
+Output
+----------------
+DumpFile:           C:\Users\user16\AppData\Local\Temp\WindowsUpdateLog\wuetl.CSV.tmp.00016
+
+The command completed successfully.
+
+
+
+
+
+
+
+
+
+
+
+WindowsUpdate.log written to C:\Users\user16\Desktop\WindowsUpdate.log
+Get-Member : You must specify an object for the Get-Member cmdlet.
+At line:1 char:24
++ Get-WindowsUpdateLog | Get-Member
++                        ~~~~~~~~~~
+    + CategoryInfo          : CloseError: (:) [Get-Member], InvalidOperationException
+    + FullyQualifiedErrorId : NoObjectInGetMember,Microsoft.PowerShell.Commands.GetMemberCommand
+Get-Member : You must specify an object for the Get-Member cmdlet.
+At line:1 char:24
++ Get-WindowsUpdateLog | Get-Member
++                        ~~~~~~~~~~
+    + CategoryInfo          : CloseError: (:) [Get-Member], InvalidOperationException
+    + FullyQualifiedErrorId : NoObjectInGetMember,Microsoft.PowerShell.Commands.GetMemberCommand
+
+PS C:\Users\user16> Stop-Transcript
+**********************
+Windows PowerShell transcript end
+End time: 20240605153730
+**********************
