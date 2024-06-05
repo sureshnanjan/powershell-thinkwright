@@ -1,0 +1,306 @@
+﻿**********************
+Windows PowerShell transcript start
+Start time: 20240605140753
+Username: THINKWRIGHT\user2
+RunAs User: THINKWRIGHT\user2
+Configuration Name: 
+Machine: DESKTOP-2 (Microsoft Windows NT 10.0.19045.0)
+Host Application: C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe
+Process ID: 8016
+PSVersion: 5.1.19041.4412
+PSEdition: Desktop
+PSCompatibleVersions: 1.0, 2.0, 3.0, 4.0, 5.0, 5.1.19041.4412
+BuildVersion: 10.0.19041.4412
+CLRVersion: 4.0.30319.42000
+WSManStackVersion: 3.0
+PSRemotingProtocolVersion: 2.3
+SerializationVersion: 1.1.0.1
+**********************
+Transcript started, output file is C:\Users\user2\Afroz-14-07-14-3023519.log
+PS C:\Users\user2\Training\powershell-thinkwright> $csvCommands = Get-Command -Noun CSV
+PS C:\Users\user2\Training\powershell-thinkwright> $csvCommands
+
+CommandType     Name                                               Version    Source
+-----------     ----                                               -------    ------
+Cmdlet          ConvertFrom-Csv                                    3.1.0.0    Microsoft.PowerShell.Utility
+Cmdlet          ConvertTo-Csv                                      3.1.0.0    Microsoft.PowerShell.Utility
+Cmdlet          Export-Csv                                         3.1.0.0    Microsoft.PowerShell.Utility
+Cmdlet          Import-Csv                                         3.1.0.0    Microsoft.PowerShell.Utility
+
+
+PS C:\Users\user2\Training\powershell-thinkwright> Get-Help Get-WindowsUpdateLog -Detailed
+
+NAME
+    Get-WindowsUpdateLog
+
+SYNTAX
+    Get-WindowsUpdateLog [[-ETLPath] <string[]>] [[-LogPath] <string>] [-ProcessingType {CSV | XML}] [-ForceFlush]
+    [-WhatIf] [-Confirm]  [<CommonParameters>]
+
+
+PARAMETERS
+    -Confirm
+
+    -ETLPath <string[]>
+
+    -ForceFlush
+
+    -LogPath <string>
+
+    -ProcessingType <string>
+
+    -WhatIf
+
+    <CommonParameters>
+        This cmdlet supports the common parameters: Verbose, Debug,
+        ErrorAction, ErrorVariable, WarningAction, WarningVariable,
+        OutBuffer, PipelineVariable, and OutVariable. For more information, see
+        about_CommonParameters (https:/go.microsoft.com/fwlink/?LinkID=113216).
+
+
+ALIASES
+    None
+
+
+REMARKS
+    Get-Help cannot find the Help files for this cmdlet on this computer. It is displaying only partial help.
+        -- To download and install Help files for the module that includes this cmdlet, use Update-Help.
+
+
+
+PS C:\Users\user2\Training\powershell-thinkwright> Get-Help Get-WindowsUpdateLog -examples
+
+NAME
+    Get-WindowsUpdateLog
+
+ALIASES
+    None
+
+
+REMARKS
+    Get-Help cannot find the Help files for this cmdlet on this computer. It is displaying only partial help.
+        -- To download and install Help files for the module that includes this cmdlet, use Update-Help.
+
+
+
+PS C:\Users\user2\Training\powershell-thinkwright> Test-Path $env:USERPROFILE\Documents\WindowsUpdate.log
+False
+PS C:\Users\user2\Training\powershell-thinkwright> Get-Process
+
+Handles  NPM(K)    PM(K)      WS(K)     CPU(s)     Id  SI ProcessName
+-------  ------    -----      -----     ------     --  -- -----------
+     98       5     1000       4836              4428   0 AggregatorHost
+    268      16     4240      25268       0.19   2536   2 ApplicationFrameHost
+    143       7     1460       8976       0.05   5892   2 CompPkgSrv
+    302      15     7124      22000       2.55   4680   2 conhost
+    266      13     4324      17116      45.75   6256   2 conhost
+    273      13     4916      17784      10.38   7872   2 conhost
+    266      13     4300      17160       0.94  10860   2 conhost
+    555      21     1796       5556               528   0 csrss
+    167       9     1668       5028               620   1 csrss
+    659      17     2568      15052              5628   2 csrss
+    494      17     4732      22220       8.83   6808   2 ctfmon
+    206      17     3592      11648              1908   0 dllhost
+    292      16     4140      14444       0.41   8488   2 dllhost
+    148       9     2128       8364       0.47   8984   2 dllhost
+    724      24    14908      47960              1056   1 dwm
+   1202      34    50932      88584              5880   2 dwm
+   2983     128    92080     194928     166.25   7004   2 explorer
+    181      14     3620      18672       0.06   2372   2 FileCoAuth
+     36       5     1260       3984               928   0 fontdrvhost
+     36       5     1196       3880               936   1 fontdrvhost
+     36       6     2192       5956              5820   2 fontdrvhost
+      0       0       60          8                 0   0 Idle
+    178      10     1720       9240              1836   0 igfxCUIService
+    162       8     1436       7744              1472   0 IntelCpHDCPSvc
+    617      34    19892      60556               908   1 LogonUI
+   1992      33    10080      25952               768   0 lsass
+      0       0      476     109976              2208   0 Memory Compression
+    211      13     2056       4216              8136   0 MicrosoftEdgeUpdate
+    675      20    16220      33304              6320   0 MoUsoCoreWorker
+    484      16     9540      21608              3184   0 MpDefenderCoreService
+    200       9     2148       8300       0.11   2832   2 msedge
+    292      21    93832      88336      22.27   2972   2 msedge
+   1004      31   178964     189836      50.73   3452   2 msedge
+    244      17    16848       6316       0.19   4128   2 msedge
+    193      12     8936      19364       0.47   5928   2 msedge
+    208      15    13652      27272       0.09   6636   2 msedge
+    504      46    66300      50164       2.30   7404   2 msedge
+    455      32   284548      32272      45.95   7472   2 msedge
+    447      28   125984     146724      18.17  10432   2 msedge
+    329      19    20888      45632      40.69  10484   2 msedge
+    254      14     8124      25292       0.48  10624   2 msedge
+    235      14     7772      19900       0.16  10680   2 msedge
+   2155     116   103812     213664     113.94  11052   2 msedge
+    877     192   301808     201948              3288   0 MsMpEng
+    220      11     4328      12056              5484   0 NisSrv
+    250      13     3188      16796       0.73   9112   2 notepad
+    631      27    39380      46488              3164   0 OneApp.IGCC.WinService
+    869      50    54140     126020       9.19   3668   2 OneDrive
+   1247     110    59356     172800       4.16   4208   2 PhoneExperienceHost
+    560      31    59348      75624       1.67   1164   2 powershell
+    511      31    59544      75152       1.22   7960   2 powershell
+    771      32    63160      82236       4.39   8016   2 powershell
+    891      42    79016     100908      63.66   8464   2 powershell
+    356      14     3596      13932       6.63   6212   2 rdpclip
+      0      11     4244      73348               108   0 Registry
+    679      33    28824      60972      20.08    948   2 RuntimeBroker
+    354      20     7384      32892       3.91   4832   2 RuntimeBroker
+    258      14     3016      18300       0.08   9532   2 RuntimeBroker
+    323      17     8496      28792       9.25  10156   2 RuntimeBroker
+   1812     285   253052     321420      70.16   7720   2 SearchApp
+    777      58    26608      43064              3496   0 SearchIndexer
+    373      15     4328      14816             10576   0 SecurityHealthService
+    167       9     1900      10076       0.42  10544   2 SecurityHealthSystray
+    703      14     6416      14464               752   0 services
+    105       7     4656       7928              2260   0 SgrmBroker
+    563      26    14984      59704       0.27   9812   2 ShellExperienceHost
+    546      18     7072      29968      17.28   6284   2 sihost
+     56       3     1060       1212               412   0 smss
+    559      24     7820      22900              2936   0 spoolsv
+    638      33    24248      79188       8.08   9116   2 StartMenuExperienceHost
+    406      11     3524      10448               552   0 svchost
+   1756      23    18392      37164               896   0 svchost
+   1201      19    11584      20052              1016   0 svchost
+   1700      60   226352     222872              1124   0 svchost
+    275      15     3688      15788              1184   0 svchost
+    205      12     1756       7904              1200   0 svchost
+    145      21     4760       9300              1204   0 svchost
+    215      12     2448      10548              1260   0 svchost
+    466      10     2496      12812              1288   0 svchost
+    222      10     2340       7996              1324   0 svchost
+    416      14    14680      18172              1368   0 svchost
+    169      11     1608       7844              1376   0 svchost
+    384      17     6604      16516              1400   0 svchost
+    316      16     3648      10060              1428   0 svchost
+    183       9     1988       8088              1516   0 svchost
+    417      16     4576      13772              1584   0 svchost
+    175       7     1624       6532              1652   0 svchost
+    209       7     1328       6220              1676   0 svchost
+    173      10     1920       8480              1728   0 svchost
+    412      31    10896      19920              1744   0 svchost
+    192      10     2488       9588              1872   0 svchost
+    463      12     3076      10252              1924   0 svchost
+    252      12     2448      11324              2032   0 svchost
+    197      10     1868       8928              2100   0 svchost
+    130       8     1408       7460              2108   0 svchost
+    191      10     2136       8992              2116   0 svchost
+    231      10     2708      10052              2200   0 svchost
+    289      15     3244      13408              2316   0 svchost
+    204      11     2136       9352              2452   0 svchost
+    244      15     2404      11072              2512   0 svchost
+    342      13     3172      14152              2592   0 svchost
+    372      15     9140      20280              2620   0 svchost
+    152      10     1736       8596              2696   0 svchost
+    166      17    14772      23340              2736   0 svchost
+    215      12     2432      10828              2744   0 svchost
+    382      13     2252      10068              2752   0 svchost
+    199      13     2288      13012              2816   0 svchost
+    378      16     2816      11724              3076   0 svchost
+    304      28     6984      17680              3124   0 svchost
+    588      28    29264      56620              3144   0 svchost
+    343      19    31996      41728              3152   0 svchost
+    143       9     1560       7008              3228   0 svchost
+    135       7     1300       6000              3248   0 svchost
+    206      12     2360       9404              3272   0 svchost
+    398      19     4932      22256              3312   0 svchost
+    116       7     1288       5836              3488   0 svchost
+    382      24     3492      13100              3700   0 svchost
+    230      15     3852      13864              4344   0 svchost
+    122       8     1284       5812              4352   0 svchost
+    390      20     7988      26740              4364   0 svchost
+    215      11     1852       8564              4924   0 svchost
+    279      16     4420      21148              5296   0 svchost
+    230      12     2444      12136              5600   0 svchost
+    313      15     6660      22532       2.11   6356   2 svchost
+    423      20     6584      28600       2.06   6404   2 svchost
+    340      19     9564      27228              6444   0 svchost
+    468      13     4928      18468              6536   0 svchost
+    201       9     1772       8284              6704   0 svchost
+    321      19     4304      16904              6964   0 svchost
+    187      10     2084       9248              7852   0 svchost
+    396      20     8812      21624              8132   0 svchost
+    130       8     1640       7864              8208   0 svchost
+    145       9     1632      11472              8304   0 svchost
+    327      12     5308      11484              8468   0 svchost
+    322      16     4216      23144       2.41   8892   2 svchost
+    497      26     5944      23912       0.97   8960   2 svchost
+    409      19     3948      18588              9132   0 svchost
+    776       8     1704       7960              9924   0 svchost
+    171       9     1852       8276             10276   0 svchost
+    235      13     3204      11260             10300   0 svchost
+    217      15     2016       7948             10724   0 svchost
+    194      15     6148       9984             10816   0 svchost
+   3533       0      208       5960                 4   0 System
+    306      29     7080      19000       2.14   6516   2 taskhostw
+    556      23    15364      56084       1.64   3732   2 TextInputHost
+    121       7     1340       6492              5500   0 uhssvc
+    169      11     1620       7328               612   0 wininit
+    213      10     2372      10988               680   1 winlogon
+    268      12     3336      11880              5676   2 winlogon
+     69       5      776       3700              3280   0 wlms
+    359      14    16544      35672              8172   0 WUDFHost
+
+
+PS C:\Users\user2\Training\powershell-thinkwright> $examples = Get-Help Get-Process -Examples
+PS C:\Users\user2\Training\powershell-thinkwright> $examplesHtml = $examples | Out-String | ConvertTo-Html -Title "Get-Process Examples"
+PS C:\Users\user2\Training\powershell-thinkwright> $htmlFilePath = Join-Path -Path $env:USERPROFILE -ChildPath "Documents\Get-Process-Examples.html"
+PS C:\Users\user2\Training\powershell-thinkwright> $examplesHtml | Set-Content -Path $htmlFilePath
+PS C:\Users\user2\Training\powershell-thinkwright> $htmlFilePath
+C:\Users\user2\Documents\Get-Process-Examples.html
+PS C:\Users\user2\Training\powershell-thinkwright> $examples = Get-Help Get-Process -Examples
+PS C:\Users\user2\Training\powershell-thinkwright> $examplesHtml = $examples | Out-String | ConvertTo-Html -Title "Get-Process Examples"
+PS C:\Users\user2\Training\powershell-thinkwright> $htmlFilePath = Join-Path -Path $env:USERPROFILE -ChildPath "C:\Users\user2\Training\powershell-thinkwright\Get-Process-Examples.html"
+PS C:\Users\user2\Training\powershell-thinkwright> $examplesHtml | Set-Content -Path $htmlFilePath
+Set-Content : Could not open the alternate data stream 
+'\Users\user2\Training\powershell-thinkwright\Get-Process-Examples.html' of the file 'C:\Users\user2\C'.
+At line:1 char:17
++ $examplesHtml | Set-Content -Path $htmlFilePath
++                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : ObjectNotFound: (C:\Users\user2\C:String) [Set-Content], FileNotFoundException
+    + FullyQualifiedErrorId : GetContentWriterFileNotFoundError,Microsoft.PowerShell.Commands.SetContentCommand
+Set-Content : Could not open the alternate data stream
+'\Users\user2\Training\powershell-thinkwright\Get-Process-Examples.html' of the file 'C:\Users\user2\C'.
+At line:1 char:17
++ $examplesHtml | Set-Content -Path $htmlFilePath
++                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : ObjectNotFound: (C:\Users\user2\C:String) [Set-Content], FileNotFoundException
+    + FullyQualifiedErrorId : GetContentWriterFileNotFoundError,Microsoft.PowerShell.Commands.SetContentCommand
+
+PS C:\Users\user2\Training\powershell-thinkwright> $htmlFilePath
+C:\Users\user2\C:\Users\user2\Training\powershell-thinkwright\Get-Process-Examples.html
+PS C:\Users\user2\Training\powershell-thinkwright> $examplesHtml | Set-Content -Path $htmlFilePath
+Set-Content : Could not open the alternate data stream 
+'\Users\user2\Training\powershell-thinkwright\Get-Process-Examples.html' of the file 'C:\Users\user2\C'.
+At line:1 char:17
++ $examplesHtml | Set-Content -Path $htmlFilePath
++                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : ObjectNotFound: (C:\Users\user2\C:String) [Set-Content], FileNotFoundException
+    + FullyQualifiedErrorId : GetContentWriterFileNotFoundError,Microsoft.PowerShell.Commands.SetContentCommand
+Set-Content : Could not open the alternate data stream
+'\Users\user2\Training\powershell-thinkwright\Get-Process-Examples.html' of the file 'C:\Users\user2\C'.
+At line:1 char:17
++ $examplesHtml | Set-Content -Path $htmlFilePath
++                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : ObjectNotFound: (C:\Users\user2\C:String) [Set-Content], FileNotFoundException
+    + FullyQualifiedErrorId : GetContentWriterFileNotFoundError,Microsoft.PowerShell.Commands.SetContentCommand
+
+PS C:\Users\user2\Training\powershell-thinkwright> $currentPath = Get-Location
+PS C:\Users\user2\Training\powershell-thinkwright> $htmlFilePath = Join-Path -Path $currentPath -ChildPath "Get-Process-Examples.html"
+PS C:\Users\user2\Training\powershell-thinkwright> $examplesHtml | Set-Content -Path $htmlFilePath
+PS C:\Users\user2\Training\powershell-thinkwright> $htmlFilePath
+C:\Users\user2\Training\powershell-thinkwright\Get-Process-Examples.html
+PS C:\Users\user2\Training\powershell-thinkwright> git status
+On branch Afroz-branch
+Your branch is up to date with 'origin/Afroz-branch'.
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        Get-Process-Examples.html
+
+nothing added to commit but untracked files present (use "git add" to track)
+PS C:\Users\user2\Training\powershell-thinkwright> Stop-Transcript
+**********************
+Windows PowerShell transcript end
+End time: 20240605142400
+**********************
