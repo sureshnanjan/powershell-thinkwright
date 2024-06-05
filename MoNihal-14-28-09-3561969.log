@@ -1,0 +1,1436 @@
+﻿**********************
+Windows PowerShell transcript start
+Start time: 20240605143021
+Username: THINKWRIGHT\user14
+RunAs User: THINKWRIGHT\user14
+Configuration Name: 
+Machine: DESKTOP-14 (Microsoft Windows NT 10.0.19045.0)
+Host Application: C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe
+Process ID: 2412
+PSVersion: 5.1.19041.4412
+PSEdition: Desktop
+PSCompatibleVersions: 1.0, 2.0, 3.0, 4.0, 5.0, 5.1.19041.4412
+BuildVersion: 10.0.19041.4412
+CLRVersion: 4.0.30319.42000
+WSManStackVersion: 3.0
+PSRemotingProtocolVersion: 2.3
+SerializationVersion: 1.1.0.1
+**********************
+Transcript started, output file is C:\Users\user14\MoNihal-14-28-09-3561969.log
+PS C:\Users\user14\QA-Training\powershell-thinkwright> Get-Command -Noun  csv
+
+CommandType     Name                                               Version    Source
+-----------     ----                                               -------    ------
+Cmdlet          ConvertFrom-Csv                                    3.1.0.0    Microsoft.PowerShell.Utility
+Cmdlet          ConvertTo-Csv                                      3.1.0.0    Microsoft.PowerShell.Utility
+Cmdlet          Export-Csv                                         3.1.0.0    Microsoft.PowerShell.Utility
+Cmdlet          Import-Csv                                         3.1.0.0    Microsoft.PowerShell.Utility
+
+
+PS C:\Users\user14\QA-Training\powershell-thinkwright> Get-Command -Noun  csv | select Name,Source
+
+Name            Source
+----            ------
+ConvertFrom-Csv Microsoft.PowerShell.Utility
+ConvertTo-Csv   Microsoft.PowerShell.Utility
+Export-Csv      Microsoft.PowerShell.Utility
+Import-Csv      Microsoft.PowerShell.Utility
+
+
+PS C:\Users\user14\QA-Training\powershell-thinkwright> Get-Help *csv*
+
+Name                              Category  Module                    Synopsis
+----                              --------  ------                    --------
+epcsv                             Alias                               Export-Csv
+ipcsv                             Alias                               Import-Csv
+ConvertFrom-Csv                   Cmdlet    Microsoft.PowerShell.U... ...
+ConvertTo-Csv                     Cmdlet    Microsoft.PowerShell.U... ...
+Export-Csv                        Cmdlet    Microsoft.PowerShell.U... ...
+Import-Csv                        Cmdlet    Microsoft.PowerShell.U... ...
+Set-PcsvDeviceNetworkConfigura... Function  PcsvDevice                ...
+Start-PcsvDevice                  Function  PcsvDevice                ...
+Set-PcsvDeviceBootConfiguration   Function  PcsvDevice                ...
+Restart-PcsvDevice                Function  PcsvDevice                ...
+Set-PcsvDeviceUserPassword        Function  PcsvDevice                ...
+Get-PcsvDevice                    Function  PcsvDevice                ...
+Get-PcsvDeviceLog                 Function  PcsvDevice                ...
+Clear-PcsvDeviceLog               Function  PcsvDevice                ...
+Stop-PcsvDevice                   Function  PcsvDevice                ...
+
+
+PS C:\Users\user14\QA-Training\powershell-thinkwright> Get-Help -Name Get-WindowsUpdateLog
+
+NAME
+    Get-WindowsUpdateLog
+
+SYNTAX
+    Get-WindowsUpdateLog [[-ETLPath] <string[]>] [[-LogPath] <string>] [-ProcessingType {CSV | XML}] [-ForceFlush]
+    [-WhatIf] [-Confirm]  [<CommonParameters>]
+
+
+ALIASES
+    None
+
+
+REMARKS
+    Get-Help cannot find the Help files for this cmdlet on this computer. It is displaying only partial help.
+        -- To download and install Help files for the module that includes this cmdlet, use Update-Help.
+
+
+
+PS C:\Users\user14\QA-Training\powershell-thinkwright> Update-Help
+Update-Help : Failed to update Help for the module(s) : 
+'AppBackgroundTask, AppLocker, AppvClient, Appx, AssignedAccess, BitLocker, BitsTransfer, BranchCache, CimCmdlets, 
+ConfigCI, Defender, DirectAccessClientComponents, Dism, DnsClient, EventTracingManagement, International, iSCSI, ISE, 
+Kds, LanguagePackManagement, LAPS, Microsoft.PowerShell.Archive, Microsoft.PowerShell.Core, 
+Microsoft.PowerShell.Diagnostics, Microsoft.PowerShell.Host, Microsoft.PowerShell.LocalAccounts, 
+Microsoft.PowerShell.Management, Microsoft.PowerShell.ODataUtils, Microsoft.PowerShell.Security, 
+Microsoft.PowerShell.Utility, Microsoft.WSMan.Management, MMAgent, MsDtc, NetAdapter, NetConnection, 
+NetEventPacketCapture, NetLbfo, NetNat, NetQos, NetSecurity, NetSwitchTeam, NetTCPIP, NetworkConnectivityStatus, 
+NetworkSwitchManager, NetworkTransition, PackageManagement, PcsvDevice, PKI, PnpDevice, PowerShellGet, PrintManagement, 
+ProcessMitigations, Provisioning, PSDesiredStateConfiguration, PSScheduledJob, PSWorkflow, PSWorkflowUtility, 
+ScheduledTasks, SecureBoot, SmbShare, SmbWitness, StartLayout, Storage, TLS, TroubleshootingPack, 
+TrustedPlatformModule, UEV, VpnClient, Wdac, Whea, WindowsDeveloperLicense, WindowsErrorReporting, WindowsSearch, 
+WindowsUpdate'
+Access is denied. The command could not update Help topics for the Windows PowerShell core modules, or for any modules 
+in the $pshome\Modules directory. To update these Help topics, start Windows PowerShell by using the "Run as 
+Administrator" command, and try running Update-Help again.
+At line:1 char:1
++ Update-Help
++ ~~~~~~~~~~~
+    + CategoryInfo          : InvalidOperation: (:) [Update-Help], Exception
+    + FullyQualifiedErrorId : UpdatableHelpSystemRequiresElevation,Microsoft.PowerShell.Commands.UpdateHelpCommand
+Update-Help : Failed to update Help for the module(s) :
+'AppBackgroundTask, AppLocker, AppvClient, Appx, AssignedAccess, BitLocker, BitsTransfer, BranchCache, CimCmdlets,
+ConfigCI, Defender, DirectAccessClientComponents, Dism, DnsClient, EventTracingManagement, International, iSCSI, ISE,
+Kds, LanguagePackManagement, LAPS, Microsoft.PowerShell.Archive, Microsoft.PowerShell.Core,
+Microsoft.PowerShell.Diagnostics, Microsoft.PowerShell.Host, Microsoft.PowerShell.LocalAccounts,
+Microsoft.PowerShell.Management, Microsoft.PowerShell.ODataUtils, Microsoft.PowerShell.Security,
+Microsoft.PowerShell.Utility, Microsoft.WSMan.Management, MMAgent, MsDtc, NetAdapter, NetConnection,
+NetEventPacketCapture, NetLbfo, NetNat, NetQos, NetSecurity, NetSwitchTeam, NetTCPIP, NetworkConnectivityStatus,
+NetworkSwitchManager, NetworkTransition, PackageManagement, PcsvDevice, PKI, PnpDevice, PowerShellGet,
+PrintManagement, ProcessMitigations, Provisioning, PSDesiredStateConfiguration, PSScheduledJob, PSWorkflow,
+PSWorkflowUtility, ScheduledTasks, SecureBoot, SmbShare, SmbWitness, StartLayout, Storage, TLS, TroubleshootingPack,
+TrustedPlatformModule, UEV, VpnClient, Wdac, Whea, WindowsDeveloperLicense, WindowsErrorReporting, WindowsSearch,
+WindowsUpdate'
+Access is denied. The command could not update Help topics for the Windows PowerShell core modules, or for any modules
+in the $pshome\Modules directory. To update these Help topics, start Windows PowerShell by using the "Run as
+Administrator" command, and try running Update-Help again.
+At line:1 char:1
++ Update-Help
++ ~~~~~~~~~~~
+    + CategoryInfo          : InvalidOperation: (:) [Update-Help], Exception
+    + FullyQualifiedErrorId : UpdatableHelpSystemRequiresElevation,Microsoft.PowerShell.Commands.UpdateHelpCommand
+
+Update-Help : Failed to update Help for the module(s) 'ConfigDefender, ConfigDefenderPerformance, PSReadline' with UI 
+culture(s) {en-US} : Unable to retrieve the HelpInfo XML file for UI culture en-US. Make sure the HelpInfoUri property 
+in the module manifest is valid or check your network connection and then try the command again.
+At line:1 char:1
++ Update-Help
++ ~~~~~~~~~~~
+    + CategoryInfo          : ResourceUnavailable: (:) [Update-Help], Exception
+    + FullyQualifiedErrorId : UnableToRetrieveHelpInfoXml,Microsoft.PowerShell.Commands.UpdateHelpCommand
+Update-Help : Failed to update Help for the module(s) 'ConfigDefender, ConfigDefenderPerformance, PSReadline' with UI
+culture(s) {en-US} : Unable to retrieve the HelpInfo XML file for UI culture en-US. Make sure the HelpInfoUri property
+in the module manifest is valid or check your network connection and then try the command again.
+At line:1 char:1
++ Update-Help
++ ~~~~~~~~~~~
+    + CategoryInfo          : ResourceUnavailable: (:) [Update-Help], Exception
+    + FullyQualifiedErrorId : UnableToRetrieveHelpInfoXml,Microsoft.PowerShell.Commands.UpdateHelpCommand
+
+Update-Help : Failed to update Help for the module(s) 'Microsoft.PowerShell.Operation.Validation' with UI culture(s) 
+{en-US} : Access to the path 'C:\Program 
+Files\WindowsPowerShell\Modules\Microsoft.PowerShell.Operation.Validation\1.0.1\en-US' is denied.
+At line:1 char:1
++ Update-Help
++ ~~~~~~~~~~~
+    + CategoryInfo          : InvalidOperation: (:) [Update-Help], Exception
+    + FullyQualifiedErrorId : UnknownErrorId,Microsoft.PowerShell.Commands.UpdateHelpCommand
+Update-Help : Failed to update Help for the module(s) 'Microsoft.PowerShell.Operation.Validation' with UI culture(s)
+{en-US} : Access to the path 'C:\Program
+Files\WindowsPowerShell\Modules\Microsoft.PowerShell.Operation.Validation\1.0.1\en-US' is denied.
+At line:1 char:1
++ Update-Help
++ ~~~~~~~~~~~
+    + CategoryInfo          : InvalidOperation: (:) [Update-Help], Exception
+    + FullyQualifiedErrorId : UnknownErrorId,Microsoft.PowerShell.Commands.UpdateHelpCommand
+
+PS C:\Users\user14\QA-Training\powershell-thinkwright> Get-Help -Name Get-WindowsUpdateLog
+
+NAME
+    Get-WindowsUpdateLog
+
+SYNTAX
+    Get-WindowsUpdateLog [[-ETLPath] <string[]>] [[-LogPath] <string>] [-ProcessingType {CSV | XML}] [-ForceFlush]
+    [-WhatIf] [-Confirm]  [<CommonParameters>]
+
+
+ALIASES
+    None
+
+
+REMARKS
+    Get-Help cannot find the Help files for this cmdlet on this computer. It is displaying only partial help.
+        -- To download and install Help files for the module that includes this cmdlet, use Update-Help.
+
+
+
+PS C:\Users\user14\QA-Training\powershell-thinkwright> Get-WindowsUpdateLog -LogPath "C:\Users\user14\Documents\MoNihal_WindowsUpdate.log"
+
+Converting C:\Windows\logs\WindowsUpdate into C:\Users\user14\Documents\MoNihal_WindowsUpdate.log ...
+
+
+    Directory: C:\Users\user14\AppData\Local\Temp\WindowsUpdateLog
+
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+d-----        05-06-2024     14:45                SymCache
+
+Input
+----------------
+File(s):
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240602.044434.505.40.etl
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240602.044434.505.41.etl
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240602.044434.505.42.etl
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240602.044434.505.43.etl
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240602.044434.505.44.etl
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240602.044434.505.45.etl
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240602.044434.505.46.etl
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240602.044434.505.47.etl
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240602.044434.505.48.etl
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240602.044434.505.49.etl
+
+0.00%4.65%9.30%13.95%18.60%23.26%27.91%32.56%37.21%41.86%46.51%51.16%55.81%60.47%65.12%69.77%74.42%79.07%83.72%88.37%93.02%97.67%100.00%
+
+Output
+----------------
+DumpFile:           C:\Users\user14\AppData\Local\Temp\WindowsUpdateLog\wuetl.CSV.tmp.00000
+
+The command completed successfully.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Input
+----------------
+File(s):
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240602.044434.505.50.etl
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240602.064921.052.1.etl
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240602.074156.827.1.etl
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240602.103818.747.1.etl
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240602.124415.062.1.etl
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240602.185142.763.1.etl
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240602.185142.763.2.etl
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240602.185142.763.3.etl
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240602.205037.059.1.etl
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240603.044141.718.1.etl
+
+0.00%8.70%17.39%26.09%34.78%43.48%52.17%60.87%69.57%78.26%86.96%95.65%100.00%
+
+Output
+----------------
+DumpFile:           C:\Users\user14\AppData\Local\Temp\WindowsUpdateLog\wuetl.CSV.tmp.00001
+
+The command completed successfully.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Input
+----------------
+File(s):
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240603.103544.365.1.etl
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240603.103544.365.2.etl
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240603.103544.365.3.etl
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240603.103544.365.4.etl
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240603.103544.365.5.etl
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240603.103544.365.6.etl
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240603.103544.365.7.etl
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240603.103544.365.8.etl
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240603.103544.365.9.etl
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240603.103544.365.10.etl
+
+0.00%4.69%9.38%14.08%18.77%23.46%28.15%32.84%37.54%42.23%46.92%51.61%56.30%61.00%65.69%70.38%75.07%79.77%84.46%89.15%93.84%98.53%100.00%
+
+Output
+----------------
+DumpFile:           C:\Users\user14\AppData\Local\Temp\WindowsUpdateLog\wuetl.CSV.tmp.00002
+
+The command completed successfully.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Input
+----------------
+File(s):
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240603.103544.365.11.etl
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240603.103544.365.12.etl
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240603.103544.365.13.etl
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240603.103544.365.14.etl
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240603.103544.365.15.etl
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240603.103544.365.16.etl
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240603.103544.365.17.etl
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240603.103544.365.18.etl
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240603.103544.365.19.etl
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240603.103544.365.20.etl
+
+0.00%4.68%9.36%14.04%18.71%23.39%28.07%32.75%37.43%42.11%46.78%51.46%56.14%60.82%65.50%70.18%74.85%79.53%84.21%88.89%93.57%98.25%100.00%
+
+Output
+----------------
+DumpFile:           C:\Users\user14\AppData\Local\Temp\WindowsUpdateLog\wuetl.CSV.tmp.00003
+
+The command completed successfully.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Input
+----------------
+File(s):
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240603.103544.365.21.etl
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240603.103544.365.22.etl
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240603.103544.365.23.etl
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240603.103544.365.24.etl
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240603.103544.365.25.etl
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240603.103544.365.26.etl
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240603.103544.365.27.etl
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240603.103544.365.28.etl
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240603.103544.365.29.etl
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240603.103544.365.30.etl
+
+0.00%4.68%9.36%14.04%18.71%23.39%28.07%32.75%37.43%42.11%46.78%51.46%56.14%60.82%65.50%70.18%74.85%79.53%84.21%88.89%93.57%98.25%100.00%
+
+Output
+----------------
+DumpFile:           C:\Users\user14\AppData\Local\Temp\WindowsUpdateLog\wuetl.CSV.tmp.00004
+
+The command completed successfully.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Input
+----------------
+File(s):
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240603.103544.365.31.etl
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240603.103544.365.32.etl
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240603.103544.365.33.etl
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240603.103544.365.34.etl
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240603.103544.365.35.etl
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240603.103544.365.36.etl
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240603.103544.365.37.etl
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240603.103544.365.38.etl
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240603.103544.365.39.etl
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240603.103544.365.40.etl
+
+0.00%4.64%9.28%13.91%18.55%23.19%27.83%32.46%37.10%41.74%46.38%51.01%55.65%60.29%64.93%69.57%74.20%78.84%83.48%88.12%92.75%97.39%100.00%
+
+Output
+----------------
+DumpFile:           C:\Users\user14\AppData\Local\Temp\WindowsUpdateLog\wuetl.CSV.tmp.00005
+
+The command completed successfully.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Input
+----------------
+File(s):
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240603.103544.365.41.etl
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240603.103544.365.42.etl
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240603.103544.365.43.etl
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240603.123626.061.1.etl
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240603.124706.552.1.etl
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240603.124706.552.2.etl
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240603.124706.552.3.etl
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240603.124706.552.4.etl
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240603.124706.552.5.etl
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240603.124706.552.6.etl
+
+0.00%5.42%10.85%16.27%21.69%27.12%32.54%37.97%43.39%48.81%54.24%59.66%65.08%70.51%75.93%81.36%86.78%92.20%97.63%100.00%
+
+Output
+----------------
+DumpFile:           C:\Users\user14\AppData\Local\Temp\WindowsUpdateLog\wuetl.CSV.tmp.00006
+
+The command completed successfully.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Input
+----------------
+File(s):
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240603.124706.552.7.etl
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240603.124706.552.8.etl
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240603.124706.552.9.etl
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240603.124706.552.10.etl
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240603.124706.552.11.etl
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240603.124706.552.12.etl
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240603.124706.552.13.etl
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240603.124706.552.14.etl
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240603.144604.059.1.etl
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240603.170123.727.1.etl
+
+0.00%5.76%11.51%17.27%23.02%28.78%34.53%40.29%46.04%51.80%57.55%63.31%69.06%74.82%80.58%86.33%92.09%97.84%100.00%
+
+Output
+----------------
+DumpFile:           C:\Users\user14\AppData\Local\Temp\WindowsUpdateLog\wuetl.CSV.tmp.00007
+
+The command completed successfully.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Input
+----------------
+File(s):
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240604.043519.505.1.etl
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240604.044552.639.1.etl
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240604.103822.109.1.etl
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240604.124421.355.1.etl
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240604.141414.962.1.etl
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240604.141414.962.2.etl
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240604.141414.962.3.etl
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240604.141414.962.4.etl
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240604.141414.962.5.etl
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240604.141414.962.6.etl
+
+0.00%5.82%11.64%17.45%23.27%29.09%34.91%40.73%46.55%52.36%58.18%64.00%69.82%75.64%81.45%87.27%93.09%98.91%100.00%
+
+Output
+----------------
+DumpFile:           C:\Users\user14\AppData\Local\Temp\WindowsUpdateLog\wuetl.CSV.tmp.00008
+
+The command completed successfully.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Input
+----------------
+File(s):
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240604.141414.962.7.etl
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240604.161238.056.1.etl
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240604.183412.065.1.etl
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240605.042010.734.1.etl
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240605.083512.624.1.etl
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240605.083512.624.2.etl
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240605.083512.624.3.etl
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240605.083512.624.4.etl
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240605.090126.395.1.etl
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240605.090126.395.2.etl
+
+0.00%7.02%14.04%21.05%28.07%35.09%42.11%49.12%56.14%63.16%70.18%77.19%84.21%91.23%98.25%100.00%
+
+Output
+----------------
+DumpFile:           C:\Users\user14\AppData\Local\Temp\WindowsUpdateLog\wuetl.CSV.tmp.00009
+
+The command completed successfully.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Input
+----------------
+File(s):
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240605.090126.395.3.etl
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240605.090126.395.4.etl
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240605.090126.395.5.etl
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240605.090126.395.6.etl
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240605.090126.395.7.etl
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240605.090126.395.8.etl
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240605.090126.395.9.etl
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240605.090126.395.10.etl
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240605.090126.395.11.etl
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240605.090126.395.12.etl
+
+0.00%4.69%9.38%14.08%18.77%23.46%28.15%32.84%37.54%42.23%46.92%51.61%56.30%61.00%65.69%70.38%75.07%79.77%84.46%89.15%93.84%98.53%100.00%
+
+Output
+----------------
+DumpFile:           C:\Users\user14\AppData\Local\Temp\WindowsUpdateLog\wuetl.CSV.tmp.00010
+
+The command completed successfully.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Input
+----------------
+File(s):
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240605.090126.395.13.etl
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240605.090126.395.14.etl
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240605.090126.395.15.etl
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240605.090126.395.16.etl
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240605.090126.395.17.etl
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240605.090126.395.18.etl
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240605.090126.395.19.etl
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240605.090126.395.20.etl
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240605.090126.395.21.etl
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240605.090126.395.22.etl
+
+0.00%4.68%9.36%14.04%18.71%23.39%28.07%32.75%37.43%42.11%46.78%51.46%56.14%60.82%65.50%70.18%74.85%79.53%84.21%88.89%93.57%98.25%100.00%
+
+Output
+----------------
+DumpFile:           C:\Users\user14\AppData\Local\Temp\WindowsUpdateLog\wuetl.CSV.tmp.00011
+
+The command completed successfully.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Input
+----------------
+File(s):
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240605.090126.395.23.etl
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240605.090126.395.24.etl
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240605.090126.395.25.etl
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240605.090126.395.26.etl
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240605.090126.395.27.etl
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240605.090126.395.28.etl
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240605.090126.395.29.etl
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240605.090126.395.30.etl
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240605.090126.395.31.etl
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240605.090126.395.32.etl
+
+0.00%4.66%9.33%13.99%18.66%23.32%27.99%32.65%37.32%41.98%46.65%51.31%55.98%60.64%65.31%69.97%74.64%79.30%83.97%88.63%93.29%97.96%100.00%
+
+Output
+----------------
+DumpFile:           C:\Users\user14\AppData\Local\Temp\WindowsUpdateLog\wuetl.CSV.tmp.00012
+
+The command completed successfully.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Input
+----------------
+File(s):
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240605.090126.395.33.etl
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240605.090126.395.34.etl
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240605.090126.395.35.etl
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240605.090126.395.36.etl
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240605.090126.395.37.etl
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240605.090126.395.38.etl
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240605.090126.395.39.etl
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240605.090126.395.40.etl
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240605.090126.395.41.etl
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240605.090126.395.42.etl
+
+0.00%4.69%9.38%14.08%18.77%23.46%28.15%32.84%37.54%42.23%46.92%51.61%56.30%61.00%65.69%70.38%75.07%79.77%84.46%89.15%93.84%98.53%100.00%
+
+Output
+----------------
+DumpFile:           C:\Users\user14\AppData\Local\Temp\WindowsUpdateLog\wuetl.CSV.tmp.00013
+
+The command completed successfully.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Input
+----------------
+File(s):
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240605.090126.395.43.etl
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240605.090126.395.44.etl
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240605.090126.395.45.etl
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240605.090126.395.46.etl
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240605.090126.395.47.etl
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240605.090126.395.48.etl
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240605.090126.395.49.etl
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240605.090126.395.50.etl
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240605.090126.395.51.etl
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240605.090126.395.52.etl
+
+0.00%4.69%9.38%14.08%18.77%23.46%28.15%32.84%37.54%42.23%46.92%51.61%56.30%61.00%65.69%70.38%75.07%79.77%84.46%89.15%93.84%98.53%100.00%
+
+Output
+----------------
+DumpFile:           C:\Users\user14\AppData\Local\Temp\WindowsUpdateLog\wuetl.CSV.tmp.00014
+
+The command completed successfully.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Input
+----------------
+File(s):
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240605.090126.395.53.etl
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240605.090126.395.54.etl
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240605.103349.061.1.etl
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240605.110609.060.1.etl
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240605.124418.068.1.etl
+
+0.00%25.00%50.00%75.00%100.00%
+
+Output
+----------------
+DumpFile:           C:\Users\user14\AppData\Local\Temp\WindowsUpdateLog\wuetl.CSV.tmp.00015
+
+The command completed successfully.
+
+
+
+
+
+
+WindowsUpdate.log written to C:\Users\user14\Documents\MoNihal_WindowsUpdate.log
+
+
+PS C:\Users\user14\QA-Training\powershell-thinkwright> Test-Path $env:USERPROFILE\Documents\MoNihal_WindowsUpdate.log
+True
+PS C:\Users\user14\QA-Training\powershell-thinkwright> Get-WindowsUpdateLog | Get-Member
+
+Converting C:\Windows\logs\WindowsUpdate into C:\Users\user14\Desktop\WindowsUpdate.log ...
+
+Input
+----------------
+File(s):
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240602.044434.505.40.etl
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240602.044434.505.41.etl
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240602.044434.505.42.etl
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240602.044434.505.43.etl
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240602.044434.505.44.etl
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240602.044434.505.45.etl
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240602.044434.505.46.etl
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240602.044434.505.47.etl
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240602.044434.505.48.etl
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240602.044434.505.49.etl
+
+0.00%4.65%9.30%13.95%18.60%23.26%27.91%32.56%37.21%41.86%46.51%51.16%55.81%60.47%65.12%69.77%74.42%79.07%83.72%88.37%93.02%97.67%100.00%
+
+Output
+----------------
+DumpFile:           C:\Users\user14\AppData\Local\Temp\WindowsUpdateLog\wuetl.CSV.tmp.00000
+
+The command completed successfully.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Input
+----------------
+File(s):
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240602.044434.505.50.etl
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240602.064921.052.1.etl
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240602.074156.827.1.etl
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240602.103818.747.1.etl
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240602.124415.062.1.etl
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240602.185142.763.1.etl
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240602.185142.763.2.etl
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240602.185142.763.3.etl
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240602.205037.059.1.etl
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240603.044141.718.1.etl
+
+0.00%8.70%17.39%26.09%34.78%43.48%52.17%60.87%69.57%78.26%86.96%95.65%100.00%
+
+Output
+----------------
+DumpFile:           C:\Users\user14\AppData\Local\Temp\WindowsUpdateLog\wuetl.CSV.tmp.00001
+
+The command completed successfully.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Input
+----------------
+File(s):
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240603.103544.365.1.etl
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240603.103544.365.2.etl
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240603.103544.365.3.etl
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240603.103544.365.4.etl
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240603.103544.365.5.etl
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240603.103544.365.6.etl
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240603.103544.365.7.etl
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240603.103544.365.8.etl
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240603.103544.365.9.etl
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240603.103544.365.10.etl
+
+0.00%4.69%9.38%14.08%18.77%23.46%28.15%32.84%37.54%42.23%46.92%51.61%56.30%61.00%65.69%70.38%75.07%79.77%84.46%89.15%93.84%98.53%100.00%
+
+Output
+----------------
+DumpFile:           C:\Users\user14\AppData\Local\Temp\WindowsUpdateLog\wuetl.CSV.tmp.00002
+
+The command completed successfully.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Input
+----------------
+File(s):
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240603.103544.365.11.etl
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240603.103544.365.12.etl
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240603.103544.365.13.etl
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240603.103544.365.14.etl
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240603.103544.365.15.etl
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240603.103544.365.16.etl
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240603.103544.365.17.etl
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240603.103544.365.18.etl
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240603.103544.365.19.etl
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240603.103544.365.20.etl
+
+0.00%4.68%9.36%14.04%18.71%23.39%28.07%32.75%37.43%42.11%46.78%51.46%56.14%60.82%65.50%70.18%74.85%79.53%84.21%88.89%93.57%98.25%100.00%
+
+Output
+----------------
+DumpFile:           C:\Users\user14\AppData\Local\Temp\WindowsUpdateLog\wuetl.CSV.tmp.00003
+
+The command completed successfully.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Input
+----------------
+File(s):
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240603.103544.365.21.etl
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240603.103544.365.22.etl
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240603.103544.365.23.etl
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240603.103544.365.24.etl
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240603.103544.365.25.etl
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240603.103544.365.26.etl
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240603.103544.365.27.etl
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240603.103544.365.28.etl
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240603.103544.365.29.etl
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240603.103544.365.30.etl
+
+>> TerminatingError(): "The pipeline has been stopped."
+>> TerminatingError(): "The pipeline has been stopped."
+>> TerminatingError(): "The pipeline has been stopped."
+>> TerminatingError(): "The pipeline has been stopped."
+>> TerminatingError(): "The pipeline has been stopped."
+PS C:\Users\user14\AppData\Local\Temp\WindowsUpdateLog\SymCache> Test-Path $env:USERPROFILE\Documents\MoNihal_WindowsUpdate.log
+True
+PS C:\Users\user14\AppData\Local\Temp\WindowsUpdateLog\SymCache> Get-Command -Name Get-WindowsUpdateLog
+
+CommandType     Name                                               Version    Source
+-----------     ----                                               -------    ------
+Function        Get-WindowsUpdateLog                               1.0.0.0    WindowsUpdate
+
+
+PS C:\Users\user14\AppData\Local\Temp\WindowsUpdateLog\SymCache> Get-Command -Name Get-WindowsUpdateLog | Get-Help
+
+NAME
+    Get-WindowsUpdateLog
+
+SYNTAX
+    Get-WindowsUpdateLog [[-ETLPath] <string[]>] [[-LogPath] <string>] [-ProcessingType {CSV | XML}] [-ForceFlush]
+    [-WhatIf] [-Confirm]  [<CommonParameters>]
+
+
+ALIASES
+    None
+
+
+REMARKS
+    Get-Help cannot find the Help files for this cmdlet on this computer. It is displaying only partial help.
+        -- To download and install Help files for the module that includes this cmdlet, use Update-Help.
+
+
+
+PS C:\Users\user14\AppData\Local\Temp\WindowsUpdateLog\SymCache> Get-Command -Name Get-WindowsUpdateLog | Get-Help | select SYNTAX
+
+Syntax
+------
+@{syntaxItem=System.Object[]}
+
+
+PS C:\Users\user14\AppData\Local\Temp\WindowsUpdateLog\SymCache> cd..
+PS C:\Users\user14\AppData\Local\Temp\WindowsUpdateLog> cd
+PS C:\Users\user14\AppData\Local\Temp\WindowsUpdateLog> cd "C:\Users\user14\QA-Training\powershell-thinkwright>"
+cd : Illegal characters in path.
+At line:1 char:1
++ cd "C:\Users\user14\QA-Training\powershell-thinkwright>"
++ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : InvalidArgument: (C:\Users\user14...ll-thinkwright>:String) [Set-Location], 
+ArgumentException
+    + FullyQualifiedErrorId : ItemExistsArgumentError,Microsoft.PowerShell.Commands.SetLocationCommand
+cd : Illegal characters in path.
+At line:1 char:1
++ cd "C:\Users\user14\QA-Training\powershell-thinkwright>"
++ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : InvalidArgument: (C:\Users\user14...ll-thinkwright>:String) [Set-Location], ArgumentExce
+   ption
+    + FullyQualifiedErrorId : ItemExistsArgumentError,Microsoft.PowerShell.Commands.SetLocationCommand
+
+cd : Cannot find path 'C:\Users\user14\QA-Training\powershell-thinkwright>' because it does not exist.
+At line:1 char:1
++ cd "C:\Users\user14\QA-Training\powershell-thinkwright>"
++ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : ObjectNotFound: (C:\Users\user14...ll-thinkwright>:String) [Set-Location], 
+ItemNotFoundException
+    + FullyQualifiedErrorId : PathNotFound,Microsoft.PowerShell.Commands.SetLocationCommand
+cd : Cannot find path 'C:\Users\user14\QA-Training\powershell-thinkwright>' because it does not exist.
+At line:1 char:1
++ cd "C:\Users\user14\QA-Training\powershell-thinkwright>"
++ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : ObjectNotFound: (C:\Users\user14...ll-thinkwright>:String) [Set-Location], ItemNotFoundE
+   xception
+    + FullyQualifiedErrorId : PathNotFound,Microsoft.PowerShell.Commands.SetLocationCommand
+
+PS C:\Users\user14\AppData\Local\Temp\WindowsUpdateLog> cd..
+PS C:\Users\user14\AppData\Local\Temp> cd..
+PS C:\Users\user14\AppData\Local> cd..
+PS C:\Users\user14\AppData> cd..
+PS C:\Users\user14> .\QA-Training\
+.\QA-Training\ : The term '.\QA-Training\' is not recognized as the name of a cmdlet, function, script file, or 
+operable program. Check the spelling of the name, or if a path was included, verify that the path is correct and try 
+again.
+At line:1 char:1
++ .\QA-Training\
++ ~~~~~~~~~~~~~~
+    + CategoryInfo          : ObjectNotFound: (.\QA-Training\:String) [], CommandNotFoundException
+    + FullyQualifiedErrorId : CommandNotFoundException
+.\QA-Training\ : The term '.\QA-Training\' is not recognized as the name of a cmdlet, function, script file, or
+operable program. Check the spelling of the name, or if a path was included, verify that the path is correct and try
+again.
+At line:1 char:1
++ .\QA-Training\
++ ~~~~~~~~~~~~~~
+    + CategoryInfo          : ObjectNotFound: (.\QA-Training\:String) [], CommandNotFoundException
+    + FullyQualifiedErrorId : CommandNotFoundException
+
+PS C:\Users\user14> cd .\QA-Training\
+PS C:\Users\user14\QA-Training> cd .\powershell-thinkwright\
+PS C:\Users\user14\QA-Training\powershell-thinkwright> Get-Command -Name Get-WindowsUpdateLog | Get-Help
+
+NAME
+    Get-WindowsUpdateLog
+
+SYNTAX
+    Get-WindowsUpdateLog [[-ETLPath] <string[]>] [[-LogPath] <string>] [-ProcessingType {CSV | XML}] [-ForceFlush]
+    [-WhatIf] [-Confirm]  [<CommonParameters>]
+
+
+ALIASES
+    None
+
+
+REMARKS
+    Get-Help cannot find the Help files for this cmdlet on this computer. It is displaying only partial help.
+        -- To download and install Help files for the module that includes this cmdlet, use Update-Help.
+
+
+
+PS C:\Users\user14\QA-Training\powershell-thinkwright> Get-Command -Name Get-WindowsUpdateLog -Syntax
+
+Get-WindowsUpdateLog [[-ETLPath] <string[]>] [[-LogPath] <string>] [-ProcessingType <string>] [-ForceFlush] [-WhatIf] [-Confirm] [<CommonParameters>]
+PS C:\Users\user14\QA-Training\powershell-thinkwright> Get-Member -Type Int
+>> TerminatingError(Get-Member): "Cannot bind parameter 'MemberType'. Cannot convert value "Int" to type "System.Management.Automation.PSMemberTypes". Error: "Cannot convert value "Int" to type "System.Management.Automation.PSMemberTypes" due to enumeration values that are not valid. Specify one of the following enumeration values and try again. The possible enumeration values are "AliasProperty,CodeProperty,Property,NoteProperty,ScriptProperty,Properties,PropertySet,Method,CodeMethod,ScriptMethod,Methods,ParameterizedProperty,MemberSet,Event,Dynamic,All".""
+Get-Member : Cannot bind parameter 'MemberType'. Cannot convert value "Int" to type 
+"System.Management.Automation.PSMemberTypes". Error: "Cannot convert value "Int" to type 
+"System.Management.Automation.PSMemberTypes" due to enumeration values that are not valid. Specify one of the following 
+enumeration values and try again. The possible enumeration values are "AliasProperty,CodeProperty,Property,NoteProperty,
+ScriptProperty,Properties,PropertySet,Method,CodeMethod,ScriptMethod,Methods,ParameterizedProperty,MemberSet,Event,Dynam
+ic,All"."
+At line:1 char:18
++ Get-Member -Type Int
++                  ~~~
+    + CategoryInfo          : InvalidArgument: (:) [Get-Member], ParameterBindingException
+    + FullyQualifiedErrorId : CannotConvertArgumentNoMessage,Microsoft.PowerShell.Commands.GetMemberCommand
+Get-Member : Cannot bind parameter 'MemberType'. Cannot convert value "Int" to type
+"System.Management.Automation.PSMemberTypes". Error: "Cannot convert value "Int" to type
+"System.Management.Automation.PSMemberTypes" due to enumeration values that are not valid. Specify one of the
+following enumeration values and try again. The possible enumeration values are "AliasProperty,CodeProperty,Property,No
+teProperty,ScriptProperty,Properties,PropertySet,Method,CodeMethod,ScriptMethod,Methods,ParameterizedProperty,MemberSet
+,Event,Dynamic,All"."
+At line:1 char:18
++ Get-Member -Type Int
++                  ~~~
+    + CategoryInfo          : InvalidArgument: (:) [Get-Member], ParameterBindingException
+    + FullyQualifiedErrorId : CannotConvertArgumentNoMessage,Microsoft.PowerShell.Commands.GetMemberCommand
+
+PS C:\Users\user14\QA-Training\powershell-thinkwright> Get-Member
+Get-Member : You must specify an object for the Get-Member cmdlet.
+At line:1 char:1
++ Get-Member
++ ~~~~~~~~~~
+    + CategoryInfo          : CloseError: (:) [Get-Member], InvalidOperationException
+    + FullyQualifiedErrorId : NoObjectInGetMember,Microsoft.PowerShell.Commands.GetMemberCommand
+Get-Member : You must specify an object for the Get-Member cmdlet.
+At line:1 char:1
++ Get-Member
++ ~~~~~~~~~~
+    + CategoryInfo          : CloseError: (:) [Get-Member], InvalidOperationException
+    + FullyQualifiedErrorId : NoObjectInGetMember,Microsoft.PowerShell.Commands.GetMemberCommand
+
+PS C:\Users\user14\QA-Training\powershell-thinkwright> Get-Member -MemberType
+>> TerminatingError(Get-Member): "Missing an argument for parameter 'MemberType'. Specify a parameter of type 'System.Management.Automation.PSMemberTypes' and try again."
+Get-Member : Missing an argument for parameter 'MemberType'. Specify a parameter of type 
+'System.Management.Automation.PSMemberTypes' and try again.
+At line:1 char:12
++ Get-Member -MemberType
++            ~~~~~~~~~~~
+    + CategoryInfo          : InvalidArgument: (:) [Get-Member], ParameterBindingException
+    + FullyQualifiedErrorId : MissingArgument,Microsoft.PowerShell.Commands.GetMemberCommand
+Get-Member : Missing an argument for parameter 'MemberType'. Specify a parameter of type
+'System.Management.Automation.PSMemberTypes' and try again.
+At line:1 char:12
++ Get-Member -MemberType
++            ~~~~~~~~~~~
+    + CategoryInfo          : InvalidArgument: (:) [Get-Member], ParameterBindingException
+    + FullyQualifiedErrorId : MissingArgument,Microsoft.PowerShell.Commands.GetMemberCommand
+
+PS C:\Users\user14\QA-Training\powershell-thinkwright> Get-Member -MemberType All
+Get-Member : You must specify an object for the Get-Member cmdlet.
+At line:1 char:1
++ Get-Member -MemberType All
++ ~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : CloseError: (:) [Get-Member], InvalidOperationException
+    + FullyQualifiedErrorId : NoObjectInGetMember,Microsoft.PowerShell.Commands.GetMemberCommand
+Get-Member : You must specify an object for the Get-Member cmdlet.
+At line:1 char:1
++ Get-Member -MemberType All
++ ~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : CloseError: (:) [Get-Member], InvalidOperationException
+    + FullyQualifiedErrorId : NoObjectInGetMember,Microsoft.PowerShell.Commands.GetMemberCommand
+
+PS C:\Users\user14\QA-Training\powershell-thinkwright> Test-Path $env:USERPROFILE\Documents\MoNihal_WindowsUpdate.log
+True
+PS C:\Users\user14\QA-Training\powershell-thinkwright> Get-Process
+
+Handles  NPM(K)    PM(K)      WS(K)     CPU(s)     Id  SI ProcessName
+-------  ------    -----      -----     ------     --  -- -----------
+    135       7     1452       6820              4208   0 AggregatorHost
+    268      16     4552      25388               916   3 ApplicationFrameHost
+    273      14     4324      17092       7.69  10140   4 conhost
+    562      21     1808       5572               528   0 csrss
+    170       9     1656       5024               620   1 csrss
+    429      14     2768      15036              2884   4 csrss
+    350      13     2080       6148              3028   3 csrss
+    411      16     3784      20152              5304   3 ctfmon
+    446      16     4028      20840       2.45   5484   4 ctfmon
+    200      17     3632      11656               516   0 dllhost
+    247      17     4428      13648       0.00   1200   4 dllhost
+    148       9     1996       8104       0.03   7336   4 dllhost
+    225      16     4092      12352              9408   3 dllhost
+    732      24    15612      48760              1060   1 dwm
+    893      33    25844      60068              4832   3 dwm
+   1018      35    40400      77448              5320   4 dwm
+   2483      94   109304     245544      34.94   1780   4 explorer
+   1907      72    54564     198560              7052   3 explorer
+    184      14     3692      18764       0.03   5732   4 FileCoAuth
+    127       8     1312       7208              9740   0 fodhelper
+     36       5     1272       3976               928   0 fontdrvhost
+     36       5     1220       3872               936   1 fontdrvhost
+     36       6     1720       5872              4920   4 fontdrvhost
+     36       5     1424       4580              9132   3 fontdrvhost
+      0       0       60          8                 0   0 Idle
+    178      10     1844       9300              1888   0 igfxCUIService
+    162       8     1420       7704              1476   0 IntelCpHDCPSvc
+    644      35    20272      65848               824   1 LogonUI
+    376      22    13760      43912              1224   3 LogonUI
+   1727      32     9048      24916               772   0 lsass
+      0       0       40          0              2184   0 Memory Compression
+    211      13     2076       4496              5864   0 MicrosoftEdgeUpdate
+    447      20    15668      31732              3476   0 MoUsoCoreWorker
+    457      16     8856      20632             11460   0 MpDefenderCoreService
+    144       9     2092       7976              1652   3 msedge
+    300      16    15116      32776              3804   3 msedge
+    176      11     6976      17296              5516   3 msedge
+   1160      37    40068      97424             11872   3 msedge
+    309      17     9796      29132             12008   3 msedge
+    695     189   306952     212996             11292   0 MsMpEng
+    220      34     4020      11956              2856   0 NisSrv
+    283      15     3076      18476       1.09   9780   4 notepad
+    416      27    39128      49300              3204   0 OneApp.IGCC.WinService
+    878      52    54532     119628       3.88   4932   4 OneDrive
+    862      51    55028     117892             12100   3 OneDrive
+   1130     118    58712     182272       3.45   6764   4 PhoneExperienceHost
+   1070     110    56476     166612              9784   3 PhoneExperienceHost
+    937      48   215140     240036      27.30   2412   4 powershell
+    325      13     2512      12316              7376   3 rdpclip
+    348      14     2752      13004       1.36  11504   4 rdpclip
+      0      14     4548     133612               108   0 Registry
+    267      14     3468      20344       1.53   4056   4 RuntimeBroker
+    488      23     8872      33628              4672   3 RuntimeBroker
+    232      13     2852      16116       0.08   4696   4 RuntimeBroker
+    313      20     7028      31756       4.58   5248   4 RuntimeBroker
+    216      12     2592      13764              8036   3 RuntimeBroker
+    644      31    13316      44272       2.59   9732   4 RuntimeBroker
+    314      18     6472      28348             10316   3 RuntimeBroker
+    263      14     2928      16240             11128   3 RuntimeBroker
+    308      17     5588      24176       0.27  11864   4 RuntimeBroker
+   1394     127   177100     259644      14.09   7896   4 SearchApp
+   1299     126   179860     263340              8096   3 SearchApp
+   1272     235   441752     473792      10.55  10732   4 SearchApp
+    748      51    28760      41944              3928   0 SearchIndexer
+    494      16     5676      16144             10408   0 SecurityHealthService
+    167       9     1816       9516              7096   3 SecurityHealthSystray
+    166       9     1760       9740       0.14  11392   4 SecurityHealthSystray
+    730      14     6680      14636               752   0 services
+    105       7     4372       7660              5968   0 SgrmBroker
+    694      31    22744      74420       0.67   1364   4 ShellExperienceHost
+    545      17     6336      27144       4.41   1192   4 sihost
+    497      18     6056      26724              6156   3 sihost
+     59       3     1072       1212               416   0 smss
+    534      25     7948      22760              2980   0 spoolsv
+    625      30    24744      79300       1.53   3340   4 StartMenuExperienceHost
+    722      34    19932      66672              9088   3 StartMenuExperienceHost
+    450      13     3552      11924               452   0 svchost
+   1896      23    18208      37084               896   0 svchost
+   1340      20    12072      20484              1020   0 svchost
+    870      35    82524      90356              1120   0 svchost
+    150      24     5100       9656              1176   0 svchost
+    205      12     1764       7916              1184   0 svchost
+    215      12     2664      10760              1264   0 svchost
+    473       9     2396      12756              1272   0 svchost
+    224      10     2156       7940              1292   0 svchost
+    443      14    15656      18712              1376   0 svchost
+    321      16     3600      10080              1384   0 svchost
+    392      18     6448      16332              1404   0 svchost
+    185       9     2012       8108              1516   0 svchost
+    200       7     1812       6716              1532   0 svchost
+    414      16     4412      13212              1608   0 svchost
+    175       9     1888       8392              1732   0 svchost
+    408      32    11204      20592              1748   0 svchost
+    192      10     2372       9528              1764   0 svchost
+    312      15     6384      22136       0.67   1840   4 svchost
+    261      14     2536      11308              1896   0 svchost
+    291      16     3820      16500              1928   0 svchost
+    243       8     1396       6256              1944   0 svchost
+    474      12     3044      10228              1956   0 svchost
+    131       8     1420       7456              2084   0 svchost
+    197      10     1836       8956              2140   0 svchost
+    218      11     2260       9456              2148   0 svchost
+    277      10     2984      10540              2256   0 svchost
+    210      10     1864       7912              2388   0 svchost
+    134       9     1752       7712              2404   0 svchost
+    155      10     1900       8724              2504   0 svchost
+    204      11     2076       9288              2536   0 svchost
+    245      16     2432      11116              2576   0 svchost
+    369      13     3568      15292              2616   0 svchost
+    546      14     5104      21924              2680   0 svchost
+    380      15     9648      20056              2684   0 svchost
+    382      13     2352      10152              2728   0 svchost
+    215      12     2404      11044              2736   0 svchost
+    190      17    15684      24776              2748   0 svchost
+    198      12     2292      13028              2912   0 svchost
+    204       9     2020       7524              3000   0 svchost
+    383      17     2896      11804              3108   0 svchost
+    391      26     4872      15664              3160   0 svchost
+    599      29    27092      54168              3168   0 svchost
+    349      18    34632      44308              3188   0 svchost
+    135       7     1300       6008              3268   0 svchost
+    364      18     4476      20504              3304   0 svchost
+    206      12     2380       9428              3316   0 svchost
+    208       9     1876       8496              3428   0 svchost
+    116       8     1388       5864              3536   0 svchost
+    122       8     1296       5812              4272   0 svchost
+    436      21    10528      22656              4592   0 svchost
+    215      11     1868       8620              4704   0 svchost
+    230      15     3784      13772              4972   0 svchost
+    194      15     6156      10028              5004   0 svchost
+    274      16     4124      20892              5044   0 svchost
+    241      12     4644      10156              5092   0 svchost
+    237      12     3144      11236              5224   0 svchost
+    415      20     4128      19332              5344   0 svchost
+    219      15     2088       7960              5684   0 svchost
+    343      21     4712      18744              5712   0 svchost
+    302      15     3752      22728       0.48   5724   4 svchost
+    230      12     2676      12336              5748   0 svchost
+    376      19    11288      28656              5940   0 svchost
+    389      21     7432      26192              6100   0 svchost
+    436      21     7344      31392              6556   3 svchost
+    203      11     2652      11160              6952   0 svchost
+    252      14     2940      12808       0.06   7232   4 svchost
+    491      23     8688      36668       1.05   8160   4 svchost
+    487       8     1636       7684              8420   0 svchost
+    155       9     1512       7148              8748   0 svchost
+    177       9     1888       8160              9164   0 svchost
+    251      13     3252      18064              9300   3 svchost
+    148       9     1592      11456              9756   0 svchost
+    291      14     3988      17384             10976   3 svchost
+    439      25     5288      21032             11032   3 svchost
+   3910       0      204       4560                 4   0 System
+    259      27     6172      16360       0.84   9148   4 taskhostw
+    264      27     5784      15660              9240   3 taskhostw
+    554      23    15128      56496       0.61   4360   4 TextInputHost
+    556      23    15080      54920              5936   3 TextInputHost
+    210      58    37740      39624              1844   0 TiWorker
+    142       9     6392       9132              2832   0 TrustedInstaller
+    121       7     1364       6456              6056   0 uhssvc
+    164      11     1440       7280               612   0 wininit
+    213      10     2352      11020               696   1 winlogon
+    263      11     1952      10060              9276   3 winlogon
+    260      11     1948      10156             11380   4 winlogon
+     69       5      772       3692              3324   0 wlms
+    357      14    16552      35424               440   0 WUDFHost
+
+
+PS C:\Users\user14\QA-Training\powershell-thinkwright> Get-Process -ProcessName explorer
+
+Handles  NPM(K)    PM(K)      WS(K)     CPU(s)     Id  SI ProcessName
+-------  ------    -----      -----     ------     --  -- -----------
+   2489      94   109588     242204      34.97   1780   4 explorer
+   1907      72    54564     198560              7052   3 explorer
+
+
+PS C:\Users\user14\QA-Training\powershell-thinkwright> Get-Process -ProcessName explorer | Export-Csv "C:\Users\user14\Documents\Explorer_process.html"
+PS C:\Users\user14\QA-Training\powershell-thinkwright> git status
+On branch MoNihal-branch
+Your branch is ahead of 'origin/MoNihal-branch' by 1 commit.
+  (use "git push" to publish your local commits)
+
+nothing to commit, working tree clean
+PS C:\Users\user14\QA-Training\powershell-thinkwright> Stop-Transcript
+**********************
+Windows PowerShell transcript end
+End time: 20240605155202
+**********************
