@@ -1,0 +1,47 @@
+﻿**********************
+Windows PowerShell transcript start
+Start time: 20240605150734
+Username: THINKWRIGHT\user2
+RunAs User: THINKWRIGHT\user2
+Configuration Name: 
+Machine: DESKTOP-2 (Microsoft Windows NT 10.0.19045.0)
+Host Application: C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe
+Process ID: 7960
+PSVersion: 5.1.19041.4412
+PSEdition: Desktop
+PSCompatibleVersions: 1.0, 2.0, 3.0, 4.0, 5.0, 5.1.19041.4412
+BuildVersion: 10.0.19041.4412
+CLRVersion: 4.0.30319.42000
+WSManStackVersion: 3.0
+PSRemotingProtocolVersion: 2.3
+SerializationVersion: 1.1.0.1
+**********************
+Transcript started, output file is C:\Users\user2\Training\powershell-thinkwright\06-05-2024.log
+PS C:\Users\user2\Training\powershell-thinkwright> (get-Date).TimeofDay.ToString()
+15:09:42.9713966
+PS C:\Users\user2\Training\powershell-thinkwright> (get-Date).TimeofDay.ToString().Replace(":", "-")
+15-10-50.9227862
+PS C:\Users\user2\Training\powershell-thinkwright> (get-Date).TimeofDay.ToString().Replace(":", "-").Replace(".","-")
+15-11-30-0464226
+PS C:\Users\user2\Training\powershell-thinkwright> $env:userprofile
+C:\Users\user2
+PS C:\Users\user2\Training\powershell-thinkwright> git status
+On branch Afroz-branch
+Your branch is up to date with 'origin/Afroz-branch'.
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        06-05-2024.log
+
+nothing added to commit but untracked files present (use "git add" to track)
+PS C:\Users\user2\Training\powershell-thinkwright> git push
+Everything up-to-date
+PS C:\Users\user2\Training\powershell-thinkwright> git add .
+
+PS C:\Users\user2\Training\powershell-thinkwright> git push
+Everything up-to-date
+PS C:\Users\user2\Training\powershell-thinkwright> Stop-Transcript
+**********************
+Windows PowerShell transcript end
+End time: 20240605153709
+**********************
