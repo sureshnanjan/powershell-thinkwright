@@ -1,0 +1,38 @@
+﻿**********************
+Windows PowerShell transcript start
+Start time: 20240605140705
+Username: THINKWRIGHT\user15
+RunAs User: THINKWRIGHT\user15
+Configuration Name: 
+Machine: DESKTOP-1 (Microsoft Windows NT 10.0.19045.0)
+Host Application: C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe
+Process ID: 2668
+PSVersion: 5.1.19041.4412
+PSEdition: Desktop
+PSCompatibleVersions: 1.0, 2.0, 3.0, 4.0, 5.0, 5.1.19041.4412
+BuildVersion: 10.0.19041.4412
+CLRVersion: 4.0.30319.42000
+WSManStackVersion: 3.0
+PSRemotingProtocolVersion: 2.3
+SerializationVersion: 1.1.0.1
+**********************
+Transcript started, output file is .\Transcript_Murugan_5June2024.log
+PS C:\Users\user15\QA-Training\powershell-thinkwright> dir
+
+
+    Directory: C:\Users\user15\QA-Training\powershell-thinkwright
+
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+-a----          6/4/2024   2:37 PM           2257 Rajesh.log
+-a----          6/4/2024   2:37 PM             56 README.md
+-a----          6/4/2024   2:37 PM           1579 suresh.log
+-a----          6/5/2024   2:07 PM              0 Transcript_Murugan_5June2024.log
+
+
+PS C:\Users\user15\QA-Training\powershell-thinkwright> Stop-Transcript
+**********************
+Windows PowerShell transcript end
+End time: 20240605140755
+**********************
