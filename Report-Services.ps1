@@ -28,11 +28,11 @@
    [string]$OutputPath = (Get-Location)
    )
 
-   $d = (Get-Date).Date.ToString('ddMMyyyy-hhmm')
+   $d = (Get-Date).ToString('ddMMyyyy-hhmm')
    if ($Status -eq "")
-   {$ServiceData = Get-Service | Select Name, DisplayName, ServiceType | Sort-Object Status | ConvertTo-Html }
+   {$ServiceData = Get-Service | Select Name, DisplayName, Status, ServiceType | Sort-Object Status | ConvertTo-Html }
    else 
-   {$ServiceData = Get-Service | where {$_.Status -eq $Status} | Select Name, DisplayName, ServiceType | ConvertTo-Html}
+   {$ServiceData = Get-Service | where {$_.Status -eq $Status} | Select Name, DisplayName, Status, ServiceType | ConvertTo-Html}
    
    $ServiceData | Out-File "$OutputPath\ServiceStatus_$d.html"
 
