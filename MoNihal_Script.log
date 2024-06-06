@@ -1,0 +1,34 @@
+﻿**********************
+Windows PowerShell transcript start
+Start time: 20240606161105
+Username: THINKWRIGHT\user14
+RunAs User: THINKWRIGHT\user14
+Configuration Name: 
+Machine: DESKTOP-14 (Microsoft Windows NT 10.0.19045.0)
+Host Application: C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe
+Process ID: 10192
+PSVersion: 5.1.19041.4412
+PSEdition: Desktop
+PSCompatibleVersions: 1.0, 2.0, 3.0, 4.0, 5.0, 5.1.19041.4412
+BuildVersion: 10.0.19041.4412
+CLRVersion: 4.0.30319.42000
+WSManStackVersion: 3.0
+PSRemotingProtocolVersion: 2.3
+SerializationVersion: 1.1.0.1
+**********************
+Transcript started, output file is MoNihal_Script.log
+PS C:\Users\user14\QA-Training\powershell-thinkwright> .\Grant-SMBXPermission.ps1 -username "Mohamed Nihal" -SMBXname "HR Resource" -Accessrights "FullAccess"
+User Name: Mohamed Nihal
+Shared Mailbox Name: HR Resource
+Level of Permission (Full Access, Send As or Send on Behalf): FullAccess
+FullAccess Permission has been granted to Mohamed Nihal on the mailbox HR Resource
+PS C:\Users\user14\QA-Training\powershell-thinkwright> .\Remove-SMBXPermission.ps1 -username "Mohamed Nihal" -SMBXname "Financial" -Accessrights "Send As"
+User Name: Mohamed Nihal
+Shared Mailbox Name: Financial
+Level of Permission (Full Access, Send As or Send on Behalf): Send As
+Send As Permission has been removed for Mohamed Nihal on the mailbox Financial
+PS C:\Users\user14\QA-Training\powershell-thinkwright> Stop-Transcript
+**********************
+Windows PowerShell transcript end
+End time: 20240606161319
+**********************
