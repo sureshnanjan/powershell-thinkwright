@@ -1,0 +1,1317 @@
+﻿**********************
+Windows PowerShell transcript start
+Start time: 20240606191709
+Username: AzureAD\RajeshGuttavilli
+RunAs User: AzureAD\RajeshGuttavilli
+Configuration Name: 
+Machine: DESKTOP-OQJSPVH (Microsoft Windows NT 10.0.19045.0)
+Host Application: C:\WINDOWS\system32\WindowsPowerShell\v1.0\PowerShell_ISE.exe
+Process ID: 11792
+PSVersion: 5.1.19041.4412
+PSEdition: Desktop
+PSCompatibleVersions: 1.0, 2.0, 3.0, 4.0, 5.0, 5.1.19041.4412
+BuildVersion: 10.0.19041.4412
+CLRVersion: 4.0.30319.42000
+WSManStackVersion: 3.0
+PSRemotingProtocolVersion: 2.3
+SerializationVersion: 1.1.0.1
+**********************
+Transcript started, output file is C:\Users\RajeshGuttavilli\Rajesh-19-17-04-0146148.log
+PS C:\RajeshPowerShell> New-Object -TypeName Details
+>> TerminatingError(New-Object): "Cannot find type [Details]: verify that the assembly containing this type is loaded."
+New-Object : Cannot find type [Details]: verify that the assembly containing this type is loaded.
+At line:1 char:1
++ New-Object -TypeName Details
++ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : InvalidType: (:) [New-Object], PSArgumentException
+    + FullyQualifiedErrorId : TypeNotFound,Microsoft.PowerShell.Commands.NewObjectCommand
+New-Object : Cannot find type [Details]: verify that the assembly containing this type is loaded.
+At line:1 char:1
++ New-Object -TypeName Details
++ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : InvalidType: (:) [New-Object], PSArgumentException
+    + FullyQualifiedErrorId : TypeNotFound,Microsoft.PowerShell.Commands.NewObjectCommand
+
+PS C:\RajeshPowerShell> New-Object -TypeName RDetails
+>> TerminatingError(New-Object): "Cannot find type [RDetails]: verify that the assembly containing this type is loaded."
+New-Object : Cannot find type [RDetails]: verify that the assembly containing this type is loaded.
+At line:1 char:1
++ New-Object -TypeName RDetails
++ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : InvalidType: (:) [New-Object], PSArgumentException
+    + FullyQualifiedErrorId : TypeNotFound,Microsoft.PowerShell.Commands.NewObjectCommand
+New-Object : Cannot find type [RDetails]: verify that the assembly containing this type is loaded.
+At line:1 char:1
++ New-Object -TypeName RDetails
++ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : InvalidType: (:) [New-Object], PSArgumentException
+    + FullyQualifiedErrorId : TypeNotFound,Microsoft.PowerShell.Commands.NewObjectCommand
+
+PS C:\RajeshPowerShell> $array = @('Rajesh', '2106', '35')
+$parameters = @{
+    TypeName = 'System.Collections.Generic.HashSet[string]'
+    ArgumentList = ([string[]]$array, [System.StringComparer]::OrdinalIgnoreCase)
+}
+$set = New-Object @parameters
+PS C:\RajeshPowerShell> $set
+Rajesh
+2106
+35
+PS C:\RajeshPowerShell> New-Object | Get-Member
+>> TerminatingError(New-Object): "Cannot find type [test]: verify that the assembly containing this type is loaded."
+New-Object : Cannot find type [test]: verify that the assembly containing this type is loaded.
+At line:1 char:1
++ New-Object | Get-Member
++ ~~~~~~~~~~
+    + CategoryInfo          : InvalidType: (:) [New-Object], PSArgumentException
+    + FullyQualifiedErrorId : TypeNotFound,Microsoft.PowerShell.Commands.NewObjectCommand
+New-Object : Cannot find type [test]: verify that the assembly containing this type is loaded.
+At line:1 char:1
++ New-Object | Get-Member
++ ~~~~~~~~~~
+    + CategoryInfo          : InvalidType: (:) [New-Object], PSArgumentException
+    + FullyQualifiedErrorId : TypeNotFound,Microsoft.PowerShell.Commands.NewObjectCommand
+
+PS C:\RajeshPowerShell> Get-Help New-Object
+
+NAME
+    New-Object
+
+SYNTAX
+    New-Object [-TypeName] <string> [[-ArgumentList] <Object[]>] [-Property <IDictionary>]  [<CommonParameters>]
+
+    New-Object [-ComObject] <string> [-Strict] [-Property <IDictionary>]  [<CommonParameters>]
+
+
+ALIASES
+    None
+
+
+REMARKS
+    Get-Help cannot find the Help files for this cmdlet on this computer. It is displaying only partial help.
+        -- To download and install Help files for the module that includes this cmdlet, use Update-Help.
+        -- To view the Help topic for this cmdlet online, type: "Get-Help New-Object -Online" or
+           go to https://go.microsoft.com/fwlink/?LinkID=113355.
+
+
+
+PS C:\RajeshPowerShell> New-Object WIN32_FIND_DATA 
+>> TerminatingError(New-Object): "Cannot find type [WIN32_FIND_DATA]: verify that the assembly containing this type is loaded."
+New-Object : Cannot find type [WIN32_FIND_DATA]: verify that the assembly containing this type is loaded.
+At line:1 char:1
++ New-Object WIN32_FIND_DATA
++ ~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : InvalidType: (:) [New-Object], PSArgumentException
+    + FullyQualifiedErrorId : TypeNotFound,Microsoft.PowerShell.Commands.NewObjectCommand
+New-Object : Cannot find type [WIN32_FIND_DATA]: verify that the assembly containing this type is loaded.
+At line:1 char:1
++ New-Object WIN32_FIND_DATA
++ ~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : InvalidType: (:) [New-Object], PSArgumentException
+    + FullyQualifiedErrorId : TypeNotFound,Microsoft.PowerShell.Commands.NewObjectCommand
+
+PS C:\RajeshPowerShell> New-Object -TypeName PSObject
+
+PS C:\RajeshPowerShell> $psobject
+PS C:\RajeshPowerShell> New-Object -TypeName PSObject
+$psobject
+
+
+PS C:\RajeshPowerShell> $details = New-Object -TypeName PSObject
+PS C:\RajeshPowerShell> $details
+
+PS C:\RajeshPowerShell> $details | Add-Member -MemberType NoteProperty -Name "Name" -Value "Rajesh"
+PS C:\RajeshPowerShell> 
+$details 
+
+Name
+----
+Rajesh
+
+
+PS C:\RajeshPowerShell> $details | Add-Member -MemberType NoteProperty -Name "DOB" -Value "21-06"
+PS C:\RajeshPowerShell> 
+$details
+
+Name   DOB
+----   ---
+Rajesh 21-06
+
+
+PS C:\RajeshPowerShell> $details = New-Object -TypeName PSObject
+$details | Add-Member -MemberType NoteProperty -Name "Name" -Value "Rajesh"
+$details | Add-Member -MemberType NoteProperty -Name "DOB" -Value "21-06"
+$details | Add-Member -MemberType NoteProperty -Name "Age" -Value "25"
+PS C:\RajeshPowerShell> 
+$details
+
+Name   DOB   Age
+----   ---   ---
+Rajesh 21-06 25
+
+
+PS C:\RajeshPowerShell> $NameValue = @{ Training = ‘Powershell’; Attendance = 5; Assessment = ‘PASS’ }
+$hash = new-object psobject -Property $NameValue
+PS C:\RajeshPowerShell> $hash
+
+Attendance Training   Assessment
+---------- --------   ----------
+         5 Powershell PASS
+
+
+PS C:\RajeshPowerShell> $hash
+
+Attendance Training   Assessment
+---------- --------   ----------
+         5 Powershell PASS
+
+
+PS C:\RajeshPowerShell> $hash
+
+Attendance Training   Assessment
+---------- --------   ----------
+         5 Powershell PASS
+
+
+PS C:\RajeshPowerShell> 
+$NameValue 
+
+Name                           Value
+----                           -----
+Attendance                     5
+Training                       Powershell
+Assessment                     PASS
+
+
+PS C:\RajeshPowerShell> $Student = $details + $hash
+Method invocation failed because [System.Management.Automation.PSObject] does not contain a method named 'op_Addition'.
+At line:1 char:1
++ $Student = $details + $hash
++ ~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : InvalidOperation: (op_Addition:String) [], RuntimeException
+    + FullyQualifiedErrorId : MethodNotFound
+Method invocation failed because [System.Management.Automation.PSObject] does not contain a method named 'op_Addition'.
+At line:1 char:1
++ $Student = $details + $hash
++ ~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : InvalidOperation: (op_Addition:String) [], RuntimeException
+    + FullyQualifiedErrorId : MethodNotFound
+
+PS C:\RajeshPowerShell> $hash
+
+Attendance Training   Assessment
+---------- --------   ----------
+         5 Powershell PASS
+
+
+PS C:\RajeshPowerShell> $result =[pscustomobject]@{
+                        Name = $details.Name
+                        DOB =  $details.DOB
+                        Age = $details.Age
+                        Training = $hash.Training
+                        Attendance = $hash.Attendance
+                        Assessment = $hash.Assessment
+                          }
+PS C:\RajeshPowerShell> $result
+
+
+Name       : Rajesh
+DOB        : 21-06
+Age        : 25
+Training   : Powershell
+Attendance : 5
+Assessment : PASS
+
+
+
+PS C:\RajeshPowerShell> $result =@()
+$result =[pscustomobject]@{
+                        Name = $details.Name
+                        DOB =  $details.DOB
+                        Age = $details.Age
+                        Training = $hash.Training
+                        Attendance = $hash.Attendance
+                        Assessment = $hash.Assessment
+                          }
+PS C:\RajeshPowerShell>                           $result
+
+
+Name       : Rajesh
+DOB        : 21-06
+Age        : 25
+Training   : Powershell
+Attendance : 5
+Assessment : PASS
+
+
+
+PS C:\RajeshPowerShell> $Student =@()
+$student =[pscustomobject]@{
+                        Name = $details.Name
+                        DOB =  $details.DOB
+                        Age = $details.Age
+                        Training = $hash.Training
+                        Attendance = $hash.Attendance
+                        Assessment = $hash.Assessment
+                          }
+                          $Student
+
+
+Name       : Rajesh
+DOB        : 21-06
+Age        : 25
+Training   : Powershell
+Attendance : 5
+Assessment : PASS
+
+
+
+PS C:\RajeshPowerShell> $Student | Export-Csv -Path student.csv
+PS C:\RajeshPowerShell> Test-Path -Path .\student.csv
+True
+PS C:\RajeshPowerShell> $ImportedStudent = Import-Csv .\student.csv
+PS C:\RajeshPowerShell> Compare-Object -ReferenceObject $Student -DifferenceObject $ImportedStudent
+PS C:\RajeshPowerShell> Compare-Object -ReferenceObject $Student -DifferenceObject $ImportedStudent -Property Name
+PS C:\RajeshPowerShell> Compare-Object -ReferenceObject $Student -DifferenceObject $ImportedStudent -PassThru
+PS C:\RajeshPowerShell> $ImportedStudent
+
+
+Name       : Rajesh
+DOB        : 21-06
+Age        : 25
+Training   : Powershell
+Attendance : 5
+Assessment : PASS
+
+
+
+PS C:\RajeshPowerShell> $Student 
+
+
+Name       : Rajesh
+DOB        : 21-06
+Age        : 25
+Training   : Powershell
+Attendance : 5
+Assessment : PASS
+
+
+
+PS C:\RajeshPowerShell> $ImportedStudent | ft
+
+Name   DOB   Age Training   Attendance Assessment
+----   ---   --- --------   ---------- ----------
+Rajesh 21-06 25  Powershell 5          PASS
+
+
+PS C:\RajeshPowerShell> $ImportedStudent | Format-Table -Property @{Name = "Name"; Alignment="left"; }
+>> TerminatingError(Format-Table): "A mandatory entry for expression is missing."
+Format-Table : A mandatory entry for expression is missing.
+At line:1 char:20
++ ... edStudent | Format-Table -Property @{Name = "Name"; Alignment="left"; ...
++                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : InvalidArgument: (:) [Format-Table], NotSupportedException
+    + FullyQualifiedErrorId : DictionaryKeyMandatoryEntry,Microsoft.PowerShell.Commands.FormatTableCommand
+Format-Table : A mandatory entry for expression is missing.
+At line:1 char:20
++ ... edStudent | Format-Table -Property @{Name = "Name"; Alignment="left"; ...
++                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : InvalidArgument: (:) [Format-Table], NotSupportedException
+    + FullyQualifiedErrorId : DictionaryKeyMandatoryEntry,Microsoft.PowerShell.Commands.FormatTableCommand
+PS C:\RajeshPowerShell> Get-Process
+
+Handles  NPM(K)    PM(K)      WS(K)     CPU(s)     Id  SI ProcessName
+-------  ------    -----      -----     ------     --  -- -----------
+   2166     112   113228     136136             17032   0 A180AG
+    674      52    33536      46304             10688   0 A180CM
+    967      55    36380      56980     150.94   3696   1 A180RS
+    184      13     2776      14312              4868   0 A180WD
+     99       6     1184       5752             10292   0 AggregatorHost
+    292      17    27632      41524       0.23  14320   1 ai
+    203      17    23488      19220       0.41  14736   1 ai
+    404      25    16428      28828       0.31  21080   1 ApplicationFrameHost
+    420      31    86752      98980   1,875.20  15456   0 audiodg
+    503      29     7196      23996       6.78  21488   1 AuthManSvr
+    154      11     2908      11100      14.72   9780   1 AutoHotkeyU64
+    949      65    54152      68716              5172   0 Avecto.IC3.Client.Host
+    449      48    23956      18236     139.09  14636   1 c42_user_session
+    484      36    47416       2744       0.39  14732   1 CalculatorApp
+     94       7     2788       6460       0.31  19584   1 cmd
+    898     167   239808     127280              4900   0 code42-aat
+    907      45    41256      67856      85.81   4372   1 Code42Desktop
+    337      32    42140      75884      13.34   8628   1 Code42Desktop
+    349      26    20996      41904       4.19  14416   1 Code42Desktop
+    312      22    21672      39112       1.48  14640   1 Code42Desktop
+   1789      82   384168     275568             20000   0 Code42Service
+    150       8     1856      10124       0.19  19524   1 CompPkgSrv
+    408      27    10072      23404       1.08   4388   1 concentr
+    109       8     6484       5560              4492   0 conhost
+    109       8     6476       6660              7352   0 conhost
+    109       8     6596       6908       0.11  11960   1 conhost
+    131      10     6936       8820       0.14  19880   1 conhost
+    112       8     6588       6804       0.05  20652   1 conhost
+    132       8     1516       6696              6228   0 CptService
+    449      34   159268      29864       6.19  19272   1 csc_ui
+    976      32     2248       5288               880   0 csrss
+    951      34     3244       5512               980   1 csrss
+    571      18     8436      28064      18.48  12248   1 ctfmon
+    126       8     1488       6176              5868   0 dasHost
+    887      29    51672      62920              4860   0 DefendpointService
+    216      17     3540      11596              7712   0 dllhost
+    370      26     6356      16276       0.56  14044   1 dllhost
+    104       9     1812       7152      45.19  11604   1 dptf_helper
+   2116      60   209408     183408              1508   1 dwm
+    149       9     2512       7272              5088   0 esif_uf
+   4562     129   294136     202872     152.56  12372   1 explorer
+    205      16     5588      23136       0.72  19492   1 FileCoAuth
+    354      33    92904     120916       2.33   1176   1 firefox
+    340      32    92700     114964       1.61   4888   1 firefox
+    351      34    84484      98092       6.47   7052   1 firefox
+    342      27    60184      58088       1.17   9748   1 firefox
+   1488      92   685372     463636     299.16  11884   1 firefox
+    319      21    53384      28196       0.17  13044   1 firefox
+    237      18    21432      14784       0.09  13332   1 firefox
+    356      29    72552      56960       2.39  13376   1 firefox
+    345      58   238240     234244       6.55  13912   1 firefox
+    328      24    47568      46204       1.58  16372   1 firefox
+    179      12    37352      13556       0.14  16640   1 firefox
+    363      38    80032      82072     516.39  18396   1 firefox
+    299      20    28280      29780       0.11  19776   1 firefox
+    272      17    21968      16904       0.11  21416   1 firefox
+    366      33    94060     120220       6.67  21604   1 firefox
+   2572     137   277992     305372     718.95  21920   1 firefox
+    342      24    35316      52676       0.61  21948   1 firefox
+    344      32    93744      99084       2.36  23036   1 firefox
+    337      29    76484      82960       1.94  23824   1 firefox
+    345      32    78480      66340       2.92  25420   1 firefox
+    346      34   106324     100952       2.63  25588   1 firefox
+    336      28    67364      94328       0.98  26020   1 firefox
+    295      19    28260      29224       0.16  26172   1 firefox
+    299      20    28300      29796       0.11  26232   1 firefox
+     48       9     4212       9052              1248   1 fontdrvhost
+     48       7     1936       3136              1256   0 fontdrvhost
+    227      11     3612       8028              5076   0 ftnlsv
+    240      12     4760       8280              5100   0 ftscanmgrhv
+    275      14     3188      14912              5064   0 FwSwitchService
+    257      17     3280      13064              4892   0 horizon_client_service
+      0       0       60          8                 0   0 Idle
+    207      12     2444      10680              2920   0 igfxCUIServiceN
+    427      16     4416      14416       0.95  11760   1 igfxEMN
+    405      37    38048      29340              5296   0 IntelAudioService
+    134       8     1452       6296              2080   0 IntelCpHDCPSvc
+    145      10     1796       7488              5332   0 jhi_service
+    585      28    47848      57036       0.58  18260   1 LockApp
+     97       7     1364       6488       0.05  11664   1 LRS.PersonalPrint.Launcher
+   1018      95    98608      48748              5324   0 LRS.PersonalPrint.Service
+    845      96   105384      58192      14.91  11908   1 LRS.PersonalPrint.Service
+     52      16     1852       3644               800   0 LsaIso
+   2246      37    15040      33812               816   0 lsass
+      0       0     3864    1073456              3204   0 Memory Compression
+   1219      64    47516      88732             17540   0 Microsoft.Management.Services.IntuneWindowsAgent
+    553      32    59844      49132      10.41  11320   1 Microsoft.SharePoint
+    392      16    10272      18240              5396   0 MpDefenderCoreService
+    361      21    37388      29952       4.20   1604   1 msedge
+   1873      42   194300     128024      56.56   2204   1 msedge
+    204      14    12076      20952       1.73   2292   1 msedge
+    321      24    86456      21076       5.05   2884   1 msedge
+    244      19    40704      44816      17.95   3064   1 msedge
+    258      15     8300      24876       0.50   6908   1 msedge
+    273      17     8204      22172       1.38  10460   1 msedge
+    424      29   142404     165644     188.84  11724   1 msedge
+    446      34    25060      46952      42.72  16180   1 msedge
+    240      11     2572       8956       0.14  16236   1 msedge
+   2534     113   157452     234912     254.05  16912   1 msedge
+    202      16    18044      29768       0.13  18116   1 msedge
+    482      27   248732       5888      50.70  19468   1 msedge
+    343      23    95056       4640       6.92  19732   1 msedge
+    365      22    66068     104772       8.27  21512   1 msedge
+    399      27   104956       5128      11.63  22756   1 msedge
+    400      28   111884       5132      22.86  23252   1 msedge
+    224      18    17772      34380       0.13  24252   1 msedge
+    192      13     8372      18776       0.13   8968   1 msedgewebview2
+   1291      54    40580     105700      13.20  13864   1 msedgewebview2
+    162      10     2492       8772       0.08  14008   1 msedgewebview2
+    644      27    86120      51012       1.78  14700   1 msedgewebview2
+    368      24    13836      17252      16.09  16824   1 msedgewebview2
+    356      23    12404      34852       5.16  17528   1 msedgewebview2
+    297      19    61236      76804       7.34  18224   1 msedgewebview2
+    491      43   595128     429564     392.25  18584   1 msedgewebview2
+    188      13    10964       5876       1.64  18792   1 msedgewebview2
+   1461      57    66896      69896      96.42  18880   1 msedgewebview2
+   1659      36   194184     124148      66.95  19040   1 msedgewebview2
+    169      11     2496       8760       0.08  19308   1 msedgewebview2
+    259      20    45632      10024       1.91  19452   1 msedgewebview2
+    267      17     8296       1436       9.00  20560   1 msedgewebview2
+    280      18    25788      53128       3.08  22968   1 msedgewebview2
+   1145     207   366868     283736              6212   0 MsMpEng
+   1070      52   172892     122408              5780   0 MsSense
+   1891      92   157040      55704     460.08  18184   1 ms-teams
+     98      11     2080       8584       0.45  13620   1 NativeMessagingHost
+    249      15     4496      10760              5304   0 ndrvx
+    345      38    23896      34848             12244   0 NisSrv
+    282      16     3448      18980       0.47    256   1 notepad
+    320      16     3656      19816       0.73   3600   1 notepad
+    282      16     3392      18900       0.22  13792   1 notepad
+    263      19    14676      21080       2.06  17468   1 notepad++
+   1332      17     8704      10708              8348   0 npullvpsx
+    829      29    39324      42848              4916   0 OfficeClickToRun
+    493      31    17812      31276              5340   0 Okta.Coordinator.Service
+   1687      79   115212      44236      15.50  11784   1 OktaVerify
+    576      31    36716      40692              5260   0 OneApp.IGCC.WinService
+   1089      66   121704     119564      17.92   7764   1 OneDrive
+    252      14     4132       4076       0.28  17972   1 ONENOTEM
+   5859     139   385732     423408      87.34   9108   1 OUTLOOK
+    587      35    13200      42300       5.19   9692   1 PanGPA
+    518      32    18476      36144              5384   0 PanGPS
+    173      11     2944       9668              5404   0 pcapsvc
+    196      12     2932      10840       2.63   8696   1 pcapui
+    163      11     2448      10704       0.09  10012   1 PGSystemTray
+   2089      86   461708     521748      24.05  23940   1 POWERPNT
+    862      79   257360     256000      88.78  11792   1 powershell_ise
+    238      27    24840      19180             12140   0 PresentationFontCache
+    549      40     9932      26872      51.36  18048   1 Receiver
+    337      12     2228      10992       0.95  16016   1 redirector
+      0      15    10136     107976               132   0 Registry
+    161      11     2176       8156              5772   0 RstMwService
+    458      16     6232      13696              5756   0 RtkAudUService64
+    429      16     5052      16048             12092   1 RtkAudUService64
+    402      15     4552      14572       1.14  16324   1 RtkAudUService64
+    164      10     2472      11732       0.08   5612   1 RuntimeBroker
+    128       8     1724       8612       0.11  11548   1 RuntimeBroker
+    364      19     4916      28016       0.53  11880   1 RuntimeBroker
+    904      50    22816      64224      17.28  13600   1 RuntimeBroker
+    333      19     5212      28360       0.83  14108   1 RuntimeBroker
+    447      22     9392      36012       6.34  15220   1 RuntimeBroker
+    358      19     5160      24312       0.25  16440   1 RuntimeBroker
+    142       9     1940       9700       0.09  19532   1 RuntimeBroker
+    246      14     3760      20920       0.08  26240   1 RuntimeBroker
+   1764     266   514748     135128      46.67  11852   1 SearchApp
+   1444     247   534188     111620      64.69  19312   1 SearchApp
+   1120      84   111920     116408              8104   0 SearchIndexer
+      0       0      188      40272                72   0 Secure System
+    391      17     4312      14760             15612   0 SecurityHealthService
+    171      10     2176      10680       0.16   4336   1 SecurityHealthSystray
+    493      39    28888      42640       1.02  21084   1 SelfService
+    391      29    15672      32288       2.33  17432   1 SelfServicePlugin
+    168      13    28656      20424             15448   0 SenseCE
+    245      16    32132      30732             16092   0 SenseCE
+    180    3470    67588      42660             24804   0 SenseNdr
+    136      12     3196       8040             14856   0 SenseTVM
+    921      13     7588      12192               472   0 services
+    120       8     8308       9512             20436   0 SgrmBroker
+    551      27    50936      78816       0.89  23688   1 ShellExperienceHost
+    607      19     7824      30480       9.91  11996   1 sihost
+     53       4     1116       1136               772   0 smss
+    443      20     6564      15352              4420   0 spoolsv
+    161      13     3548      10084              5972   0 sqlwriter
+    622      31    24104      72072       3.45  13540   1 StartMenuExperienceHost
+    145      10     1908      12720              1188   0 svchost
+   1692      29    16944      37844              1208   0 svchost
+    246      14     3704      14700              1280   0 svchost
+   1662      25    12748      20484              1368   0 svchost
+    388      15     3900       9892              1420   0 svchost
+    396      17     4060      12484              1568   0 svchost
+    171      37     7228      10856              1628   0 svchost
+    112      10     1436       6448              1640   0 svchost
+    289       8     1620       6972              1768   0 svchost
+    435      31     5684      16536              1816   0 svchost
+    419      18     3820      11148              1856   0 svchost
+    541      18    22364      21628              1880   0 svchost
+    256      14     2920      11392              1940   0 svchost
+    187       8     1928       7056              1948   0 svchost
+    414      20     7684      17372              1956   0 svchost
+    302      10     2420      12808              1976   0 svchost
+    200      12     2336       9640              1992   0 svchost
+    203      11     3224       9972              2000   0 svchost
+    406      14     3348       9204              2132   0 svchost
+    274      12     3292       9004              2196   0 svchost
+    147      12     2080       7504              2216   0 svchost
+    210      11     2508       8796              2260   0 svchost
+    201      12     2484      12456              2280   0 svchost
+    287      12     3572      12484              2304   0 svchost
+    240      17     4236      15672              2380   0 svchost
+    129       9     1736       7792              2436   0 svchost
+    187      13     2300       8984              2660   0 svchost
+    232      13     2848      11776              2676   0 svchost
+    505      16     5136      16324              2844   0 svchost
+    199      13     3156      12728              2852   0 svchost
+    193      13     2780      12020              2872   0 svchost
+    407      18     6380      13932              2900   0 svchost
+    201      11     2684       8884              2912   0 svchost
+    182      11     8024      17368              2988   0 svchost
+    255      11     3192       9244              3188   0 svchost
+    187      12     2920      10244              3196   0 svchost
+    330      17     4796      10816              3216   0 svchost
+    697      16     4556      11856              3240   0 svchost
+    153      11     2044       9044              3524   0 svchost
+    472      15     5124      13992              3568   0 svchost
+    135       9     1836       7876              3740   0 svchost
+    439      36    20060      23440              3816   0 svchost
+    239      12     2848       9052              3924   0 svchost
+    140       9     1780       7660              4064   0 svchost
+    151      12     2068       7548              4128   0 svchost
+    541      26     7608      20528              4152   0 svchost
+    282      18     3836      16300              4200   0 svchost
+    143      10     2104      10132              4264   0 svchost
+    689      79    40236      48440              4324   0 svchost
+    648      20    17436      27500              4340   0 svchost
+    709      20    10608      18952              4356   0 svchost
+    379      18     3444      11648              4500   0 svchost
+    539      28   176824      79104              4520   0 svchost
+    189      12     2420       8984              4748   0 svchost
+    142       8     1596       7464              4924   0 svchost
+    634      32    27472      40268              4932   0 svchost
+    302      13     4744      11044              5012   0 svchost
+    391      29    46928      45456              5016   0 svchost
+    215      14     2984      10436              5368   0 svchost
+    171      10     2084       9912              5616   0 svchost
+    141       9     1824       7240              5676   0 svchost
+    138       8     1580       6668              6048   0 svchost
+    405      22     5568      22920              6220   0 svchost
+    248      13     2964      11424              6800   0 svchost
+    196      13     2936      12092              6928   0 svchost
+    417      24     3872      13464              7224   0 svchost
+    114       8     1556       6360              7232   0 svchost
+    252      23     2736       8552              8132   0 svchost
+    179      13     2556      10652              8408   0 svchost
+    120       8     1588       6308              8920   0 svchost
+    201      11     2372       9392              9200   0 svchost
+    170      10     2140       9692             10136   0 svchost
+    406      19     4804      18180             10684   0 svchost
+    217      12     3276      12852             10972   0 svchost
+    588      16     7832      25748             11404   0 svchost
+    180      11     2304      10292             11832   0 svchost
+    467      21    12284      35928      12.91  12008   1 svchost
+    508      24     9344      36956       8.20  12228   1 svchost
+    332      16     4296      24884       3.53  13120   1 svchost
+    291      18     4500      22848             13668   0 svchost
+    466      26     5896      23484       0.95  14768   1 svchost
+    332      15     4072      12536             15444   0 svchost
+    286      13     3008      14300             16256   0 svchost
+    126      10     2380       9060             16616   0 svchost
+    161      11     3976      11668             22636   0 svchost
+    143       8     3100      10220             23120   0 svchost
+    196      16     6632      11768             23860   0 svchost
+    294      14     5344      16028             23908   0 svchost
+    180       9     2076       9440             25888   0 svchost
+   7537       0      208       2172                 4   0 System
+    821      39    62832       2716       0.80  21732   1 SystemSettings
+    327      55    14908      26252       5.14  11460   1 taskhostw
+    130       8     1556       6488              5888   0 TbtP2pShortcutService
+    586      24    45552      55828       4.28  16364   1 TextInputHost
+    337      16     4664      23068              7752   0 uhssvc
+    135       9     2080       9216              7596   0 unsecapp
+    132       9     1940       9660             14800   1 unsecapp
+    138      11     2292      10904       0.03  17336   1 UserOOBEBroker
+    528      31    51644       3624       0.34  22396   1 Video.UI
+    214      13     5212      13404              4956   0 vmcompute
+      0    3722   532056          0             14808   0 vmmem
+    223      14     3324      11696              6076   0 vmware-usbarbitrator64
+    194      11     2492       9908              6096   0 vmwetlm
+    277      13     4108       9076              5688   0 vmwsprrdpwks
+    484      28    10020      23708              4120   0 vpnagent
+    298      18     6712      16068              4736   0 VSSVC
+    266      15    13152      17704              5696   0 WavesAudioService
+   4417      61   738480      49320      93.64  14040   1 WavesSvc64
+    919      38    18532     363728              5588   0 WavesSysSvc64
+    223      15     8000      15356       5.53  16772   1 WebexHost
+    353      28     5072      18028       2.05  18976   1 wfcrun32
+    167      11     1464       6084               972   0 wininit
+    269      14     3000      12928              1072   1 winlogon
+    128       8     1556       6780              4476   0 wlanext
+    262      12     7952      14280              3772   0 WmiPrvSE
+    161      11     4124      11468              6164   0 WmiPrvSE
+    429      24    19280      34840              6520   0 WmiPrvSE
+    544      31    47996      59480              6676   0 WmiPrvSE
+    260      13     2972      13296              6256   0 WMIRegistrationService
+    410      14     6708       8796              2828   0 WUDFHost
+    429      21    12328      23396              3680   0 WUDFHost
+    245      12     2056       8332              6024   0 WUDFHost
+
+
+PS C:\RajeshPowerShell> [string]$name  = "Rajesh"
+Write-host "$name"
+Rajesh
+PS C:\RajeshPowerShell> Get-Module
+
+ModuleType Version    Name                                ExportedCommands
+---------- -------    ----                                ----------------
+Script     1.0.0.0    ISE                                 {Get-IseSnippet, Import-IseSnippet, New-IseSnippet}
+Manifest   3.0.0.0    Microsoft.PowerShell.Host           {Start-Transcript, Stop-Transcript}
+Manifest   3.1.0.0    Microsoft.PowerShell.Management     {Add-Computer, Add-Content, Checkpoint-Computer, Clear-Content...}
+Manifest   3.0.0.0    Microsoft.PowerShell.Security       {ConvertFrom-SecureString, ConvertTo-SecureString, Get-Acl, Get-AuthenticodeSignature...}
+Manifest   3.1.0.0    Microsoft.PowerShell.Utility        {Add-Member, Add-Type, Clear-Variable, Compare-Object...}
+Manifest   3.0.0.0    Microsoft.WSMan.Management          {Connect-WSMan, Disable-WSManCredSSP, Disconnect-WSMan, Enable-WSManCredSSP...}
+
+
+PS C:\RajeshPowerShell> Get-Host
+
+
+Name             : Windows PowerShell ISE Host
+Version          : 5.1.19041.4412
+InstanceId       : e3f7ed39-4122-410b-bfde-2809cad96319
+UI               : System.Management.Automation.Internal.Host.InternalHostUserInterface
+CurrentCulture   : en-IN
+CurrentUICulture : en-US
+PrivateData      : Microsoft.PowerShell.Host.ISE.ISEOptions
+DebuggerEnabled  : True
+IsRunspacePushed : False
+Runspace         : System.Management.Automation.Runspaces.LocalRunspace
+
+
+
+PS C:\RajeshPowerShell> Get-Module | select * 
+
+
+LogPipelineExecutionDetails : False
+Name                        : ISE
+Path                        : C:\WINDOWS\system32\WindowsPowerShell\v1.0\Modules\ISE\ISE.psm1
+ImplementingAssembly        :
+Definition                  : # .Link
+                              # https://go.microsoft.com/fwlink/?LinkID=225298
+                              # .ExternalHelp ISE.psm1-help.xml
+                              function New-IseSnippet
+                              {
+                                  [CmdletBinding()]
+                                  param(
+
+                                      [Parameter(Mandatory=$true, Position=0)]
+                                      [String]
+                                      $Title,
+
+                                      [Parameter(Mandatory=$true, Position=1)]
+                                      [String]
+                                      $Description,
+
+                                      [Parameter(Mandatory=$true, Position=2)]
+                                      [String]
+                                      $Text,
+
+                                      [String]
+                                      $Author,
+
+                                      [Int32]
+                                      [ValidateRange(0, [Int32]::MaxValue)]
+                                      $CaretOffset = 0,
+
+                                      [Switch]
+                                      $Force
+                                  )
+
+                                  Begin
+                                  {
+                                      $snippetPath = Join-Path (Split-Path $profile.CurrentUserCurrentHost) "Snippets"
+
+                                      if($Text.IndexOf("]]>") -ne -1)
+                                      {
+                                          throw [Microsoft.PowerShell.Host.ISE.SnippetStrings]::SnippetsNoCloseCData -f "Text","]]>"
+                                      }
+
+                                      if (-not (Test-Path $snippetPath))
+                                      {
+                                          $null = mkdir $snippetPath
+                                      }
+                                  }
+
+                                  End
+                                  {
+                                      $snippet = @"
+                              <?xml version='1.0' encoding='utf-8' ?>
+                                  <Snippets  xmlns='http://schemas.microsoft.com/PowerShell/Snippets'>
+                                      <Snippet Version='1.0.0'>
+                                          <Header>
+                                              <Title>$([System.Security.SecurityElement]::Escape($Title))</Title>
+                                              <Description>$([System.Security.SecurityElement]::Escape($Description))</Description>
+                                              <Author>$([System.Security.SecurityElement]::Escape($Author))</Author>
+                                              <SnippetTypes>
+                                                  <SnippetType>Expansion</SnippetType>
+                                              </SnippetTypes>
+                                          </Header>
+
+                                          <Code>
+                                              <Script Language='PowerShell' CaretOffset='$CaretOffset'>
+                                                  <![CDATA[$Text]]>
+                                              </Script>
+                                          </Code>
+
+                                  </Snippet>
+                              </Snippets>
+
+                              "@
+
+                                      $pathCharacters = '/\`*?[]:><"|.';
+                                      $fileName=new-object text.stringBuilder
+                                      for($ix=0; $ix -lt $Title.Length; $ix++)
+                                      {
+                                          $titleChar=$Title[$ix]
+                                          if($pathCharacters.IndexOf($titleChar) -ne -1)
+                                          {
+                                              $titleChar = "_"
+                                          }
+
+                                          $null = $fileName.Append($titleChar)
+                                      }
+
+                                      $params = @{
+                                          FilePath = "$snippetPath\$fileName.snippets.ps1xml";
+                                          Encoding = "UTF8"
+                                      }
+
+                                      if ($Force)
+                                      {
+                                          $params["Force"] = $true
+                                      }
+                                      else
+                                      {
+                                          $params["NoClobber"] = $true
+                                      }
+
+                                      $snippet | Out-File @params
+
+                                      $psise.CurrentPowerShellTab.Snippets.Load($params["FilePath"])
+                                  }
+                              }
+
+                              # .Link
+                              # https://go.microsoft.com/fwlink/?LinkId=242050
+                              # .ExternalHelp ISE.psm1-help.xml
+                              function Import-IseSnippet
+                              {
+                                  [CmdletBinding(DefaultParameterSetName="FromFolder")]
+                                  param(
+
+                                      [Parameter(Mandatory=$true, Position=0, ParameterSetName="FromFolder")]
+                                      [String]
+                                      $Path,
+
+                                      [Parameter()]
+                                      [Switch]
+                                      $Recurse,
+
+                                      [Parameter(Mandatory=$true, ParameterSetName="FromModule")]
+                                      [String]
+                                      $Module,
+
+                                      [Parameter(ParameterSetName="FromModule")]
+                                      [Switch]
+                                      $ListAvailable
+                                  )
+
+                                  End
+                                  {
+                                      if ($Path)
+                                      {
+                                          dir "$Path\*.snippets.ps1xml" -Recurse:$Recurse |
+                                                  % {$psise.CurrentPowerShellTab.Snippets.Load($_)}
+                                      }
+                                      elseif ($Module)
+                                      {
+                                          if($ListAvailable)
+                                          {
+                                              $m = Get-Module $module -ListAvailable
+                                          }
+                                          else
+                                          {
+                                              $m = Get-Module $module
+                                          }
+
+                                          if (-not $m)
+                                          {
+                                              Write-Error ([Microsoft.PowerShell.Host.ISE.SnippetStrings]::ModuleNotFound)
+                                          }
+
+                                          foreach ($x in $m)
+                                          {
+                                              # Get the module path and validate that there is a Snippets folder
+                                              $snipPath = Split-Path ($x.Path) -Parent
+                                              if (Test-Path "$snipPath\Snippets")
+                                              {
+                                                  dir "$snipPath\Snippets\*.snippets.ps1xml" -Recurse:$Recurse |
+                                                          % {$psise.CurrentPowerShellTab.Snippets.Load($_)}
+                                              }
+                                              else
+                                              {
+                                                  Write-Verbose ([Microsoft.PowerShell.Host.ISE.SnippetStrings]::NoSnippetsInModule -f $x.Name,"Snippets")
+                                              }
+                                          }
+                                      }
+                                  }
+                              }
+
+                              # .Link
+                              # https://go.microsoft.com/fwlink/?LinkID=238787
+                              # .ExternalHelp ISE.psm1-help.xml
+                              function Get-IseSnippet
+                              {
+                                  [CmdletBinding()]
+                                  [OutputType([System.IO.FileInfo])]
+                                  param()
+                                  $snippetPath = Join-Path (Split-Path $profile.CurrentUserCurrentHost) "Snippets"
+                                  if (Test-Path $snippetPath)
+                                  {
+                                      dir $snippetPath
+                                  }
+                              }
+
+Description                 :
+Guid                        : bae93d8e-782c-4a23-b87f-8699bfc17ee0
+HelpInfoUri                 : https://go.microsoft.com/fwlink/?linkid=390780
+ModuleBase                  : C:\WINDOWS\system32\WindowsPowerShell\v1.0\Modules\ISE
+PrivateData                 :
+Tags                        : {}
+ProjectUri                  :
+IconUri                     :
+LicenseUri                  :
+ReleaseNotes                :
+RepositorySourceLocation    :
+Version                     : 1.0.0.0
+ModuleType                  : Script
+Author                      : Microsoft Corporation
+AccessMode                  : ReadWrite
+ClrVersion                  : 4.0
+CompanyName                 : Microsoft Corporation
+Copyright                   : (c) Microsoft Corporation. All rights reserved.
+DotNetFrameworkVersion      :
+ExportedFunctions           : {[Get-IseSnippet, Get-IseSnippet], [Import-IseSnippet, Import-IseSnippet], [New-IseSnippet, New-IseSnippet]}
+Prefix                      :
+ExportedCmdlets             : {}
+ExportedCommands            : {[Get-IseSnippet, Get-IseSnippet], [Import-IseSnippet, Import-IseSnippet], [New-IseSnippet, New-IseSnippet]}
+FileList                    : {}
+CompatiblePSEditions        : {Desktop}
+ModuleList                  : {}
+NestedModules               : {}
+PowerShellHostName          : Windows PowerShell ISE Host
+PowerShellHostVersion       :
+PowerShellVersion           : 5.1
+ProcessorArchitecture       : None
+Scripts                     : {}
+RequiredAssemblies          : {}
+RequiredModules             : {}
+RootModule                  : ISE.psm1
+ExportedVariables           : {}
+ExportedAliases             : {}
+ExportedWorkflows           : {}
+ExportedDscResources        : {}
+SessionState                : System.Management.Automation.SessionState
+OnRemove                    :
+ExportedFormatFiles         : {}
+ExportedTypeFiles           : {}
+
+LogPipelineExecutionDetails : False
+Name                        : Microsoft.PowerShell.Host
+Path                        : C:\WINDOWS\system32\WindowsPowerShell\v1.0\Modules\Microsoft.PowerShell.Host\Microsoft.PowerShell.Host.psd1
+ImplementingAssembly        :
+Definition                  :
+Description                 :
+Guid                        : 56d66100-99a0-4ffc-a12d-eee9a6718aef
+HelpInfoUri                 : https://go.microsoft.com/fwlink/?linkid=390784
+ModuleBase                  : C:\Windows\System32\WindowsPowerShell\v1.0
+PrivateData                 :
+Tags                        : {}
+ProjectUri                  :
+IconUri                     :
+LicenseUri                  :
+ReleaseNotes                :
+RepositorySourceLocation    :
+Version                     : 3.0.0.0
+ModuleType                  : Manifest
+Author                      : Microsoft Corporation
+AccessMode                  : ReadWrite
+ClrVersion                  : 4.0
+CompanyName                 : Microsoft Corporation
+Copyright                   : © Microsoft Corporation. All rights reserved.
+DotNetFrameworkVersion      :
+ExportedFunctions           : {}
+Prefix                      :
+ExportedCmdlets             : {[Start-Transcript, Start-Transcript], [Stop-Transcript, Stop-Transcript]}
+ExportedCommands            : {[Start-Transcript, Start-Transcript], [Stop-Transcript, Stop-Transcript]}
+FileList                    : {}
+CompatiblePSEditions        : {}
+ModuleList                  : {}
+NestedModules               : {Microsoft.PowerShell.ConsoleHost.dll}
+PowerShellHostName          :
+PowerShellHostVersion       :
+PowerShellVersion           : 3.0
+ProcessorArchitecture       : None
+Scripts                     : {}
+RequiredAssemblies          : {}
+RequiredModules             : {}
+RootModule                  :
+ExportedVariables           : {}
+ExportedAliases             : {}
+ExportedWorkflows           : {}
+ExportedDscResources        : {}
+SessionState                : System.Management.Automation.SessionState
+OnRemove                    :
+ExportedFormatFiles         : {}
+ExportedTypeFiles           : {}
+
+LogPipelineExecutionDetails : False
+Name                        : Microsoft.PowerShell.Management
+Path                        : C:\WINDOWS\system32\WindowsPowerShell\v1.0\Modules\Microsoft.PowerShell.Management\Microsoft.PowerShell.Management.psd1
+ImplementingAssembly        :
+Definition                  :
+Description                 :
+Guid                        : eefcb906-b326-4e99-9f54-8b4bb6ef3c6d
+HelpInfoUri                 : https://go.microsoft.com/fwlink/?linkid=390785
+ModuleBase                  : C:\Windows\System32\WindowsPowerShell\v1.0
+PrivateData                 :
+Tags                        : {}
+ProjectUri                  :
+IconUri                     :
+LicenseUri                  :
+ReleaseNotes                :
+RepositorySourceLocation    :
+Version                     : 3.1.0.0
+ModuleType                  : Manifest
+Author                      : Microsoft Corporation
+AccessMode                  : ReadWrite
+ClrVersion                  : 4.0
+CompanyName                 : Microsoft Corporation
+Copyright                   : © Microsoft Corporation. All rights reserved.
+DotNetFrameworkVersion      :
+ExportedFunctions           : {}
+Prefix                      :
+ExportedCmdlets             : {[Add-Computer, Add-Computer], [Add-Content, Add-Content], [Checkpoint-Computer, Checkpoint-Computer], [Clear-Content, Clear-Content]...}
+ExportedCommands            : {[Add-Computer, Add-Computer], [Add-Content, Add-Content], [Checkpoint-Computer, Checkpoint-Computer], [Clear-Content, Clear-Content]...}
+FileList                    : {}
+CompatiblePSEditions        : {Desktop, Core}
+ModuleList                  : {}
+NestedModules               : {Microsoft.PowerShell.Commands.Management.dll}
+PowerShellHostName          :
+PowerShellHostVersion       :
+PowerShellVersion           : 5.1
+ProcessorArchitecture       : None
+Scripts                     : {}
+RequiredAssemblies          : {}
+RequiredModules             : {}
+RootModule                  :
+ExportedVariables           : {}
+ExportedAliases             : {[gcb, gcb], [gin, gin], [gtz, gtz], [scb, scb]...}
+ExportedWorkflows           : {}
+ExportedDscResources        : {}
+SessionState                : System.Management.Automation.SessionState
+OnRemove                    :
+ExportedFormatFiles         : {}
+ExportedTypeFiles           : {}
+
+LogPipelineExecutionDetails : False
+Name                        : Microsoft.PowerShell.Security
+Path                        : C:\WINDOWS\system32\WindowsPowerShell\v1.0\Modules\Microsoft.PowerShell.Security\Microsoft.PowerShell.Security.psd1
+ImplementingAssembly        :
+Definition                  :
+Description                 :
+Guid                        : a94c8c7e-9810-47c0-b8af-65089c13a35a
+HelpInfoUri                 : https://go.microsoft.com/fwlink/?linkid=390786
+ModuleBase                  : C:\Windows\System32\WindowsPowerShell\v1.0
+PrivateData                 :
+Tags                        : {}
+ProjectUri                  :
+IconUri                     :
+LicenseUri                  :
+ReleaseNotes                :
+RepositorySourceLocation    :
+Version                     : 3.0.0.0
+ModuleType                  : Manifest
+Author                      : Microsoft Corporation
+AccessMode                  : ReadWrite
+ClrVersion                  : 4.0
+CompanyName                 : Microsoft Corporation
+Copyright                   : © Microsoft Corporation. All rights reserved.
+DotNetFrameworkVersion      :
+ExportedFunctions           : {}
+Prefix                      :
+ExportedCmdlets             : {[ConvertFrom-SecureString, ConvertFrom-SecureString], [ConvertTo-SecureString, ConvertTo-SecureString], [Get-Acl, Get-Acl], [Get-AuthenticodeSignature,
+                              Get-AuthenticodeSignature]...}
+ExportedCommands            : {[ConvertFrom-SecureString, ConvertFrom-SecureString], [ConvertTo-SecureString, ConvertTo-SecureString], [Get-Acl, Get-Acl], [Get-AuthenticodeSignature,
+                              Get-AuthenticodeSignature]...}
+FileList                    : {}
+CompatiblePSEditions        : {Desktop}
+ModuleList                  : {}
+NestedModules               : {Microsoft.PowerShell.Security.dll}
+PowerShellHostName          :
+PowerShellHostVersion       :
+PowerShellVersion           : 5.1
+ProcessorArchitecture       : None
+Scripts                     : {}
+RequiredAssemblies          : {}
+RequiredModules             : {}
+RootModule                  :
+ExportedVariables           : {}
+ExportedAliases             : {}
+ExportedWorkflows           : {}
+ExportedDscResources        : {}
+SessionState                : System.Management.Automation.SessionState
+OnRemove                    :
+ExportedFormatFiles         : {}
+ExportedTypeFiles           : {}
+
+LogPipelineExecutionDetails : False
+Name                        : Microsoft.PowerShell.Utility
+Path                        : C:\WINDOWS\system32\WindowsPowerShell\v1.0\Modules\Microsoft.PowerShell.Utility\Microsoft.PowerShell.Utility.psd1
+ImplementingAssembly        :
+Definition                  :
+Description                 :
+Guid                        : 1da87e53-152b-403e-98dc-74d7b4d63d59
+HelpInfoUri                 : https://go.microsoft.com/fwlink/?linkid=390787
+ModuleBase                  : C:\Windows\System32\WindowsPowerShell\v1.0
+PrivateData                 :
+Tags                        : {}
+ProjectUri                  :
+IconUri                     :
+LicenseUri                  :
+ReleaseNotes                :
+RepositorySourceLocation    :
+Version                     : 3.1.0.0
+ModuleType                  : Manifest
+Author                      : Microsoft Corporation
+AccessMode                  : ReadWrite
+ClrVersion                  : 4.0
+CompanyName                 : Microsoft Corporation
+Copyright                   : © Microsoft Corporation. All rights reserved.
+DotNetFrameworkVersion      :
+ExportedFunctions           : {[ConvertFrom-SddlString, ConvertFrom-SddlString], [Format-Hex, Format-Hex], [Get-FileHash, Get-FileHash], [Import-PowerShellDataFile,
+                              Import-PowerShellDataFile]...}
+Prefix                      :
+ExportedCmdlets             : {[Add-Member, Add-Member], [Add-Type, Add-Type], [Clear-Variable, Clear-Variable], [Compare-Object, Compare-Object]...}
+ExportedCommands            : {[Add-Member, Add-Member], [Add-Type, Add-Type], [Clear-Variable, Clear-Variable], [Compare-Object, Compare-Object]...}
+FileList                    : {}
+CompatiblePSEditions        : {Desktop}
+ModuleList                  : {}
+NestedModules               : {Microsoft.PowerShell.Commands.Utility.dll, Microsoft.PowerShell.Utility}
+PowerShellHostName          :
+PowerShellHostVersion       :
+PowerShellVersion           : 5.1
+ProcessorArchitecture       : None
+Scripts                     : {}
+RequiredAssemblies          : {}
+RequiredModules             : {}
+RootModule                  :
+ExportedVariables           : {}
+ExportedAliases             : {[CFS, CFS], [fhx, fhx]}
+ExportedWorkflows           : {}
+ExportedDscResources        : {}
+SessionState                : System.Management.Automation.SessionState
+OnRemove                    :
+ExportedFormatFiles         : {}
+ExportedTypeFiles           : {}
+
+LogPipelineExecutionDetails : False
+Name                        : Microsoft.WSMan.Management
+Path                        : C:\WINDOWS\system32\WindowsPowerShell\v1.0\Modules\Microsoft.WSMan.Management\Microsoft.WSMan.Management.psd1
+ImplementingAssembly        :
+Definition                  :
+Description                 :
+Guid                        : 766204a6-330e-4263-a7ab-46c87afc366c
+HelpInfoUri                 : https://go.microsoft.com/fwlink/?linkid=390788
+ModuleBase                  : C:\Windows\System32\WindowsPowerShell\v1.0
+PrivateData                 :
+Tags                        : {}
+ProjectUri                  :
+IconUri                     :
+LicenseUri                  :
+ReleaseNotes                :
+RepositorySourceLocation    :
+Version                     : 3.0.0.0
+ModuleType                  : Manifest
+Author                      : Microsoft Corporation
+AccessMode                  : ReadWrite
+ClrVersion                  : 4.0
+CompanyName                 : Microsoft Corporation
+Copyright                   : © Microsoft Corporation. All rights reserved.
+DotNetFrameworkVersion      :
+ExportedFunctions           : {}
+Prefix                      :
+ExportedCmdlets             : {[Connect-WSMan, Connect-WSMan], [Disable-WSManCredSSP, Disable-WSManCredSSP], [Disconnect-WSMan, Disconnect-WSMan], [Enable-WSManCredSSP,
+                              Enable-WSManCredSSP]...}
+ExportedCommands            : {[Connect-WSMan, Connect-WSMan], [Disable-WSManCredSSP, Disable-WSManCredSSP], [Disconnect-WSMan, Disconnect-WSMan], [Enable-WSManCredSSP,
+                              Enable-WSManCredSSP]...}
+FileList                    : {}
+CompatiblePSEditions        : {Desktop}
+ModuleList                  : {}
+NestedModules               : {Microsoft.WSMan.Management.dll}
+PowerShellHostName          :
+PowerShellHostVersion       :
+PowerShellVersion           : 5.1
+ProcessorArchitecture       : None
+Scripts                     : {}
+RequiredAssemblies          : {}
+RequiredModules             : {}
+RootModule                  :
+ExportedVariables           : {}
+ExportedAliases             : {}
+ExportedWorkflows           : {}
+ExportedDscResources        : {}
+SessionState                : System.Management.Automation.SessionState
+OnRemove                    :
+ExportedFormatFiles         : {C:\Windows\System32\WindowsPowerShell\v1.0\WSMan.format.ps1xml}
+ExportedTypeFiles           : {}
+
+
+
+PS C:\RajeshPowerShell> Get-Module | select Path
+
+Path
+----
+C:\WINDOWS\system32\WindowsPowerShell\v1.0\Modules\ISE\ISE.psm1
+C:\WINDOWS\system32\WindowsPowerShell\v1.0\Modules\Microsoft.PowerShell.Host\Microsoft.PowerShell.Host.psd1
+C:\WINDOWS\system32\WindowsPowerShell\v1.0\Modules\Microsoft.PowerShell.Management\Microsoft.PowerShell.Management.psd1
+C:\WINDOWS\system32\WindowsPowerShell\v1.0\Modules\Microsoft.PowerShell.Security\Microsoft.PowerShell.Security.psd1
+C:\WINDOWS\system32\WindowsPowerShell\v1.0\Modules\Microsoft.PowerShell.Utility\Microsoft.PowerShell.Utility.psd1
+C:\WINDOWS\system32\WindowsPowerShell\v1.0\Modules\Microsoft.WSMan.Management\Microsoft.WSMan.Management.psd1
+
+
+PS C:\RajeshPowerShell> Get-Module | select ExpectedFor*
+
+ExpectedFor*
+------------
+
+
+
+
+
+
+
+
+PS C:\RajeshPowerShell> Get-Module | select ExportedFormatFiles
+
+ExportedFormatFiles
+-------------------
+{}
+{}
+{}
+{}
+{}
+{C:\Windows\System32\WindowsPowerShell\v1.0\WSMan.format.ps1xml}
+
+
+PS C:\RajeshPowerShell> Get-Module | Select-Object -ExpandProperty ExportedFormatFiles
+C:\Windows\System32\WindowsPowerShell\v1.0\WSMan.format.ps1xml
+PS C:\RajeshPowerShell> Get-Process -Name notepad
+
+Handles  NPM(K)    PM(K)      WS(K)     CPU(s)     Id  SI ProcessName
+-------  ------    -----      -----     ------     --  -- -----------
+    282      16     3448      18980       0.47    256   1 notepad
+    320      16     3656      19388       0.73   3600   1 notepad
+    282      16     3392      18900       0.23  13792   1 notepad
+
+
+PS C:\RajeshPowerShell> Get-Process -Name sqlwriter
+
+Handles  NPM(K)    PM(K)      WS(K)     CPU(s)     Id  SI ProcessName
+-------  ------    -----      -----     ------     --  -- -----------
+    161      13     3548      10100              5972   0 sqlwriter
+
+
+PS C:\RajeshPowerShell> Stop-Transcript
+**********************
+Windows PowerShell transcript end
+End time: 20240606204444
+**********************
+
+
+
+
+
+
+
+
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+
+$MyFile = (Get-Date).TimeOfDay.ToString().Replace(':','-').Replace('.','-')
+$MyFile = “Rajesh{1}{0}.log” -f $MyFile, ‘-’
+$MyFile = Join-Path $env:USERPROFILE -ChildPath $MyFile
+Start-Transcript -Path $MyFile
+1) Using New-Object cmdlet create a custom object type with members as below
+a) Name = ‘Your Name’
+b) DOB = ‘any date’
+c) Age = Compute the value of this from the DOB field
+
+$details = New-Object -TypeName PSObject
+$details | Add-Member -MemberType NoteProperty -Name "Name" -Value "Rajesh"
+$details | Add-Member -MemberType NoteProperty -Name "DOB" -Value "21-06"
+$details | Add-Member -MemberType NoteProperty -Name "Age" -Value "25"
+
+
+Hint: use in combination with other cmdlets if necessary
+
+2) Using Hash tables create another custom Object Type with the following members and
+values
+a) Training = ‘Powershell’
+b) Attendance = 5
+c) Assessment = ‘PASS’
+
+$NameValue = @{ Training = ‘Powershell’; Attendance = 5; Assessment = ‘PASS’ }
+$hash = new-object psobject -Property $NameValue
+
+
+3) Find out the right cmdlet and add the second object members to the first object and store
+the combined object in variable $Student
+
+$Student =@()
+$student =[pscustomobject]@{
+                        Name = $details.Name
+                        DOB =  $details.DOB
+                        Age = $details.Age
+                        Training = $hash.Training
+                        Attendance = $hash.Attendance
+                        Assessment = $hash.Assessment
+                          }
+                          $Student
+
+4) Use the appropriate cmdlets to complete the following steps
+a) Store the $Student object in csv format in a file name Student.csv,
+$Student | Export-Csv -Path student.csv
+b) Verify that the file was created properly using Test-Path cmdlet
+Test-Path -Path .\student.csv
+c) Import the contents of the stored file and store results to $ImportedStudent
+
+$ImportedStudent = Import-Csv .\student.csv
+
+5) Use Compare-Object to compare the $Student and $ImportedStudent and observe the
+results
+
+Compare-Object -ReferenceObject $Student -DifferenceObject $ImportedStudent
+
+6) Show the results of the Imported students in Table-Format with the following style
+a) Name - aligned to left
+b) Birthday - aligned to right , with the value of DOB property
+c) Training - aligned to center
+
+$ImportedStudent | Format-Table 
+
+
+7) Using Get-Process and Stop-Process explain in your own words which Parameter gets
+bound and why?
+
+Get-Process 
+Stop-Process
+
+
+a) <Type your answer as a string using Write-Host >
+[string]$name  = "Rajesh"
+Write-host "$name"
+
+8) Identify all the positional parameters in New-Item cmdlet and create 2 new items by
+using both Positional and NamedParameter
+
+New-Item -
+
+9) Which location will you be able to find the default Format files used by powershell using
+Set-Location cmdlet change to that folder and list the contents in that folder with
+extension .ps1xml
+
+Get-Module | Select-Object -ExpandProperty ExportedFormatFiles
+
+
+10) Provide the command that will find all the processes running with one of the following
+Names
+Notepad, chrome, acrobat or sqlserver
+
+Get-Process -Name sqlwriter
+
+
+Stop-Transcript
+After completion please submit your Transcript Log file
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
