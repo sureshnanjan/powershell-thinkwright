@@ -1,0 +1,275 @@
+﻿**********************
+Windows PowerShell transcript start
+Start time: 20240604131307
+Username: THINKWRIGHT\user7
+RunAs User: THINKWRIGHT\user7
+Configuration Name: 
+Machine: DESKTOP-7 (Microsoft Windows NT 10.0.19045.0)
+Host Application: C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe
+Process ID: 9776
+PSVersion: 5.1.19041.4412
+PSEdition: Desktop
+PSCompatibleVersions: 1.0, 2.0, 3.0, 4.0, 5.0, 5.1.19041.4412
+BuildVersion: 10.0.19041.4412
+CLRVersion: 4.0.30319.42000
+WSManStackVersion: 3.0
+PSRemotingProtocolVersion: 2.3
+SerializationVersion: 1.1.0.1
+**********************
+Transcript started, output file is GeethaDoli.log
+PS C:\Users\user7> new-item -name ‘QA-Training’ -ItemType Directory 
+
+
+    Directory: C:\Users\user7
+
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+d-----        04-06-2024     13:19                QA-Training
+
+
+PS C:\Users\user7> git --version
+git version 2.44.0.windows.1
+PS C:\Users\user7> git clone https://github.com/sureshnanjan/powershell-thinkwright.git
+fatal: destination path 'powershell-thinkwright' already exists and is not an empty directory.
+PS C:\Users\user7> Set-Location powershell-thinkwright
+PS C:\Users\user7\powershell-thinkwright> git status
+On branch ranch
+nothing to commit, working tree clean
+PS C:\Users\user7\powershell-thinkwright> git checkout -b GeethaDoli-branch 
+Switched to a new branch 'GeethaDoli-branch'
+PS C:\Users\user7\powershell-thinkwright> git status
+On branch GeethaDoli-branch
+nothing to commit, working tree clean
+PS C:\Users\user7\powershell-thinkwright> git push
+fatal: The current branch GeethaDoli-branch has no upstream branch.
+To push the current branch and set the remote as upstream, use
+
+    git push --set-upstream origin GeethaDoli-branch
+
+To have this happen automatically for branches without a tracking
+upstream, see 'push.autoSetupRemote' in 'git help config'.
+PS C:\Users\user7\powershell-thinkwright> git push --set-upstream origin GeethaDoli-branch
+info: please complete authentication in your browser...
+Total 0 (delta 0), reused 0 (delta 0), pack-reused 0 (from 0)
+remote:
+remote: Create a pull request for 'GeethaDoli-branch' on GitHub by visiting:
+remote:      https://github.com/sureshnanjan/powershell-thinkwright/pull/new/GeethaDoli-branch
+remote:
+To https://github.com/sureshnanjan/powershell-thinkwright.git
+ * [new branch]      GeethaDoli-branch -> GeethaDoli-branch
+branch 'GeethaDoli-branch' set up to track 'origin/GeethaDoli-branch'.
+PS C:\Users\user7\powershell-thinkwright> get-childiteam -name *.log
+get-childiteam : The term 'get-childiteam' is not recognized as the name of a cmdlet, function, script file, or 
+operable program. Check the spelling of the name, or if a path was included, verify that the path is correct and try 
+again.
+At line:1 char:1
++ get-childiteam -name *.log
++ ~~~~~~~~~~~~~~
+    + CategoryInfo          : ObjectNotFound: (get-childiteam:String) [], CommandNotFoundException
+    + FullyQualifiedErrorId : CommandNotFoundException
+get-childiteam : The term 'get-childiteam' is not recognized as the name of a cmdlet, function, script file, or
+operable program. Check the spelling of the name, or if a path was included, verify that the path is correct and try
+again.
+At line:1 char:1
++ get-childiteam -name *.log
++ ~~~~~~~~~~~~~~
+    + CategoryInfo          : ObjectNotFound: (get-childiteam:String) [], CommandNotFoundException
+    + FullyQualifiedErrorId : CommandNotFoundException
+
+PS C:\Users\user7\powershell-thinkwright> move-item ..\GeethaDoli.log
+move-item : The process cannot access the file because it is being used by another process.
+At line:1 char:1
++ move-item ..\GeethaDoli.log
++ ~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : WriteError: (C:\Users\user7\GeethaDoli.log:FileInfo) [Move-Item], IOException
+    + FullyQualifiedErrorId : MoveFileInfoItemIOError,Microsoft.PowerShell.Commands.MoveItemCommand
+move-item : The process cannot access the file because it is being used by another process.
+At line:1 char:1
++ move-item ..\GeethaDoli.log
++ ~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : WriteError: (C:\Users\user7\GeethaDoli.log:FileInfo) [Move-Item], IOException
+    + FullyQualifiedErrorId : MoveFileInfoItemIOError,Microsoft.PowerShell.Commands.MoveItemCommand
+
+PS C:\Users\user7\powershell-thinkwright> move-item ..\GeethaDoli.log .
+move-item : The process cannot access the file because it is being used by another process.
+At line:1 char:1
++ move-item ..\GeethaDoli.log .
++ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : WriteError: (C:\Users\user7\GeethaDoli.log:FileInfo) [Move-Item], IOException
+    + FullyQualifiedErrorId : MoveFileInfoItemIOError,Microsoft.PowerShell.Commands.MoveItemCommand
+move-item : The process cannot access the file because it is being used by another process.
+At line:1 char:1
++ move-item ..\GeethaDoli.log .
++ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : WriteError: (C:\Users\user7\GeethaDoli.log:FileInfo) [Move-Item], IOException
+    + FullyQualifiedErrorId : MoveFileInfoItemIOError,Microsoft.PowerShell.Commands.MoveItemCommand
+
+PS C:\Users\user7\powershell-thinkwright> move-item ..\GeethaDoli.log .
+move-item : The process cannot access the file because it is being used by another process.
+At line:1 char:1
++ move-item ..\GeethaDoli.log .
++ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : WriteError: (C:\Users\user7\GeethaDoli.log:FileInfo) [Move-Item], IOException
+    + FullyQualifiedErrorId : MoveFileInfoItemIOError,Microsoft.PowerShell.Commands.MoveItemCommand
+move-item : The process cannot access the file because it is being used by another process.
+At line:1 char:1
++ move-item ..\GeethaDoli.log .
++ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : WriteError: (C:\Users\user7\GeethaDoli.log:FileInfo) [Move-Item], IOException
+    + FullyQualifiedErrorId : MoveFileInfoItemIOError,Microsoft.PowerShell.Commands.MoveItemCommand
+
+PS C:\Users\user7\powershell-thinkwright> move-item ..\GeethaDoli.log .
+move-item : The process cannot access the file because it is being used by another process.
+At line:1 char:1
++ move-item ..\GeethaDoli.log .
++ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : WriteError: (C:\Users\user7\GeethaDoli.log:FileInfo) [Move-Item], IOException
+    + FullyQualifiedErrorId : MoveFileInfoItemIOError,Microsoft.PowerShell.Commands.MoveItemCommand
+move-item : The process cannot access the file because it is being used by another process.
+At line:1 char:1
++ move-item ..\GeethaDoli.log .
++ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : WriteError: (C:\Users\user7\GeethaDoli.log:FileInfo) [Move-Item], IOException
+    + FullyQualifiedErrorId : MoveFileInfoItemIOError,Microsoft.PowerShell.Commands.MoveItemCommand
+
+PS C:\Users\user7\powershell-thinkwright> move-item ..\GeethaDoli.log .
+move-item : The process cannot access the file because it is being used by another process.
+At line:1 char:1
++ move-item ..\GeethaDoli.log .
++ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : WriteError: (C:\Users\user7\GeethaDoli.log:FileInfo) [Move-Item], IOException
+    + FullyQualifiedErrorId : MoveFileInfoItemIOError,Microsoft.PowerShell.Commands.MoveItemCommand
+move-item : The process cannot access the file because it is being used by another process.
+At line:1 char:1
++ move-item ..\GeethaDoli.log .
++ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : WriteError: (C:\Users\user7\GeethaDoli.log:FileInfo) [Move-Item], IOException
+    + FullyQualifiedErrorId : MoveFileInfoItemIOError,Microsoft.PowerShell.Commands.MoveItemCommand
+
+PS C:\Users\user7\powershell-thinkwright> move-item ..\GeethaDoli.log .
+move-item : The process cannot access the file because it is being used by another process.
+At line:1 char:1
++ move-item ..\GeethaDoli.log .
++ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : WriteError: (C:\Users\user7\GeethaDoli.log:FileInfo) [Move-Item], IOException
+    + FullyQualifiedErrorId : MoveFileInfoItemIOError,Microsoft.PowerShell.Commands.MoveItemCommand
+move-item : The process cannot access the file because it is being used by another process.
+At line:1 char:1
++ move-item ..\GeethaDoli.log .
++ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : WriteError: (C:\Users\user7\GeethaDoli.log:FileInfo) [Move-Item], IOException
+    + FullyQualifiedErrorId : MoveFileInfoItemIOError,Microsoft.PowerShell.Commands.MoveItemCommand
+
+PS C:\Users\user7\powershell-thinkwright> move-item ..\GeethaDoli.log .
+move-item : The process cannot access the file because it is being used by another process.
+At line:1 char:1
++ move-item ..\GeethaDoli.log .
++ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : WriteError: (C:\Users\user7\GeethaDoli.log:FileInfo) [Move-Item], IOException
+    + FullyQualifiedErrorId : MoveFileInfoItemIOError,Microsoft.PowerShell.Commands.MoveItemCommand
+move-item : The process cannot access the file because it is being used by another process.
+At line:1 char:1
++ move-item ..\GeethaDoli.log .
++ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : WriteError: (C:\Users\user7\GeethaDoli.log:FileInfo) [Move-Item], IOException
+    + FullyQualifiedErrorId : MoveFileInfoItemIOError,Microsoft.PowerShell.Commands.MoveItemCommand
+
+PS C:\Users\user7\powershell-thinkwright> get-chilitem -name *.log .
+get-chilitem : The term 'get-chilitem' is not recognized as the name of a cmdlet, function, script file, or operable 
+program. Check the spelling of the name, or if a path was included, verify that the path is correct and try again.
+At line:1 char:1
++ get-chilitem -name *.log .
++ ~~~~~~~~~~~~
+    + CategoryInfo          : ObjectNotFound: (get-chilitem:String) [], CommandNotFoundException
+    + FullyQualifiedErrorId : CommandNotFoundException
+get-chilitem : The term 'get-chilitem' is not recognized as the name of a cmdlet, function, script file, or operable
+program. Check the spelling of the name, or if a path was included, verify that the path is correct and try again.
+At line:1 char:1
++ get-chilitem -name *.log .
++ ~~~~~~~~~~~~
+    + CategoryInfo          : ObjectNotFound: (get-chilitem:String) [], CommandNotFoundException
+    + FullyQualifiedErrorId : CommandNotFoundException
+
+PS C:\Users\user7\powershell-thinkwright> get-chilitem -name *.log 
+get-chilitem : The term 'get-chilitem' is not recognized as the name of a cmdlet, function, script file, or operable 
+program. Check the spelling of the name, or if a path was included, verify that the path is correct and try again.
+At line:1 char:1
++ get-chilitem -name *.log
++ ~~~~~~~~~~~~
+    + CategoryInfo          : ObjectNotFound: (get-chilitem:String) [], CommandNotFoundException
+    + FullyQualifiedErrorId : CommandNotFoundException
+get-chilitem : The term 'get-chilitem' is not recognized as the name of a cmdlet, function, script file, or operable
+program. Check the spelling of the name, or if a path was included, verify that the path is correct and try again.
+At line:1 char:1
++ get-chilitem -name *.log
++ ~~~~~~~~~~~~
+    + CategoryInfo          : ObjectNotFound: (get-chilitem:String) [], CommandNotFoundException
+    + FullyQualifiedErrorId : CommandNotFoundException
+
+PS C:\Users\user7\powershell-thinkwright> Set-Location C:\Users\user7
+PS C:\Users\user7> get-chilitem -name *.log 
+get-chilitem : The term 'get-chilitem' is not recognized as the name of a cmdlet, function, script file, or operable 
+program. Check the spelling of the name, or if a path was included, verify that the path is correct and try again.
+At line:1 char:1
++ get-chilitem -name *.log
++ ~~~~~~~~~~~~
+    + CategoryInfo          : ObjectNotFound: (get-chilitem:String) [], CommandNotFoundException
+    + FullyQualifiedErrorId : CommandNotFoundException
+get-chilitem : The term 'get-chilitem' is not recognized as the name of a cmdlet, function, script file, or operable
+program. Check the spelling of the name, or if a path was included, verify that the path is correct and try again.
+At line:1 char:1
++ get-chilitem -name *.log
++ ~~~~~~~~~~~~
+    + CategoryInfo          : ObjectNotFound: (get-chilitem:String) [], CommandNotFoundException
+    + FullyQualifiedErrorId : CommandNotFoundException
+
+PS C:\Users\user7> Set-Location C:\Users\user7\powershell-thinkwright>
+Set-Location : Illegal characters in path.
+At line:1 char:1
++ Set-Location C:\Users\user7\powershell-thinkwright>
++ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : InvalidArgument: (C:\Users\user7\powershell-thinkwright>:String) [Set-Location], 
+ArgumentException
+    + FullyQualifiedErrorId : ItemExistsArgumentError,Microsoft.PowerShell.Commands.SetLocationCommand
+Set-Location : Illegal characters in path.
+At line:1 char:1
++ Set-Location C:\Users\user7\powershell-thinkwright>
++ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : InvalidArgument: (C:\Users\user7\powershell-thinkwright>:String) [Set-Location], Argumen
+   tException
+    + FullyQualifiedErrorId : ItemExistsArgumentError,Microsoft.PowerShell.Commands.SetLocationCommand
+
+Set-Location : Cannot find path 'C:\Users\user7\powershell-thinkwright>' because it does not exist.
+At line:1 char:1
++ Set-Location C:\Users\user7\powershell-thinkwright>
++ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : ObjectNotFound: (C:\Users\user7\powershell-thinkwright>:String) [Set-Location], 
+ItemNotFoundException
+    + FullyQualifiedErrorId : PathNotFound,Microsoft.PowerShell.Commands.SetLocationCommand
+Set-Location : Cannot find path 'C:\Users\user7\powershell-thinkwright>' because it does not exist.
+At line:1 char:1
++ Set-Location C:\Users\user7\powershell-thinkwright>
++ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : ObjectNotFound: (C:\Users\user7\powershell-thinkwright>:String) [Set-Location], ItemNotF
+   oundException
+    + FullyQualifiedErrorId : PathNotFound,Microsoft.PowerShell.Commands.SetLocationCommand
+
+PS C:\Users\user7> Set-Location C:\Users\user7\powershell-thinkwright
+PS C:\Users\user7\powershell-thinkwright> cd C:\Users\user7
+PS C:\Users\user7> get-childitem ..\GeethaDoli.log
+get-childitem : Cannot find path 'C:\Users\GeethaDoli.log' because it does not exist.
+At line:1 char:1
++ get-childitem ..\GeethaDoli.log
++ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : ObjectNotFound: (C:\Users\GeethaDoli.log:String) [Get-ChildItem], ItemNotFoundException
+    + FullyQualifiedErrorId : PathNotFound,Microsoft.PowerShell.Commands.GetChildItemCommand
+get-childitem : Cannot find path 'C:\Users\GeethaDoli.log' because it does not exist.
+At line:1 char:1
++ get-childitem ..\GeethaDoli.log
++ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : ObjectNotFound: (C:\Users\GeethaDoli.log:String) [Get-ChildItem], ItemNotFoundException
+    + FullyQualifiedErrorId : PathNotFound,Microsoft.PowerShell.Commands.GetChildItemCommand
+
+PS C:\Users\user7> get-childitem -name *.log
+GeethaDoli.log
