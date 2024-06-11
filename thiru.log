@@ -1,0 +1,52 @@
+﻿**********************
+Windows PowerShell transcript start
+Start time: 20240611123917
+Username: THIRU\tirum
+RunAs User: THIRU\tirum
+Configuration Name: 
+Machine: THIRU (Microsoft Windows NT 10.0.22621.0)
+Host Application: C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe
+Process ID: 19344
+PSVersion: 5.1.22621.3672
+PSEdition: Desktop
+PSCompatibleVersions: 1.0, 2.0, 3.0, 4.0, 5.0, 5.1.22621.3672
+BuildVersion: 10.0.22621.3672
+CLRVersion: 4.0.30319.42000
+WSManStackVersion: 3.0
+PSRemotingProtocolVersion: 2.3
+SerializationVersion: 1.1.0.1
+**********************
+Transcript started, output file is thiru.log
+PS C:\powershelltraining\powershell-thinkwright> git checkout -b thiru-trainee
+
+PS C:\powershelltraining\powershell-thinkwright> dir
+
+
+    Directory: C:\powershelltraining\powershell-thinkwright
+
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+-a----        11-06-2024     12:36          17888 Afroz-05-06-24-3023519.log
+-a----        11-06-2024     12:36           9350 Afroz.log
+-a----        11-06-2024     12:36            325 Get-Process-Examples.html
+-a----        11-06-2024     12:36           8308 narendra.log
+-a----        11-06-2024     12:36           2257 Rajesh.log
+-a----        11-06-2024     12:36             56 README.md
+-a----        11-06-2024     12:36           1579 suresh.log
+-a----        11-06-2024     12:36          68445 THARUN-14-32-15-5115250.log
+-a----        11-06-2024     12:36           2110 THARUN.log
+-a----        11-06-2024     12:39              0 thiru.log
+
+
+PS C:\powershelltraining\powershell-thinkwright> git status
+
+PS C:\powershelltraining\powershell-thinkwright> git add .
+
+PS C:\powershelltraining\powershell-thinkwright> git status
+
+PS C:\powershelltraining\powershell-thinkwright> Stop-Transcript
+**********************
+Windows PowerShell transcript end
+End time: 20240611124433
+**********************
