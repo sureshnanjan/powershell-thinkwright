@@ -1,0 +1,399 @@
+﻿**********************
+Windows PowerShell transcript start
+Start time: 20240612050520
+Username: THINKWRIGHT\user2
+RunAs User: THINKWRIGHT\user2
+Configuration Name: 
+Machine: DESKTOP-2 (Microsoft Windows NT 10.0.19045.0)
+Host Application: C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe
+Process ID: 7960
+PSVersion: 5.1.19041.4412
+PSEdition: Desktop
+PSCompatibleVersions: 1.0, 2.0, 3.0, 4.0, 5.0, 5.1.19041.4412
+BuildVersion: 10.0.19041.4412
+CLRVersion: 4.0.30319.42000
+WSManStackVersion: 3.0
+PSRemotingProtocolVersion: 2.3
+SerializationVersion: 1.1.0.1
+**********************
+Transcript started, output file is C:\Users\user2\Afroz-05-04-23-7363911.log
+PS C:\Users\user2\Training\powershell-thinkwright> $Name = "Afroz"
+PS C:\Users\user2\Training\powershell-thinkwright> $DOB = '1980-01-01'
+PS C:\Users\user2\Training\powershell-thinkwright> $DOBDateTime = [datetime]::Parse($DOB)
+PS C:\Users\user2\Training\powershell-thinkwright> $Today = [datetime]::Now
+PS C:\Users\user2\Training\powershell-thinkwright> $Age = $Today.year - $DOBDateTime.Year
+PS C:\Users\user2\Training\powershell-thinkwright> If ($Today.Month -lt $DOBDateTime -or ($Today.Month -eq $DOBDateTime.Month -and $Today.Day -lt $DOBDateTime.Day)) { $Age --}
+Could not compare "6" to "01/01/1980 00:00:00". Error: "Cannot convert value "1/1/1980 12:00:00 AM" to type 
+"System.Int32". Error: "Invalid cast from 'DateTime' to 'Int32'.""
+At line:1 char:5
++ If ($Today.Month -lt $DOBDateTime -or ($Today.Month -eq $DOBDateTime. ...
++     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : InvalidOperation: (:) [], RuntimeException
+    + FullyQualifiedErrorId : ComparisonFailure
+Could not compare "6" to "01/01/1980 00:00:00". Error: "Cannot convert value "1/1/1980 12:00:00 AM" to type "System.Int32".
+Error: "Invalid cast from 'DateTime' to 'Int32'.""
+At line:1 char:5
++ If ($Today.Month -lt $DOBDateTime -or ($Today.Month -eq $DOBDateTime. ...
++     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : InvalidOperation: (:) [], RuntimeException
+    + FullyQualifiedErrorId : ComparisonFailure
+
+PS C:\Users\user2\Training\powershell-thinkwright> if ($Today.Month -lt $DOBDateTime.Month -or ($Today.Month -eq $DOBDateTime.Month -and $Today.Day -lt $DOBDateTime.Day)) {  $Age-- }
+PS C:\Users\user2\Training\powershell-thinkwright> $CustomObject = New-Object PSObject -Property @{     Name = $Name     DOB = $DOB     Age = $Age }
+At line:1 char:71
++ ... t = New-Object PSObject -Property @{     Name = $Name     DOB = $DOB  ...
++                                                               ~~~
+Unexpected token 'DOB' in expression or statement.
+
+At line:1 char:66
++ ... tomObject = New-Object PSObject -Property @{     Name = $Name     DOB ...
++                                                                  ~
+The hash literal was incomplete.
+
+At line:1 char:97
++ ... SObject -Property @{     Name = $Name     DOB = $DOB     Age = $Age }
++                                                                         ~
+Unexpected token '}' in expression or statement.
+At line:1 char:71
++ ... t = New-Object PSObject -Property @{     Name = $Name     DOB = $DOB  ...
++                                                               ~~~
+Unexpected token 'DOB' in expression or statement.
+
+At line:1 char:66
++ ... tomObject = New-Object PSObject -Property @{     Name = $Name     DOB ...
++                                                                  ~
+The hash literal was incomplete.
+
+At line:1 char:97
++ ... SObject -Property @{     Name = $Name     DOB = $DOB     Age = $Age }
++                                                                         ~
+Unexpected token '}' in expression or statement.
+    + CategoryInfo          : ParserError: (:) [], ParentContainsErrorRecordException
+    + FullyQualifiedErrorId : UnexpectedToken
+
+PS C:\Users\user2\Training\powershell-thinkwright> $CustomObject = New-Object PSObject -Property @{
+    Name = $Name
+    DOB = $DOB
+    Age = $Age
+}
+PS C:\Users\user2\Training\powershell-thinkwright> $CustomObject
+
+Age Name  DOB
+--- ----  ---
+ 44 Afroz 1980-01-01
+
+
+PS C:\Users\user2\Training\powershell-thinkwright> $properties = @{
+    Training = 'Powershell'
+    Attendance = 5
+    Assessment = 'PASS'
+}
+PS C:\Users\user2\Training\powershell-thinkwright> $CustomObject = New-Object PSObject -Property $properties
+PS C:\Users\user2\Training\powershell-thinkwright> $CustomObject
+
+Attendance Training   Assessment
+---------- --------   ----------
+         5 Powershell PASS
+
+
+PS C:\Users\user2\Training\powershell-thinkwright> $FirstObject = New-Object PSObject -Property @{
+    Name = $Name
+    DOB = $DOB
+    Age = $Age
+}
+PS C:\Users\user2\Training\powershell-thinkwright> $FirstObject
+
+Age Name  DOB
+--- ----  ---
+ 44 Afroz 1980-01-01
+
+
+PS C:\Users\user2\Training\powershell-thinkwright> $SecondObjectProperties = @{
+    Training = 'Powershell'
+    Attendance = 5
+    Assessment = 'PASS'
+}
+PS C:\Users\user2\Training\powershell-thinkwright> $SecondObjectProperties
+
+Name                           Value
+----                           -----
+Attendance                     5
+Training                       Powershell
+Assessment                     PASS
+
+
+PS C:\Users\user2\Training\powershell-thinkwright> $SecondObject = New-Object PSObject -Property $SecondObjectProperties
+PS C:\Users\user2\Training\powershell-thinkwright> foreach ($property in $SecondObject.PSObject.Properties) {
+    $FirstObject | Add-Member -MemberType NoteProperty -Name $property.Name -Value $property.Value
+}
+PS C:\Users\user2\Training\powershell-thinkwright> $Student = $FirstObject
+PS C:\Users\user2\Training\powershell-thinkwright> $Student
+
+
+Age        : 44
+Name       : Afroz
+DOB        : 1980-01-01
+Attendance : 5
+Training   : Powershell
+Assessment : PASS
+
+
+
+PS C:\Users\user2\Training\powershell-thinkwright> $Student | Export-Csv -Path "Student.csv" -NoTypeInformation
+PS C:\Users\user2\Training\powershell-thinkwright> $FileCreated = Test-Path -Path "Student.csv"
+PS C:\Users\user2\Training\powershell-thinkwright> if ($FileCreated) {
+    Write-Output "File Student.csv was created successfully."
+} else {
+    Write-Output "File Student.csv was not created."
+}
+File Student.csv was created successfully.
+PS C:\Users\user2\Training\powershell-thinkwright> dir
+
+
+    Directory: C:\Users\user2\Training\powershell-thinkwright
+
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+-a----          6/5/2024   3:37 PM           1889 06-05-2024.log
+-a----          6/5/2024   2:24 PM          17888 Afroz-05-06-24-3023519.log
+-a----          6/4/2024   6:15 PM           9350 Afroz.log
+-a----          6/5/2024   2:22 PM            325 Get-Process-Examples.html
+-a----          6/4/2024   6:14 PM           2257 Rajesh.log
+-a----          6/4/2024   6:14 PM             56 README.md
+-a----         6/12/2024   5:42 AM            445 Setup-ADLab.ps1
+-a----         6/12/2024   5:59 AM            108 Student.csv
+-a----          6/4/2024   6:14 PM           1579 suresh.log
+
+
+PS C:\Users\user2\Training\powershell-thinkwright> $ImportedStudent = Import-Csv -Path "Student.csv"
+PS C:\Users\user2\Training\powershell-thinkwright> $ComparisonResult = Compare-Object -ReferenceObject $Student -DifferenceObject $ImportedStudent
+PS C:\Users\user2\Training\powershell-thinkwright> Write-Output "Comparison Results:"
+Comparison Results:
+PS C:\Users\user2\Training\powershell-thinkwright> $ComparisonResult
+PS C:\Users\user2\Training\powershell-thinkwright> $FormattedStudent = $ImportedStudent | Select-Object @{Name='Name';Expression={$_.Name}}, @{Name='Birthday';Expression={$_.DOB}}, @{Name='Training';Expression={$_.Training}}
+PS C:\Users\user2\Training\powershell-thinkwright> $FormattedStudent | Format-Table -Property @{Name='Name';Expression={$_.Name};Alignment='Left'}, @{Name='Birthday';Expression={$_.Birthday};Alignment='Right'}, @{Name='Training';Expression={$_.Training};Alignment='Center'} -AutoSize
+
+Name    Birthday  Training
+----    --------  --------
+Afroz 1980-01-01 Powershell
+
+
+PS C:\Users\user2\Training\powershell-thinkwright> Get-Process
+
+Handles  NPM(K)    PM(K)      WS(K)     CPU(s)     Id  SI ProcessName
+-------  ------    -----      -----     ------     --  -- -----------
+    135       7     1504       6856       0.17   4428   0 AggregatorHost
+    268      16     4240      25428       0.19   2536   2 ApplicationFrameHost
+     77       5     2196       4344       0.03    536   2 cmd
+    143       7     1460       8984       0.05   5892   2 CompPkgSrv
+    302      15     7132      22428       2.77   4680   2 conhost
+    266      13     4332      17600      46.00   6256   2 conhost
+    299      15     7200      23224      18.89  10860   2 conhost
+    242      14     7496      20708       0.47  11120   2 conhost
+    584      21     1836       5600      32.88    528   0 csrss
+    167       9     1668       5028       0.09    620   1 csrss
+    723      17     2876      15192      18.70   5628   2 csrss
+    517      17     4984      22592      16.77   6808   2 ctfmon
+    201      17     3680      12096       0.28   1908   0 dllhost
+    328      13     3624      14444       1.31   8488   2 dllhost
+    148       9     2144       8484       0.69   8984   2 dllhost
+    741      24    14908      48036       0.81   1056   1 dwm
+   1511      37    63424     100832      56.36   5880   2 dwm
+   3661     162   114308     217760     339.97   7004   2 explorer
+     36       5     1260       3988       0.28    928   0 fontdrvhost
+     36       5     1196       3880       0.00    936   1 fontdrvhost
+     36      13     6392      12216       1.09   5820   2 fontdrvhost
+    104       6     1368       5292       0.00   5484   2 git-cmd
+      0       0       60          8                 0   0 Idle
+    178      10     1800       9320       0.03   1836   0 igfxCUIService
+    162       8     1436       7744       0.03   1472   0 IntelCpHDCPSvc
+    617      34    19912      60584       0.81    908   1 LogonUI
+   1543      32    10024      25964   3,824.53    768   0 lsass
+      0       0      384      31392      28.34   2208   0 Memory Compression
+    211      13     2172       4400       0.34   9288   0 MicrosoftEdgeUpdate
+   1224      20    21148      38528      25.92   6320   0 MoUsoCoreWorker
+    487      16     9500      22324       3.88   5776   0 MpDefenderCoreService
+    200       9     2204       8556       0.28   2832   2 msedge
+    309      22   134872      20500      73.14   2972   2 msedge
+    208      15    18028      29680       0.05   3020   2 msedge
+   1127      32   225604     226580     119.19   3452   2 msedge
+    244      17    16808      16304       0.36   4128   2 msedge
+    195      12     9296      19960       0.66   5928   2 msedge
+   1766     214    81816      72868       7.92   7404   2 msedge
+    441      22    79044     118752       2.77   7888   2 msedge
+    372      25    66332      62168       4.02   8244   2 msedge
+    330      19    28320      54404      99.58  10484   2 msedge
+    254      14     8124      25416       1.02  10624   2 msedge
+    236      14     8816      20312       0.38  10680   2 msedge
+   2767     168   136936     256324     283.98  11052   2 msedge
+    783     193   326000     208608   1,295.05   7624   0 MsMpEng
+    220      26     4196      12216       0.09   7488   0 NisSrv
+    235      12     2580      15088       0.17   4860   2 notepad
+    241      13     2604      15360       0.88  11572   2 notepad
+    501      27    38880      46652       1.06   3164   0 OneApp.IGCC.WinService
+    875      52    55948     121580       7.97   9108   2 OneDrive
+   1425     110    55856     169676       2.81   4888   2 PhoneExperienceHost
+    559      31    59348     102660       1.75   1164   2 powershell
+   1101      52   161836     218452      40.52   7960   2 powershell
+    830      42    79016     127696      63.86   8464   2 powershell
+    878      67   144204     219208      84.17   5780   2 powershell_ise
+    356      14     4072      14524      14.05   6212   2 rdpclip
+      0      11     4576      73564      19.67    108   0 Registry
+    555      28    25448      54736      28.09    948   2 RuntimeBroker
+    354      20     8000      33608       6.45   4832   2 RuntimeBroker
+    273      15     3604      23912       0.16   9532   2 RuntimeBroker
+    315      18    16440      32644      16.53  10156   2 RuntimeBroker
+   1149     114   144856     227472       3.63  11084   2 SearchApp
+    789      60    30584      47548      37.00   3496   0 SearchIndexer
+    388      15     4880      15708       6.22  10576   0 SecurityHealthService
+    168       9     1904      10220       0.67  10544   2 SecurityHealthSystray
+    700      14     6500      14640      86.77    752   0 services
+    105       7     5488       8256       0.27   2260   0 SgrmBroker
+    703      30    20228      71396       0.66   9812   2 ShellExperienceHost
+    560      18     7368      30620      27.83   6284   2 sihost
+     56       3     1060       1212       0.19    412   0 smss
+    564      24     7984      23348      11.67   2936   0 spoolsv
+    639      33    24208      79484      10.02   9116   2 StartMenuExperienceHost
+    500      11     4120      11120     146.69    552   0 svchost
+   1753      23    23576      42528     210.63    896   0 svchost
+   1228      20    13984      22452      94.58   1016   0 svchost
+   1044      59   358928     365120  13,708.72   1124   0 svchost
+    275      15     3704      15816       0.69   1184   0 svchost
+    205      12     1768       7916       0.03   1200   0 svchost
+    147      22     4808       9348       5.72   1204   0 svchost
+    215      12     2548      10632       0.41   1260   0 svchost
+    601       9     2480      12932       1.14   1288   0 svchost
+    222      10     2320       8048       3.47   1324   0 svchost
+    425      14    15152      18636      12.30   1368   0 svchost
+    382      17     7148      17028      49.52   1400   0 svchost
+    317      16     3788      10188      20.69   1428   0 svchost
+    184       9     2016       8120       0.64   1516   0 svchost
+    417      16     4676      13864       1.58   1584   0 svchost
+    180       7     1700       6616       0.38   1652   0 svchost
+    209       7     1328       6224       0.61   1676   0 svchost
+    177      10     1944       8532       0.36   1728   0 svchost
+    413      31    11260      20536       5.56   1744   0 svchost
+    192      10     2860       9852     449.55   1872   0 svchost
+    464      12     3176      10324       6.66   1924   0 svchost
+    254      12     2552      11552       0.94   2032   0 svchost
+    198      10     1952       9016       0.72   2100   0 svchost
+    130       8     1440       7492       0.05   2108   0 svchost
+    192      11     2236       9628       0.45   2116   0 svchost
+    255      10     2840      10308       6.53   2200   0 svchost
+    353      16     3992      14056       1.69   2316   0 svchost
+    204      11     2148       9372       1.30   2452   0 svchost
+    244      15     2440      11112       0.22   2512   0 svchost
+    366      13     3416      15064       2.16   2592   0 svchost
+    393      15     9388      20784      42.50   2620   0 svchost
+    152      10     1804       8668       0.72   2696   0 svchost
+    379      19     5616      18836       5.28   2716   0 svchost
+    171      17    16100      24580      59.98   2736   0 svchost
+    215      12     2440      10836       0.58   2744   0 svchost
+    382      13     2332      10148       1.83   2752   0 svchost
+    199      13     2332      13056       0.70   2816   0 svchost
+    378      16     2828      11748       0.14   3076   0 svchost
+    404      28     7360      18732      27.02   3124   0 svchost
+    684      29    32244      59600      99.27   3144   0 svchost
+    339      19    35228      44816     281.59   3152   0 svchost
+    143       9     1592       7040       0.02   3228   0 svchost
+    135       7     1300       6004       0.02   3248   0 svchost
+    206      12     2396       9428       1.16   3272   0 svchost
+    394      19     4996      22380       1.78   3312   0 svchost
+    116       7     1312       5856       0.11   3488   0 svchost
+    385      24     3584      13148       0.09   3700   0 svchost
+    230      15     3896      13900     155.59   4344   0 svchost
+    122       8     1316       5844       0.03   4352   0 svchost
+    395      21     9084      27980       5.50   4364   0 svchost
+    215      11     1884       8596       0.02   4924   0 svchost
+    280      16     4456      21452       1.45   5296   0 svchost
+    230      12     2488      12176       0.03   5600   0 svchost
+    226       8     1600       7852       0.16   6300   0 svchost
+    315      16     7312      23132       3.28   6356   2 svchost
+    498      23     8092      35672       3.03   6404   2 svchost
+    340      18     9472      27220       5.73   6444   0 svchost
+    180      10     2092       8352       0.16   6532   0 svchost
+    665      13     6248      19720      28.56   6536   0 svchost
+    252       9     1772       8284       0.05   6704   0 svchost
+    321      19     4252      16892       0.09   6964   0 svchost
+    189      10     2116       9288       0.08   7852   0 svchost
+    162      11     1512       7524       0.03   8140   0 svchost
+    145       9     1580      11456       0.02   8304   0 svchost
+    522      12     5528      11772       2.98   8468   0 svchost
+    335      16     4312      23540       3.84   8892   2 svchost
+    501      26     6084      24124       1.53   8960   2 svchost
+    409      19     3964      18656       0.50   9132   0 svchost
+    233      13     3208      11268       0.80  10300   0 svchost
+    219      15     2068       7992     194.86  10724   0 svchost
+    194      15     6184      10020       0.03  10816   0 svchost
+   3885       0      212       7556     399.83      4   0 System
+    310      33     8696      20756       4.09   6516   2 taskhostw
+    556      23    15380      56340       3.27   3732   2 TextInputHost
+    121       7     1340       6492       0.02   5500   0 uhssvc
+    167      11     1656       7364      65.31    612   0 wininit
+    213      10     2372      10996       0.09    680   1 winlogon
+    268      12     3340      11968       0.77   5676   2 winlogon
+     69       5      820       3748       0.59   3280   0 wlms
+    361      14    16616      35896       0.17   1096   0 WUDFHost
+
+
+PS C:\Users\user2\Training\powershell-thinkwright> dir
+
+
+    Directory: C:\Users\user2\Training\powershell-thinkwright
+
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+-a----          6/5/2024   3:37 PM           1889 06-05-2024.log
+-a----          6/5/2024   2:24 PM          17888 Afroz-05-06-24-3023519.log
+-a----          6/4/2024   6:15 PM           9350 Afroz.log
+-a----          6/5/2024   2:22 PM            325 Get-Process-Examples.html
+-a----          6/4/2024   6:14 PM           2257 Rajesh.log
+-a----          6/4/2024   6:14 PM             56 README.md
+-a----         6/12/2024   5:42 AM            445 Setup-ADLab.ps1
+-a----         6/12/2024   5:59 AM            108 Student.csv
+-a----          6/4/2024   6:14 PM           1579 suresh.log
+
+
+PS C:\Users\user2\Training\powershell-thinkwright> Get-Process -Name 'NotePad'
+
+Handles  NPM(K)    PM(K)      WS(K)     CPU(s)     Id  SI ProcessName
+-------  ------    -----      -----     ------     --  -- -----------
+    235      12     2580      15088       0.17   4860   2 notepad
+    241      13     2604      15360       0.88  11572   2 notepad
+
+
+PS C:\Users\user2\Training\powershell-thinkwright> Get-Process -Name 'chrome'
+Get-Process : Cannot find a process with the name "chrome". Verify the process name and call the cmdlet again.
+At line:1 char:1
++ Get-Process -Name 'chrome'
++ ~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : ObjectNotFound: (chrome:String) [Get-Process], ProcessCommandException
+    + FullyQualifiedErrorId : NoProcessFoundForGivenName,Microsoft.PowerShell.Commands.GetProcessCommand
+Get-Process : Cannot find a process with the name "chrome". Verify the process name and call the cmdlet again.
+At line:1 char:1
++ Get-Process -Name 'chrome'
++ ~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : ObjectNotFound: (chrome:String) [Get-Process], ProcessCommandException
+    + FullyQualifiedErrorId : NoProcessFoundForGivenName,Microsoft.PowerShell.Commands.GetProcessCommand
+
+PS C:\Users\user2\Training\powershell-thinkwright> Get-Process -Name 'acrobat'
+Get-Process : Cannot find a process with the name "acrobat". Verify the process name and call the cmdlet again.
+At line:1 char:1
++ Get-Process -Name 'acrobat'
++ ~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : ObjectNotFound: (acrobat:String) [Get-Process], ProcessCommandException
+    + FullyQualifiedErrorId : NoProcessFoundForGivenName,Microsoft.PowerShell.Commands.GetProcessCommand
+Get-Process : Cannot find a process with the name "acrobat". Verify the process name and call the cmdlet again.
+At line:1 char:1
++ Get-Process -Name 'acrobat'
++ ~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : ObjectNotFound: (acrobat:String) [Get-Process], ProcessCommandException
+    + FullyQualifiedErrorId : NoProcessFoundForGivenName,Microsoft.PowerShell.Commands.GetProcessCommand
+
+PS C:\Users\user2\Training\powershell-thinkwright> Stop-Transcript
+**********************
+Windows PowerShell transcript end
+End time: 20240612060606
+**********************
