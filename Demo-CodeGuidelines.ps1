@@ -60,7 +60,8 @@ function Verb-Noun
         [ValidatePattern("[a-z]*")]
         [ValidateLength(0,15)]
         [String]
-        $Param3
+        $Param3,
+        [switch]$param4
     )
 
     Begin
@@ -70,6 +71,8 @@ function Verb-Noun
     {
         if ($pscmdlet.ShouldProcess("Target", "Operation"))
         {
+            Write-Host $param4
+
         }
     }
     End
