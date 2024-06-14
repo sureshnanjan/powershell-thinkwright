@@ -1,0 +1,2023 @@
+﻿**********************
+Windows PowerShell transcript start
+Start time: 20240614152355
+Username: THINKWRIGHT\user15
+RunAs User: THINKWRIGHT\user15
+Configuration Name: 
+Machine: DESKTOP-15 (Microsoft Windows NT 10.0.19045.0)
+Host Application: C:\Windows\system32\WindowsPowerShell\v1.0\PowerShell_ISE.exe
+Process ID: 1108
+PSVersion: 5.1.19041.4412
+PSEdition: Desktop
+PSCompatibleVersions: 1.0, 2.0, 3.0, 4.0, 5.0, 5.1.19041.4412
+BuildVersion: 10.0.19041.4412
+CLRVersion: 4.0.30319.42000
+WSManStackVersion: 3.0
+PSRemotingProtocolVersion: 2.3
+SerializationVersion: 1.1.0.1
+**********************
+Transcript started, output file is C:\Users\user15\Murugan_Assesment_Day2-15-23-38-9154609.log
+PS C:\Users\user15> get-help New-Object
+
+NAME
+    New-Object
+
+SYNTAX
+    New-Object [-TypeName] <string> [[-ArgumentList] <Object[]>] [-Property <IDictionary>]  [<CommonParameters>]
+
+    New-Object [-ComObject] <string> [-Strict] [-Property <IDictionary>]  [<CommonParameters>]
+
+
+ALIASES
+    None
+
+
+REMARKS
+    Get-Help cannot find the Help files for this cmdlet on this computer. It is displaying only partial help.
+        -- To download and install Help files for the module that includes this cmdlet, use Update-Help.
+        -- To view the Help topic for this cmdlet online, type: "Get-Help New-Object -Online" or
+           go to https://go.microsoft.com/fwlink/?LinkID=113355.
+
+
+
+PS C:\Users\user15> New-Object -TypeName System.Management.Automation.PSCustomObject
+>> TerminatingError(New-Object): "A constructor was not found. Cannot find an appropriate constructor for type System.Management.Automation.PSCustomObject."
+New-Object : A constructor was not found. Cannot find an appropriate constructor for type 
+System.Management.Automation.PSCustomObject.
+At line:1 char:1
++ New-Object -TypeName System.Management.Automation.PSCustomObject
++ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : ObjectNotFound: (:) [New-Object], PSArgumentException
+    + FullyQualifiedErrorId : CannotFindAppropriateCtor,Microsoft.PowerShell.Commands.NewObjectCommand
+New-Object : A constructor was not found. Cannot find an appropriate constructor for type System.Management.Automation.PSCustomObject.
+At line:1 char:1
++ New-Object -TypeName System.Management.Automation.PSCustomObject
++ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : ObjectNotFound: (:) [New-Object], PSArgumentException
+    + FullyQualifiedErrorId : CannotFindAppropriateCtor,Microsoft.PowerShell.Commands.NewObjectCommand
+
+PS C:\Users\user15> New-Object -TypeName System.Management.Automation.PSCustomObject {name=Murugan}
+>> TerminatingError(New-Object): "A constructor was not found. Cannot find an appropriate constructor for type System.Management.Automation.PSCustomObject."
+New-Object : A constructor was not found. Cannot find an appropriate constructor for type 
+System.Management.Automation.PSCustomObject.
+At line:1 char:1
++ New-Object -TypeName System.Management.Automation.PSCustomObject {nam ...
++ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : ObjectNotFound: (:) [New-Object], PSArgumentException
+    + FullyQualifiedErrorId : CannotFindAppropriateCtor,Microsoft.PowerShell.Commands.NewObjectCommand
+New-Object : A constructor was not found. Cannot find an appropriate constructor for type System.Management.Automation.PSCustomObject.
+At line:1 char:1
++ New-Object -TypeName System.Management.Automation.PSCustomObject {nam ...
++ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : ObjectNotFound: (:) [New-Object], PSArgumentException
+    + FullyQualifiedErrorId : CannotFindAppropriateCtor,Microsoft.PowerShell.Commands.NewObjectCommand
+
+PS C:\Users\user15> New-Object -TypeName System.Management.Automation.PSCustomObject -ArgumentList {name=murugan;DOb=10-Jun-1990}
+>> TerminatingError(New-Object): "A constructor was not found. Cannot find an appropriate constructor for type System.Management.Automation.PSCustomObject."
+New-Object : A constructor was not found. Cannot find an appropriate constructor for type 
+System.Management.Automation.PSCustomObject.
+At line:1 char:1
++ New-Object -TypeName System.Management.Automation.PSCustomObject -Arg ...
++ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : ObjectNotFound: (:) [New-Object], PSArgumentException
+    + FullyQualifiedErrorId : CannotFindAppropriateCtor,Microsoft.PowerShell.Commands.NewObjectCommand
+New-Object : A constructor was not found. Cannot find an appropriate constructor for type System.Management.Automation.PSCustomObject.
+At line:1 char:1
++ New-Object -TypeName System.Management.Automation.PSCustomObject -Arg ...
++ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : ObjectNotFound: (:) [New-Object], PSArgumentException
+    + FullyQualifiedErrorId : CannotFindAppropriateCtor,Microsoft.PowerShell.Commands.NewObjectCommand
+
+PS C:\Users\user15> New-Object -TypeName System.Management.Automation.PSCustomObject @{Name="Murugan";DOB="1-June-1986";Age="38"}
+>> TerminatingError(New-Object): "A constructor was not found. Cannot find an appropriate constructor for type System.Management.Automation.PSCustomObject."
+New-Object : A constructor was not found. Cannot find an appropriate constructor for type 
+System.Management.Automation.PSCustomObject.
+At line:1 char:1
++ New-Object -TypeName System.Management.Automation.PSCustomObject @{Na ...
++ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : ObjectNotFound: (:) [New-Object], PSArgumentException
+    + FullyQualifiedErrorId : CannotFindAppropriateCtor,Microsoft.PowerShell.Commands.NewObjectCommand
+New-Object : A constructor was not found. Cannot find an appropriate constructor for type System.Management.Automation.PSCustomObject.
+At line:1 char:1
++ New-Object -TypeName System.Management.Automation.PSCustomObject @{Na ...
++ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : ObjectNotFound: (:) [New-Object], PSArgumentException
+    + FullyQualifiedErrorId : CannotFindAppropriateCtor,Microsoft.PowerShell.Commands.NewObjectCommand
+
+PS C:\Users\user15> $test= New-Object -TypeName System.Management.Automation.PSCustomObject @{Name="Murugan";DOB="1-June-1986";Age="38"}
+>> TerminatingError(New-Object): "A constructor was not found. Cannot find an appropriate constructor for type System.Management.Automation.PSCustomObject."
+New-Object : A constructor was not found. Cannot find an appropriate constructor for type 
+System.Management.Automation.PSCustomObject.
+At line:1 char:8
++ $test= New-Object -TypeName System.Management.Automation.PSCustomObje ...
++        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : ObjectNotFound: (:) [New-Object], PSArgumentException
+    + FullyQualifiedErrorId : CannotFindAppropriateCtor,Microsoft.PowerShell.Commands.NewObjectCommand
+New-Object : A constructor was not found. Cannot find an appropriate constructor for type System.Management.Automation.PSCustomObject.
+At line:1 char:8
++ $test= New-Object -TypeName System.Management.Automation.PSCustomObje ...
++        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : ObjectNotFound: (:) [New-Object], PSArgumentException
+    + FullyQualifiedErrorId : CannotFindAppropriateCtor,Microsoft.PowerShell.Commands.NewObjectCommand
+
+PS C:\Users\user15> $test = New-Object -TypeName System.Management.Automation.PSCustomObject -Property @{Name = "Murugan"DOB = "01-June-1980"Age = (Get-Date -Year) - "1980" }
+>> TerminatingError(Get-Date): "Missing an argument for parameter 'Year'. Specify a parameter of type 'System.Int32' and try again."
+Get-Date : Missing an argument for parameter 'Year'. Specify a parameter of type 'System.Int32' and try again.
+At line:5 char:17
++ Age = (Get-Date -Year) - "1980"
++                 ~~~~~
+    + CategoryInfo          : InvalidArgument: (:) [Get-Date], ParameterBindingException
+    + FullyQualifiedErrorId : MissingArgument,Microsoft.PowerShell.Commands.GetDateCommand
+Get-Date : Missing an argument for parameter 'Year'. Specify a parameter of type 'System.Int32' and try again.
+At line:5 char:17
++ Age = (Get-Date -Year) - "1980"
++                 ~~~~~
+    + CategoryInfo          : InvalidArgument: (:) [Get-Date], ParameterBindingException
+    + FullyQualifiedErrorId : MissingArgument,Microsoft.PowerShell.Commands.GetDateCommand
+
+PS C:\Users\user15> (Get-Date -Year)
+>> TerminatingError(Get-Date): "Missing an argument for parameter 'Year'. Specify a parameter of type 'System.Int32' and try again."
+Get-Date : Missing an argument for parameter 'Year'. Specify a parameter of type 'System.Int32' and try again.
+At line:1 char:11
++ (Get-Date -Year)
++           ~~~~~
+    + CategoryInfo          : InvalidArgument: (:) [Get-Date], ParameterBindingException
+    + FullyQualifiedErrorId : MissingArgument,Microsoft.PowerShell.Commands.GetDateCommand
+Get-Date : Missing an argument for parameter 'Year'. Specify a parameter of type 'System.Int32' and try again.
+At line:1 char:11
++ (Get-Date -Year)
++           ~~~~~
+    + CategoryInfo          : InvalidArgument: (:) [Get-Date], ParameterBindingException
+    + FullyQualifiedErrorId : MissingArgument,Microsoft.PowerShell.Commands.GetDateCommand
+
+PS C:\Users\user15> Get-Date -Year
+>> TerminatingError(Get-Date): "Missing an argument for parameter 'Year'. Specify a parameter of type 'System.Int32' and try again."
+Get-Date : Missing an argument for parameter 'Year'. Specify a parameter of type 'System.Int32' and try again.
+At line:1 char:10
++ Get-Date -Year
++          ~~~~~
+    + CategoryInfo          : InvalidArgument: (:) [Get-Date], ParameterBindingException
+    + FullyQualifiedErrorId : MissingArgument,Microsoft.PowerShell.Commands.GetDateCommand
+Get-Date : Missing an argument for parameter 'Year'. Specify a parameter of type 'System.Int32' and try again.
+At line:1 char:10
++ Get-Date -Year
++          ~~~~~
+    + CategoryInfo          : InvalidArgument: (:) [Get-Date], ParameterBindingException
+    + FullyQualifiedErrorId : MissingArgument,Microsoft.PowerShell.Commands.GetDateCommand
+
+PS C:\Users\user15> Get-Date
+
+14 June 2024 15:38:32
+
+
+PS C:\Users\user15> Get-Date -Month
+>> TerminatingError(Get-Date): "Missing an argument for parameter 'Month'. Specify a parameter of type 'System.Int32' and try again."
+Get-Date : Missing an argument for parameter 'Month'. Specify a parameter of type 'System.Int32' and try again.
+At line:1 char:10
++ Get-Date -Month
++          ~~~~~~
+    + CategoryInfo          : InvalidArgument: (:) [Get-Date], ParameterBindingException
+    + FullyQualifiedErrorId : MissingArgument,Microsoft.PowerShell.Commands.GetDateCommand
+Get-Date : Missing an argument for parameter 'Month'. Specify a parameter of type 'System.Int32' and try again.
+At line:1 char:10
++ Get-Date -Month
++          ~~~~~~
+    + CategoryInfo          : InvalidArgument: (:) [Get-Date], ParameterBindingException
+    + FullyQualifiedErrorId : MissingArgument,Microsoft.PowerShell.Commands.GetDateCommand
+
+PS C:\Users\user15> (get-date).year
+2024
+PS C:\Users\user15> $test = New-Object -TypeName System.Management.Automation.PSCustomObject -Property @{Name = "Murugan"DOB = "01-June-1980"Age = (Get-Date).Year - "1980" }
+PS C:\Users\user15> TerminatingError(New-Object): "A constructor was not found. Cannot find an appropriate constructor for type System.Management.Automation.PSCustomObject."
+New-Object : A constructor was not found. Cannot find an appropriate constructor for type 
+System.Management.Automation.PSCustomObject.
+At line:1 char:9
++ $test = New-Object -TypeName System.Management.Automation.PSCustomObj ...
++         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : ObjectNotFound: (:) [New-Object], PSArgumentException
+    + FullyQualifiedErrorId : CannotFindAppropriateCtor,Microsoft.PowerShell.Commands.NewObjectCommand
+New-Object : A constructor was not found. Cannot find an appropriate constructor for type System.Management.Automation.PSCustomObject.
+At line:1 char:9
++ $test = New-Object -TypeName System.Management.Automation.PSCustomObj ...
++         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : ObjectNotFound: (:) [New-Object], PSArgumentException
+    + FullyQualifiedErrorId : CannotFindAppropriateCtor,Microsoft.PowerShell.Commands.NewObjectCommand
+
+PS C:\Users\user15> $test = New-Object -TypeName PSCustomObject -Property @{Name = "Murugan"DOB = "01-June-1980"Age = (Get-Date).Year - "1980" }
+PS C:\Users\user15> $test
+
+Age Name    DOB
+--- ----    ---
+ 44 Murugan 01-June-1980
+
+
+PS C:\Users\user15> $hastable = @{Training = 'PowerShell'Attendance = 5Assessment = 'Pass'}
+PS C:\Users\user15> $hastable
+
+Name                           Value
+----                           -----
+Attendance                     5
+Training                       PowerShell
+Assessment                     Pass
+
+
+PS C:\Users\user15> Get-Process -Name notepad | Stop-Process -WhatIf
+What if: Performing the operation "Stop-Process" on target "notepad (10020)".
+PS C:\Users\user15> Get-Process -Name notepad | Stop-Process
+PS C:\Users\user15> Get-Process -Name notepad | gm
+Get-Process : Cannot find a process with the name "notepad". Verify the process name and call the cmdlet again.
+At line:1 char:1
++ Get-Process -Name notepad | gm
++ ~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : ObjectNotFound: (notepad:String) [Get-Process], ProcessCommandException
+    + FullyQualifiedErrorId : NoProcessFoundForGivenName,Microsoft.PowerShell.Commands.GetProcessCommand
+Get-Process : Cannot find a process with the name "notepad". Verify the process name and call the cmdlet again.
+At line:1 char:1
++ Get-Process -Name notepad | gm
++ ~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : ObjectNotFound: (notepad:String) [Get-Process], ProcessCommandException
+    + FullyQualifiedErrorId : NoProcessFoundForGivenName,Microsoft.PowerShell.Commands.GetProcessCommand
+
+gm : You must specify an object for the Get-Member cmdlet.
+At line:1 char:29
++ Get-Process -Name notepad | gm
++                             ~~
+    + CategoryInfo          : CloseError: (:) [Get-Member], InvalidOperationException
+    + FullyQualifiedErrorId : NoObjectInGetMember,Microsoft.PowerShell.Commands.GetMemberCommand
+gm : You must specify an object for the Get-Member cmdlet.
+At line:1 char:29
++ Get-Process -Name notepad | gm
++                             ~~
+    + CategoryInfo          : CloseError: (:) [Get-Member], InvalidOperationException
+    + FullyQualifiedErrorId : NoObjectInGetMember,Microsoft.PowerShell.Commands.GetMemberCommand
+
+PS C:\Users\user15> notepad 
+PS C:\Users\user15> Get-Process -Name notepad | gm
+
+
+   TypeName: System.Diagnostics.Process
+
+Name                       MemberType     Definition
+----                       ----------     ----------
+Handles                    AliasProperty  Handles = Handlecount
+Name                       AliasProperty  Name = ProcessName
+NPM                        AliasProperty  NPM = NonpagedSystemMemorySize64
+PM                         AliasProperty  PM = PagedMemorySize64
+SI                         AliasProperty  SI = SessionId
+VM                         AliasProperty  VM = VirtualMemorySize64
+WS                         AliasProperty  WS = WorkingSet64
+Disposed                   Event          System.EventHandler Disposed(System.Object, System.EventArgs)
+ErrorDataReceived          Event          System.Diagnostics.DataReceivedEventHandler ErrorDataReceived(System.Object, System.Diagnostics.DataReceivedEventArgs)
+Exited                     Event          System.EventHandler Exited(System.Object, System.EventArgs)
+OutputDataReceived         Event          System.Diagnostics.DataReceivedEventHandler OutputDataReceived(System.Object, System.Diagnostics.DataReceivedEventArgs)
+BeginErrorReadLine         Method         void BeginErrorReadLine()
+BeginOutputReadLine        Method         void BeginOutputReadLine()
+CancelErrorRead            Method         void CancelErrorRead()
+CancelOutputRead           Method         void CancelOutputRead()
+Close                      Method         void Close()
+CloseMainWindow            Method         bool CloseMainWindow()
+CreateObjRef               Method         System.Runtime.Remoting.ObjRef CreateObjRef(type requestedType)
+Dispose                    Method         void Dispose(), void IDisposable.Dispose()
+Equals                     Method         bool Equals(System.Object obj)
+GetHashCode                Method         int GetHashCode()
+GetLifetimeService         Method         System.Object GetLifetimeService()
+GetType                    Method         type GetType()
+InitializeLifetimeService  Method         System.Object InitializeLifetimeService()
+Kill                       Method         void Kill()
+Refresh                    Method         void Refresh()
+Start                      Method         bool Start()
+ToString                   Method         string ToString()
+WaitForExit                Method         bool WaitForExit(int milliseconds), void WaitForExit()
+WaitForInputIdle           Method         bool WaitForInputIdle(int milliseconds), bool WaitForInputIdle()
+__NounName                 NoteProperty   string __NounName=Process
+BasePriority               Property       int BasePriority {get;}
+Container                  Property       System.ComponentModel.IContainer Container {get;}
+EnableRaisingEvents        Property       bool EnableRaisingEvents {get;set;}
+ExitCode                   Property       int ExitCode {get;}
+ExitTime                   Property       datetime ExitTime {get;}
+Handle                     Property       System.IntPtr Handle {get;}
+HandleCount                Property       int HandleCount {get;}
+HasExited                  Property       bool HasExited {get;}
+Id                         Property       int Id {get;}
+MachineName                Property       string MachineName {get;}
+MainModule                 Property       System.Diagnostics.ProcessModule MainModule {get;}
+MainWindowHandle           Property       System.IntPtr MainWindowHandle {get;}
+MainWindowTitle            Property       string MainWindowTitle {get;}
+MaxWorkingSet              Property       System.IntPtr MaxWorkingSet {get;set;}
+MinWorkingSet              Property       System.IntPtr MinWorkingSet {get;set;}
+Modules                    Property       System.Diagnostics.ProcessModuleCollection Modules {get;}
+NonpagedSystemMemorySize   Property       int NonpagedSystemMemorySize {get;}
+NonpagedSystemMemorySize64 Property       long NonpagedSystemMemorySize64 {get;}
+PagedMemorySize            Property       int PagedMemorySize {get;}
+PagedMemorySize64          Property       long PagedMemorySize64 {get;}
+PagedSystemMemorySize      Property       int PagedSystemMemorySize {get;}
+PagedSystemMemorySize64    Property       long PagedSystemMemorySize64 {get;}
+PeakPagedMemorySize        Property       int PeakPagedMemorySize {get;}
+PeakPagedMemorySize64      Property       long PeakPagedMemorySize64 {get;}
+PeakVirtualMemorySize      Property       int PeakVirtualMemorySize {get;}
+PeakVirtualMemorySize64    Property       long PeakVirtualMemorySize64 {get;}
+PeakWorkingSet             Property       int PeakWorkingSet {get;}
+PeakWorkingSet64           Property       long PeakWorkingSet64 {get;}
+PriorityBoostEnabled       Property       bool PriorityBoostEnabled {get;set;}
+PriorityClass              Property       System.Diagnostics.ProcessPriorityClass PriorityClass {get;set;}
+PrivateMemorySize          Property       int PrivateMemorySize {get;}
+PrivateMemorySize64        Property       long PrivateMemorySize64 {get;}
+PrivilegedProcessorTime    Property       timespan PrivilegedProcessorTime {get;}
+ProcessName                Property       string ProcessName {get;}
+ProcessorAffinity          Property       System.IntPtr ProcessorAffinity {get;set;}
+Responding                 Property       bool Responding {get;}
+SafeHandle                 Property       Microsoft.Win32.SafeHandles.SafeProcessHandle SafeHandle {get;}
+SessionId                  Property       int SessionId {get;}
+Site                       Property       System.ComponentModel.ISite Site {get;set;}
+StandardError              Property       System.IO.StreamReader StandardError {get;}
+StandardInput              Property       System.IO.StreamWriter StandardInput {get;}
+StandardOutput             Property       System.IO.StreamReader StandardOutput {get;}
+StartInfo                  Property       System.Diagnostics.ProcessStartInfo StartInfo {get;set;}
+StartTime                  Property       datetime StartTime {get;}
+SynchronizingObject        Property       System.ComponentModel.ISynchronizeInvoke SynchronizingObject {get;set;}
+Threads                    Property       System.Diagnostics.ProcessThreadCollection Threads {get;}
+TotalProcessorTime         Property       timespan TotalProcessorTime {get;}
+UserProcessorTime          Property       timespan UserProcessorTime {get;}
+VirtualMemorySize          Property       int VirtualMemorySize {get;}
+VirtualMemorySize64        Property       long VirtualMemorySize64 {get;}
+WorkingSet                 Property       int WorkingSet {get;}
+WorkingSet64               Property       long WorkingSet64 {get;}
+PSConfiguration            PropertySet    PSConfiguration {Name, Id, PriorityClass, FileVersion}
+PSResources                PropertySet    PSResources {Name, Id, Handlecount, WorkingSet, NonPagedMemorySize, PagedMemorySize, PrivateMemorySize, VirtualMemorySize, T...
+Company                    ScriptProperty System.Object Company {get=$this.Mainmodule.FileVersionInfo.CompanyName;}
+CPU                        ScriptProperty System.Object CPU {get=$this.TotalProcessorTime.TotalSeconds;}
+Description                ScriptProperty System.Object Description {get=$this.Mainmodule.FileVersionInfo.FileDescription;}
+FileVersion                ScriptProperty System.Object FileVersion {get=$this.Mainmodule.FileVersionInfo.FileVersion;}
+Path                       ScriptProperty System.Object Path {get=$this.Mainmodule.FileName;}
+Product                    ScriptProperty System.Object Product {get=$this.Mainmodule.FileVersionInfo.ProductName;}
+ProductVersion             ScriptProperty System.Object ProductVersion {get=$this.Mainmodule.FileVersionInfo.ProductVersion;}
+
+
+PS C:\Users\user15> Get-help Stop-Process -Parameter
+>> TerminatingError(Get-Help): "Missing an argument for parameter 'Parameter'. Specify a parameter of type 'System.String' and try again."
+Get-Help : Missing an argument for parameter 'Parameter'. Specify a parameter of type 'System.String' and try again.
+At line:1 char:23
++ Get-help Stop-Process -Parameter
++                       ~~~~~~~~~~
+    + CategoryInfo          : InvalidArgument: (:) [Get-Help], ParameterBindingException
+    + FullyQualifiedErrorId : MissingArgument,Microsoft.PowerShell.Commands.GetHelpCommand
+Get-Help : Missing an argument for parameter 'Parameter'. Specify a parameter of type 'System.String' and try again.
+At line:1 char:23
++ Get-help Stop-Process -Parameter
++                       ~~~~~~~~~~
+    + CategoryInfo          : InvalidArgument: (:) [Get-Help], ParameterBindingException
+    + FullyQualifiedErrorId : MissingArgument,Microsoft.PowerShell.Commands.GetHelpCommand
+
+PS C:\Users\user15> Get-help Stop-Process
+
+NAME
+    Stop-Process
+
+SYNTAX
+    Stop-Process [-Id] <int[]> [-PassThru] [-Force] [-WhatIf] [-Confirm]  [<CommonParameters>]
+
+    Stop-Process -Name <string[]> [-PassThru] [-Force] [-WhatIf] [-Confirm]  [<CommonParameters>]
+
+    Stop-Process [-InputObject] <Process[]> [-PassThru] [-Force] [-WhatIf] [-Confirm]  [<CommonParameters>]
+
+
+ALIASES
+    spps
+    kill
+
+
+REMARKS
+    Get-Help cannot find the Help files for this cmdlet on this computer. It is displaying only partial help.
+        -- To download and install Help files for the module that includes this cmdlet, use Update-Help.
+        -- To view the Help topic for this cmdlet online, type: "Get-Help Stop-Process -Online" or
+           go to https://go.microsoft.com/fwlink/?LinkID=113412.
+
+
+
+PS C:\Users\user15> Get-help Stop-Process -Examples
+
+NAME
+    Stop-Process
+
+ALIASES
+    spps
+    kill
+
+
+REMARKS
+    Get-Help cannot find the Help files for this cmdlet on this computer. It is displaying only partial help.
+        -- To download and install Help files for the module that includes this cmdlet, use Update-Help.
+        -- To view the Help topic for this cmdlet online, type: "Get-Help Stop-Process -Online" or
+           go to https://go.microsoft.com/fwlink/?LinkID=113412.
+
+
+
+PS C:\Users\user15> Write-Host ""Get-process -name Notepad " Generates "TypeName: System.Diagnostics.Process" object type and Stop-Process have parameter named "Inputbject process type", so it works"
+ Get-process -name Notepad  Generates  TypeName: System.Diagnostics.Process object type and Stop-Process have parameter named Inputbject process type, so it works
+PS C:\Users\user15> Get-help New-Item 
+
+NAME
+    New-Item
+
+SYNTAX
+    New-Item [-Path] <string[]> [-ItemType <string>] [-Value <Object>] [-Force] [-Credential <pscredential>] [-WhatIf] [-Confirm] [-UseTransaction]  [<CommonParameters>]
+
+    New-Item [[-Path] <string[]>] -Name <string> [-ItemType <string>] [-Value <Object>] [-Force] [-Credential <pscredential>] [-WhatIf] [-Confirm] [-UseTransaction]
+    [<CommonParameters>]
+
+
+ALIASES
+    ni
+
+
+REMARKS
+    Get-Help cannot find the Help files for this cmdlet on this computer. It is displaying only partial help.
+        -- To download and install Help files for the module that includes this cmdlet, use Update-Help.
+        -- To view the Help topic for this cmdlet online, type: "Get-Help New-Item -Online" or
+           go to https://go.microsoft.com/fwlink/?LinkID=113353.
+
+
+
+PS C:\Users\user15> Get-help New-Item -Detailed
+
+NAME
+    New-Item
+
+SYNTAX
+    New-Item [-Path] <string[]> [-ItemType <string>] [-Value <Object>] [-Force] [-Credential <pscredential>] [-WhatIf] [-Confirm] [-UseTransaction]  [<CommonParameters>]
+
+    New-Item [[-Path] <string[]>] -Name <string> [-ItemType <string>] [-Value <Object>] [-Force] [-Credential <pscredential>] [-WhatIf] [-Confirm] [-UseTransaction]
+    [<CommonParameters>]
+
+
+PARAMETERS
+    -Confirm
+
+    -Credential <pscredential>
+
+    -Force
+
+    -ItemType <string>
+
+    -Name <string>
+
+    -Path <string[]>
+
+    -UseTransaction
+
+    -Value <Object>
+
+    -WhatIf
+
+    <CommonParameters>
+        This cmdlet supports the common parameters: Verbose, Debug,
+        ErrorAction, ErrorVariable, WarningAction, WarningVariable,
+        OutBuffer, PipelineVariable, and OutVariable. For more information, see
+        about_CommonParameters (https:/go.microsoft.com/fwlink/?LinkID=113216).
+
+
+ALIASES
+    ni
+
+
+REMARKS
+    Get-Help cannot find the Help files for this cmdlet on this computer. It is displaying only partial help.
+        -- To download and install Help files for the module that includes this cmdlet, use Update-Help.
+        -- To view the Help topic for this cmdlet online, type: "Get-Help New-Item -Online" or
+           go to https://go.microsoft.com/fwlink/?LinkID=113353.
+
+
+
+PS C:\Users\user15> Update-Help
+Update-Help : Failed to update Help for the module(s) : 
+'AppBackgroundTask, AppLocker, AppvClient, Appx, AssignedAccess, BitLocker, BitsTransfer, BranchCache, CimCmdlets, 
+ConfigCI, Defender, DirectAccessClientComponents, Dism, DnsClient, EventTracingManagement, International, iSCSI, ISE, 
+Kds, LanguagePackManagement, LAPS, Microsoft.PowerShell.Archive, Microsoft.PowerShell.Core, 
+Microsoft.PowerShell.Diagnostics, Microsoft.PowerShell.Host, Microsoft.PowerShell.LocalAccounts, 
+Microsoft.PowerShell.Management, Microsoft.PowerShell.ODataUtils, Microsoft.PowerShell.Security, 
+Microsoft.PowerShell.Utility, Microsoft.WSMan.Management, MMAgent, MsDtc, NetAdapter, NetConnection, 
+NetEventPacketCapture, NetLbfo, NetNat, NetQos, NetSecurity, NetSwitchTeam, NetTCPIP, NetworkConnectivityStatus, 
+NetworkSwitchManager, NetworkTransition, PackageManagement, PcsvDevice, PKI, PnpDevice, PowerShellGet, PrintManagement, 
+ProcessMitigations, Provisioning, PSDesiredStateConfiguration, PSScheduledJob, PSWorkflow, PSWorkflowUtility, 
+ScheduledTasks, SecureBoot, SmbShare, SmbWitness, StartLayout, Storage, TLS, TroubleshootingPack, 
+TrustedPlatformModule, UEV, VpnClient, Wdac, Whea, WindowsDeveloperLicense, WindowsErrorReporting, WindowsSearch, 
+WindowsUpdate'
+Access is denied. The command could not update Help topics for the Windows PowerShell core modules, or for any modules 
+in the $pshome\Modules directory. To update these Help topics, start Windows PowerShell by using the "Run as 
+Administrator" command, and try running Update-Help again.
+At line:1 char:1
++ Update-Help
++ ~~~~~~~~~~~
+    + CategoryInfo          : InvalidOperation: (:) [Update-Help], Exception
+    + FullyQualifiedErrorId : UpdatableHelpSystemRequiresElevation,Microsoft.PowerShell.Commands.UpdateHelpCommand
+Update-Help : Failed to update Help for the module(s) :
+'AppBackgroundTask, AppLocker, AppvClient, Appx, AssignedAccess, BitLocker, BitsTransfer, BranchCache, CimCmdlets, ConfigCI, Defender, DirectAccessClientComponents,
+Dism, DnsClient, EventTracingManagement, International, iSCSI, ISE, Kds, LanguagePackManagement, LAPS, Microsoft.PowerShell.Archive, Microsoft.PowerShell.Core,
+Microsoft.PowerShell.Diagnostics, Microsoft.PowerShell.Host, Microsoft.PowerShell.LocalAccounts, Microsoft.PowerShell.Management, Microsoft.PowerShell.ODataUtils,
+Microsoft.PowerShell.Security, Microsoft.PowerShell.Utility, Microsoft.WSMan.Management, MMAgent, MsDtc, NetAdapter, NetConnection, NetEventPacketCapture, NetLbfo,
+NetNat, NetQos, NetSecurity, NetSwitchTeam, NetTCPIP, NetworkConnectivityStatus, NetworkSwitchManager, NetworkTransition, PackageManagement, PcsvDevice, PKI, PnpDevice,
+PowerShellGet, PrintManagement, ProcessMitigations, Provisioning, PSDesiredStateConfiguration, PSScheduledJob, PSWorkflow, PSWorkflowUtility, ScheduledTasks,
+SecureBoot, SmbShare, SmbWitness, StartLayout, Storage, TLS, TroubleshootingPack, TrustedPlatformModule, UEV, VpnClient, Wdac, Whea, WindowsDeveloperLicense,
+WindowsErrorReporting, WindowsSearch, WindowsUpdate'
+Access is denied. The command could not update Help topics for the Windows PowerShell core modules, or for any modules in the $pshome\Modules directory. To update these
+Help topics, start Windows PowerShell by using the "Run as Administrator" command, and try running Update-Help again.
+At line:1 char:1
++ Update-Help
++ ~~~~~~~~~~~
+    + CategoryInfo          : InvalidOperation: (:) [Update-Help], Exception
+    + FullyQualifiedErrorId : UpdatableHelpSystemRequiresElevation,Microsoft.PowerShell.Commands.UpdateHelpCommand
+
+Update-Help : Failed to update Help for the module(s) 'Microsoft.PowerShell.Operation.Validation' with UI culture(s) 
+{en-US} : Access to the path 'C:\Program 
+Files\WindowsPowerShell\Modules\Microsoft.PowerShell.Operation.Validation\1.0.1\en-US' is denied.
+At line:1 char:1
++ Update-Help
++ ~~~~~~~~~~~
+    + CategoryInfo          : InvalidOperation: (:) [Update-Help], Exception
+    + FullyQualifiedErrorId : UnknownErrorId,Microsoft.PowerShell.Commands.UpdateHelpCommand
+Update-Help : Failed to update Help for the module(s) 'Microsoft.PowerShell.Operation.Validation' with UI culture(s) {en-US} : Access to the path 'C:\Program
+Files\WindowsPowerShell\Modules\Microsoft.PowerShell.Operation.Validation\1.0.1\en-US' is denied.
+At line:1 char:1
++ Update-Help
++ ~~~~~~~~~~~
+    + CategoryInfo          : InvalidOperation: (:) [Update-Help], Exception
+    + FullyQualifiedErrorId : UnknownErrorId,Microsoft.PowerShell.Commands.UpdateHelpCommand
+
+Update-Help : Failed to update Help for the module(s) 'ConfigDefender, ConfigDefenderPerformance, PSReadline' with UI 
+culture(s) {en-US} : Unable to retrieve the HelpInfo XML file for UI culture en-US. Make sure the HelpInfoUri property 
+in the module manifest is valid or check your network connection and then try the command again.
+At line:1 char:1
++ Update-Help
++ ~~~~~~~~~~~
+    + CategoryInfo          : ResourceUnavailable: (:) [Update-Help], Exception
+    + FullyQualifiedErrorId : UnableToRetrieveHelpInfoXml,Microsoft.PowerShell.Commands.UpdateHelpCommand
+Update-Help : Failed to update Help for the module(s) 'ConfigDefender, ConfigDefenderPerformance, PSReadline' with UI culture(s) {en-US} : Unable to retrieve the
+HelpInfo XML file for UI culture en-US. Make sure the HelpInfoUri property in the module manifest is valid or check your network connection and then try the command
+again.
+At line:1 char:1
++ Update-Help
++ ~~~~~~~~~~~
+    + CategoryInfo          : ResourceUnavailable: (:) [Update-Help], Exception
+    + FullyQualifiedErrorId : UnableToRetrieveHelpInfoXml,Microsoft.PowerShell.Commands.UpdateHelpCommand
+
+PS C:\Users\user15> Get-help New-Item -Detailed
+
+NAME
+    New-Item
+
+SYNTAX
+    New-Item [-Path] <string[]> [-ItemType <string>] [-Value <Object>] [-Force] [-Credential <pscredential>] [-WhatIf] [-Confirm] [-UseTransaction]  [<CommonParameters>]
+
+    New-Item [[-Path] <string[]>] -Name <string> [-ItemType <string>] [-Value <Object>] [-Force] [-Credential <pscredential>] [-WhatIf] [-Confirm] [-UseTransaction]
+    [<CommonParameters>]
+
+
+PARAMETERS
+    -Confirm
+
+    -Credential <pscredential>
+
+    -Force
+
+    -ItemType <string>
+
+    -Name <string>
+
+    -Path <string[]>
+
+    -UseTransaction
+
+    -Value <Object>
+
+    -WhatIf
+
+    <CommonParameters>
+        This cmdlet supports the common parameters: Verbose, Debug,
+        ErrorAction, ErrorVariable, WarningAction, WarningVariable,
+        OutBuffer, PipelineVariable, and OutVariable. For more information, see
+        about_CommonParameters (https:/go.microsoft.com/fwlink/?LinkID=113216).
+
+
+ALIASES
+    ni
+
+
+REMARKS
+    Get-Help cannot find the Help files for this cmdlet on this computer. It is displaying only partial help.
+        -- To download and install Help files for the module that includes this cmdlet, use Update-Help.
+        -- To view the Help topic for this cmdlet online, type: "Get-Help New-Item -Online" or
+           go to https://go.microsoft.com/fwlink/?LinkID=113353.
+
+
+
+PS C:\Users\user15> new-item -name test.txt File c:\temp
+>> TerminatingError(New-Item): "A positional parameter cannot be found that accepts argument 'c:\temp'."
+New-Item : A positional parameter cannot be found that accepts argument 'c:\temp'.
+At line:1 char:1
++ new-item -name test.txt File c:\temp
++ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : InvalidArgument: (:) [New-Item], ParameterBindingException
+    + FullyQualifiedErrorId : PositionalParameterNotFound,Microsoft.PowerShell.Commands.NewItemCommand
+New-Item : A positional parameter cannot be found that accepts argument 'c:\temp'.
+At line:1 char:1
++ new-item -name test.txt File c:\temp
++ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : InvalidArgument: (:) [New-Item], ParameterBindingException
+    + FullyQualifiedErrorId : PositionalParameterNotFound,Microsoft.PowerShell.Commands.NewItemCommand
+
+PS C:\Users\user15> Write-Host "Here the position of the Path is 0 , so we have either put that parameter in 0 or we can name it with parametername"
+Here the position of the Path is 0 , so we have either put that parameter in 0 or we can name it with parametername
+PS C:\Users\user15> New-item c:\temp test.txt -ItemType file
+>> TerminatingError(New-Item): "A positional parameter cannot be found that accepts argument 'test.txt'."
+New-Item : A positional parameter cannot be found that accepts argument 'test.txt'.
+At line:1 char:1
++ New-item c:\temp test.txt -ItemType file
++ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : InvalidArgument: (:) [New-Item], ParameterBindingException
+    + FullyQualifiedErrorId : PositionalParameterNotFound,Microsoft.PowerShell.Commands.NewItemCommand
+New-Item : A positional parameter cannot be found that accepts argument 'test.txt'.
+At line:1 char:1
++ New-item c:\temp test.txt -ItemType file
++ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : InvalidArgument: (:) [New-Item], ParameterBindingException
+    + FullyQualifiedErrorId : PositionalParameterNotFound,Microsoft.PowerShell.Commands.NewItemCommand
+
+PS C:\Users\user15> New-item c:\temp -name test.txt -ItemType file
+New-item : Could not find a part of the path 'C:\temp\test.txt'.
+At line:1 char:1
++ New-item c:\temp -name test.txt -ItemType file
++ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : WriteError: (C:\temp\test.txt:String) [New-Item], DirectoryNotFoundException
+    + FullyQualifiedErrorId : NewItemIOError,Microsoft.PowerShell.Commands.NewItemCommand
+New-item : Could not find a part of the path 'C:\temp\test.txt'.
+At line:1 char:1
++ New-item c:\temp -name test.txt -ItemType file
++ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : WriteError: (C:\temp\test.txt:String) [New-Item], DirectoryNotFoundException
+    + FullyQualifiedErrorId : NewItemIOError,Microsoft.PowerShell.Commands.NewItemCommand
+
+PS C:\Users\user15> New-Item c:\temp -Name test
+New-Item : Could not find a part of the path 'C:\temp\test'.
+At line:1 char:1
++ New-Item c:\temp -Name test
++ ~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : WriteError: (C:\temp\test:String) [New-Item], DirectoryNotFoundException
+    + FullyQualifiedErrorId : NewItemIOError,Microsoft.PowerShell.Commands.NewItemCommand
+New-Item : Could not find a part of the path 'C:\temp\test'.
+At line:1 char:1
++ New-Item c:\temp -Name test
++ ~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : WriteError: (C:\temp\test:String) [New-Item], DirectoryNotFoundException
+    + FullyQualifiedErrorId : NewItemIOError,Microsoft.PowerShell.Commands.NewItemCommand
+
+PS C:\Users\user15> New-item .\ -name test.txt -ItemType file
+
+
+    Directory: C:\Users\user15
+
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+-a----        14-06-2024     15:56              0 test.txt
+
+
+PS C:\Users\user15> New-item -Path c:\users\user15 -name Test -ItemType Folder
+>> TerminatingError(New-Item): "The type is not a known type for the file system. Only "file","directory" or "symboliclink" can be specified."
+New-item : The type is not a known type for the file system. Only "file","directory" or "symboliclink" can be specified.
+At line:1 char:1
++ New-item -Path c:\users\user15 -name Test -ItemType Folder
++ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : InvalidArgument: (:) [New-Item], PSArgumentException
+    + FullyQualifiedErrorId : Argument,Microsoft.PowerShell.Commands.NewItemCommand
+New-item : The type is not a known type for the file system. Only "file","directory" or "symboliclink" can be specified.
+At line:1 char:1
++ New-item -Path c:\users\user15 -name Test -ItemType Folder
++ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : InvalidArgument: (:) [New-Item], PSArgumentException
+    + FullyQualifiedErrorId : Argument,Microsoft.PowerShell.Commands.NewItemCommand
+
+PS C:\Users\user15> New-item -Path c:\users\user15 -name Test -ItemType Directory
+
+
+    Directory: C:\users\user15
+
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+d-----        14-06-2024     15:57                Test
+
+
+PS C:\Users\user15> $PSHOME
+C:\Windows\System32\WindowsPowerShell\v1.0
+PS C:\Users\user15> Set-Location $PSHOME
+PS C:\Windows\System32\WindowsPowerShell\v1.0> Get-ChildItem *.ps1xml
+
+
+    Directory: C:\Windows\System32\WindowsPowerShell\v1.0
+
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+-a----        07-12-2019     14:40          12825 Certificate.format.ps1xml
+-a----        07-12-2019     14:40           4994 Diagnostics.Format.ps1xml
+-a----        07-12-2019     14:40         138013 DotNetTypes.format.ps1xml
+-a----        07-12-2019     14:40          10112 Event.Format.ps1xml
+-a----        07-12-2019     14:40          25306 FileSystem.format.ps1xml
+-a----        07-12-2019     14:40           9164 getevent.types.ps1xml
+-a----        07-12-2019     14:40          91655 Help.format.ps1xml
+-a----        07-12-2019     14:40         138625 HelpV3.format.ps1xml
+-a----        07-12-2019     14:40         206468 PowerShellCore.format.ps1xml
+-a----        07-12-2019     14:40           4097 PowerShellTrace.format.ps1xml
+-a----        07-12-2019     14:40           8458 Registry.format.ps1xml
+-a----        07-12-2019     14:40         210376 types.ps1xml
+-a----        07-12-2019     14:40          12282 typesv3.ps1xml
+-a----        07-12-2019     14:40          16598 WSMan.Format.ps1xml
+
+
+PS C:\Windows\System32\WindowsPowerShell\v1.0> notepad
+PS C:\Windows\System32\WindowsPowerShell\v1.0> Get-Process -Name Notepad
+
+Handles  NPM(K)    PM(K)      WS(K)     CPU(s)     Id  SI ProcessName
+-------  ------    -----      -----     ------     --  -- -----------
+    248      12     2540      14580       0.08   4904   5 notepad
+    257      13     3076      14456       0.05   8528   5 notepad
+
+
+PS C:\Windows\System32\WindowsPowerShell\v1.0> Get-Command -Verb combine
+PS C:\Windows\System32\WindowsPowerShell\v1.0> Get-Command -Verb join
+
+CommandType     Name                                               Version    Source
+-----------     ----                                               -------    ------
+Cmdlet          Join-DtcDiagnosticResourceManager                  1.0.0.0    MsDtc
+Cmdlet          Join-Path                                          3.1.0.0    Microsoft.PowerShell.Management
+
+
+PS C:\Windows\System32\WindowsPowerShell\v1.0> Get-Command -Noun object
+
+CommandType     Name                                               Version    Source
+-----------     ----                                               -------    ------
+Cmdlet          Compare-Object                                     3.1.0.0    Microsoft.PowerShell.Utility
+Cmdlet          ForEach-Object                                     3.0.0.0    Microsoft.PowerShell.Core
+Cmdlet          Group-Object                                       3.1.0.0    Microsoft.PowerShell.Utility
+Cmdlet          Measure-Object                                     3.1.0.0    Microsoft.PowerShell.Utility
+Cmdlet          New-Object                                         3.1.0.0    Microsoft.PowerShell.Utility
+Cmdlet          Select-Object                                      3.1.0.0    Microsoft.PowerShell.Utility
+Cmdlet          Sort-Object                                        3.1.0.0    Microsoft.PowerShell.Utility
+Cmdlet          Tee-Object                                         3.1.0.0    Microsoft.PowerShell.Utility
+Cmdlet          Where-Object                                       3.0.0.0    Microsoft.PowerShell.Core
+
+
+PS C:\Windows\System32\WindowsPowerShell\v1.0> Get-Help 
+
+TOPIC
+    Windows PowerShell Help System
+
+SHORT DESCRIPTION
+    Displays help about Windows PowerShell cmdlets and concepts. 
+
+LONG DESCRIPTION
+    Windows PowerShell Help describes Windows PowerShell cmdlets,
+    functions, scripts, and modules, and explains concepts, including
+    the elements of the Windows PowerShell language.
+
+    Windows PowerShell does not include help files, but you can read the
+    help topics online, or use the Update-Help cmdlet to download help files
+    to your computer and then use the Get-Help cmdlet to display the help
+    topics at the command line.
+
+    You can also use the Update-Help cmdlet to download updated help files
+    as they are released so that your local help content is never obsolete. 
+
+    Without help files, Get-Help displays auto-generated help for cmdlets, 
+    functions, and scripts.
+
+
+  ONLINE HELP    
+    You can find help for Windows PowerShell online in the TechNet Library
+    beginning at http://go.microsoft.com/fwlink/?LinkID=108518. 
+
+    To open online help for any cmdlet or function, type:
+
+        Get-Help <cmdlet-name> -Online    
+
+  UPDATE-HELP
+    To download and install help files on your computer:
+
+       1. Start Windows PowerShell with the "Run as administrator" option.
+       2. Type:
+
+          Update-Help
+
+    After the help files are installed, you can use the Get-Help cmdlet to
+    display the help topics. You can also use the Update-Help cmdlet to
+    download updated help files so that your local help files are always
+    up-to-date.
+    
+    For more information about the Update-Help cmdlet, type:
+
+       Get-Help Update-Help -Online
+
+    or go to: http://go.microsoft.com/fwlink/?LinkID=210614
+
+
+  GET-HELP
+    The Get-Help cmdlet displays help at the command line from content in
+    help files on your computer. Without help files, Get-Help displays basic
+    help about cmdlets and functions. You can also use Get-Help to display
+    online help for cmdlets and functions.
+
+    To get help for a cmdlet, type:
+
+        Get-Help <cmdlet-name>
+    
+    To get online help, type:
+   
+        Get-Help <cmdlet-name> -Online    
+
+    The titles of conceptual topics begin with "About_".
+    To get help for a concept or language element, type:
+
+        Get-Help About_<topic-name>
+
+    To search for a word or phrase in all help files, type:
+
+        Get-Help <search-term>
+
+    For more information about the Get-Help cmdlet, type:
+
+        Get-Help Get-Help -Online
+
+    or go to: http://go.microsoft.com/fwlink/?LinkID=113316
+
+
+  EXAMPLES:
+      Save-Help              : Download help files from the Internet and saves
+                               them on a file share.
+      Update-Help            : Downloads and installs help files from the
+                               Internet or a file share.
+      Get-Help Get-Process   : Displays help about the Get-Process cmdlet.   
+      Get-Help Get-Process -Online
+                             : Opens online help for the Get-Process cmdlet.                            
+      Help Get-Process       : Displays help about Get-Process one page at a time.
+      Get-Process -?         : Displays help about the Get-Process cmdlet.      
+      Get-Help About_Modules : Displays help about Windows PowerShell modules.
+      Get-Help remoting      : Searches the help topics for the word "remoting."
+
+  SEE ALSO:
+      about_Updatable_Help
+      Get-Help
+      Save-Help
+      Update-Help
+PS C:\Windows\System32\WindowsPowerShell\v1.0> Get-Help Group-Object
+
+NAME
+    Group-Object
+
+SYNTAX
+    Group-Object [[-Property] <Object[]>] [-NoElement] [-AsHashTable] [-AsString] [-InputObject <psobject>] [-Culture <string>] [-CaseSensitive]  [<CommonParameters>]
+
+
+ALIASES
+    group
+
+
+REMARKS
+    Get-Help cannot find the Help files for this cmdlet on this computer. It is displaying only partial help.
+        -- To download and install Help files for the module that includes this cmdlet, use Update-Help.
+        -- To view the Help topic for this cmdlet online, type: "Get-Help Group-Object -Online" or
+           go to https://go.microsoft.com/fwlink/?LinkID=113338.
+
+
+
+PS C:\Windows\System32\WindowsPowerShell\v1.0> Get-Help 
+
+TOPIC
+    Windows PowerShell Help System
+
+SHORT DESCRIPTION
+    Displays help about Windows PowerShell cmdlets and concepts. 
+
+LONG DESCRIPTION
+    Windows PowerShell Help describes Windows PowerShell cmdlets,
+    functions, scripts, and modules, and explains concepts, including
+    the elements of the Windows PowerShell language.
+
+    Windows PowerShell does not include help files, but you can read the
+    help topics online, or use the Update-Help cmdlet to download help files
+    to your computer and then use the Get-Help cmdlet to display the help
+    topics at the command line.
+
+    You can also use the Update-Help cmdlet to download updated help files
+    as they are released so that your local help content is never obsolete. 
+
+    Without help files, Get-Help displays auto-generated help for cmdlets, 
+    functions, and scripts.
+
+
+  ONLINE HELP    
+    You can find help for Windows PowerShell online in the TechNet Library
+    beginning at http://go.microsoft.com/fwlink/?LinkID=108518. 
+
+    To open online help for any cmdlet or function, type:
+
+        Get-Help <cmdlet-name> -Online    
+
+  UPDATE-HELP
+    To download and install help files on your computer:
+
+       1. Start Windows PowerShell with the "Run as administrator" option.
+       2. Type:
+
+          Update-Help
+
+    After the help files are installed, you can use the Get-Help cmdlet to
+    display the help topics. You can also use the Update-Help cmdlet to
+    download updated help files so that your local help files are always
+    up-to-date.
+    
+    For more information about the Update-Help cmdlet, type:
+
+       Get-Help Update-Help -Online
+
+    or go to: http://go.microsoft.com/fwlink/?LinkID=210614
+
+
+  GET-HELP
+    The Get-Help cmdlet displays help at the command line from content in
+    help files on your computer. Without help files, Get-Help displays basic
+    help about cmdlets and functions. You can also use Get-Help to display
+    online help for cmdlets and functions.
+
+    To get help for a cmdlet, type:
+
+        Get-Help <cmdlet-name>
+    
+    To get online help, type:
+   
+        Get-Help <cmdlet-name> -Online    
+
+    The titles of conceptual topics begin with "About_".
+    To get help for a concept or language element, type:
+
+        Get-Help About_<topic-name>
+
+    To search for a word or phrase in all help files, type:
+
+        Get-Help <search-term>
+
+    For more information about the Get-Help cmdlet, type:
+
+        Get-Help Get-Help -Online
+
+    or go to: http://go.microsoft.com/fwlink/?LinkID=113316
+
+
+  EXAMPLES:
+      Save-Help              : Download help files from the Internet and saves
+                               them on a file share.
+      Update-Help            : Downloads and installs help files from the
+                               Internet or a file share.
+      Get-Help Get-Process   : Displays help about the Get-Process cmdlet.   
+      Get-Help Get-Process -Online
+                             : Opens online help for the Get-Process cmdlet.                            
+      Help Get-Process       : Displays help about Get-Process one page at a time.
+      Get-Process -?         : Displays help about the Get-Process cmdlet.      
+      Get-Help About_Modules : Displays help about Windows PowerShell modules.
+      Get-Help remoting      : Searches the help topics for the word "remoting."
+
+  SEE ALSO:
+      about_Updatable_Help
+      Get-Help
+      Save-Help
+      Update-Help
+PS C:\Windows\System32\WindowsPowerShell\v1.0> Get-Command -Noun object
+
+CommandType     Name                                               Version    Source
+-----------     ----                                               -------    ------
+Cmdlet          Compare-Object                                     3.1.0.0    Microsoft.PowerShell.Utility
+Cmdlet          ForEach-Object                                     3.0.0.0    Microsoft.PowerShell.Core
+Cmdlet          Group-Object                                       3.1.0.0    Microsoft.PowerShell.Utility
+Cmdlet          Measure-Object                                     3.1.0.0    Microsoft.PowerShell.Utility
+Cmdlet          New-Object                                         3.1.0.0    Microsoft.PowerShell.Utility
+Cmdlet          Select-Object                                      3.1.0.0    Microsoft.PowerShell.Utility
+Cmdlet          Sort-Object                                        3.1.0.0    Microsoft.PowerShell.Utility
+Cmdlet          Tee-Object                                         3.1.0.0    Microsoft.PowerShell.Utility
+Cmdlet          Where-Object                                       3.0.0.0    Microsoft.PowerShell.Core
+
+
+PS C:\Windows\System32\WindowsPowerShell\v1.0> Get-Help Group-Object
+
+NAME
+    Group-Object
+
+SYNTAX
+    Group-Object [[-Property] <Object[]>] [-NoElement] [-AsHashTable] [-AsString] [-InputObject <psobject>] [-Culture <string>] [-CaseSensitive]  [<CommonParameters>]
+
+
+ALIASES
+    group
+
+
+REMARKS
+    Get-Help cannot find the Help files for this cmdlet on this computer. It is displaying only partial help.
+        -- To download and install Help files for the module that includes this cmdlet, use Update-Help.
+        -- To view the Help topic for this cmdlet online, type: "Get-Help Group-Object -Online" or
+           go to https://go.microsoft.com/fwlink/?LinkID=113338.
+
+
+
+PS C:\Windows\System32\WindowsPowerShell\v1.0> Get-Command -Noun member
+
+CommandType     Name                                               Version    Source
+-----------     ----                                               -------    ------
+Cmdlet          Add-Member                                         3.1.0.0    Microsoft.PowerShell.Utility
+Cmdlet          Get-Member                                         3.1.0.0    Microsoft.PowerShell.Utility
+
+
+PS C:\Windows\System32\WindowsPowerShell\v1.0> get-help Add-Member
+
+NAME
+    Add-Member
+
+SYNTAX
+    Add-Member -InputObject <psobject> -TypeName <string> [-PassThru]  [<CommonParameters>]
+
+    Add-Member [-NotePropertyName] <string> [-NotePropertyValue] <Object> -InputObject <psobject> [-TypeName <string>] [-Force] [-PassThru]  [<CommonParameters>]
+
+    Add-Member [-MemberType] {AliasProperty | CodeProperty | Property | NoteProperty | ScriptProperty | Properties | PropertySet | Method | CodeMethod | ScriptMethod |
+    Methods | ParameterizedProperty | MemberSet | Event | Dynamic | All} [-Name] <string> [[-Value] <Object>] [[-SecondValue] <Object>] -InputObject <psobject>
+    [-TypeName <string>] [-Force] [-PassThru]  [<CommonParameters>]
+
+    Add-Member [-NotePropertyMembers] <IDictionary> -InputObject <psobject> [-TypeName <string>] [-Force] [-PassThru]  [<CommonParameters>]
+
+
+ALIASES
+    None
+
+
+REMARKS
+    Get-Help cannot find the Help files for this cmdlet on this computer. It is displaying only partial help.
+        -- To download and install Help files for the module that includes this cmdlet, use Update-Help.
+        -- To view the Help topic for this cmdlet online, type: "Get-Help Add-Member -Online" or
+           go to https://go.microsoft.com/fwlink/?LinkID=113280.
+
+
+
+PS C:\Windows\System32\WindowsPowerShell\v1.0> $test
+
+Age Name    DOB
+--- ----    ---
+ 44 Murugan 01-June-1980
+
+
+PS C:\Windows\System32\WindowsPowerShell\v1.0> $hastable
+
+Name                           Value
+----                           -----
+Attendance                     5
+Training                       PowerShell
+Assessment                     Pass
+
+
+PS C:\Windows\System32\WindowsPowerShell\v1.0> get-help Add-Member
+
+NAME
+    Add-Member
+
+SYNTAX
+    Add-Member -InputObject <psobject> -TypeName <string> [-PassThru]  [<CommonParameters>]
+
+    Add-Member [-NotePropertyName] <string> [-NotePropertyValue] <Object> -InputObject <psobject> [-TypeName <string>] [-Force] [-PassThru]  [<CommonParameters>]
+
+    Add-Member [-MemberType] {AliasProperty | CodeProperty | Property | NoteProperty | ScriptProperty | Properties | PropertySet | Method | CodeMethod | ScriptMethod |
+    Methods | ParameterizedProperty | MemberSet | Event | Dynamic | All} [-Name] <string> [[-Value] <Object>] [[-SecondValue] <Object>] -InputObject <psobject>
+    [-TypeName <string>] [-Force] [-PassThru]  [<CommonParameters>]
+
+    Add-Member [-NotePropertyMembers] <IDictionary> -InputObject <psobject> [-TypeName <string>] [-Force] [-PassThru]  [<CommonParameters>]
+
+
+ALIASES
+    None
+
+
+REMARKS
+    Get-Help cannot find the Help files for this cmdlet on this computer. It is displaying only partial help.
+        -- To download and install Help files for the module that includes this cmdlet, use Update-Help.
+        -- To view the Help topic for this cmdlet online, type: "Get-Help Add-Member -Online" or
+           go to https://go.microsoft.com/fwlink/?LinkID=113280.
+
+
+
+PS C:\Windows\System32\WindowsPowerShell\v1.0> $test | gm
+
+
+   TypeName: System.Management.Automation.PSCustomObject
+
+Name        MemberType   Definition
+----        ----------   ----------
+Equals      Method       bool Equals(System.Object obj)
+GetHashCode Method       int GetHashCode()
+GetType     Method       type GetType()
+ToString    Method       string ToString()
+Age         NoteProperty int Age=44
+DOB         NoteProperty string DOB=01-June-1980
+Name        NoteProperty string Name=Murugan
+
+
+PS C:\Windows\System32\WindowsPowerShell\v1.0> get-help Add-Member
+
+NAME
+    Add-Member
+
+SYNTAX
+    Add-Member -InputObject <psobject> -TypeName <string> [-PassThru]  [<CommonParameters>]
+
+    Add-Member [-NotePropertyName] <string> [-NotePropertyValue] <Object> -InputObject <psobject> [-TypeName <string>] [-Force] [-PassThru]  [<CommonParameters>]
+
+    Add-Member [-MemberType] {AliasProperty | CodeProperty | Property | NoteProperty | ScriptProperty | Properties | PropertySet | Method | CodeMethod | ScriptMethod |
+    Methods | ParameterizedProperty | MemberSet | Event | Dynamic | All} [-Name] <string> [[-Value] <Object>] [[-SecondValue] <Object>] -InputObject <psobject>
+    [-TypeName <string>] [-Force] [-PassThru]  [<CommonParameters>]
+
+    Add-Member [-NotePropertyMembers] <IDictionary> -InputObject <psobject> [-TypeName <string>] [-Force] [-PassThru]  [<CommonParameters>]
+
+
+ALIASES
+    None
+
+
+REMARKS
+    Get-Help cannot find the Help files for this cmdlet on this computer. It is displaying only partial help.
+        -- To download and install Help files for the module that includes this cmdlet, use Update-Help.
+        -- To view the Help topic for this cmdlet online, type: "Get-Help Add-Member -Online" or
+           go to https://go.microsoft.com/fwlink/?LinkID=113280.
+
+
+
+PS C:\Windows\System32\WindowsPowerShell\v1.0> get-help Add-Member -Examples
+
+NAME
+    Add-Member
+
+ALIASES
+    None
+
+
+REMARKS
+    Get-Help cannot find the Help files for this cmdlet on this computer. It is displaying only partial help.
+        -- To download and install Help files for the module that includes this cmdlet, use Update-Help.
+        -- To view the Help topic for this cmdlet online, type: "Get-Help Add-Member -Online" or
+           go to https://go.microsoft.com/fwlink/?LinkID=113280.
+
+
+
+PS C:\Windows\System32\WindowsPowerShell\v1.0> $test = New-Object -TypeName PSCustomObject -Property @{Name = "Murugan"DOB = [Date]"01-June-1980"Age = (Get-Date).Year - "1980" }
+Unable to find type [Date].
+At line:4 char:8
++ DOB = [Date]"01-June-1980"
++        ~~~~
+    + CategoryInfo          : InvalidOperation: (Date:TypeName) [], RuntimeException
+    + FullyQualifiedErrorId : TypeNotFound
+Unable to find type [Date].
+At line:4 char:8
++ DOB = [Date]"01-June-1980"
++        ~~~~
+    + CategoryInfo          : InvalidOperation: (Date:TypeName) [], RuntimeException
+    + FullyQualifiedErrorId : TypeNotFound
+
+PS C:\Windows\System32\WindowsPowerShell\v1.0> $test = New-Object -TypeName PSCustomObject -Property @{Name = "Murugan"DOB = [datetime]"01-June-1980"Age = (Get-Date).Year - "1980" }
+PS C:\Windows\System32\WindowsPowerShell\v1.0> $test
+
+Age Name    DOB
+--- ----    ---
+ 44 Murugan 01-06-1980 00:00:00
+
+
+PS C:\Windows\System32\WindowsPowerShell\v1.0> $test = New-Object -TypeName PSCustomObject -Property @{Name = "Murugan"DOB = [datetime]"01-June-1980"Age = (Get-Date) - [datetime]"01-June-1980" }
+PS C:\Windows\System32\WindowsPowerShell\v1.0> $test
+
+Age                    Name    DOB
+---                    ----    ---
+16084.16:54:23.5898448 Murugan 01-06-1980 00:00:00
+
+
+PS C:\Windows\System32\WindowsPowerShell\v1.0> $test = New-Object -TypeName PSCustomObject -Property @{Name = "Murugan"DOB = [datetime]"01-June-1980"Age = ((Get-Date) - [datetime]"01-June-1980").Year}
+PS C:\Windows\System32\WindowsPowerShell\v1.0> $test
+
+Age Name    DOB
+--- ----    ---
+    Murugan 01-06-1980 00:00:00
+
+
+PS C:\Windows\System32\WindowsPowerShell\v1.0> $test = New-Object -TypeName PSCustomObject -Property @{Name = "Murugan"DOB = [datetime]"01-June-1980"Age = (Get-Date - [datetime]"01-June-1980")}
+>> TerminatingError(Get-Date): "Cannot bind parameter 'Date'. Cannot convert value "-" to type "System.DateTime". Error: "String was not recognized as a valid DateTime.""
+Get-Date : Cannot bind parameter 'Date'. Cannot convert value "-" to type "System.DateTime". Error: "String was not 
+recognized as a valid DateTime."
+At line:5 char:17
++ Age = (Get-Date - [datetime]"01-June-1980")
++                 ~
+    + CategoryInfo          : InvalidArgument: (:) [Get-Date], ParameterBindingException
+    + FullyQualifiedErrorId : CannotConvertArgumentNoMessage,Microsoft.PowerShell.Commands.GetDateCommand
+Get-Date : Cannot bind parameter 'Date'. Cannot convert value "-" to type "System.DateTime". Error: "String was not recognized as a valid DateTime."
+At line:5 char:17
++ Age = (Get-Date - [datetime]"01-June-1980")
++                 ~
+    + CategoryInfo          : InvalidArgument: (:) [Get-Date], ParameterBindingException
+    + FullyQualifiedErrorId : CannotConvertArgumentNoMessage,Microsoft.PowerShell.Commands.GetDateCommand
+
+PS C:\Windows\System32\WindowsPowerShell\v1.0> $test = New-Object -TypeName PSCustomObject -Property @{Name = "Murugan"DOB = [datetime]"01-June-1980"Age = (Get-Date) - [datetime]"01-June-1980"}
+PS C:\Windows\System32\WindowsPowerShell\v1.0> $test
+
+Age                    Name    DOB
+---                    ----    ---
+16084.16:55:40.4804274 Murugan 01-06-1980 00:00:00
+
+
+PS C:\Windows\System32\WindowsPowerShell\v1.0> Get-Date
+
+14 June 2024 16:56:03
+
+
+PS C:\Windows\System32\WindowsPowerShell\v1.0> [datetime] Get-Date
+At line:1 char:12
++ [datetime] Get-Date
++            ~~~~~~~~
+Unexpected token 'Get-Date' in expression or statement.
+    + CategoryInfo          : ParserError: (:) [], ParentContainsErrorRecordException
+    + FullyQualifiedErrorId : UnexpectedToken
+
+PS C:\Windows\System32\WindowsPowerShell\v1.0> [datetime]"01-June-1980" | gm
+
+
+   TypeName: System.DateTime
+
+Name                 MemberType     Definition
+----                 ----------     ----------
+Add                  Method         datetime Add(timespan value)
+AddDays              Method         datetime AddDays(double value)
+AddHours             Method         datetime AddHours(double value)
+AddMilliseconds      Method         datetime AddMilliseconds(double value)
+AddMinutes           Method         datetime AddMinutes(double value)
+AddMonths            Method         datetime AddMonths(int months)
+AddSeconds           Method         datetime AddSeconds(double value)
+AddTicks             Method         datetime AddTicks(long value)
+AddYears             Method         datetime AddYears(int value)
+CompareTo            Method         int CompareTo(System.Object value), int CompareTo(datetime value), int IComparable.CompareTo(System.Object obj), int IComparable[d...
+Equals               Method         bool Equals(System.Object value), bool Equals(datetime value), bool IEquatable[datetime].Equals(datetime other)
+GetDateTimeFormats   Method         string[] GetDateTimeFormats(), string[] GetDateTimeFormats(System.IFormatProvider provider), string[] GetDateTimeFormats(char form...
+GetHashCode          Method         int GetHashCode()
+GetObjectData        Method         void ISerializable.GetObjectData(System.Runtime.Serialization.SerializationInfo info, System.Runtime.Serialization.StreamingContex...
+GetType              Method         type GetType()
+GetTypeCode          Method         System.TypeCode GetTypeCode(), System.TypeCode IConvertible.GetTypeCode()
+IsDaylightSavingTime Method         bool IsDaylightSavingTime()
+Subtract             Method         timespan Subtract(datetime value), datetime Subtract(timespan value)
+ToBinary             Method         long ToBinary()
+ToBoolean            Method         bool IConvertible.ToBoolean(System.IFormatProvider provider)
+ToByte               Method         byte IConvertible.ToByte(System.IFormatProvider provider)
+ToChar               Method         char IConvertible.ToChar(System.IFormatProvider provider)
+ToDateTime           Method         datetime IConvertible.ToDateTime(System.IFormatProvider provider)
+ToDecimal            Method         decimal IConvertible.ToDecimal(System.IFormatProvider provider)
+ToDouble             Method         double IConvertible.ToDouble(System.IFormatProvider provider)
+ToFileTime           Method         long ToFileTime()
+ToFileTimeUtc        Method         long ToFileTimeUtc()
+ToInt16              Method         int16 IConvertible.ToInt16(System.IFormatProvider provider)
+ToInt32              Method         int IConvertible.ToInt32(System.IFormatProvider provider)
+ToInt64              Method         long IConvertible.ToInt64(System.IFormatProvider provider)
+ToLocalTime          Method         datetime ToLocalTime()
+ToLongDateString     Method         string ToLongDateString()
+ToLongTimeString     Method         string ToLongTimeString()
+ToOADate             Method         double ToOADate()
+ToSByte              Method         sbyte IConvertible.ToSByte(System.IFormatProvider provider)
+ToShortDateString    Method         string ToShortDateString()
+ToShortTimeString    Method         string ToShortTimeString()
+ToSingle             Method         float IConvertible.ToSingle(System.IFormatProvider provider)
+ToString             Method         string ToString(), string ToString(string format), string ToString(System.IFormatProvider provider), string ToString(string format...
+ToType               Method         System.Object IConvertible.ToType(type conversionType, System.IFormatProvider provider)
+ToUInt16             Method         uint16 IConvertible.ToUInt16(System.IFormatProvider provider)
+ToUInt32             Method         uint32 IConvertible.ToUInt32(System.IFormatProvider provider)
+ToUInt64             Method         uint64 IConvertible.ToUInt64(System.IFormatProvider provider)
+ToUniversalTime      Method         datetime ToUniversalTime()
+Date                 Property       datetime Date {get;}
+Day                  Property       int Day {get;}
+DayOfWeek            Property       System.DayOfWeek DayOfWeek {get;}
+DayOfYear            Property       int DayOfYear {get;}
+Hour                 Property       int Hour {get;}
+Kind                 Property       System.DateTimeKind Kind {get;}
+Millisecond          Property       int Millisecond {get;}
+Minute               Property       int Minute {get;}
+Month                Property       int Month {get;}
+Second               Property       int Second {get;}
+Ticks                Property       long Ticks {get;}
+TimeOfDay            Property       timespan TimeOfDay {get;}
+Year                 Property       int Year {get;}
+DateTime             ScriptProperty System.Object DateTime {get=if ((& { Set-StrictMode -Version 1; $this.DisplayHint }) -ieq  "Date")...
+
+
+PS C:\Windows\System32\WindowsPowerShell\v1.0> ([datetime]"01-June-1980").Subtract(Get-date)
+At line:1 char:37
++ ([datetime]"01-June-1980").Subtract(Get-date)
++                                     ~
+Missing ')' in method call.
+
+At line:1 char:37
++ ([datetime]"01-June-1980").Subtract(Get-date)
++                                     ~~~~~~~~
+Unexpected token 'Get-date' in expression or statement.
+
+At line:1 char:45
++ ([datetime]"01-June-1980").Subtract(Get-date)
++                                             ~
+Unexpected token ')' in expression or statement.
+    + CategoryInfo          : ParserError: (:) [], ParentContainsErrorRecordException
+    + FullyQualifiedErrorId : MissingEndParenthesisInMethodCall
+
+PS C:\Windows\System32\WindowsPowerShell\v1.0> ([datetime]"01-June-1980").Subtract((Get-date)).year
+PS C:\Windows\System32\WindowsPowerShell\v1.0> ([datetime]"01-June-1980").Subtract($(Get-date))
+
+
+Days              : -16084
+Hours             : -16
+Minutes           : -58
+Seconds           : -50
+Milliseconds      : -74
+Ticks             : -13897187300740436
+TotalDays         : -16084.7075240051
+TotalHours        : -386032.980576123
+TotalMinutes      : -23161978.8345674
+TotalSeconds      : -1389718730.07404
+TotalMilliseconds : -1389718730074.04
+
+
+
+PS C:\Windows\System32\WindowsPowerShell\v1.0> Get-Command -Verb diff
+PS C:\Windows\System32\WindowsPowerShell\v1.0> Get-Command -Verb diff*
+PS C:\Windows\System32\WindowsPowerShell\v1.0> Get-Command -Verb dif*
+PS C:\Windows\System32\WindowsPowerShell\v1.0> Get-Command -noun dif*
+PS C:\Windows\System32\WindowsPowerShell\v1.0> Get-Date
+
+14 June 2024 17:00:57
+
+
+PS C:\Windows\System32\WindowsPowerShell\v1.0> Get-Date |gm
+
+
+   TypeName: System.DateTime
+
+Name                 MemberType     Definition
+----                 ----------     ----------
+Add                  Method         datetime Add(timespan value)
+AddDays              Method         datetime AddDays(double value)
+AddHours             Method         datetime AddHours(double value)
+AddMilliseconds      Method         datetime AddMilliseconds(double value)
+AddMinutes           Method         datetime AddMinutes(double value)
+AddMonths            Method         datetime AddMonths(int months)
+AddSeconds           Method         datetime AddSeconds(double value)
+AddTicks             Method         datetime AddTicks(long value)
+AddYears             Method         datetime AddYears(int value)
+CompareTo            Method         int CompareTo(System.Object value), int CompareTo(datetime value), int IComparable.CompareTo(System.Object obj), int IComparable[d...
+Equals               Method         bool Equals(System.Object value), bool Equals(datetime value), bool IEquatable[datetime].Equals(datetime other)
+GetDateTimeFormats   Method         string[] GetDateTimeFormats(), string[] GetDateTimeFormats(System.IFormatProvider provider), string[] GetDateTimeFormats(char form...
+GetHashCode          Method         int GetHashCode()
+GetObjectData        Method         void ISerializable.GetObjectData(System.Runtime.Serialization.SerializationInfo info, System.Runtime.Serialization.StreamingContex...
+GetType              Method         type GetType()
+GetTypeCode          Method         System.TypeCode GetTypeCode(), System.TypeCode IConvertible.GetTypeCode()
+IsDaylightSavingTime Method         bool IsDaylightSavingTime()
+Subtract             Method         timespan Subtract(datetime value), datetime Subtract(timespan value)
+ToBinary             Method         long ToBinary()
+ToBoolean            Method         bool IConvertible.ToBoolean(System.IFormatProvider provider)
+ToByte               Method         byte IConvertible.ToByte(System.IFormatProvider provider)
+ToChar               Method         char IConvertible.ToChar(System.IFormatProvider provider)
+ToDateTime           Method         datetime IConvertible.ToDateTime(System.IFormatProvider provider)
+ToDecimal            Method         decimal IConvertible.ToDecimal(System.IFormatProvider provider)
+ToDouble             Method         double IConvertible.ToDouble(System.IFormatProvider provider)
+ToFileTime           Method         long ToFileTime()
+ToFileTimeUtc        Method         long ToFileTimeUtc()
+ToInt16              Method         int16 IConvertible.ToInt16(System.IFormatProvider provider)
+ToInt32              Method         int IConvertible.ToInt32(System.IFormatProvider provider)
+ToInt64              Method         long IConvertible.ToInt64(System.IFormatProvider provider)
+ToLocalTime          Method         datetime ToLocalTime()
+ToLongDateString     Method         string ToLongDateString()
+ToLongTimeString     Method         string ToLongTimeString()
+ToOADate             Method         double ToOADate()
+ToSByte              Method         sbyte IConvertible.ToSByte(System.IFormatProvider provider)
+ToShortDateString    Method         string ToShortDateString()
+ToShortTimeString    Method         string ToShortTimeString()
+ToSingle             Method         float IConvertible.ToSingle(System.IFormatProvider provider)
+ToString             Method         string ToString(), string ToString(string format), string ToString(System.IFormatProvider provider), string ToString(string format...
+ToType               Method         System.Object IConvertible.ToType(type conversionType, System.IFormatProvider provider)
+ToUInt16             Method         uint16 IConvertible.ToUInt16(System.IFormatProvider provider)
+ToUInt32             Method         uint32 IConvertible.ToUInt32(System.IFormatProvider provider)
+ToUInt64             Method         uint64 IConvertible.ToUInt64(System.IFormatProvider provider)
+ToUniversalTime      Method         datetime ToUniversalTime()
+DisplayHint          NoteProperty   DisplayHintType DisplayHint=DateTime
+Date                 Property       datetime Date {get;}
+Day                  Property       int Day {get;}
+DayOfWeek            Property       System.DayOfWeek DayOfWeek {get;}
+DayOfYear            Property       int DayOfYear {get;}
+Hour                 Property       int Hour {get;}
+Kind                 Property       System.DateTimeKind Kind {get;}
+Millisecond          Property       int Millisecond {get;}
+Minute               Property       int Minute {get;}
+Month                Property       int Month {get;}
+Second               Property       int Second {get;}
+Ticks                Property       long Ticks {get;}
+TimeOfDay            Property       timespan TimeOfDay {get;}
+Year                 Property       int Year {get;}
+DateTime             ScriptProperty System.Object DateTime {get=if ((& { Set-StrictMode -Version 1; $this.DisplayHint }) -ieq  "Date")...
+
+
+PS C:\Windows\System32\WindowsPowerShell\v1.0> ([datetime]"01-June-1980")
+
+01 June 1980 00:00:00
+
+
+PS C:\Windows\System32\WindowsPowerShell\v1.0> ([datetime]"01-June-1980").Year
+1980
+PS C:\Windows\System32\WindowsPowerShell\v1.0> (Get-Date).Year
+2024
+PS C:\Windows\System32\WindowsPowerShell\v1.0> ($(Get-Date).year)
+2024
+PS C:\Windows\System32\WindowsPowerShell\v1.0> ([datetime]"01-June-1980").year - ($(Get-Date).year)
+-44
+PS C:\Windows\System32\WindowsPowerShell\v1.0> $test = New-Object -TypeName PSCustomObject -Property @{Name = "Murugan"DOB = [datetime]"01-June-1980"Age = ($(Get-Date).year) - ([datetime]"01-June-1980").year}
+PS C:\Windows\System32\WindowsPowerShell\v1.0> $test
+
+Age Name    DOB
+--- ----    ---
+ 44 Murugan 01-06-1980 00:00:00
+
+
+PS C:\Windows\System32\WindowsPowerShell\v1.0> $test
+
+Age Name    DOB
+--- ----    ---
+ 44 Murugan 01-06-1980 00:00:00
+
+
+PS C:\Windows\System32\WindowsPowerShell\v1.0> $test | gm
+
+
+   TypeName: System.Management.Automation.PSCustomObject
+
+Name        MemberType   Definition
+----        ----------   ----------
+Equals      Method       bool Equals(System.Object obj)
+GetHashCode Method       int GetHashCode()
+GetType     Method       type GetType()
+ToString    Method       string ToString()
+Age         NoteProperty int Age=44
+DOB         NoteProperty datetime DOB=01-06-1980 00:00:00
+Name        NoteProperty string Name=Murugan
+
+
+PS C:\Windows\System32\WindowsPowerShell\v1.0> $hastable
+
+Name                           Value
+----                           -----
+Attendance                     5
+Training                       PowerShell
+Assessment                     Pass
+
+
+PS C:\Windows\System32\WindowsPowerShell\v1.0> $test | Add-Member -MemberType NoteProperty -Name Attendance -Value 5
+PS C:\Windows\System32\WindowsPowerShell\v1.0> $test | Add-Member -MemberType NoteProperty -Name Training -Value PowerShell
+PS C:\Windows\System32\WindowsPowerShell\v1.0> $test | Add-Member -MemberType NoteProperty -Name Assessment -Value Pass
+PS C:\Windows\System32\WindowsPowerShell\v1.0> $test
+
+
+Age        : 44
+Name       : Murugan
+DOB        : 01-06-1980 00:00:00
+Attendance : 5
+Training   : PowerShell
+Assessment : Pass
+
+
+
+PS C:\Windows\System32\WindowsPowerShell\v1.0> $test = New-Object -TypeName PSCustomObject -Property @{Name = "Murugan"DOB = [datetime]"01-June-1980"Age = ($(Get-Date).year) - ([datetime]"01-June-1980").year}
+PS C:\Windows\System32\WindowsPowerShell\v1.0> $student = $test | Add-Member -MemberType NoteProperty -Name Trainig -Value $hastable.Training
+PS C:\Windows\System32\WindowsPowerShell\v1.0> $student
+PS C:\Windows\System32\WindowsPowerShell\v1.0> $test
+
+Age Name    DOB                 Trainig
+--- ----    ---                 -------
+ 44 Murugan 01-06-1980 00:00:00 PowerShell
+
+
+PS C:\Windows\System32\WindowsPowerShell\v1.0> $student = $test | Add-Member -MemberType NoteProperty -Name Attendance -Value $hastable.Attendance
+PS C:\Windows\System32\WindowsPowerShell\v1.0> $student = $test | Add-Member -MemberType NoteProperty -Name Assessment -Value $hastable.Assessment
+PS C:\Windows\System32\WindowsPowerShell\v1.0> $student
+PS C:\Windows\System32\WindowsPowerShell\v1.0> TerminatingError(Resolve-Path): "The specified wildcard character pattern is not valid: $student\[pscu*"
+PS C:\Windows\System32\WindowsPowerShell\v1.0> TerminatingError(Resolve-Path): "The specified wildcard character pattern is not valid: $student\[pscus*"
+PS C:\Windows\System32\WindowsPowerShell\v1.0> TerminatingError(Resolve-Path): "The specified wildcard character pattern is not valid: $student\[pscus*"
+PS C:\Windows\System32\WindowsPowerShell\v1.0> [System.Management.Automation.PSCustomObject]Student
+At line:1 char:46
++ [System.Management.Automation.PSCustomObject]Student
++                                              ~~~~~~~
+Unexpected token 'Student' in expression or statement.
+    + CategoryInfo          : ParserError: (:) [], ParentContainsErrorRecordException
+    + FullyQualifiedErrorId : UnexpectedToken
+
+PS C:\Windows\System32\WindowsPowerShell\v1.0> [System.Management.Automation.PSCustomObject]$student = $test
+Cannot convert the "@{Age=44; Name=Murugan; DOB=01-06-1980 00:00:00; Trainig=PowerShell; Attendance=5; 
+Assessment=Pass}" value of type "System.Management.Automation.PSCustomObject" to type 
+"System.Management.Automation.PSCustomObject".
+At line:1 char:1
++ [System.Management.Automation.PSCustomObject]$student = $test
++ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : MetadataError: (:) [], ArgumentTransformationMetadataException
+    + FullyQualifiedErrorId : RuntimeException
+Cannot convert the "@{Age=44; Name=Murugan; DOB=01-06-1980 00:00:00; Trainig=PowerShell; Attendance=5; Assessment=Pass}" value of type
+"System.Management.Automation.PSCustomObject" to type "System.Management.Automation.PSCustomObject".
+At line:1 char:1
++ [System.Management.Automation.PSCustomObject]$student = $test
++ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : MetadataError: (:) [], ArgumentTransformationMetadataException
+    + FullyQualifiedErrorId : RuntimeException
+
+PS C:\Windows\System32\WindowsPowerShell\v1.0> [PSCustomObject]$student = $test
+PS C:\Windows\System32\WindowsPowerShell\v1.0> $student
+
+
+Age        : 44
+Name       : Murugan
+DOB        : 01-06-1980 00:00:00
+Trainig    : PowerShell
+Attendance : 5
+Assessment : Pass
+
+
+
+PS C:\Windows\System32\WindowsPowerShell\v1.0> $student | Export-Csv Students.csv
+>> TerminatingError(Export-Csv): "Access to the path 'C:\Windows\System32\WindowsPowerShell\v1.0\Students.csv' is denied."
+Export-Csv : Access to the path 'C:\Windows\System32\WindowsPowerShell\v1.0\Students.csv' is denied.
+At line:1 char:12
++ $student | Export-Csv Students.csv
++            ~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : OpenError: (:) [Export-Csv], UnauthorizedAccessException
+    + FullyQualifiedErrorId : FileOpenFailure,Microsoft.PowerShell.Commands.ExportCsvCommand
+Export-Csv : Access to the path 'C:\Windows\System32\WindowsPowerShell\v1.0\Students.csv' is denied.
+At line:1 char:12
++ $student | Export-Csv Students.csv
++            ~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : OpenError: (:) [Export-Csv], UnauthorizedAccessException
+    + FullyQualifiedErrorId : FileOpenFailure,Microsoft.PowerShell.Commands.ExportCsvCommand
+
+PS C:\Windows\System32\WindowsPowerShell\v1.0> $student | Export-Csv c:\users\user15\Students.csv
+PS C:\Windows\System32\WindowsPowerShell\v1.0> Get-Content 'C:\Users\user15\Students.csv'
+#TYPE System.Management.Automation.PSCustomObject
+"Age","Name","DOB","Trainig","Attendance","Assessment"
+"44","Murugan","01-06-1980 00:00:00","PowerShell","5","Pass"
+PS C:\Windows\System32\WindowsPowerShell\v1.0> $ImportCSV = Import-Csv -Path C:\users\user15\Students.csv
+PS C:\Windows\System32\WindowsPowerShell\v1.0> $ImportCSV
+
+
+Age        : 44
+Name       : Murugan
+DOB        : 01-06-1980 00:00:00
+Trainig    : PowerShell
+Attendance : 5
+Assessment : Pass
+
+
+
+PS C:\Windows\System32\WindowsPowerShell\v1.0> Compare-Object -ReferenceObject $student -DifferenceObject $ImportCSV
+PS C:\Windows\System32\WindowsPowerShell\v1.0> Compare-Object -ReferenceObject $student -DifferenceObject $tes
+>> TerminatingError(Compare-Object): "Cannot bind argument to parameter 'DifferenceObject' because it is null."
+Compare-Object : Cannot bind argument to parameter 'DifferenceObject' because it is null.
+At line:1 char:60
++ Compare-Object -ReferenceObject $student -DifferenceObject $tes
++                                                            ~~~~
+    + CategoryInfo          : InvalidData: (:) [Compare-Object], ParameterBindingValidationException
+    + FullyQualifiedErrorId : 
+ParameterArgumentValidationErrorNullNotAllowed,Microsoft.PowerShell.Commands.CompareObjectCommand
+Compare-Object : Cannot bind argument to parameter 'DifferenceObject' because it is null.
+At line:1 char:60
++ Compare-Object -ReferenceObject $student -DifferenceObject $tes
++                                                            ~~~~
+    + CategoryInfo          : InvalidData: (:) [Compare-Object], ParameterBindingValidationException
+    + FullyQualifiedErrorId : ParameterArgumentValidationErrorNullNotAllowed,Microsoft.PowerShell.Commands.CompareObjectCommand
+
+PS C:\Windows\System32\WindowsPowerShell\v1.0> Compare-Object -ReferenceObject $student -DifferenceObject $test
+PS C:\Windows\System32\WindowsPowerShell\v1.0> Compare-Object -ReferenceObject $student -DifferenceObject $hastable
+
+InputObject                                                                                         SideIndicator
+-----------                                                                                         -------------
+{Attendance, Training, Assessment}                                                                  =>
+@{Age=44; Name=Murugan; DOB=01-06-1980 00:00:00; Trainig=PowerShell; Attendance=5; Assessment=Pass} <=
+
+
+PS C:\Windows\System32\WindowsPowerShell\v1.0> get-help -noun table
+>> TerminatingError(Get-Help): "A parameter cannot be found that matches parameter name 'noun'."
+Get-Help : A parameter cannot be found that matches parameter name 'noun'.
+At line:1 char:10
++ get-help -noun table
++          ~~~~~
+    + CategoryInfo          : InvalidArgument: (:) [Get-Help], ParameterBindingException
+    + FullyQualifiedErrorId : NamedParameterNotFound,Microsoft.PowerShell.Commands.GetHelpCommand
+Get-Help : A parameter cannot be found that matches parameter name 'noun'.
+At line:1 char:10
++ get-help -noun table
++          ~~~~~
+    + CategoryInfo          : InvalidArgument: (:) [Get-Help], ParameterBindingException
+    + FullyQualifiedErrorId : NamedParameterNotFound,Microsoft.PowerShell.Commands.GetHelpCommand
+
+PS C:\Windows\System32\WindowsPowerShell\v1.0> Get-Command -Noun Table
+
+CommandType     Name                                               Version    Source
+-----------     ----                                               -------    ------
+Cmdlet          Format-Table                                       3.1.0.0    Microsoft.PowerShell.Utility
+
+
+PS C:\Windows\System32\WindowsPowerShell\v1.0> get-help Format-Table
+
+NAME
+    Format-Table
+
+SYNOPSIS
+    Formats the output as a table.
+
+
+SYNTAX
+    Format-Table [[-Property] <System.Object[]>] [-AutoSize] [-DisplayError] [-Expand {CoreOnly | EnumOnly | Both}] [-Force] [-GroupBy <System.Object>]
+    [-HideTableHeaders] [-InputObject <System.Management.Automation.PSObject>] [-RepeatHeader] [-ShowError] [-View <System.String>] [-Wrap] [<CommonParameters>]
+
+
+DESCRIPTION
+    The `Format-Table` cmdlet formats the output of a command as a table with the selected properties of the object in each column. The object type determines the
+    default layout and properties that are displayed in each column. You can use the Property parameter to select the properties that you want to display.
+
+    PowerShell uses default formatters to define how object types are displayed. You can use `.ps1xml` files to create custom views that display an output table with
+    specified properties. After a custom view is created, use the View parameter to display the table with your custom view. For more information about views, see
+    about_Format.ps1xml (../Microsoft.PowerShell.Core/About/about_Format.ps1xml.md).
+
+    You can use a hash table to add calculated properties to an object before displaying it and to specify the column headings in the table. To add a calculated
+    property, use the Property or GroupBy parameter. For more information about hash tables, see about_Hash_Tables
+    (../Microsoft.PowerShell.Core/About/about_Hash_Tables.md).
+
+
+RELATED LINKS
+    Online Version: https://learn.microsoft.com/powershell/module/microsoft.powershell.utility/format-table?view=powershell-5.1&WT.mc_id=ps-gethelp
+    about_Calculated_Properties
+    about_Format.ps1xml
+    about_Hash_Tables
+    Export-FormatData
+    Format-Custom
+    Format-Hex
+    Format-List
+    Format-Wide
+    Get-FormatData
+    Get-Member
+    Get-CimInstance
+    Update-FormatData
+
+REMARKS
+    To see the examples, type: "get-help Format-Table -examples".
+    For more information, type: "get-help Format-Table -detailed".
+    For technical information, type: "get-help Format-Table -full".
+    For online help, type: "get-help Format-Table -online"
+
+
+PS C:\Windows\System32\WindowsPowerShell\v1.0> $ImportCSV
+
+
+Age        : 44
+Name       : Murugan
+DOB        : 01-06-1980 00:00:00
+Trainig    : PowerShell
+Attendance : 5
+Assessment : Pass
+
+
+
+PS C:\Windows\System32\WindowsPowerShell\v1.0> $ImportCSV | Format-Table -AutoSize
+
+Age Name    DOB                 Trainig    Attendance Assessment
+--- ----    ---                 -------    ---------- ----------
+44  Murugan 01-06-1980 00:00:00 PowerShell 5          Pass
+
+
+PS C:\Windows\System32\WindowsPowerShell\v1.0> $ImportCSV | Format-Table -Property age
+
+Age
+---
+44
+
+
+PS C:\Windows\System32\WindowsPowerShell\v1.0> $ImportCSV | Format-Table -Property age left
+>> TerminatingError(Format-Table): "A positional parameter cannot be found that accepts argument 'left'."
+Format-Table : A positional parameter cannot be found that accepts argument 'left'.
+At line:1 char:14
++ $ImportCSV | Format-Table -Property age left
++              ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : InvalidArgument: (:) [Format-Table], ParameterBindingException
+    + FullyQualifiedErrorId : PositionalParameterNotFound,Microsoft.PowerShell.Commands.FormatTableCommand
+Format-Table : A positional parameter cannot be found that accepts argument 'left'.
+At line:1 char:14
++ $ImportCSV | Format-Table -Property age left
++              ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : InvalidArgument: (:) [Format-Table], ParameterBindingException
+    + FullyQualifiedErrorId : PositionalParameterNotFound,Microsoft.PowerShell.Commands.FormatTableCommand
+
+PS C:\Windows\System32\WindowsPowerShell\v1.0> $ImportCSV | Format-Table -Property Age
+
+Age
+---
+44
+
+
+PS C:\Windows\System32\WindowsPowerShell\v1.0> $ImportCSV | Format-Table -Property Age @{Alignment=left}
+left : The term 'left' is not recognized as the name of a cmdlet, function, script file, or operable program. Check the 
+spelling of the name, or if a path was included, verify that the path is correct and try again.
+At line:1 char:53
++ $ImportCSV | Format-Table -Property Age @{Alignment=left}
++                                                     ~~~~
+    + CategoryInfo          : ObjectNotFound: (left:String) [], CommandNotFoundException
+    + FullyQualifiedErrorId : CommandNotFoundException
+left : The term 'left' is not recognized as the name of a cmdlet, function, script file, or operable program. Check the spelling of the name, or if a path was included,
+verify that the path is correct and try again.
+At line:1 char:53
++ $ImportCSV | Format-Table -Property Age @{Alignment=left}
++                                                     ~~~~
+    + CategoryInfo          : ObjectNotFound: (left:String) [], CommandNotFoundException
+    + FullyQualifiedErrorId : CommandNotFoundException
+
+PS C:\Windows\System32\WindowsPowerShell\v1.0> $ImportCSV | Format-Table -Property 
+>> TerminatingError(Format-Table): "Missing an argument for parameter 'Property'. Specify a parameter of type 'System.Object[]' and try again."
+Format-Table : Missing an argument for parameter 'Property'. Specify a parameter of type 'System.Object[]' and try 
+again.
+At line:1 char:27
++ $ImportCSV | Format-Table -Property
++                           ~~~~~~~~~
+    + CategoryInfo          : InvalidArgument: (:) [Format-Table], ParameterBindingException
+    + FullyQualifiedErrorId : MissingArgument,Microsoft.PowerShell.Commands.FormatTableCommand
+Format-Table : Missing an argument for parameter 'Property'. Specify a parameter of type 'System.Object[]' and try again.
+At line:1 char:27
++ $ImportCSV | Format-Table -Property
++                           ~~~~~~~~~
+    + CategoryInfo          : InvalidArgument: (:) [Format-Table], ParameterBindingException
+    + FullyQualifiedErrorId : MissingArgument,Microsoft.PowerShell.Commands.FormatTableCommand
+
+PS C:\Windows\System32\WindowsPowerShell\v1.0> $ImportCSV | Format-Table -Property @{name="age";alignment="centre"}
+>> TerminatingError(Format-Table): "A mandatory entry for expression is missing."
+Format-Table : A mandatory entry for expression is missing.
+At line:1 char:14
++ $ImportCSV | Format-Table -Property @{name="age";alignment="centre"}
++              ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : InvalidArgument: (:) [Format-Table], NotSupportedException
+    + FullyQualifiedErrorId : DictionaryKeyMandatoryEntry,Microsoft.PowerShell.Commands.FormatTableCommand
+Format-Table : A mandatory entry for expression is missing.
+At line:1 char:14
++ $ImportCSV | Format-Table -Property @{name="age";alignment="centre"}
++              ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : InvalidArgument: (:) [Format-Table], NotSupportedException
+    + FullyQualifiedErrorId : DictionaryKeyMandatoryEntry,Microsoft.PowerShell.Commands.FormatTableCommand
+PS C:\Windows\System32\WindowsPowerShell\v1.0> $ImportCSV | Format-Table -Property @{name="age";E={(Alignment="Center")}}
+
+age
+---
+
+
+
+PS C:\Windows\System32\WindowsPowerShell\v1.0> $ImportCSV | gm
+
+
+   TypeName: CSV:System.Management.Automation.PSCustomObject
+
+Name        MemberType   Definition
+----        ----------   ----------
+Equals      Method       bool Equals(System.Object obj)
+GetHashCode Method       int GetHashCode()
+GetType     Method       type GetType()
+ToString    Method       string ToString()
+Age         NoteProperty string Age=44
+Assessment  NoteProperty string Assessment=Pass
+Attendance  NoteProperty string Attendance=5
+DOB         NoteProperty string DOB=01-06-1980 00:00:00
+Name        NoteProperty string Name=Murugan
+Trainig     NoteProperty string Trainig=PowerShell
+
+
+PS C:\Windows\System32\WindowsPowerShell\v1.0> $ImportCSV | Format-Table | gm
+
+
+   TypeName: Microsoft.PowerShell.Commands.Internal.Format.FormatStartData
+
+Name                                    MemberType Definition
+----                                    ---------- ----------
+Equals                                  Method     bool Equals(System.Object obj)
+GetHashCode                             Method     int GetHashCode()
+GetType                                 Method     type GetType()
+ToString                                Method     string ToString()
+autosizeInfo                            Property   Microsoft.PowerShell.Commands.Internal.Format.AutosizeInfo, System.Management.Automation, Version=3.0.0.0, Culture=...
+ClassId2e4f51ef21dd47e99d3c952918aff9cd Property   string ClassId2e4f51ef21dd47e99d3c952918aff9cd {get;}
+groupingEntry                           Property   Microsoft.PowerShell.Commands.Internal.Format.GroupingEntry, System.Management.Automation, Version=3.0.0.0, Culture...
+pageFooterEntry                         Property   Microsoft.PowerShell.Commands.Internal.Format.PageFooterEntry, System.Management.Automation, Version=3.0.0.0, Cultu...
+pageHeaderEntry                         Property   Microsoft.PowerShell.Commands.Internal.Format.PageHeaderEntry, System.Management.Automation, Version=3.0.0.0, Cultu...
+shapeInfo                               Property   Microsoft.PowerShell.Commands.Internal.Format.ShapeInfo, System.Management.Automation, Version=3.0.0.0, Culture=neu...
+
+
+   TypeName: Microsoft.PowerShell.Commands.Internal.Format.GroupStartData
+
+Name                                    MemberType Definition
+----                                    ---------- ----------
+Equals                                  Method     bool Equals(System.Object obj)
+GetHashCode                             Method     int GetHashCode()
+GetType                                 Method     type GetType()
+ToString                                Method     string ToString()
+ClassId2e4f51ef21dd47e99d3c952918aff9cd Property   string ClassId2e4f51ef21dd47e99d3c952918aff9cd {get;}
+groupingEntry                           Property   Microsoft.PowerShell.Commands.Internal.Format.GroupingEntry, System.Management.Automation, Version=3.0.0.0, Culture...
+shapeInfo                               Property   Microsoft.PowerShell.Commands.Internal.Format.ShapeInfo, System.Management.Automation, Version=3.0.0.0, Culture=neu...
+
+
+   TypeName: Microsoft.PowerShell.Commands.Internal.Format.FormatEntryData
+
+Name                                    MemberType Definition
+----                                    ---------- ----------
+Equals                                  Method     bool Equals(System.Object obj)
+GetHashCode                             Method     int GetHashCode()
+GetType                                 Method     type GetType()
+ToString                                Method     string ToString()
+ClassId2e4f51ef21dd47e99d3c952918aff9cd Property   string ClassId2e4f51ef21dd47e99d3c952918aff9cd {get;}
+formatEntryInfo                         Property   Microsoft.PowerShell.Commands.Internal.Format.FormatEntryInfo, System.Management.Automation, Version=3.0.0.0, Cultu...
+outOfBand                               Property   bool outOfBand {get;set;}
+writeStream                             Property   Microsoft.PowerShell.Commands.Internal.Format.WriteStreamType, System.Management.Automation, Version=3.0.0.0, Cultu...
+
+
+   TypeName: Microsoft.PowerShell.Commands.Internal.Format.GroupEndData
+
+Name                                    MemberType Definition
+----                                    ---------- ----------
+Equals                                  Method     bool Equals(System.Object obj)
+GetHashCode                             Method     int GetHashCode()
+GetType                                 Method     type GetType()
+ToString                                Method     string ToString()
+ClassId2e4f51ef21dd47e99d3c952918aff9cd Property   string ClassId2e4f51ef21dd47e99d3c952918aff9cd {get;}
+groupingEntry                           Property   Microsoft.PowerShell.Commands.Internal.Format.GroupingEntry, System.Management.Automation, Version=3.0.0.0, Culture...
+
+
+   TypeName: Microsoft.PowerShell.Commands.Internal.Format.FormatEndData
+
+Name                                    MemberType Definition
+----                                    ---------- ----------
+Equals                                  Method     bool Equals(System.Object obj)
+GetHashCode                             Method     int GetHashCode()
+GetType                                 Method     type GetType()
+ToString                                Method     string ToString()
+ClassId2e4f51ef21dd47e99d3c952918aff9cd Property   string ClassId2e4f51ef21dd47e99d3c952918aff9cd {get;}
+groupingEntry                           Property   Microsoft.PowerShell.Commands.Internal.Format.GroupingEntry, System.Management.Automation, Version=3.0.0.0, Culture...
+
+
+PS C:\Windows\System32\WindowsPowerShell\v1.0> $ImportCSV | Format-Table -Property | gm
+>> TerminatingError(Format-Table): "Missing an argument for parameter 'Property'. Specify a parameter of type 'System.Object[]' and try again."
+Format-Table : Missing an argument for parameter 'Property'. Specify a parameter of type 'System.Object[]' and try 
+again.
+At line:1 char:27
++ $ImportCSV | Format-Table -Property | gm
++                           ~~~~~~~~~
+    + CategoryInfo          : InvalidArgument: (:) [Format-Table], ParameterBindingException
+    + FullyQualifiedErrorId : MissingArgument,Microsoft.PowerShell.Commands.FormatTableCommand
+Format-Table : Missing an argument for parameter 'Property'. Specify a parameter of type 'System.Object[]' and try again.
+At line:1 char:27
++ $ImportCSV | Format-Table -Property | gm
++                           ~~~~~~~~~
+    + CategoryInfo          : InvalidArgument: (:) [Format-Table], ParameterBindingException
+    + FullyQualifiedErrorId : MissingArgument,Microsoft.PowerShell.Commands.FormatTableCommand
+
+PS C:\Windows\System32\WindowsPowerShell\v1.0> $ImportCSV | Format-Table -Property age
+
+Age
+---
+44
+
+
+PS C:\Windows\System32\WindowsPowerShell\v1.0> $ImportCSV | Format-Table
+
+Age Name    DOB                 Trainig    Attendance Assessment
+--- ----    ---                 -------    ---------- ----------
+44  Murugan 01-06-1980 00:00:00 PowerShell 5          Pass
+
+
+PS C:\Windows\System32\WindowsPowerShell\v1.0> Get-Help Format-Table
+
+NAME
+    Format-Table
+
+SYNOPSIS
+    Formats the output as a table.
+
+
+SYNTAX
+    Format-Table [[-Property] <System.Object[]>] [-AutoSize] [-DisplayError] [-Expand {CoreOnly | EnumOnly | Both}] [-Force] [-GroupBy <System.Object>]
+    [-HideTableHeaders] [-InputObject <System.Management.Automation.PSObject>] [-RepeatHeader] [-ShowError] [-View <System.String>] [-Wrap] [<CommonParameters>]
+
+
+DESCRIPTION
+    The `Format-Table` cmdlet formats the output of a command as a table with the selected properties of the object in each column. The object type determines the
+    default layout and properties that are displayed in each column. You can use the Property parameter to select the properties that you want to display.
+
+    PowerShell uses default formatters to define how object types are displayed. You can use `.ps1xml` files to create custom views that display an output table with
+    specified properties. After a custom view is created, use the View parameter to display the table with your custom view. For more information about views, see
+    about_Format.ps1xml (../Microsoft.PowerShell.Core/About/about_Format.ps1xml.md).
+
+    You can use a hash table to add calculated properties to an object before displaying it and to specify the column headings in the table. To add a calculated
+    property, use the Property or GroupBy parameter. For more information about hash tables, see about_Hash_Tables
+    (../Microsoft.PowerShell.Core/About/about_Hash_Tables.md).
+
+
+RELATED LINKS
+    Online Version: https://learn.microsoft.com/powershell/module/microsoft.powershell.utility/format-table?view=powershell-5.1&WT.mc_id=ps-gethelp
+    about_Calculated_Properties
+    about_Format.ps1xml
+    about_Hash_Tables
+    Export-FormatData
+    Format-Custom
+    Format-Hex
+    Format-List
+    Format-Wide
+    Get-FormatData
+    Get-Member
+    Get-CimInstance
+    Update-FormatData
+
+REMARKS
+    To see the examples, type: "get-help Format-Table -examples".
+    For more information, type: "get-help Format-Table -detailed".
+    For technical information, type: "get-help Format-Table -full".
+    For online help, type: "get-help Format-Table -online"
+
+
+PS C:\Windows\System32\WindowsPowerShell\v1.0> $ImportCSV | Format-Table -Property age @{Alignment=center}
+center : The term 'center' is not recognized as the name of a cmdlet, function, script file, or operable program. Check 
+the spelling of the name, or if a path was included, verify that the path is correct and try again.
+At line:1 char:53
++ $ImportCSV | Format-Table -Property age @{Alignment=center}
++                                                     ~~~~~~
+    + CategoryInfo          : ObjectNotFound: (center:String) [], CommandNotFoundException
+    + FullyQualifiedErrorId : CommandNotFoundException
+center : The term 'center' is not recognized as the name of a cmdlet, function, script file, or operable program. Check the spelling of the name, or if a path was
+included, verify that the path is correct and try again.
+At line:1 char:53
++ $ImportCSV | Format-Table -Property age @{Alignment=center}
++                                                     ~~~~~~
+    + CategoryInfo          : ObjectNotFound: (center:String) [], CommandNotFoundException
+    + FullyQualifiedErrorId : CommandNotFoundException
+
+PS C:\Windows\System32\WindowsPowerShell\v1.0> $ImportCSV | Format-Table -Property @{name="Test";Expression={$_.age};Alignment="Left"}
+
+Test
+----
+44
+
+
+PS C:\Windows\System32\WindowsPowerShell\v1.0> $ImportCSV | Format-Table -Property @{name="Test";Expression={$_.age};Alignment="Right"}
+
+Test
+----
+  44
+
+
+PS C:\Windows\System32\WindowsPowerShell\v1.0> $ImportCSV | Format-Table -Property @{name="Name";Expression={$_.Name};Alignment="Lef"},@{name="Birthday";Expression={$_.DOB};Alignment="Right"},@{name="Training";Expression={$_.Training};Alignment="Center"}
+
+Name               Birthday Training
+----               -------- --------
+Murugan 01-06-1980 00:00:00
+
+
+PS C:\Windows\System32\WindowsPowerShell\v1.0> $ImportCSV
+
+
+Age        : 44
+Name       : Murugan
+DOB        : 01-06-1980 00:00:00
+Trainig    : PowerShell
+Attendance : 5
+Assessment : Pass
+
+
+
+PS C:\Windows\System32\WindowsPowerShell\v1.0> $ImportCSV | Format-Table -Property @{name="Name";Expression={$_.Name};Alignment="Lef"},@{name="Birthday";Expression={$_.DOB};Alignment="Right"},@{name="Training";Expression={$_.Trainig};Alignment="Center"}
+
+Name               Birthday  Training
+----               --------  --------
+Murugan 01-06-1980 00:00:00 PowerShell
+
+
+PS C:\Windows\System32\WindowsPowerShell\v1.0> $ImportCSV | Format-Table -Property @{name="Name";Expression={$_.Name};Alignment="Lef"},@{name="Birthday";Expression={$_.DOB};Alignment="Right"},@{name="Training";Expression={$_.Trainig};Alignment="Center"}
+
+Name               Birthday  Training
+----               --------  --------
+Murugan 01-06-1980 00:00:00 PowerShell
+
+
+PS C:\Windows\System32\WindowsPowerShell\v1.0> $ImportCSV | Format-Table 
+
+Age Name    DOB                 Trainig    Attendance Assessment
+--- ----    ---                 -------    ---------- ----------
+44  Murugan 01-06-1980 00:00:00 PowerShell 5          Pass
+
+
+PS C:\Windows\System32\WindowsPowerShell\v1.0> Stop-Transcript
+**********************
+Windows PowerShell transcript end
+End time: 20240614182537
+**********************
