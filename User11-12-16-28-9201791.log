@@ -1,0 +1,1331 @@
+﻿**********************
+Windows PowerShell transcript start
+Start time: 20240615121936
+Username: THINKWRIGHT\user11
+RunAs User: THINKWRIGHT\user11
+Configuration Name: 
+Machine: DESKTOP-11 (Microsoft Windows NT 10.0.19045.0)
+Host Application: C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe
+Process ID: 5296
+PSVersion: 5.1.19041.4412
+PSEdition: Desktop
+PSCompatibleVersions: 1.0, 2.0, 3.0, 4.0, 5.0, 5.1.19041.4412
+BuildVersion: 10.0.19041.4412
+CLRVersion: 4.0.30319.42000
+WSManStackVersion: 3.0
+PSRemotingProtocolVersion: 2.3
+SerializationVersion: 1.1.0.1
+**********************
+Transcript started, output file is C:\Users\user11\User11-12-16-28-9201791.log
+PS C:\User11\powershell-thinkwright> Get-Command -Noun CSV
+
+CommandType     Name                                               Version    Source
+-----------     ----                                               -------    ------
+Cmdlet          ConvertFrom-Csv                                    3.1.0.0    Microsoft.PowerShell.Utility
+Cmdlet          ConvertTo-Csv                                      3.1.0.0    Microsoft.PowerShell.Utility
+Cmdlet          Export-Csv                                         3.1.0.0    Microsoft.PowerShell.Utility
+Cmdlet          Import-Csv                                         3.1.0.0    Microsoft.PowerShell.Utility
+
+
+PS C:\User11\powershell-thinkwright> Get-Command -Noun CSV | Select-Object Source
+
+Source
+------
+Microsoft.PowerShell.Utility
+Microsoft.PowerShell.Utility
+Microsoft.PowerShell.Utility
+Microsoft.PowerShell.Utility
+
+
+PS C:\User11\powershell-thinkwright> Get-Help Get-WindowsUpdateLog
+
+NAME
+    Get-WindowsUpdateLog
+
+SYNOPSIS
+    Merges Windows Update .etl files into a single log file.
+
+
+SYNTAX
+    Get-WindowsUpdateLog [[-ETLPath] <String[]>] [[-LogPath] <String>] [[-SymbolServer] <String>] [-ForceFlush]
+    [-InformationAction {SilentlyContinue | Stop | Continue | Inquire | Ignore | Suspend}] [-InformationVariable
+    <String>] [-ProcessingType {CSV | XML}] [-Confirm] [-WhatIf] [<CommonParameters>]
+
+
+DESCRIPTION
+    The Get-WindowsUpdateLog cmdlet merges and converts Windows Update .etl files into a single readable
+    WindowsUpdate.log file. Windows Update Agent uses Event Tracing for Windows (ETW) to generate diagnostic logs.
+    Windows Update no longer directly produces a WindowsUpdate.log file. Instead, it produces .etl files that are not
+    immediately readable as written.
+
+    This cmdlet requires access to a Microsoft symbol server.
+
+
+RELATED LINKS
+    WindowsUpdate_Cmdlets
+
+REMARKS
+    To see the examples, type: "get-help Get-WindowsUpdateLog -examples".
+    For more information, type: "get-help Get-WindowsUpdateLog -detailed".
+    For technical information, type: "get-help Get-WindowsUpdateLog -full".
+    For online help, type: "get-help Get-WindowsUpdateLog -online"
+
+
+PS C:\User11\powershell-thinkwright> Get-WindowsUpdateLog -LogPath $env:USERPROFILE\Documents\WindowsUpdate.log
+
+Converting C:\Windows\logs\WindowsUpdate into C:\Users\user11\Documents\WindowsUpdate.log ...
+
+Input
+----------------
+File(s):
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240609.212613.375.5.etl
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240609.212613.375.6.etl
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240609.212613.375.7.etl
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240609.212613.375.8.etl
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240609.212613.375.9.etl
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240609.212613.375.10.etl
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240609.212613.375.11.etl
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240609.212613.375.12.etl
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240609.212613.375.13.etl
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240609.212613.375.14.etl
+
+0.00%4.69%9.38%14.08%18.77%23.46%28.15%32.84%37.54%42.23%46.92%51.61%56.30%61.00%65.69%70.38%75.07%79.77%84.46%89.15%93.84%98.53%100.00%
+
+Output
+----------------
+DumpFile:           C:\Users\user11\AppData\Local\Temp\WindowsUpdateLog\wuetl.CSV.tmp.00000
+
+The command completed successfully.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Input
+----------------
+File(s):
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240609.212613.375.15.etl
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240609.212613.375.16.etl
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240609.212613.375.17.etl
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240609.212613.375.18.etl
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240609.212613.375.19.etl
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240609.212613.375.20.etl
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240609.212613.375.21.etl
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240609.212613.375.22.etl
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240609.212613.375.23.etl
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240609.212613.375.24.etl
+
+0.00%4.69%9.38%14.08%18.77%23.46%28.15%32.84%37.54%42.23%46.92%51.61%56.30%61.00%65.69%70.38%75.07%79.77%84.46%89.15%93.84%98.53%100.00%
+
+Output
+----------------
+DumpFile:           C:\Users\user11\AppData\Local\Temp\WindowsUpdateLog\wuetl.CSV.tmp.00001
+
+The command completed successfully.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Input
+----------------
+File(s):
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240609.212613.375.25.etl
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240609.212613.375.26.etl
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240609.212613.375.27.etl
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240609.212613.375.28.etl
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240609.212613.375.29.etl
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240609.212613.375.30.etl
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240609.212613.375.31.etl
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240609.212613.375.32.etl
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240609.212613.375.33.etl
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240609.212613.375.34.etl
+
+0.00%4.69%9.38%14.08%18.77%23.46%28.15%32.84%37.54%42.23%46.92%51.61%56.30%61.00%65.69%70.38%75.07%79.77%84.46%89.15%93.84%98.53%100.00%
+
+Output
+----------------
+DumpFile:           C:\Users\user11\AppData\Local\Temp\WindowsUpdateLog\wuetl.CSV.tmp.00002
+
+The command completed successfully.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Input
+----------------
+File(s):
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240609.212613.375.35.etl
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240609.212613.375.36.etl
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240609.212613.375.37.etl
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240609.212613.375.38.etl
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240609.212613.375.39.etl
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240609.212613.375.40.etl
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240609.212613.375.41.etl
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240609.212613.375.42.etl
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240609.212613.375.43.etl
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240609.212613.375.44.etl
+
+0.00%4.69%9.38%14.08%18.77%23.46%28.15%32.84%37.54%42.23%46.92%51.61%56.30%61.00%65.69%70.38%75.07%79.77%84.46%89.15%93.84%98.53%100.00%
+
+Output
+----------------
+DumpFile:           C:\Users\user11\AppData\Local\Temp\WindowsUpdateLog\wuetl.CSV.tmp.00003
+
+The command completed successfully.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Input
+----------------
+File(s):
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240609.212613.375.45.etl
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240609.212613.375.46.etl
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240609.232810.062.1.etl
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240610.002349.598.1.etl
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240610.002349.598.2.etl
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240610.002349.598.3.etl
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240610.022309.058.1.etl
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240610.031258.741.1.etl
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240610.103641.054.1.etl
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240610.104815.539.1.etl
+
+0.00%8.42%16.84%25.26%33.68%42.11%50.53%58.95%67.37%75.79%84.21%92.63%100.00%
+
+Output
+----------------
+DumpFile:           C:\Users\user11\AppData\Local\Temp\WindowsUpdateLog\wuetl.CSV.tmp.00004
+
+The command completed successfully.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Input
+----------------
+File(s):
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240610.105828.640.1.etl
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240610.112807.082.1.etl
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240610.112807.082.2.etl
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240610.112807.082.3.etl
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240610.125019.292.1.etl
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240610.132633.059.1.etl
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240610.140525.351.1.etl
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240610.203324.417.1.etl
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240610.203324.417.2.etl
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240610.203324.417.3.etl
+
+0.00%7.51%15.02%22.54%30.05%37.56%45.07%52.58%60.09%67.61%75.12%82.63%90.14%97.65%100.00%
+
+Output
+----------------
+DumpFile:           C:\Users\user11\AppData\Local\Temp\WindowsUpdateLog\wuetl.CSV.tmp.00005
+
+The command completed successfully.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Input
+----------------
+File(s):
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240610.203324.417.4.etl
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240610.203324.417.5.etl
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240610.203324.417.6.etl
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240610.203324.417.7.etl
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240610.203324.417.8.etl
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240610.203324.417.9.etl
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240610.203324.417.10.etl
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240610.203324.417.11.etl
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240610.203324.417.12.etl
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240610.203324.417.13.etl
+
+0.00%4.69%9.38%14.08%18.77%23.46%28.15%32.84%37.54%42.23%46.92%51.61%56.30%61.00%65.69%70.38%75.07%79.77%84.46%89.15%93.84%98.53%100.00%
+
+Output
+----------------
+DumpFile:           C:\Users\user11\AppData\Local\Temp\WindowsUpdateLog\wuetl.CSV.tmp.00006
+
+The command completed successfully.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Input
+----------------
+File(s):
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240610.203324.417.14.etl
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240610.203324.417.15.etl
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240610.203324.417.16.etl
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240610.203324.417.17.etl
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240610.203324.417.18.etl
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240610.203324.417.19.etl
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240610.203324.417.20.etl
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240610.203324.417.21.etl
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240610.203324.417.22.etl
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240610.203324.417.23.etl
+
+0.00%4.69%9.38%14.08%18.77%23.46%28.15%32.84%37.54%42.23%46.92%51.61%56.30%61.00%65.69%70.38%75.07%79.77%84.46%89.15%93.84%98.53%100.00%
+
+Output
+----------------
+DumpFile:           C:\Users\user11\AppData\Local\Temp\WindowsUpdateLog\wuetl.CSV.tmp.00007
+
+The command completed successfully.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Input
+----------------
+File(s):
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240610.203324.417.24.etl
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240610.203324.417.25.etl
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240610.203324.417.26.etl
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240610.203324.417.27.etl
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240610.203324.417.28.etl
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240610.203324.417.29.etl
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240610.203324.417.30.etl
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240610.203324.417.31.etl
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240610.203324.417.32.etl
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240610.203324.417.33.etl
+
+0.00%4.69%9.38%14.08%18.77%23.46%28.15%32.84%37.54%42.23%46.92%51.61%56.30%61.00%65.69%70.38%75.07%79.77%84.46%89.15%93.84%98.53%100.00%
+
+Output
+----------------
+DumpFile:           C:\Users\user11\AppData\Local\Temp\WindowsUpdateLog\wuetl.CSV.tmp.00008
+
+The command completed successfully.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Input
+----------------
+File(s):
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240610.203324.417.34.etl
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240610.203324.417.35.etl
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240610.203324.417.36.etl
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240610.203324.417.37.etl
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240610.203324.417.38.etl
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240610.203324.417.39.etl
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240610.203324.417.40.etl
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240610.203324.417.41.etl
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240610.203324.417.42.etl
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240610.203324.417.43.etl
+
+0.00%4.69%9.38%14.08%18.77%23.46%28.15%32.84%37.54%42.23%46.92%51.61%56.30%61.00%65.69%70.38%75.07%79.77%84.46%89.15%93.84%98.53%100.00%
+
+Output
+----------------
+DumpFile:           C:\Users\user11\AppData\Local\Temp\WindowsUpdateLog\wuetl.CSV.tmp.00009
+
+The command completed successfully.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Input
+----------------
+File(s):
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240610.203324.417.44.etl
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240610.203324.417.45.etl
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240610.203324.417.46.etl
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240610.203324.417.47.etl
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240610.203324.417.48.etl
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240610.203324.417.49.etl
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240610.203324.417.50.etl
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240610.203324.417.51.etl
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240610.203324.417.52.etl
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240610.203324.417.53.etl
+
+0.00%5.14%10.29%15.43%20.58%25.72%30.87%36.01%41.16%46.30%51.45%56.59%61.74%66.88%72.03%77.17%82.32%87.46%92.60%97.75%100.00%
+
+Output
+----------------
+DumpFile:           C:\Users\user11\AppData\Local\Temp\WindowsUpdateLog\wuetl.CSV.tmp.00010
+
+The command completed successfully.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Input
+----------------
+File(s):
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240610.223453.052.1.etl
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240611.033746.203.1.etl
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240611.094059.731.1.etl
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240611.103711.062.1.etl
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240611.104815.556.1.etl
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240611.105830.512.1.etl
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240611.125024.405.1.etl
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240612.000332.449.1.etl
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240612.000332.449.2.etl
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240612.000332.449.3.etl
+
+0.00%8.51%17.02%25.53%34.04%42.55%51.06%59.57%68.09%76.60%85.11%93.62%100.00%
+
+Output
+----------------
+DumpFile:           C:\Users\user11\AppData\Local\Temp\WindowsUpdateLog\wuetl.CSV.tmp.00011
+
+The command completed successfully.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Input
+----------------
+File(s):
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240612.000332.449.4.etl
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240612.000332.449.5.etl
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240612.000332.449.6.etl
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240612.000332.449.7.etl
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240612.000332.449.8.etl
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240612.000332.449.9.etl
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240612.000332.449.10.etl
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240612.000332.449.11.etl
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240612.000332.449.12.etl
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240612.020413.051.1.etl
+
+0.00%5.23%10.46%15.69%20.92%26.14%31.37%36.60%41.83%47.06%52.29%57.52%62.75%67.97%73.20%78.43%83.66%88.89%94.12%99.35%100.00%
+
+Output
+----------------
+DumpFile:           C:\Users\user11\AppData\Local\Temp\WindowsUpdateLog\wuetl.CSV.tmp.00012
+
+The command completed successfully.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Input
+----------------
+File(s):
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240612.042058.723.1.etl
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240612.042058.723.2.etl
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240612.074132.604.1.etl
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240612.074132.604.2.etl
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240612.074132.604.3.etl
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240612.094026.053.1.etl
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240612.103727.060.1.etl
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240612.104815.555.1.etl
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240612.105832.497.1.etl
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240612.125026.433.1.etl
+
+0.00%9.88%19.75%29.63%39.51%49.38%59.26%69.14%79.01%88.89%98.77%100.00%
+
+Output
+----------------
+DumpFile:           C:\Users\user11\AppData\Local\Temp\WindowsUpdateLog\wuetl.CSV.tmp.00013
+
+The command completed successfully.
+
+
+
+
+
+
+
+
+
+
+
+
+
+Input
+----------------
+File(s):
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240613.035051.917.1.etl
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240613.045013.326.1.etl
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240613.064132.741.1.etl
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240613.064132.741.2.etl
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240613.064132.741.3.etl
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240613.083949.056.1.etl
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240613.103726.071.1.etl
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240613.104815.564.1.etl
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240613.104815.564.2.etl
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240613.125022.502.1.etl
+
+0.00%8.70%17.39%26.09%34.78%43.48%52.17%60.87%69.57%78.26%86.96%95.65%100.00%
+
+Output
+----------------
+DumpFile:           C:\Users\user11\AppData\Local\Temp\WindowsUpdateLog\wuetl.CSV.tmp.00014
+
+The command completed successfully.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Input
+----------------
+File(s):
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240613.125022.502.2.etl
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240613.125022.502.3.etl
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240613.144904.048.1.etl
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240614.044835.349.1.etl
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240614.051650.417.1.etl
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240614.051650.417.2.etl
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240614.051650.417.3.etl
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240614.051650.417.4.etl
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240614.051650.417.5.etl
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240614.051650.417.6.etl
+
+0.00%6.32%12.65%18.97%25.30%31.62%37.94%44.27%50.59%56.92%63.24%69.57%75.89%82.21%88.54%94.86%100.00%
+
+Output
+----------------
+DumpFile:           C:\Users\user11\AppData\Local\Temp\WindowsUpdateLog\wuetl.CSV.tmp.00015
+
+The command completed successfully.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Input
+----------------
+File(s):
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240614.051650.417.7.etl
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240614.071552.058.1.etl
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240614.103643.058.1.etl
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240614.104815.606.1.etl
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240614.104815.606.2.etl
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240614.125028.377.1.etl
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240615.035555.516.1.etl
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240615.044728.278.1.etl
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240615.103700.051.1.etl
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240615.104815.639.1.etl
+
+0.00%9.36%18.71%28.07%37.43%46.78%56.14%65.50%74.85%84.21%93.57%100.00%
+
+Output
+----------------
+DumpFile:           C:\Users\user11\AppData\Local\Temp\WindowsUpdateLog\wuetl.CSV.tmp.00016
+
+The command completed successfully.
+
+
+
+
+
+
+
+
+
+
+
+
+
+Input
+----------------
+File(s):
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240615.104815.639.2.etl
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240615.113048.952.1.etl
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240615.113048.952.2.etl
+     C:\Windows\logs\WindowsUpdate\WindowsUpdate.20240615.113048.952.3.etl
+
+0.00%15.84%31.68%47.52%63.37%79.21%95.05%100.00%
+
+Output
+----------------
+DumpFile:           C:\Users\user11\AppData\Local\Temp\WindowsUpdateLog\wuetl.CSV.tmp.00017
+
+The command completed successfully.
+
+
+
+
+
+
+
+
+
+WindowsUpdate.log written to C:\Users\user11\Documents\WindowsUpdate.log
+PS C:\User11\powershell-thinkwright> Test-Path C:\Users\user11\Documents\WindowsUpdate.log
+True
+PS C:\User11\powershell-thinkwright> Get-Help Get-WindowsUpdateLog
+
+NAME
+    Get-WindowsUpdateLog
+
+SYNOPSIS
+    Merges Windows Update .etl files into a single log file.
+
+
+SYNTAX
+    Get-WindowsUpdateLog [[-ETLPath] <String[]>] [[-LogPath] <String>] [[-SymbolServer] <String>] [-ForceFlush]
+    [-InformationAction {SilentlyContinue | Stop | Continue | Inquire | Ignore | Suspend}] [-InformationVariable
+    <String>] [-ProcessingType {CSV | XML}] [-Confirm] [-WhatIf] [<CommonParameters>]
+
+
+DESCRIPTION
+    The Get-WindowsUpdateLog cmdlet merges and converts Windows Update .etl files into a single readable
+    WindowsUpdate.log file. Windows Update Agent uses Event Tracing for Windows (ETW) to generate diagnostic logs.
+    Windows Update no longer directly produces a WindowsUpdate.log file. Instead, it produces .etl files that are not
+    immediately readable as written.
+
+    This cmdlet requires access to a Microsoft symbol server.
+
+
+RELATED LINKS
+    WindowsUpdate_Cmdlets
+
+REMARKS
+    To see the examples, type: "get-help Get-WindowsUpdateLog -examples".
+    For more information, type: "get-help Get-WindowsUpdateLog -detailed".
+    For technical information, type: "get-help Get-WindowsUpdateLog -full".
+    For online help, type: "get-help Get-WindowsUpdateLog -online"
+
+
+PS C:\User11\powershell-thinkwright> Get-Help Get-WindowsUpdateLog -Detailed
+
+NAME
+    Get-WindowsUpdateLog
+
+SYNOPSIS
+    Merges Windows Update .etl files into a single log file.
+
+
+SYNTAX
+    Get-WindowsUpdateLog [[-ETLPath] <String[]>] [[-LogPath] <String>] [[-SymbolServer] <String>] [-ForceFlush]
+    [-InformationAction {SilentlyContinue | Stop | Continue | Inquire | Ignore | Suspend}] [-InformationVariable
+    <String>] [-ProcessingType {CSV | XML}] [-Confirm] [-WhatIf] [<CommonParameters>]
+
+
+DESCRIPTION
+    The Get-WindowsUpdateLog cmdlet merges and converts Windows Update .etl files into a single readable
+    WindowsUpdate.log file. Windows Update Agent uses Event Tracing for Windows (ETW) to generate diagnostic logs.
+    Windows Update no longer directly produces a WindowsUpdate.log file. Instead, it produces .etl files that are not
+    immediately readable as written.
+
+    This cmdlet requires access to a Microsoft symbol server.
+
+
+PARAMETERS
+    -ETLPath [<String[]>]
+        Specifies an array of paths of Windows Update .etl files to convert into WindowsUpdate.log. The default value
+        for this parameter is the Windows Update trace file directory for the current device. The acceptable values
+        for this parameter are:
+
+        -- The full path of a directory that contains one or more .etl files.
+        -- The full path of a single .etl file.
+        -- A comma-separated list of full paths of .etl files.
+
+    -ForceFlush [<SwitchParameter>]
+        Indicates that this cmdlet forces the Windows Update Agent on the current device to flush all of its traces to
+        .etl files. This process stops the Update Orchestrator and Windows Update services. Running this cmdlet with
+        this parameter requires administrative credentials. You can start Windows PowerShell with administrative
+        credentials by using the Run as administrator command.
+
+    -InformationAction [<ActionPreference>]
+        Specifies how this cmdlet responds to an information event. The acceptable values for this parameter are:
+
+        -- SilentlyContinue
+        -- Stop
+        -- Continue
+        -- Inquire
+        -- Ignore
+        -- Suspend
+
+    -InformationVariable [<String>]
+        Specifies a variable in which to store an information event message.
+
+    -LogPath [<String>]
+        Specifies the full path to which Get-WindowsUpdateLog writes WindowsUpdate.log. The default value is
+        WindowsUpdate.log in the Desktop folder of the current user.
+
+    -ProcessingType [<String>]
+        Specifies the file type that Get-WindowsUpdateLog uses for temporary files that are created during
+        intermediate processing. The acceptable values for this parameter are:
+
+        -- CSV (comma-separated values)
+        -- XML
+
+        By default, the value is CSV. The temporary files are in $env:TEMP\WindowsUpdateLog.
+
+    -SymbolServer [<String>]
+        Specifies the URL of Microsoft Symbol Server. By default, this value is the Microsoft public symbol server.
+
+    -Confirm [<SwitchParameter>]
+        Prompts you for confirmation before running the cmdlet.Prompts you for confirmation before running the cmdlet.
+
+    -WhatIf [<SwitchParameter>]
+        Shows what would happen if the cmdlet runs. The cmdlet is not run.Shows what would happen if the cmdlet runs.
+        The cmdlet is not run.
+
+    <CommonParameters>
+        This cmdlet supports the common parameters: Verbose, Debug,
+        ErrorAction, ErrorVariable, WarningAction, WarningVariable,
+        OutBuffer, PipelineVariable, and OutVariable. For more information, see
+        about_CommonParameters (https:/go.microsoft.com/fwlink/?LinkID=113216).
+
+    Example 1: Merge and convert Windows Update trace files
+
+    PS C:\>Get-WindowsUpdateLog
+    Converting C:\Windows\logs\WindowsUpdate into C:\Users\Admin\Desktop\WindowsUpdate.log
+
+
+
+
+        Directory: C:\Users\admin\AppData\Local\Temp\WindowsUpdateLog
+
+
+    Mode                LastWriteTime         Length Name
+    ----                -------------         ------ ----
+    d-----        5/30/2015  10:02 PM                SymCache
+
+    Input
+    ----------------
+    File(s):
+         C:\Windows\logs\WindowsUpdate\WindowsUpdate.20150529.112451.395.1.etl
+         C:\Windows\logs\WindowsUpdate\WindowsUpdate.20150529.112502.723.1.etl
+         C:\Windows\logs\WindowsUpdate\WindowsUpdate.20150529.112524.191.1.etl
+         C:\Windows\logs\WindowsUpdate\WindowsUpdate.20150529.121921.075.1.etl
+         C:\Windows\logs\WindowsUpdate\WindowsUpdate.20150529.122031.684.1.etl
+         C:\Windows\logs\WindowsUpdate\WindowsUpdate.20150529.122432.434.1.etl
+         C:\Windows\logs\WindowsUpdate\WindowsUpdate.20150529.122432.434.2.etl
+         C:\Windows\logs\WindowsUpdate\WindowsUpdate.20150529.122432.434.3.etl
+         C:\Windows\logs\WindowsUpdate\WindowsUpdate.20150529.122432.434.4.etl
+         C:\Windows\logs\WindowsUpdate\WindowsUpdate.20150529.122432.434.5.etl
+
+    0.00%8.33%16.67%25.00%33.33%41.67%50.00%58.33%66.67%75.00%83.33%91.67%100.00%
+
+    Output
+    ----------------
+    DumpFile:           C:\Users\admin\AppData\Local\Temp\WindowsUpdateLog\wuetl.CSV.tmp.0
+
+    The command completed successfully.
+
+    WindowsUpdate.log written to C:\Users\admin\Desktop\WindowsUpdate.log
+
+    This command merges and converts Windows Update trace files (.etl files) into a single readable WindowsUpdate.log
+    file.
+
+
+REMARKS
+    To see the examples, type: "get-help Get-WindowsUpdateLog -examples".
+    For more information, type: "get-help Get-WindowsUpdateLog -detailed".
+    For technical information, type: "get-help Get-WindowsUpdateLog -full".
+    For online help, type: "get-help Get-WindowsUpdateLog -online"
+
+
+PS C:\User11\powershell-thinkwright> Get-WindowsUpdateLog -Parameters
+>> TerminatingError(Get-WindowsUpdateLog): "A parameter cannot be found that matches parameter name 'Parameters'."
+Get-WindowsUpdateLog : A parameter cannot be found that matches parameter name 'Parameters'.
+At line:1 char:22
++ Get-WindowsUpdateLog -Parameters
++                      ~~~~~~~~~~~
+    + CategoryInfo          : InvalidArgument: (:) [Get-WindowsUpdateLog], ParameterBindingException
+    + FullyQualifiedErrorId : NamedParameterNotFound,Get-WindowsUpdateLog
+Get-WindowsUpdateLog : A parameter cannot be found that matches parameter name 'Parameters'.
+At line:1 char:22
++ Get-WindowsUpdateLog -Parameters
++                      ~~~~~~~~~~~
+    + CategoryInfo          : InvalidArgument: (:) [Get-WindowsUpdateLog], ParameterBindingException
+    + FullyQualifiedErrorId : NamedParameterNotFound,Get-WindowsUpdateLog
+
+PS C:\User11\powershell-thinkwright> Get-Help Get-WindowsUpdateLog -Parameters
+>> TerminatingError(Get-Help): "A parameter cannot be found that matches parameter name 'Parameters'."
+Get-Help : A parameter cannot be found that matches parameter name 'Parameters'.
+At line:1 char:31
++ Get-Help Get-WindowsUpdateLog -Parameters
++                               ~~~~~~~~~~~
+    + CategoryInfo          : InvalidArgument: (:) [Get-Help], ParameterBindingException
+    + FullyQualifiedErrorId : NamedParameterNotFound,Microsoft.PowerShell.Commands.GetHelpCommand
+Get-Help : A parameter cannot be found that matches parameter name 'Parameters'.
+At line:1 char:31
++ Get-Help Get-WindowsUpdateLog -Parameters
++                               ~~~~~~~~~~~
+    + CategoryInfo          : InvalidArgument: (:) [Get-Help], ParameterBindingException
+    + FullyQualifiedErrorId : NamedParameterNotFound,Microsoft.PowerShell.Commands.GetHelpCommand
+
+PS C:\User11\powershell-thinkwright> (Get-Help Get-WindowsUpdateLog).Parameters
+
+    -ETLPath [<String[]>]
+        Specifies an array of paths of Windows Update .etl files to convert into WindowsUpdate.log. The default value
+        for this parameter is the Windows Update trace file directory for the current device. The acceptable values
+        for this parameter are:
+
+        -- The full path of a directory that contains one or more .etl files.
+        -- The full path of a single .etl file.
+        -- A comma-separated list of full paths of .etl files.
+
+        Required?                    false
+        Position?                    1
+        Default value                none
+        Accept pipeline input?       true(ByValue,ByPropertyName)
+        Accept wildcard characters?  false
+
+    -ForceFlush [<SwitchParameter>]
+        Indicates that this cmdlet forces the Windows Update Agent on the current device to flush all of its traces to
+        .etl files. This process stops the Update Orchestrator and Windows Update services. Running this cmdlet with
+        this parameter requires administrative credentials. You can start Windows PowerShell with administrative
+        credentials by using the Run as administrator command.
+
+        Required?                    false
+        Position?                    named
+        Default value                none
+        Accept pipeline input?       false
+        Accept wildcard characters?  false
+
+    -InformationAction [<ActionPreference>]
+        Specifies how this cmdlet responds to an information event. The acceptable values for this parameter are:
+
+        -- SilentlyContinue
+        -- Stop
+        -- Continue
+        -- Inquire
+        -- Ignore
+        -- Suspend
+
+        Required?                    false
+        Position?                    named
+        Default value                none
+        Accept pipeline input?       false
+        Accept wildcard characters?  false
+
+    -InformationVariable [<String>]
+        Specifies a variable in which to store an information event message.
+
+        Required?                    false
+        Position?                    named
+        Default value                none
+        Accept pipeline input?       false
+        Accept wildcard characters?  false
+
+    -LogPath [<String>]
+        Specifies the full path to which Get-WindowsUpdateLog writes WindowsUpdate.log. The default value is
+        WindowsUpdate.log in the Desktop folder of the current user.
+
+        Required?                    false
+        Position?                    2
+        Default value                none
+        Accept pipeline input?       false
+        Accept wildcard characters?  false
+
+    -ProcessingType [<String>]
+        Specifies the file type that Get-WindowsUpdateLog uses for temporary files that are created during
+        intermediate processing. The acceptable values for this parameter are:
+
+        -- CSV (comma-separated values)
+        -- XML
+
+        By default, the value is CSV. The temporary files are in $env:TEMP\WindowsUpdateLog.
+
+        Required?                    false
+        Position?                    named
+        Default value                none
+        Accept pipeline input?       false
+        Accept wildcard characters?  false
+
+    -SymbolServer [<String>]
+        Specifies the URL of Microsoft Symbol Server. By default, this value is the Microsoft public symbol server.
+
+        Required?                    false
+        Position?                    3
+        Default value                none
+        Accept pipeline input?       false
+        Accept wildcard characters?  false
+
+    -Confirm [<SwitchParameter>]
+        Prompts you for confirmation before running the cmdlet.Prompts you for confirmation before running the cmdlet.
+
+        Required?                    false
+        Position?                    named
+        Default value                false
+        Accept pipeline input?       false
+        Accept wildcard characters?  false
+
+    -WhatIf [<SwitchParameter>]
+        Shows what would happen if the cmdlet runs. The cmdlet is not run.Shows what would happen if the cmdlet runs.
+        The cmdlet is not run.
+
+        Required?                    false
+        Position?                    named
+        Default value                false
+        Accept pipeline input?       false
+        Accept wildcard characters?  false
+
+    <CommonParameters>
+        This cmdlet supports the common parameters: Verbose, Debug,
+        ErrorAction, ErrorVariable, WarningAction, WarningVariable,
+        OutBuffer, PipelineVariable, and OutVariable. For more information, see
+        about_CommonParameters (https:/go.microsoft.com/fwlink/?LinkID=113216).
+
+
+
+
+PS C:\User11\powershell-thinkwright> 1 | GetType()
+At line:1 char:13
++ 1 | GetType()
++             ~
+An expression was expected after '('.
+At line:1 char:13
++ 1 | GetType()
++             ~
+An expression was expected after '('.
+    + CategoryInfo          : ParserError: (:) [], ParentContainsErrorRecordException
+    + FullyQualifiedErrorId : ExpectedExpression
+
+PS C:\User11\powershell-thinkwright> 1 | Get-Type()
+At line:1 char:14
++ 1 | Get-Type()
++              ~
+An expression was expected after '('.
+At line:1 char:14
++ 1 | Get-Type()
++              ~
+An expression was expected after '('.
+    + CategoryInfo          : ParserError: (:) [], ParentContainsErrorRecordException
+    + FullyQualifiedErrorId : ExpectedExpression
+
+PS C:\User11\powershell-thinkwright> 1 | Get-Member
+
+
+   TypeName: System.Int32
+
+Name        MemberType Definition
+----        ---------- ----------
+CompareTo   Method     int CompareTo(System.Object value), int CompareTo(int value), int IComparable.CompareTo(Syste...
+Equals      Method     bool Equals(System.Object obj), bool Equals(int obj), bool IEquatable[int].Equals(int other)
+GetHashCode Method     int GetHashCode()
+GetType     Method     type GetType()
+GetTypeCode Method     System.TypeCode GetTypeCode(), System.TypeCode IConvertible.GetTypeCode()
+ToBoolean   Method     bool IConvertible.ToBoolean(System.IFormatProvider provider)
+ToByte      Method     byte IConvertible.ToByte(System.IFormatProvider provider)
+ToChar      Method     char IConvertible.ToChar(System.IFormatProvider provider)
+ToDateTime  Method     datetime IConvertible.ToDateTime(System.IFormatProvider provider)
+ToDecimal   Method     decimal IConvertible.ToDecimal(System.IFormatProvider provider)
+ToDouble    Method     double IConvertible.ToDouble(System.IFormatProvider provider)
+ToInt16     Method     int16 IConvertible.ToInt16(System.IFormatProvider provider)
+ToInt32     Method     int IConvertible.ToInt32(System.IFormatProvider provider)
+ToInt64     Method     long IConvertible.ToInt64(System.IFormatProvider provider)
+ToSByte     Method     sbyte IConvertible.ToSByte(System.IFormatProvider provider)
+ToSingle    Method     float IConvertible.ToSingle(System.IFormatProvider provider)
+ToString    Method     string ToString(), string ToString(string format), string ToString(System.IFormatProvider pro...
+ToType      Method     System.Object IConvertible.ToType(type conversionType, System.IFormatProvider provider)
+ToUInt16    Method     uint16 IConvertible.ToUInt16(System.IFormatProvider provider)
+ToUInt32    Method     uint32 IConvertible.ToUInt32(System.IFormatProvider provider)
+ToUInt64    Method     uint64 IConvertible.ToUInt64(System.IFormatProvider provider)
+
+
+PS C:\User11\powershell-thinkwright> (1 | Get-Member).count
+21
+PS C:\User11\powershell-thinkwright> Get-Help Get-Process -Examples
+
+NAME
+    Get-Process
+
+SYNOPSIS
+    Gets the processes that are running on the local computer or a remote computer.
+
+
+    Example 1: Get a list of all active processes on the local computer
+
+    Get-Process
+
+    This command gets a list of all active processes running on the local computer. For a definition of each column,
+    see the Notes (#notes)section.
+    Example 2: Get all available data about one or more processes
+
+    Get-Process winword, explorer | Format-List *
+
+    This command gets all available data about the Winword and Explorer processes on the computer. It uses the Name
+    parameter to specify the processes, but it omits the optional parameter name. The pipeline operator (`|`) passes
+    the data to the `Format-List` cmdlet, which displays all available properties (`*`) of the Winword and Explorer
+    process objects.
+
+    You can also identify the processes by their process IDs. For instance, `Get-Process -Id 664, 2060`.
+    Example 3: Get all processes with a working set greater than a specified size
+
+    Get-Process | Where-Object {$_.WorkingSet -gt 20000000}
+
+    This command gets all processes that have a working set greater than 20 MB. It uses the `Get-Process` cmdlet to
+    get all running processes. The pipeline operator (`|`) passes the process objects to the `Where-Object` cmdlet,
+    which selects only the object with a value greater than 20,000,000 bytes for the WorkingSet property. WorkingSet
+    is one of many properties of process objects. To see all of the properties, type `Get-Process | Get-Member`. By
+    default, the values of all amount properties are in bytes, even though the default display lists them in kilobytes
+    and megabytes.
+    Example 4: List processes on the computer in groups based on priority
+
+    $A = Get-Process
+    $A | Get-Process | Format-Table -View priority
+
+    These commands list the processes on the computer in groups based on their priority class. The first command gets
+    all the processes on the computer and then stores them in the `$A` variable.
+
+    The second command pipes the Process object stored in the `$A` variable to the `Get-Process` cmdlet, then to the
+    `Format-Table` cmdlet, which formats the processes by using the Priority view.
+
+    The Priority view, and other views, are defined in the PS1XML format files in the PowerShell home directory
+    (`$pshome`).
+    Example 5: Add a property to the standard Get-Process output display
+
+    Get-Process powershell | Format-Table `
+        @{Label = "NPM(K)"; Expression = {[int]($_.NPM / 1024)}},
+        @{Label = "PM(K)"; Expression = {[int]($_.PM / 1024)}},
+        @{Label = "WS(K)"; Expression = {[int]($_.WS / 1024)}},
+        @{Label = "VM(M)"; Expression = {[int]($_.VM / 1MB)}},
+        @{Label = "CPU(s)"; Expression = {if ($_.CPU) {$_.CPU.ToString("N")}}},
+        Id, ProcessName, StartTime -AutoSize
+
+    NPM(K)  PM(K) WS(K)   VM(M)  CPU(s)    Id ProcessName StartTime
+    ------  ----- -----   -----  ------    -- ----------- ---------
+       143 239540 259384 2366162 22.73  12720 powershell  12/5/2022 3:21:51 PM
+       114  61776 104588 2366127 11.45  18336 powershell  12/5/2022 7:30:53 AM
+       156  77924  82060 2366185 10.47  18812 powershell  12/5/2022 7:30:52 AM
+        85  48216 115192 2366074 1.14   24428 powershell  12/8/2022 9:14:15 AM
+
+    This example retrieves processes from the local computer. The retrieved processes are piped to the `Format-Table`
+    command that adds the StartTime property to the standard `Get-Process` output display.
+    ------- Example 6: Get version information for a process -------
+
+    Get-Process powershell -FileVersionInfo
+
+    ProductVersion   FileVersion      FileName
+    --------------   -----------      --------
+    6.1.6713.1       6.1.6713.1 (f... C:\WINDOWS\system32\WindowsPowerShell\v1.0\powershell.exe
+
+    This command uses the FileVersionInfo parameter to get the version information for the `powershell.exe` file that
+    is the main module for the PowerShell process.
+
+    To run this command with processes that you do not own on Windows Vista and later versions of Windows, you must
+    open PowerShell with the Run as administrator option.
+    --- Example 7: Get modules loaded with the specified process ---
+
+    Get-Process SQL* -Module
+
+    This command uses the Module parameter to get the modules that have been loaded by the process. This command gets
+    the modules for the processes that have names that begin with `SQL`.
+
+    To run this command on Windows Vista and later versions of Windows with processes that you do not own, you must
+    start PowerShell with the Run as administrator option.
+    ------------ Example 8: Find the owner of a process ------------
+
+    Get-Process pwsh -IncludeUserName
+
+    Handles      WS(K)   CPU(s)     Id UserName            ProcessName
+    -------      -----   ------     -- --------            -----------
+        782     132080     2.08   2188 DOMAIN01\user01     powershell
+
+    $p = Get-WmiObject Win32_Process -Filter "name='powershell.exe'"
+    $p.GetOwner()
+
+    __GENUS          : 2
+    __CLASS          : __PARAMETERS
+    __SUPERCLASS     :
+    __DYNASTY        : __PARAMETERS
+    __RELPATH        :
+    __PROPERTY_COUNT : 3
+    __DERIVATION     : {}
+    __SERVER         :
+    __NAMESPACE      :
+    __PATH           :
+    Domain           : DOMAIN01
+    ReturnValue      : 0
+    User             : user01
+
+    The first command shows how to find the owner of a process. The IncludeUserName parameter requires elevated user
+    rights ( Run as Administrator ). The output reveals that the owner is `Domain01\user01`.
+
+    The second and third command are another way to find the owner of a process.
+
+    The second command uses `Get-WmiObject` to get the PowerShell process. It saves it in the `$p` variable.
+
+    The third command uses the GetOwner method to get the owner of the process in `$p`. The output reveals that the
+    owner is `Domain01\user01`.
+    Example 9: Use an automatic variable to identify the process hosting the current session
+
+    Get-Process powershell
+
+    Handles  NPM(K)    PM(K)      WS(K) VM(M)   CPU(s)     Id ProcessName
+    -------  ------    -----      ----- -----   ------     -- -----------
+    308      26        52308      61780   567     3.18   5632 powershell
+    377      26        62676      63384   575     3.88   5888 powershell
+
+    Get-Process -Id $PID
+
+    Handles  NPM(K)    PM(K)      WS(K) VM(M)   CPU(s)     Id ProcessName
+    -------  ------    -----      ----- -----   ------     -- -----------
+    396      26        56488      57236   575     3.90   5888 powershell
+
+    These commands show how to use the `$PID` automatic variable to identify the process that is hosting the current
+    PowerShell session. You can use this method to distinguish the host process from other PowerShell processes that
+    you might want to stop or close.
+
+    The first command gets all of the PowerShell processes in the current session.
+
+    The second command gets the PowerShell process that is hosting the current session.
+    Example 10: Get all processes that have a main window title and display them in a table
+
+    Get-Process | Where-Object {$_.mainWindowTitle} | Format-Table Id, Name, mainWindowtitle -AutoSize
+
+    This command gets all the processes that have a main window title, and it displays them in a table with the
+    process ID and the process name.
+
+    The mainWindowTitle property is just one of many useful properties of the Process object that `Get-Process`
+    returns. To view all of the properties, pipe the results of a `Get-Process` command to the `Get-Member` cmdlet
+    `Get-Process | Get-Member`.
+
+
+
+PS C:\User11\powershell-thinkwright> Get-Help Get-Process -Examples | ConvertTo-Html | Out-File $env:USERPROFILE\Documents\Processexamples.htm
+PS C:\User11\powershell-thinkwright> Stop-Transcript
+**********************
+Windows PowerShell transcript end
+End time: 20240615123128
+**********************
