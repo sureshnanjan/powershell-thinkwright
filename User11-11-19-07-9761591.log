@@ -1,0 +1,189 @@
+﻿**********************
+Windows PowerShell transcript start
+Start time: 20240618111909
+Username: THINKWRIGHT\user11
+RunAs User: THINKWRIGHT\user11
+Configuration Name: 
+Machine: DESKTOP-11 (Microsoft Windows NT 10.0.19045.0)
+Host Application: C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe
+Process ID: 8180
+PSVersion: 5.1.19041.4412
+PSEdition: Desktop
+PSCompatibleVersions: 1.0, 2.0, 3.0, 4.0, 5.0, 5.1.19041.4412
+BuildVersion: 10.0.19041.4412
+CLRVersion: 4.0.30319.42000
+WSManStackVersion: 3.0
+PSRemotingProtocolVersion: 2.3
+SerializationVersion: 1.1.0.1
+**********************
+Transcript started, output file is C:\Users\user11\User11-11-19-07-9761591.log
+PS C:\User11\powershell-thinkwright> $StudentInfo = New-Object PSObject
+PS C:\User11\powershell-thinkwright> $StudentInfo | Add-Member -MemberType NoteProperty -Name "Name" -Value "Paddy"
+PS C:\User11\powershell-thinkwright> $StudentInfo | Add-Member -MemberType NoteProperty -Name "DOB" -Value "06/13/2005"
+PS C:\User11\powershell-thinkwright> $StudentInfo | Add-Member -MemberType NoteProperty -Name "Age" -Value ((Get-Date) - [datetime] $StudentInfo.DOB)
+PS C:\User11\powershell-thinkwright> $StudentInfo
+
+Name  DOB        Age
+----  ---        ---
+Paddy 06/13/2005 6945.11:19:26.0230405
+
+
+PS C:\User11\powershell-thinkwright> $StudentTrain1 = @{Training = "Powershell"; Attendance = 5; Assessment="PASS"}
+PS C:\User11\powershell-thinkwright> $StudentTrainining = [PSCustomObject]$StudentTrain1
+PS C:\User11\powershell-thinkwright> $StudentTrainining 
+
+Attendance Training   Assessment
+---------- --------   ----------
+         5 Powershell PASS
+
+
+PS C:\User11\powershell-thinkwright> $Student =$StudentInfo
+PS C:\User11\powershell-thinkwright> $Student | Add-Member -MemberType NoteProperty -Name Training -Value $StudentTrainining.Training
+PS C:\User11\powershell-thinkwright> $Student | Add-Member -MemberType NoteProperty -Name Attendance -Value $StudentTrainining.Attendance
+PS C:\User11\powershell-thinkwright> $Student | Add-Member -MemberType NoteProperty -Name Assessment -Value $StudentTrainining.Assessment
+PS C:\User11\powershell-thinkwright> $Student
+
+
+Name       : Paddy
+DOB        : 06/13/2005
+Age        : 6945.11:19:26.0230405
+Training   : Powershell
+Attendance : 5
+Assessment : PASS
+
+
+
+PS C:\User11\powershell-thinkwright> $Student | Format-Table
+
+Name  DOB        Age                   Training   Attendance Assessment
+----  ---        ---                   --------   ---------- ----------
+Paddy 06/13/2005 6945.11:19:26.0230405 Powershell          5 PASS
+
+
+PS C:\User11\powershell-thinkwright> $Student | Export-Csv $env:USERPROFILE\documents\Student.csv -nti
+PS C:\User11\powershell-thinkwright> Test-Path C:\Users\user11\Documents\Student.csv
+True
+PS C:\User11\powershell-thinkwright> $importedStudent = Import-Csv $env:USERPROFILE\Documents\Student.csv
+PS C:\User11\powershell-thinkwright> $importedStudent
+
+
+Name       : Paddy
+DOB        : 06/13/2005
+Age        : 6945.11:19:26.0230405
+Training   : Powershell
+Attendance : 5
+Assessment : PASS
+
+
+
+PS C:\User11\powershell-thinkwright> Compare-Object -ReferenceObject $Student -DifferenceObject $importedStudent -IncludeEqual
+
+InputObject                                                                                                  SideIndicator
+-----------                                                                                                  -------------
+@{Name=Paddy; DOB=06/13/2005; Age=6945.11:19:26.0230405; Training=Powershell; Attendance=5; Assessment=PASS} ==
+
+
+PS C:\User11\powershell-thinkwright> $importedStudent | FT Name, @{Label="DOB"; Expression={$_.DOB}; Alignment="Right"}, Age, @{Label="Training"; Expression={$_.Training};Alignment="Center"}, Attendance, Assessment
+
+Name         DOB Age                    Training  Attendance Assessment
+----         --- ---                    --------  ---------- ----------
+Paddy 06/13/2005 6945.11:19:26.0230405 Powershell 5          PASS
+
+
+PS C:\User11\powershell-thinkwright> Write-Host "The Name paranmeter gets bound When you use Get-Process and Stop-Process"
+The Name paranmeter gets bound When you use Get-Process and Stop-Process
+PS C:\User11\powershell-thinkwright> ls
+
+
+    Directory: C:\User11\powershell-thinkwright
+
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+-a----        18-06-2024     11:16           9605 PowerShell_transcript.DESKTOP-11.FMnGOS3f.20240618111044.txt
+-a----        03-06-2024     15:24             56 README.md
+-a----        18-06-2024     11:14              0 testfile1.txt
+-a----        18-06-2024     11:15              0 testfile2.txt
+-a----        15-06-2024     12:31          47706 User11-12-16-28-9201791.log
+-a----        05-06-2024     16:20          24168 User11-15-38-02-8526240.log
+-a----        03-06-2024     15:27           3670 User11.log
+
+
+PS C:\User11\powershell-thinkwright> New-Item -Path . -Name "testfile1.txt" -ItemType "file"
+
+
+    Directory: C:\User11\powershell-thinkwright
+
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+-a----        18-06-2024     11:20              0 testfile1.txt
+
+
+PS C:\User11\powershell-thinkwright> New-Item -ItemType "file" -Path "C:\User11\powershell-thinkwright\testfile2.txt"
+
+
+    Directory: C:\User11\powershell-thinkwright
+
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+-a----        18-06-2024     11:20              0 testfile2.txt
+
+
+PS C:\User11\powershell-thinkwright> Get-ChildItem
+
+
+    Directory: C:\User11\powershell-thinkwright
+
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+-a----        03-06-2024     15:24             56 README.md
+-a----        18-06-2024     11:20              0 testfile1.txt
+-a----        18-06-2024     11:20              0 testfile2.txt
+-a----        15-06-2024     12:31          47706 User11-12-16-28-9201791.log
+-a----        05-06-2024     16:20          24168 User11-15-38-02-8526240.log
+-a----        03-06-2024     15:27           3670 User11.log
+
+
+PS C:\User11\powershell-thinkwright> $env:Path
+C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Program Files\Git\cmd;C:\Users\user11\AppData\Local\Microsoft\WindowsApps;
+PS C:\User11\powershell-thinkwright> Set-Location C:\Windows\System32\WindowsPowerShell\v1.0
+PS C:\Windows\System32\WindowsPowerShell\v1.0> Get-ChildItem *.ps1xml
+
+
+    Directory: C:\Windows\System32\WindowsPowerShell\v1.0
+
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+-a----        07-12-2019     14:40          12825 Certificate.format.ps1xml
+-a----        07-12-2019     14:40           4994 Diagnostics.Format.ps1xml
+-a----        07-12-2019     14:40         138013 DotNetTypes.format.ps1xml
+-a----        07-12-2019     14:40          10112 Event.Format.ps1xml
+-a----        07-12-2019     14:40          25306 FileSystem.format.ps1xml
+-a----        07-12-2019     14:40           9164 getevent.types.ps1xml
+-a----        07-12-2019     14:40          91655 Help.format.ps1xml
+-a----        07-12-2019     14:40         138625 HelpV3.format.ps1xml
+-a----        07-12-2019     14:40         206468 PowerShellCore.format.ps1xml
+-a----        07-12-2019     14:40           4097 PowerShellTrace.format.ps1xml
+-a----        07-12-2019     14:40           8458 Registry.format.ps1xml
+-a----        07-12-2019     14:40         210376 types.ps1xml
+-a----        07-12-2019     14:40          12282 typesv3.ps1xml
+-a----        07-12-2019     14:40          16598 WSMan.Format.ps1xml
+
+
+PS C:\Windows\System32\WindowsPowerShell\v1.0> Get-Process "Notepad", "CalculatorApp"
+
+Handles  NPM(K)    PM(K)      WS(K)     CPU(s)     Id  SI ProcessName
+-------  ------    -----      -----     ------     --  -- -----------
+    550      41    31252      82068       0.59   5844   2 CalculatorApp
+    466      27     8968      35484       9.39   6728   2 notepad
+
+
+PS C:\Windows\System32\WindowsPowerShell\v1.0> Stop-Transcript
+**********************
+Windows PowerShell transcript end
+End time: 20240618112121
+**********************
