@@ -1,0 +1,33 @@
+Used Cases # Exchange Online
+Mailbox Threshold checking(P1,E1 and E3 license) and sending an email with subject, company logo to notifying the user
+Automatically create distribution lists based on requests submitted via a form.
+Automatically grant access to shared mailboxes based on access requests.
+Automate the process of granting 'Send on Behalf' permissions.
+ 
+ 
+Microsoft Teams
+Automatically create new channels within Teams based on project or departmental needs.
+Automate the process of adding users to specific Teams based on requests.
+Automatically archive Teams that have been inactive for a specified period.
+Assign Teams policy to users based on Menu base or switch 
+ 
+SharePoint Online
+Automate granting access to SharePoint sites based on access requests.
+Automatically create document libraries within SharePoint sites based on requests.
+Automate the creation of a project workspace that includes a new Team in Teams, a SharePoint site, and a shared mailbox in Exchange.
+Automate the onboarding process by creating a new user account, adding them to relevant distribution lists, Teams, and SharePoint sites.
+ 
+Active Directory (AD)
+Health check 
+Automatically create new user accounts based on HR system inputs.
+Automatically reset passwords for users based on requests.
+Automatically add or remove users from AD groups based on role changes.
+Automatically monitor and unlock user accounts that get locked out
+Automatically disable user accounts when an employee leaves the company.
+ 
+Azure Active Directory (Azure AD)
+Automatically create new Azure AD user accounts based on HR system inputs.
+Automatically assign Office 365 licenses to new users.
+Automatically manage group memberships in Azure AD based on role changes.
+Automatically notify users when their passwords are about to expire.
+Automatically disable Azure AD user accounts when an employee leaves the company.
